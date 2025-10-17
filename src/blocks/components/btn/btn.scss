@@ -1,0 +1,165 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: -0.01em;
+    color: $c-accent;
+    padding: 18px 21px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+
+    @include min(full) {
+        font-size: 20px;
+        padding: 24px 28px;
+    }
+
+    @include max(xs) {
+        font-size: 14px;
+        width: 100%;
+        padding: 15px 18px;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    span span {
+        margin-left: 8px;
+        opacity: 0.4;
+    }
+
+    &--green {
+        color: $c-white;
+        background-color: $c-accent;
+        transition: all $tr;
+
+        &:hover {
+            background-color: $c-accent-dark;
+        }
+    }
+
+    &--white {
+        color: $c-accent;
+        background-color: $c-white;
+        transition: all $tr;
+
+        &:hover {
+            background-color: $c-accent-dark;
+            color: $c-white;
+        }
+    }
+
+    &--lightGreen {
+        color: $c-accent;
+        background-color: $c-accent-big-btn;
+        transition: all $tr;
+        border-radius: 32px;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white !important;
+        }
+    }
+
+    &--lightTitle {
+        color: $c-white;
+        background-color: $c-accent-title;
+        transition: all $tr;
+        border-radius: 32px;
+
+        &:hover {
+            background-color: $c-accent-text;
+            color: $c-white !important;
+        }
+    }
+
+    &--bordered {
+        color: $c-accent;
+        background-color: $c-white;
+        transition: all $tr;
+        border: solid 1px $c-border-2;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white;
+            border-color: $c-accent;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--big {
+        font-size: 18px;
+        padding: 48px 38px;
+
+        @include min(full) {
+            font-size: 22px;
+            padding: 48px 38px;
+        }
+
+        @include max(laptop) {
+            padding: 36px 28px;
+        }
+    }
+
+    &--small {
+        font-size: 14px;
+        padding: 11px 12px;
+
+        @include min(full) {
+            font-size: 14px;
+            padding: 11px 12px;
+        }
+
+        @include max(mobile) {
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+
+        @include max(xs) {
+            width: 100%;
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+    }
+
+    &--icon {
+        padding: 10px;
+        width: 60px;
+        height: 60px;
+
+        @include min(full) {
+            padding: 10px;
+        }
+
+        @include max(laptop) {
+            width: 45px;
+            height: 45px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @include max(xs) {
+            padding: 5px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+}

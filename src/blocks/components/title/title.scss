@@ -1,0 +1,106 @@
+.title {
+    //базовый размер заголовка h1, остальные размеры пропорциональны.
+    font-size: 74px;
+    color: $c-accent;
+
+    &--light {
+        color: $c-white;
+    }
+
+    span {
+        color: $c-accent-title;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        font-weight: inherit;
+        text-wrap: inherit;
+    }
+
+    &--h1 {
+        font-size: 74px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: -0.027em;
+
+        @include max(laptop) {
+            font-size: 52px;
+        }
+
+        @include max(tablet) {
+            font-size: 40px;
+        }
+
+        @include max(mobile) {
+            font-size: 36px;
+        }
+    }
+
+    &--h2 {
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: -0.03125em;
+
+        @include max(laptop) {
+            font-size: 44px;
+        }
+
+        @include max(mobile) {
+            font-size: 36px;
+        }
+    }
+
+    &--h3 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.2em;
+        letter-spacing: -0.02em;
+
+        @include max(laptop) {
+            font-size: 28px;
+        }
+    }
+
+    &--h4 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.2em;
+        letter-spacing: -0.02em;
+
+        @include max(laptop) {
+            font-size: 24px;
+        }
+    }
+
+    &--h5 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.2em;
+        letter-spacing: -0.02em;
+
+        @include max(laptop) {
+            font-size: 20px;
+        }
+    }
+
+    &--h6 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+
+        @include max(laptop) {
+            font-size: 18px;
+        }
+    }
+
+}
