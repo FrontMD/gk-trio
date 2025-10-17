@@ -1,0 +1,38 @@
+noindex
+    div
+        //- код модалок сюда
+        +modal({modalId:"callbackModal", classes:"form-modal"})(data-js="callbackModal")
+            +form({
+                classes: '',
+                title: 'Оставить заявку',
+                text: '',
+                btnText: 'Отправить',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        type: '',
+                        title: '',
+                        placeholder: 'Комментарий',
+                    })

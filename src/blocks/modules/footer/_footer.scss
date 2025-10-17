@@ -2,395 +2,75 @@
     position: relative;
     color: $c-white;
 
-    a {
-        transition: all $tr;
-    }
 
-    a:hover {
-        opacity: 1;
-    }
-
-    .title span {
-        color: $c-white;
-        opacity: 0.4;
-    }
-
-    &__bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: $c-accent-dark;
-        border-radius: 42px 42px 0 0;
-        overflow: hidden;
-
-        @include max(mobile) {
-            border-radius: 0;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            @include max(tablet) {
-                opacity: 0.3;
-            }
-        }
-    }
-
-    &__container {
-        position: relative;
-        padding: 0;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        gap: 64px;
-        min-height: calc(100dvh - 90px);
-        padding: 10px;
-        z-index: 2;
-
-        @include min(full) {
-            min-height: calc(900px);
-        }
-
-        @include max(laptop) {
-            min-height: calc(100dvh - 80px);
-            gap: 32px;
-        }
-
-        @include max(tablet) {
-            flex-direction: column;
-            padding: 24px;
-        }
-
-        @include max(mobile) {
-            padding: 20px 10px;
-            gap: 20px;
-        }
-    }
-
-    &__left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 40px 0 40px 50px;
-        flex: 0 0 auto;
-
-        @include max(laptop) {
-            padding: 30px 0 30px 20px;
-        }
-
-        @include max(tablet) {
-            display: contents;
-        }
-    }
-
-    &__right {
-        display: flex;
-        flex-direction: column;
-        flex: 0 1 auto;
+    &__main {
         background-color: $c-accent;
-        border-radius: 32px;
-        max-width: 940px;
-
-        @include max(laptop) {
-            border-radius: 24px;
-        }
-
-        @include max(tablet) {
-            background-color: transparent;
-            display: contents;
-        }
-
+        padding: 50px 50px 40px;
+        border-radius: 20px;
     }
 
-    &__logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    &__logo-block {}
 
-        img {
-            width: 218px;
-        }
+    &__logo {}
 
-        p {
-            display: block;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 1.25em;
-            color: $c-accent-big-btn;
-            padding: 8px 7px;
-            border: 1px solid $c-accent-big-btn;
-            border-radius: 36px;
-        }
-    }
+    &__logo-title {}
 
-    &__cols {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        padding: 40px;
-        gap: 24px;
+    &__logo-desc {}
 
-        @include max(laptop) {
-            padding: 24px;
-        }
+    &__socials {}
 
-        @include max(tablet) {
-            padding: 24px 0;
-        }
+    &__social {}
 
-        @include max(mobile) {
-            grid-template-columns: minmax(0, 1fr);
-        }
-    }
+    &__btn {}
 
-    &__col {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
+    &__nav {}
 
-    &__block {
-        flex: 0 0 auto;
+    &__nav-group {}
 
-        @include max(mobile) {
-            flex-basis: auto;
-        }
-    }
+    &__nav-title {}
 
-    /*&__subtitle {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 120%;
-        letter-spacing: -0.01em;
-        text-transform: uppercase;
-        opacity: 0.4;
-        color: $c-white;
+    &__list {}
 
-        @include max(laptop) {
-            font-size: 14px;
-        }
-    }*/
+    &__item {}
 
-    &__textblock {
-        display: flex;
-        flex-direction: column;
-        margin-top: 16px;
-        gap: 16px;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.2em;
-        letter-spacing: -.001em;
+    &__link {}
 
-        &>* {
-            opacity: 0.4;
-        }
+    &__school {}
 
-        &--mt {
-            margin-top: 40px;
-        }
+    &__school-title {}
 
-        @include max(laptop) {
-            font-size: 16px;
-            gap: 15px;
-            margin-top: 15px;
-        }
+    &__school-contacts {}
 
-        @include max(mobile) {
-            font-size: 14px;
-            gap: 10px;
-            margin-top: 10px;
-        }
+    &__school-phone {}
 
-    }
+    &__school-schedule {}
 
-    &__footer {
-        font-family: $ff-open;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.2em;
-        letter-spacing: -0.01em;
-        color: $c-white;
-        margin-top: auto;
+    &__school-label {}
 
-        >* {
-            transition: all $tr;
-            opacity: 0.4;
-        }
+    &__school-time {}
 
-        @include max(laptop) {
-            font-size: 14px;
-        }
+    &__school-mail {}
 
-        @include max(tablet) {
-            order: 3;
-            padding: 20px 0;
-            max-width: 100%;
-        }
+    &__school-address {}
 
-        @include max(mobile) {
-            font-size: 12px;
-        }
-    }
+    &__school-how {}
 
-    &__privacy {
-        padding: 0 40px;
+    &__school-link {}
 
-        @include max(laptop) {
-            padding: 0 24px;
-        }
+    &__school-tour {}
 
-        @include max(tablet) {
-            padding: 0;
-        }
-    }
+    &__school-addphone {}
 
-    &__flex {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 24.5px 40px;
-        gap: 16px 10px;
-        border-top: 1px solid $c-white;
+    &__bottom {}
 
-        @include max(laptop) {
-            padding: 24px;
+    &__policy {}
 
-        }
+    &__policy-link {}
 
-        @include max(tablet) {
-            padding: 16px 0 0;
-            margin-top: 20px;
-        }
-    }
+    &__copyright {}
 
-    &__copyright {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 55%;
+    &__dev {}
 
-        @include max(xs) {
-            max-width: 100%;
-            flex-basis: 100%;
-        }
-    }
+    &__dev-link {}
 
-    &__developer {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        a {
-            line-height: 0;
-            display: block;
-            padding: 0;
-            margin: 0;
-        }
-
-        svg {
-            width: 148px;
-            height: 31px;
-
-            @include max(laptop) {
-                width: 115px;
-                height: 24px;
-            }
-        }
-    }
-
-    &__links {
-        flex: 0 1 323px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-
-        @include max(mobile) {
-            flex-basis: 220px;
-            gap: 2px;
-        }
-    }
-
-    &__link {
-        min-height: 3em;
-        font-family: $ff-open;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1.5em;
-        text-transform: uppercase;
-
-        @include max(large) {
-            font-size: 14px;
-        }
-
-        @include max(laptop) {
-            font-size: 12px;
-        }
-    }
-
-    &__btn {
-        order: 2;
-    }
-
-    .socials {
-        flex-wrap: wrap;
-        padding: 0;
-
-        @include max(laptop) {
-            max-width: 180px;
-        }
-
-        @include max(tablet) {
-            max-width: 210px;
-        }
-
-        @include max(mobile) {
-            max-width: 280px;
-        }
-
-        &__item {
-            @include max(large) {
-                width: 60px;
-                height: 60px;
-
-                svg {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-
-            @include max(laptop) {
-                width: 40px;
-                height: 40px;
-
-                svg {
-                    width: 14px;
-                    height: 14px;
-                }
-            }
-
-            @include max(tablet) {
-                width: 45px;
-                height: 45px;
-
-                svg {
-                    width: 15px;
-                    height: 15px;
-                }
-            }
-
-            @include max(mobile) {
-                width: 60px;
-                height: 60px;
-
-                svg {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-        }
-    }
 }

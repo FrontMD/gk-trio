@@ -1,0 +1,49 @@
+-
+    const defaultFieldProps = {
+        classes: '',
+        tag: 'input',
+        type: 'text',
+        placeholder: '',
+        inputAttr: {},
+        selectOptions: [
+            "вариант 1",
+            "вариант 2"
+        ],
+        selectGreen: false 
+    }
+
+mixin field(props = defaultFieldProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFieldProps.classes,
+            tag: props.tag ? props.tag : defaultFieldProps.tag,
+            type: props.type ? props.type : defaultFieldProps.type,
+            placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
+            inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
+            selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
+            selectGreen: props.selectGreen ? props.selectGreen : defaultFieldProps.selectGreen,
+        }
+
+    label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js='formField')&attributes(attributes)
+        - if(checkProps.tag === 'input')
+            input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+            - if(checkProps.type === 'radio')
+                span.fake-radio
+            - else if(checkProps.type === 'checkbox')
+                span.fake-checkbox
+                span.field__error(data-js='fieldError') Нужно обязательно ознакомиться и согласиться
+            - else
+                span.field__error(data-js='fieldError')
+        - if(checkProps.tag === 'textarea')
+            textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+            span.field__error(data-js='fieldError')
+        - if(checkProps.tag === 'select')
+            select.field__select(data-placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
+                - let optionCount = 0
+                - while (optionCount < checkProps.selectOptions.length)
+                    - if(checkProps.selectOptions[optionCount].length > 0)
+                        option(value=checkProps.selectOptions[optionCount])!= checkProps.selectOptions[optionCount]
+                    - else
+                        option(label=" ")!= checkProps.selectOptions[optionCount]
+                    - optionCount++
+            span.field__error(data-js='fieldError')

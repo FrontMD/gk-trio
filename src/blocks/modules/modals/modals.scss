@@ -1,0 +1,236 @@
+.hystmodal__shadow.hystmodal__shadow--show {
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.form-modal {
+
+    .modal__inner {
+        max-height: 80vh;
+        max-width: calc(100% + 8px);
+        overflow: auto;
+        margin-right: -8px;
+        padding-right: 5px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #688D80;
+            border-radius: 2px;
+        }
+    }
+
+    .form {
+        padding: 0;
+        background-color: transparent;
+
+        &__title {
+            color: $c-accent;
+            text-align: center;
+            padding: 0 40px;
+            margin-bottom: 0;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.2em;
+            letter-spacing: -0.02em;
+            color: $c-accent;
+        }
+
+        &__thanks {
+            background-color: transparent;
+        }
+
+        &__thanks .form__title {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 1.1em;
+            letter-spacing: -0.02em;
+            max-width: 430px;
+        }
+
+        &__thanks .form__text {
+            color: $c-accent;
+        }
+
+        &__fields {
+            max-width: 430px;
+        }
+
+        &--sent {
+            min-height: auto !important;
+        }
+
+        @include max(mobile) {
+            padding: 0;
+        }
+    }
+
+    .form-privacy__text {
+        max-width: 360px;
+    }
+
+    .form__title+.form__fields,
+    .form__text+.form__fields,
+    .form__fields+.form__fields {
+        margin-top: 30px;
+    }
+
+    .field__input,
+    .field__textarea,
+    .field-file__fakeinput,
+    .btn {
+        padding: 16px 20px;
+    }
+
+    .field--checkbox,
+    .field--radio {
+        .field__title {
+            font-size: 16px;
+        }
+    }
+}
+
+.project-modal {
+
+    &__title {
+        padding-right: 42px;
+        text-align: center;
+
+        @include max(mobile) {
+            text-align: start;
+            font-size: 20px;
+        }
+    }
+
+    .lp-section {
+        .m-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        a.lp-section__media {
+            position: relative;
+            margin-bottom: 0;
+
+            @include max(tablet) {
+                margin-bottom: 0;
+            }
+
+        }
+
+        a.lp-section__media::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: opacity $tr;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2304412B' d='M54,0A42.051,42.051,0,0,0,12,42a41.5989,41.5989,0,0,0,8.48,25.0356L1.7578,85.7578a5.9994,5.9994,0,1,0,8.4844,8.4844L28.9644,75.52A41.5989,41.5989,0,0,0,54,84,42,42,0,0,0,54,0Zm0,72A30,30,0,1,1,84,42,30.0315,30.0315,0,0,1,54,72Z'/%3E%3Cpath fill='%2304412B' d='M66,36H60V30a6,6,0,0,0-12,0v6H42a6,6,0,0,0,0,12h6v6a6,6,0,0,0,12,0V48h6a6,6,0,0,0,0-12Z'/%3E%3C/g%3E%3C/svg%3E");
+            background-position: center center;
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
+        }
+
+        a.lp-section__media:hover::after {
+            opacity: 1;
+        }
+
+        &__container {
+            gap: 50px;
+
+            @include max(mobile) {
+                gap: 32px;
+            }
+        }
+    }
+
+    .m-columns {
+        gap: 28px;
+
+        &__header {
+            flex: 0 0 calc(50% - 28px);
+            gap: 24px;
+
+            @include max(large) {
+                flex: 0 0 calc(35% - 28px);
+                gap: 12px;
+            }
+
+
+            .btn--small {
+
+                @include min(large) {
+                    font-size: 16px;
+                    padding: 18px 21px;
+                }
+            }
+        }
+
+        &__main {
+            @include max(large) {
+                max-width: 65%;
+            }
+
+            .text-editor h2,
+            .text-editor h1 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .text-editor h3,
+            .text-editor h4 {
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .text-editor,
+            .text-editor p,
+            .text-editor ul,
+            .text-editor ol,
+            .text-editor li {
+                font-size: 14px;
+            }
+
+            .text-editor ul li+li,
+            .text-editor ol li+li {
+                margin-top: 14px;
+            }
+        }
+    }
+
+    .modal__content {
+        max-width: 1150px;
+    }
+
+    .modal__inner {
+        max-height: 80vh;
+        max-width: calc(100% + 8px);
+        overflow: auto;
+        margin-right: -8px;
+        padding-right: 5px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #688D80;
+            border-radius: 2px;
+        }
+    }
+}

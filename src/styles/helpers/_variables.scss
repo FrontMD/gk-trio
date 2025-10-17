@@ -19,8 +19,12 @@ $media-list: (
 $c-white: #fff;
 $c-black: #000;
 $c-accent: #000;
+$c-accent-hover: rgba(0, 0, 0, 0.7);
 $c-bg-main: #F3F3F3;
 $c-text: #111;
+$c-text-grey: #969696;
+$c-text-light: #7B7B7B;
+$c-bg-grey: #d5d5d5;
 
 
 $c-accent-middle: #D5F0D3;
@@ -32,13 +36,11 @@ $c-accent-btn: #C5F0C2;
 $c-accent-big-btn: #D5F0D3;
 $c-accent-2: #FBF9F0;
 $c-accent-3: #E2ECF9;
-$c-bg-dark: #282A2A;
 $c-border: #EAEDEC;
 $c-border-2: #CAD3D0;
 $c-error: #E66773;
 $c-table-header: #D5F0D3;
 $c-border-op: rgba(0, 0, 0, 0.2);
-$c-text-grey: #D9D9D9;
 
 // переходы
 $tr: .3s linear;

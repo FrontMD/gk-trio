@@ -39,7 +39,7 @@
                     <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
                   </svg>
                 </div>
-                <div class="main-menu__sub submenu">
+                <div class="site-header__sub submenu">
                   <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Нетели</a></div>
                   <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Быки</a></div>
                   <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Племенные бычки</a></div>
@@ -52,7 +52,7 @@
                     <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
                   </svg>
                 </div>
-                <div class="main-menu__sub submenu">
+                <div class="site-header__sub submenu">
                   <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Животноводство</a></div>
                   <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Растениеводство</a></div>
                   <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Трейдинг зерна</a></div>
@@ -65,9 +65,33 @@
             </div>
           </nav>
           <div class="site-header__contacts">
-            <div class="site-header__email"><a href="mailto:info@triogk.ru">info@triogk.ru</a></div>
-            <div class="site-header__phone"><a href="tel:+74742371361">+7 (474) 237–13–61</a></div>
-            <button class="site-header__callback" data-modal="#">Заказать звонок</button>
+            <div class="site-header__contact"><a href="mailto:info@triogk.ru">info@triogk.ru</a></div>
+                <div class="socials"><a class="socials__item" href="javascript:void(0);">
+                    <svg> 
+                      <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                    </svg></a>
+                </div>
+            <div class="site-header__block">
+              <div class="site-header__contact"><a href="tel:+74742371361">+7 (474) 237–13–61</a>
+                <div class="main-menu__chevron">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                  </svg>
+                </div>
+                <div class="site-header__sub submenu">
+                  <div class="submenu__item submenu__item">
+                    <div class="submenu__subtitle">Офис продаж</div><a class="main-menu__link main-menu__link--contact" href="tel:+74742371361">+7 (474) 237–13–61</a>
+                  </div>
+                  <div class="submenu__item submenu__item">
+                    <div class="submenu__subtitle">Школа Действия</div><a class="main-menu__link main-menu__link--contact" href="tel:+74742371361">+7 (474) 237–13–61</a>
+                  </div>
+                </div>
+              </div>
+              <button class="site-header__callback" data-modal="#callbackModal">Заказать звонок</button>
+            </div><a class="site-header__cart" href="javascript:void(0);">
+              <svg> 
+                <use xlink:href="img/sprites/sprite.svg#basket"></use>
+              </svg><span>98</span></a>
           </div>
         </div>
       </div>
@@ -215,8 +239,113 @@
       </div>
     </main>
         <footer class="site-footer">
-          <div class="gkt-container"></div>
+          <div class="gkt-container">
+            <div class="site-footer__main">
+              <div class="site-footer__logo-block"><img class="site-footer__logo" src="logo.png" alt="ТРИО группа компаний"><span class="site-footer__logo-title">ТРИО</span><span class="site-footer__logo-desc">группа компаний</span>
+                <div class="site-footer__socials"><a class="site-footer__social" href="#">vk</a><a class="site-footer__social" href="#">tg</a><a class="site-footer__social" href="#">yt</a></div>
+                <button class="site-footer__btn" type="button">Оставить заявку</button>
+              </div>
+              <div class="site-footer__nav">
+                <div class="site-footer__nav-group">
+                  <h4 class="site-footer__nav-title">О КОМПАНИИ</h4>
+                  <ul class="site-footer__list">
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Производство</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Пресс-центр</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="site-footer__nav-group">
+                  <h4 class="site-footer__nav-title">КАТАЛОГ</h4>
+                  <ul class="site-footer__list">
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Нетели</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Быки</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Племенные бычки</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Эмбрионы</a></li>
+                  </ul>
+                </div>
+                <div class="site-footer__nav-group">
+                  <h4 class="site-footer__nav-title">НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ</h4>
+                  <ul class="site-footer__list">
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Животноводство</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Растениеводство</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Трейдинг зерна</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Семенной завод</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Школа действий</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Агротуризм</a></li>
+                    <li class="site-footer__item"><a class="site-footer__link" href="#">Благотворительность</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="site-footer__school">
+                <h4 class="site-footer__school-title">ШКОЛА ДЕЙСТВИЙ</h4>
+                <div class="site-footer__school-contacts"><span class="site-footer__school-phone">+7 (990) 059 50 39</span></div>
+                <div class="site-footer__school-schedule"><span class="site-footer__school-label">ГРАФИК РАБОТЫ</span><span class="site-footer__school-time">Пн. – Пт.:  10:30–18:00</span><span class="site-footer__school-time">Сб.: 10:30–15:00</span></div>
+                <div class="site-footer__school-mail"><span class="site-footer__school-label">info@triogk.ru</span></div>
+                <div class="site-footer__school-address">398017, г. Липецк, ул. Металлургов, 1</div>
+                <div class="site-footer__school-how"><a class="site-footer__school-link" href="#">КАК ПРОЕХАТЬ</a></div>
+                <div class="site-footer__school-tour"><a class="site-footer__school-link" href="#">ЭКСКУРСИЯ НА ФЕРМУ</a></div>
+                <div class="site-footer__school-addphone"><span class="site-footer__school-addphone">+7 (4922) 11-22-22</span></div>
+              </div>
+            </div>
+            <div class="site-footer__bottom">
+              <div class="site-footer__policy"><a class="site-footer__policy-link" href="#">Политика обработки персональных данных</a></div>
+              <div class="site-footer__copyright">© 2025 ООО «ГК ТРИО»</div>
+              <div class="site-footer__dev">Разработка сайта:<a class="site-footer__dev-link" href="#">ITS GROUP</a></div>
+            </div>
+          </div>
         </footer>
+    <noindex>
+      <div>
+            <div class="modal hystmodal form-modal" id="callbackModal" aria-hidden="true" data-js="callbackModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__title">Оставить заявку</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green btn--full" type="submit"><span>Отправить</span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                                    </svg>
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Согласен на обработку моих персональных данных <a href="#" target="_blank">в&nbsp;соответствии с&nbsp;Политикой в&nbsp;отношении обработки персональных данных</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </noindex>
     <script src="js/main.min.js"></script>
   </body>
 </html>
