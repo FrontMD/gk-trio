@@ -1,76 +1,238 @@
 .site-footer {
     position: relative;
     color: $c-white;
+    margin-bottom: 40px;
 
-
-    &__main {
-        background-color: $c-accent;
-        padding: 50px 50px 40px;
-        border-radius: 20px;
+    @include max(tablet) {
+        margin-bottom: 20px;
     }
 
-    &__logo-block {}
+    @include max(mobile) {
+        margin-bottom: 0;
+    }
 
-    &__logo {}
+    &__main {
+        background-color: $c-bg-dark;
+        padding: 50px 50px 40px;
+        border-radius: 20px;
 
-    &__logo-title {}
+        @include max(laptop) {
+            padding: 30px 24px;
+        }
 
-    &__logo-desc {}
+        @include max(mobile) {
+            padding: 20px 10px;
+            border-radius: 10px 10px 0 0;
+        }
+    }
 
-    &__socials {}
+    &__top {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 24px;
 
-    &__social {}
+        @include max(laptop) {
+            flex-wrap: wrap;
+            gap: 50px;
+        }
 
-    &__btn {}
+        @include max(mobile) {
+            gap: 40px;
+        }
+    }
 
-    &__nav {}
+    &__column {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 40px;
+        flex: 0 0 316px;
 
-    &__nav-group {}
+        @include max(large) {
+            flex: 0 0 250px;
+        }
 
-    &__nav-title {}
+        @include max(laptop) {
+            flex: 0 0 200px;
+        }
 
-    &__list {}
+        @include max(tablet) {
+            flex: 0 0 calc(50% - 50px);
+        }
 
-    &__item {}
+        @include max(mobile) {
+            flex: 0 0 100%;
+        }
 
-    &__link {}
+        &--stretch {
+            flex: 1 1 100%;
+            min-width: 330px;
 
-    &__school {}
+            @include max(large) {
+                flex: 1 1 100%;
+            }
 
-    &__school-title {}
+            @include max(laptop) {
+                flex: 1 1 auto;
+            }
+        }
 
-    &__school-contacts {}
+        &--contacts {
+            gap: 27px;
 
-    &__school-phone {}
+            @include max(laptop) {
+                flex: 0 0 250px;
+            }
+        }
 
-    &__school-schedule {}
+        &--first {
+            @include max(laptop) {
+                flex: 0 0 100%;
+                flex-direction: row;
+                align-items: center;
+            }
 
-    &__school-label {}
+            @include max(tablet) {
+                flex: 0 0 100%;
+            }
 
-    &__school-time {}
+            @include max(mobile) {
+                flex-direction: column;
+                align-items: flex-start;
+                display: contents;
+            }
+        }
+    }
 
-    &__school-mail {}
+    &__logo {
+        width: 165px;
+        height: 45px;
 
-    &__school-address {}
+        @include max(laptop) {
+            margin-right: auto;
+        }
 
-    &__school-how {}
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 
-    &__school-link {}
+    &__socials {
+        @include max(mobile) {
+            order: 2;
+        }
+    }
 
-    &__school-tour {}
+    &__callback {
+        margin-top: auto;
 
-    &__school-addphone {}
+        @include max(laptop) {
+            margin-top: 0;
+        }
 
-    &__bottom {}
+        @include max(mobile) {
+            order: 2;
+        }
+    }
 
-    &__policy {}
+    &__title {
+        font-family: $ff-tiktok;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $c-bg-grey;
 
-    &__policy-link {}
+        @include max(mobile) {
+            font-size: 18px;
+        }
+    }
 
-    &__copyright {}
 
-    &__dev {}
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-    &__dev-link {}
+        @include max(mobile) {
+            gap: 15px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+
+        @include max(mobile) {
+            gap: 15px;
+        }
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137.5%;
+        color: $c-white;
+        transition: all $tr;
+        opacity: 1;
+
+        p+p {
+            margin-top: 4px;
+        }
+    }
+
+    a.site-footer__item:hover,
+    a.site-footer__title:hover {
+        opacity: 0.7;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: $c-bg-main;
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid #D8D8D8;
+
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+    }
+
+    &__docs {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 133%;
+    }
+
+    &__developer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+            line-height: 0;
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        svg {
+            width: 117px;
+            height: 13px;
+        }
+    }
 
 }

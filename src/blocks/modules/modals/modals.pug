@@ -1,12 +1,12 @@
 noindex
     div
         //- код модалок сюда
-        +modal({modalId:"callbackModal", classes:"form-modal"})(data-js="callbackModal")
+        +modal({modalId:"callbackModal"})(data-js="callbackModal")
             +form({
-                classes: '',
+                classes: 'form--modal',
                 title: 'Оставить заявку',
-                text: '',
-                btnText: 'Отправить',
+                text: 'Мы ищем надёжных партнёров для долгосрочного и взаимовыгодного сотрудничества. Оставьте заявку — и в ближайшее время мы обсудим детали возможного партнёрства.',
+                btnText: 'Отправить заявку',
                 })
                     +field({
                         classes: '',

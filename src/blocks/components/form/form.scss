@@ -1,12 +1,6 @@
 .form {
     width: 100%;
-    padding: 30px 25px;
-    background-color: $c-accent;
-    transition: height $tr;
-
-    @include max(mobile) {
-        padding: 30px 15px;
-    }
+    background-color: transparent;
 
     &__content,
     &__thanks {
@@ -14,6 +8,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
         transition: opacity 0.3s linear;
         overflow: hidden;
     }
@@ -37,27 +32,26 @@
     }
 
     &__title {
+        font-family: $ff-tiktok;
         font-weight: 500;
-        font-size: 36px;
-        line-height: 1.1em;
-        letter-spacing: -0.02em;
-        max-width: 430px;
-        color: $c-white;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+        max-width: 550px;
+        color: $c-bg-dark;
     }
 
     &__text {
-        max-width: 300px;
-        font-size: 16px;
         font-weight: 400;
-        line-height: 1.2em;
-        letter-spacing: -0.01em;
-        color: $c-white;
-        opacity: 0.4;
-        text-align: center;
+        font-size: 15px;
+        line-height: 153.3%;
+        color: $c-text-light;
+        margin-top: 10px;
 
         @include max(mobile) {
-            font-size: 14px;
+            font-size: 12px;
         }
+
     }
 
     &__image-success {
@@ -72,33 +66,32 @@
     &__title+&__fields,
     &__text+&__fields,
     &__fields+&__fields {
-        margin-top: 50px;
+        margin-top: 30px;
+
+        @include max(mobile) {
+            margin-top: 20px;
+        }
     }
 
     &__fields {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 7px;
         margin-bottom: 20px;
-
-        @include max(tablet) {
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
+        width: 100%;
 
         @include max(mobile) {
-            margin-top: 20px;
-            margin-bottom: 15px;
+            gap: 4px;
         }
     }
 
-    &__block {
+    /*&__block {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    &__flex {
+    /*&__flex {
         display: flex;
         gap: 20px;
 
@@ -117,17 +110,16 @@
             flex-direction: column;
             gap: 10px;
         }
-    }
+    }*/
 
     &__privacy {
-        margin-top: 20px;
+        margin-bottom: 7px;
     }
 
     .form-privacy {
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 5px;
 
         input {
             position: absolute;
@@ -145,54 +137,58 @@
         &__fake {
             display: block;
             position: relative;
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             background-color: transparent;
             flex-shrink: 0;
             flex-grow: 0;
             cursor: pointer;
             margin-top: 2px;
-            border: 1px solid rgba(130, 160, 149, 0.3);
-            border-radius: 4px;
+            border: 2px solid $c-text-grey;
+            border-radius: 3px;
 
             &::after {
                 content: '';
-                background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.60039 3.2998L4.23075 8.6998L2.40039 6.85909' stroke='transparent' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L5.5 8L12 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
                 position: absolute;
-                width: 12px;
-                height: 12px;
+                width: 13px;
+                height: 13px;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
+                opacity: 0;
             }
         }
 
         input:checked+.form-privacy__fake {
-            background-color: $c-accent-title;
-            border-color: $c-accent-title;
+            background-color: $c-text-grey;
         }
 
         input:checked+.form-privacy__fake::after {
-            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.60039 3.2998L4.23075 8.6998L2.40039 6.85909' stroke='white' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
+            opacity: 1;
         }
 
         &__text {
-            font-size: 14px;
             font-weight: 400;
-            line-height: 1.2em;
-            letter-spacing: -0.01em;
-            color: $c-accent;
+            font-size: 15px;
+            line-height: 153.3%;
+            color: $c-text-grey;
 
-            a,
-            span {
-                opacity: 0.4;
+            @include max(mobile) {
+                font-size: 12px;
+            }
+
+            a {
+                color: $c-link;
+                text-decoration: underline;
+                opacity: 1;
                 transition: all $tr;
             }
 
             a:hover {
-                opacity: 1;
+                opacity: 0.7;
             }
         }
     }
@@ -201,8 +197,7 @@
         position: relative;
         overflow: hidden;
         margin-top: auto;
-        width: 100%;
-        min-height: 60px;
+        align-self: flex-start;
 
         span.load-icon {
             display: none;
@@ -241,17 +236,38 @@
 }
 
 .form {
-    &--dark .form-privacy {
-        &__text {
-            color: $c-white;
 
-            a,
-            span {
-                opacity: 0.4;
-                transition: all $tr;
-            }
+    &--modal .form__content {
+        max-height: calc(95vh - 70px);
+
+        @include max(mobile) {
+            max-height: calc(100vh - 40px);
+            max-height: calc(100dvh - 40px);
         }
     }
+
+    &--modal .form__fields {
+        max-width: calc(100% + 8px);
+        overflow: auto;
+        margin-right: -8px;
+        padding-right: 5px;
+        flex: 1 1 auto;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-bg-grey;
+            border-radius: 2px;
+        }
+    }
+
 }
 
 .form {

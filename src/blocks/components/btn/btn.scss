@@ -4,28 +4,16 @@
     justify-content: center;
     width: fit-content;
     gap: 10px;
-    font-size: 16px;
+    font-family: $ff-open;
     font-weight: 500;
-    line-height: 1.2em;
-    letter-spacing: -0.01em;
-    color: $c-accent;
-    padding: 18px 21px;
+    font-size: 16px;
+    line-height: 1em;
+    padding: 17px 30px;
     border-radius: 50px;
     cursor: pointer;
     text-align: center;
 
-    @include min(full) {
-        font-size: 20px;
-        padding: 24px 28px;
-    }
-
-    @include max(xs) {
-        font-size: 14px;
-        width: 100%;
-        padding: 15px 18px;
-    }
-
-    svg {
+    /*svg {
         width: 24px;
         height: 24px;
     }
@@ -33,30 +21,30 @@
     span span {
         margin-left: 8px;
         opacity: 0.4;
+    }*/
+
+    &--light {
+        color: $c-text-btn;
+        background-color: $c-bg-grey;
+        opacity: 1;
+        transition: all $tr;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 
-    &--green {
+    &--accent {
         color: $c-white;
         background-color: $c-accent;
         transition: all $tr;
 
         &:hover {
-            background-color: $c-accent-dark;
+            opacity: 0.7;
         }
     }
 
-    &--white {
-        color: $c-accent;
-        background-color: $c-white;
-        transition: all $tr;
-
-        &:hover {
-            background-color: $c-accent-dark;
-            color: $c-white;
-        }
-    }
-
-    &--lightGreen {
+    /*&--lightGreen {
         color: $c-accent;
         background-color: $c-accent-big-btn;
         transition: all $tr;
@@ -160,6 +148,6 @@
 
     &--reverse {
         flex-direction: row-reverse;
-    }
+    }*/
 
 }

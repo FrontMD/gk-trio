@@ -12,7 +12,7 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
-        transition: all $tr linear;
+        transition: all $tr;
 
         &:hover {
             background-color: $c-accent-hover;
@@ -23,5 +23,46 @@
             height: 20px;
         }
 
+    }
+}
+
+.socials {
+    &--footer &__item {
+        background-color: $c-bg-grey;
+        color: $c-accent;
+        opacity: 1;
+        width: 40px;
+        height: 40px;
+
+        @include max(laptop) {
+            width: 50px;
+            height: 50px;
+        }
+
+        @include max(mobile) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 22px;
+            height: 22px;
+
+            @include max(laptop) {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include max(mobile) {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+
+    &--footer &__item:hover {
+        background-color: $c-bg-grey;
+        color: $c-accent;
+        opacity: 0.7;
     }
 }

@@ -1,0 +1,111 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include max(large) {
+        gap: 20px;
+    }
+
+    @include max(laptop) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 14.5px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__chevron {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(0);
+        transition: all $tr;
+        color: $c-text;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &__item:hover &__chevron {
+        transform: rotate(180deg);
+    }
+
+    &__item:hover .site-header__sub {
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-text;
+        opacity: 1;
+        transform: all $tr;
+
+        &--contact {
+            font-size: 18px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.submenu {
+    min-width: 245px;
+    background-color: $c-white;
+    border-radius: 10px;
+    padding: 15px 0;
+
+    &__item {
+        position: relative;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__subtitle {
+        position: absolute;
+        top: -0.58em;
+        left: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 190%;
+        letter-spacing: 0;
+        color: $c-text-grey;
+    }
+
+    &__sticker {
+        width: fit-content;
+        background-color: $c-accent;
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: $c-white;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 100%;
+        letter-spacing: 0;
+
+    }
+}
+
+.submenu {
+    &--phone &__item {
+        padding: 15px 0;
+    }
+}

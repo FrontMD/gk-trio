@@ -85,7 +85,7 @@ function validation() {
                                 if (valueField.match(dataReqexp.email)) {
                                     error(input).remove()
                                 } else {
-                                    error(input, 'Необходимо ввести корректный email').set()
+                                    error(input, 'Некорректный email').set()
                                 }
                                 break
                             case 'phone':
@@ -94,7 +94,7 @@ function validation() {
                                 if (valueField.length === 11) {
                                     error(input).remove()
                                 } else {
-                                    error(input, 'Необходимо ввести номер телефона').set()
+                                    error(input, 'Некорректный номер телефона').set()
                                 }
                                 break                              
                             case 'file':

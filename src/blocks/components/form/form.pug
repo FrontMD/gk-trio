@@ -4,9 +4,9 @@
         title: '',
         text: '',
         btnText: '',
-        btnCMode: 'green',
+        btnCMode: 'accent',
         innerThanks: true,
-        privacyText: 'Согласен на обработку моих персональных данных <a href="#" target="_blank">в&nbsp;соответствии с&nbsp;Политикой в&nbsp;отношении обработки персональных данных</a>',
+        privacyText: 'Нажимая кнопку, вы соглашаетесь с <a href="javascript:void(0);" target="_blank">Политикой конфиденциальности</a> и даёте согласие на обработку персональных данных.',
         successTitle: 'Ваша заявка отправлена!',
         successText: 'Менеджер свяжется с вами в ближайшее время'
     }
@@ -26,22 +26,13 @@ mixin form(props = defaultFormProps)
         }
 
     form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
-        .form__content(data-js='form-content')
+        .form__content(data-js='formContent')
             - if(checkProps.title.length > 0)
                 .form__title!= checkProps.title
             - if(checkProps.text.length > 0)
                 .form__text!= checkProps.text
-            .form__fields
+            .form__fields(data-js="formFields")
                 block
-            +btn({
-                classes: 'form__submit',
-                type: 'button',
-                buttonType: 'submit',
-                name: checkProps.btnText,
-                cMode: checkProps.btnCMode,
-                icon: 'arrow_up_right',
-                sMode: 'full'
-            })
             .form__privacy.form-privacy(data-js="formField")
                 .form-privacy__flex
                     label
@@ -49,6 +40,14 @@ mixin form(props = defaultFormProps)
                         span.form-privacy__fake
                     span.form-privacy__text!= checkProps.privacyText
                 span.field__error(data-js='fieldError')
+            +btn({
+                classes: 'form__submit',
+                type: 'button',
+                buttonType: 'submit',
+                name: checkProps.btnText,
+                cMode: checkProps.btnCMode,
+            })
+
         - if(checkProps.innerThanks === true)
             .form__thanks(data-js='form-thanks')
                 .form__title!= checkProps.successTitle

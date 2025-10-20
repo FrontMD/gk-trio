@@ -1,0 +1,50 @@
+-
+    const defaultMainMenuProps = {
+        classes: '',
+    }
+
+mixin main-menu(props = defaultMainMenuProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMainMenuProps.classes
+        }
+
+    .main-menu
+        .main-menu__item
+            a.main-menu__link(href="javascript:void(0);") О компании
+        .main-menu__item
+            a.main-menu__link(href="javascript:void(0);") Каталог продукции
+            .main-menu__chevron
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+            .site-header__sub.submenu
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Нетели
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Быки
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Племенные бычки
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Эмбрионы
+                    span.submenu__sticker Скоро
+        .main-menu__item
+            a.main-menu__link(href="javascript:void(0);") Направления деятельности
+            .main-menu__chevron
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+            .site-header__sub.submenu
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Животноводство
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Растениеводство
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Трейдинг зерна
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Семенной завод
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Школа действий
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Агротуризм
+                .submenu__item
+                    a.main-menu__link(href="javascript:void(0);") Благотворительность
+

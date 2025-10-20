@@ -129,7 +129,7 @@ html.hystmodal__opened {
 
 html,
 body {
-	height: 100%;
+	min-height: 100%;
 }
 
 *:focus {
@@ -177,10 +177,44 @@ table {
 .gkt-container {
 	box-sizing: border-box;
 	width: 80%;
+	min-width: 1536px;
 	margin: 0 auto;
+
+	@include max(large) {
+		min-width: auto;
+		width: 95%;
+	}
+
+	@include max(laptop) {
+		min-width: auto;
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	@include max(mobile) {
+		width: 100%;
+		padding: 0 10px;
+	}
 
 	&--big {
 		width: 95%;
+
+		@include max(laptop) {
+			width: 100%;
+			padding: 0 20px;
+		}
+
+		@include max(mobile) {
+			width: 100%;
+			padding: 0 15px;
+		}
+	}
+
+	&--mf {
+		@include max(mobile) {
+
+			padding: 0;
+		}
 	}
 
 }

@@ -17,7 +17,7 @@ mixin socials(props= defaultSocialsProps)
 
     - let modeClass = checkProps.mode.length > 0 ? `socials--${checkProps.mode}` : ''
 
-    .socials(class= modeClass)&attributes(attributes)
+    .socials(class= checkProps.classes + ' ' + modeClass)&attributes(attributes)
         - let counter = 0
         - let icons = checkProps.icons
         - let maxValue = icons.length

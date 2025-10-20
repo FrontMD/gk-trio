@@ -26,7 +26,7 @@
 
     &__close {
         position: absolute;
-        right: 30px;
+        right: 50px;
         top: 30px;
         display: flex;
         justify-content: center;
@@ -38,18 +38,18 @@
         color: $c-accent;
         transition: color $tr;
 
+        @include max(tablet) {
+            right: 20px;
+            top: 20px;
+        }
+
         &:hover {
-            color: $c-accent-dark;
+            opacity: 0.7;
         }
 
         svg {
             width: 24px;
             height: 24px;
-        }
-
-        @include max(mobile) {
-            right: 15px;
-            top: 15px;
         }
     }
 
@@ -59,28 +59,27 @@
         position: relative;
         background: $c-white;
         width: 100%;
-        max-width: 540px;
+        max-width: 700px;
         z-index: 9999;
-        padding: 24px;
+        padding: 30px 50px 40px;
         max-height: 95vh;
-        border-radius: 24px;
-
-        &:has(.form--sent) {
-            padding: 78px 10px 10px;
-        }
+        border-radius: 20px;
 
         @include max(tablet) {
-            width: calc(100% - 20px);
+            padding: 20px;
             margin: 0 auto;
         }
 
         @include max(mobile) {
-            padding: 10px;
-            border-radius: 16px;
+            padding: 20px 10px;
+            border-radius: 0;
+            max-height: 100vh;
+            height: 100vh;
+            height: 100dvh;
         }
     }
 
-    &__inner {
+    /*&__inner {
         max-height: 100%;
         overflow-y: auto;
         margin-right: -10px;
@@ -96,8 +95,8 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: $c-accent-middle;
+            background-color: $c-bg-grey;
             border-radius: 8px;
         }
-    }
+    }*/
 }
