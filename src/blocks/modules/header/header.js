@@ -1,23 +1,23 @@
-/*function headerHeight() {
+/*function headerScroll() {
     const header = $('[data-js="siteHeader"]');
     const initScroll = $(window).scrollTop();
 
     if(initScroll > 50) {
-        header.addClass("site-header--small");
+        header.addClass("site-header--fixed");
     }
 
     $(window).scroll(function() {
         const scroll = $(window).scrollTop();
 
         if(scroll > 110) {
-            header.addClass("site-header--small");
+            header.addClass("site-header--fixed");
         } else {
-            header.removeClass("site-header--small");
+            header.removeClass("site-header--fixed");
         }
     });
-}
+}*/
 
-function headerMenu() {
+/*function headerMenu() {
     const siteHeaderMenu = document.querySelector('[data-js="siteHeaderMenu"]')
     const headerMenuBtns = document.querySelectorAll('[data-js="headerMenuBtn"]')
 

@@ -14,7 +14,7 @@
     &__main {
         background-color: $c-bg-dark;
         padding: 50px 50px 40px;
-        border-radius: 20px;
+        border-radius: $br-20;
 
         @include max(laptop) {
             padding: 30px 24px;

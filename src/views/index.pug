@@ -137,11 +137,12 @@ block content
     .page
         section.section.pages-list
             .gkt-container
-                +title({
-                    classes: 'pages-list__title',
-                    tag: 'h1',
-                    text: 'Страницы'
-                })
+                .gkt-container__inner
+                    +title({
+                        classes: 'pages-list__title',
+                        tag: 'h1',
+                        text: 'Страницы'
+                    })
 
-                .pages-list__links
-                    a.pages-list__link.pages-list__link--work(href="home.html" target="_blank") Главная
+                    .pages-list__links
+                        a.pages-list__link.pages-list__link--work(href="home.html" target="_blank") Главная

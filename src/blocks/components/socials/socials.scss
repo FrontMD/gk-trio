@@ -6,7 +6,7 @@
     &__item {
         width: 32px;
         height: 32px;
-        border-radius: 10px;
+        border-radius: $br-10;
         color: $c-white;
         background-color: $c-accent;
         display: flex !important;

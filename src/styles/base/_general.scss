@@ -176,9 +176,21 @@ table {
 
 .gkt-container {
 	box-sizing: border-box;
-	width: 80%;
-	min-width: 1536px;
+	width: 100%;
 	margin: 0 auto;
+	padding: 0 50px 80px;
+
+	&__inner {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	&__inner--bg {
+		padding-top: 50px;
+		padding-top: 50px;
+		background-color: $c-white;
+		border-radius: $br-20;
+	}
 
 	@include max(large) {
 		min-width: auto;
@@ -196,27 +208,6 @@ table {
 		padding: 0 10px;
 	}
 
-	&--big {
-		width: 95%;
-
-		@include max(laptop) {
-			width: 100%;
-			padding: 0 20px;
-		}
-
-		@include max(mobile) {
-			width: 100%;
-			padding: 0 15px;
-		}
-	}
-
-	&--mf {
-		@include max(mobile) {
-
-			padding: 0;
-		}
-	}
-
 }
 
 iframe {
@@ -226,7 +217,7 @@ iframe {
 	height: auto;
 }
 
-.text-editor {
+/*.text-editor {
 	color: $c-accent;
 	font-size: 16px;
 	font-weight: 500;
@@ -527,9 +518,9 @@ iframe {
 		}
 	}
 
-}
+}*/
 
-.my-fancybox {
+/*.my-fancybox {
 	.fancybox__viewport {
 		.fancybox__slide {
 			padding-left: 20px;
@@ -750,4 +741,4 @@ iframe {
 			}
 		}
 	}
-}
+}*/

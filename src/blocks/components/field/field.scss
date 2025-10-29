@@ -26,7 +26,7 @@
         border: 1px solid transparent;
         transition: all $tr;
         min-height: 56px;
-        border-radius: 10px;
+        border-radius: $br-10;
 
         &::placeholder {
             color: $c-text-light;

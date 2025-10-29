@@ -5,9 +5,18 @@
     width: 100%;
     z-index: 80;
     padding: 20px 0;
+    background-color: $c-bg-main;
 
     @include max(laptop) {
         padding: 10px 0;
+    }
+
+    &--fixed {
+        background-color: $c-white;
+    }
+
+    &__container {
+        padding-bottom: 0;
     }
 
     &__content {

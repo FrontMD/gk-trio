@@ -63,7 +63,7 @@
         z-index: 9999;
         padding: 30px 50px 40px;
         max-height: 95vh;
-        border-radius: 20px;
+        border-radius: $br-20;
 
         @include max(tablet) {
             padding: 20px;
