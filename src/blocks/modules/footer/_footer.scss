@@ -1,7 +1,6 @@
 .site-footer {
     position: relative;
     color: $c-white;
-    margin-bottom: 40px;
 
     @include max(tablet) {
         margin-bottom: 20px;
@@ -9,6 +8,10 @@
 
     @include max(mobile) {
         margin-bottom: 0;
+    }
+
+    &__container {
+        padding-bottom: 40px;
     }
 
     &__main {

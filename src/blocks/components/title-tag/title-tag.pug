@@ -1,0 +1,19 @@
+-
+    const defaultTitleTagProps = {
+        classes: '',
+        text: 'Текст тега',
+        icon: 'title_tag'
+    }
+
+mixin title-tag(props= defaultTitleTagProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTitleTagProps.classes,
+            text: props.text ? props.text : defaultTitleTagProps.text,
+            icon: props.icon ? props.icon : defaultTitleTagProps.icon,
+        }
+
+    .title-tag(class= checkProps.classes)&attributes(attributes)
+        svg 
+            use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
+        != checkProps.text

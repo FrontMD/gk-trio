@@ -1,0 +1,21 @@
+.title-tag {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 7px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: $c-text;
+    padding: 7px 14px 7px 9px;
+    border: 1px solid#D8D8D8;
+    border-radius: $br-30;
+    background-color: $c-white;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        color: $c-text-grey;
+    }
+}

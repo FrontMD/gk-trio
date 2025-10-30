@@ -1,0 +1,61 @@
+-
+    const defaultVolumeSliderProps = {
+        classes: ''
+    }
+
+mixin volume-slider(props= defaultVolumeSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultVolumeSliderProps.classes
+        }
+
+    section.volume-slider(class= checkProps.classes data-js="volumeSlider")&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .volume-slider__layout
+                    .volume-slider__main
+                        .volume-slider__header
+                            .title-block.volume-slider__headblock
+                                +title-tag({
+                                    text: 'Производственые масштабы'
+                                })
+                                +title({
+                                    classes: 'category-slider__title',
+                                    size: '40',
+                                    text: '<span>Объём</span> производимой продукции'
+                                })
+                            +slider-controls({
+                                classes: 'category-slider__controls',
+                            })
+                .volume-slider__layout
+                    .volume-slider__sidebar
+                        .volume-slider__desc.text-editor
+                            | Современные мощности предприятия позволяют выпускать продукцию в&nbsp;значительных объёмах, обеспечивая стабильные поставки для&nbsp;партнёров по&nbsp;всей стране.
+                        +btn({
+                            name: 'О компании',
+                            cMode: 'accent'
+                        })
+                    .volume-slider__main
+                        .volume-slider__slider(data-js="categorySliderSlider")
+                            .swiper-wrapper
+                                +category-card({
+                                    classes: 'swiper-slide'
+                                })
+                                +category-card({
+                                    classes: 'swiper-slide',
+                                    img: 'img/categories/category_2.jpg',
+                                    title: 'быки',
+                                    count: '64 животных'
+                                })
+                                +category-card({
+                                    classes: 'swiper-slide',
+                                    img: 'img/categories/category_3.jpg',
+                                    title: 'Племенные бычки',
+                                    count: '22 животных'
+                                })
+                                +category-card({
+                                    classes: 'swiper-slide',
+                                    img: 'img/categories/category_4.jpg',
+                                    title: 'Эмбрионы',
+                                    count: '16 животных'
+                                })

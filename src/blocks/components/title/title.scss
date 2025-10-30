@@ -1,14 +1,14 @@
 .title {
-    color: $c-accent;
+    color: $c-text;
     font-family: $ff-tiktok;
 
     &--light {
         color: $c-white;
     }
 
-    /*span {
-        color: $c-accent-title;
-    }*/
+    span {
+        color: $c-text-grey;
+    }
 
     h1,
     h2,
@@ -31,25 +31,36 @@
         text-transform: uppercase;
         letter-spacing: -0.04em;
 
-        @include max(laptop) {
-            font-size: 42px;
-        }
+        @include max(laptop) {}
 
-        @include max(tablet) {
-            font-size: 30px;
-        }
+        @include max(tablet) {}
 
-        @include max(mobile) {
-            font-size: 21px;
-        }
+        @include max(mobile) {}
     }
 
-    &--40 {}
+    &--40 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 130%;
+        text-transform: uppercase;
+
+        @include max(laptop) {}
+
+        @include max(mobile) {}
+    }
 
     &--24 {
         font-weight: 500;
         font-size: 24px;
         line-height: 129%;
+    }
+
+    &--20 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+
     }
 
 }

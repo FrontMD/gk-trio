@@ -1,0 +1,50 @@
+-
+    const defaultCategorySliderProps = {
+        classes: ''
+    }
+
+mixin category-slider(props= defaultCategorySliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCategorySliderProps.classes
+        }
+
+    section.category-slider(class= checkProps.classes data-js="categorySlider")&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .category-slider__header
+                    .title-block.category-slider__headblock
+                        +title-tag({
+                            text: 'Каталог'
+                        })
+                        +title({
+                            classes: 'category-slider__title',
+                            size: '40',
+                            text: 'Наша <span>продукция</span>'
+                        })
+                    +slider-controls({
+                        classes: 'category-slider__controls'
+                    })
+                .category-slider__slider(data-js="categorySliderSlider")
+                    .swiper-wrapper
+                        +category-card({
+                            classes: 'swiper-slide'
+                        })
+                        +category-card({
+                            classes: 'swiper-slide',
+                            img: 'img/categories/category_2.jpg',
+                            title: 'быки',
+                            count: '64 животных'
+                        })
+                        +category-card({
+                            classes: 'swiper-slide',
+                            img: 'img/categories/category_3.jpg',
+                            title: 'Племенные бычки',
+                            count: '22 животных'
+                        })
+                        +category-card({
+                            classes: 'swiper-slide',
+                            img: 'img/categories/category_4.jpg',
+                            title: 'Эмбрионы',
+                            count: '16 животных'
+                        })

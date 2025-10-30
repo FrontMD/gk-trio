@@ -1,0 +1,16 @@
+.category-slider {
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__controls {
+        flex: 0 0 auto;
+    }
+
+    &__slider {
+        margin-top: 50px;
+        overflow: hidden;
+    }
+}

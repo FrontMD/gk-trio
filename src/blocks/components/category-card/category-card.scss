@@ -1,0 +1,59 @@
+.category-card {
+    position: relative;
+    background-color: $c-white;
+    border-radius: $br-10;
+    overflow: hidden;
+
+    &__link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 0 0 $br-10 $br-10;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 0.683;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        padding: 20px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__count {
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 133%;
+        color: $c-text-light;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: $c-text-grey;
+        transition: all $tr;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &:hover &__icon {
+        color: $c-text;
+    }
+}
