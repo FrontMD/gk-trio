@@ -1,0 +1,56 @@
+-
+    const defaultAnimalSliderProps = {
+        classes: ''
+    }
+
+mixin animal-slider(props= defaultAnimalSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAnimalSliderProps.classes
+        }
+
+    section.animal-slider(class= checkProps.classes data-js="animalSlider")&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .animal-slider__header
+                    .title-block.animal-slider__headblock
+                        +title-tag({
+                            text: 'Каталог животных'
+                        })
+                        +title({
+                            classes: 'animal-slider__title',
+                            size: '40',
+                            text: 'Лучшие <span>животные</span> <br>на продажу'
+                        })
+                        .animal-slider__text.text-editor Мы гордимся масштабами нашего производства: современные мощности предприятия позволяют выпускать продукцию в значительных объёмах, обеспечивая стабильные поставки для партнёров по всей стране.
+                    +slider-controls({
+                        classes: 'category-slider__controls'
+                    })
+                .animal-slider__slider(data-js="animalSliderSlider")
+                    .swiper-wrapper
+                        +product-card({
+                            classes: 'swiper-slide'
+                        })
+                        +product-card({
+                            classes: 'swiper-slide',
+                            img: 'img/products/product_2.webp',
+                            price: '100 000 ₽',
+                        })
+                        +product-card({
+                            classes: 'swiper-slide',
+                            img: 'img/products/product_3.webp',
+                            price: '100 000 ₽',
+                        })
+                        +product-card({
+                            classes: 'swiper-slide'
+                        })
+                        +product-card({
+                            classes: 'swiper-slide',
+                            img: 'img/products/product_2.webp',
+                            price: '100 000 ₽',
+                        })
+                        +product-card({
+                            classes: 'swiper-slide',
+                            img: 'img/products/product_3.webp',
+                            price: '100 000 ₽',
+                        })

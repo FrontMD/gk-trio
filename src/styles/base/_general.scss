@@ -187,7 +187,7 @@ table {
 
 	&__inner--bg {
 		padding-top: 50px;
-		padding-top: 50px;
+		padding-bottom: 50px;
 		background-color: $c-white;
 		border-radius: $br-20;
 	}
@@ -224,15 +224,11 @@ iframe {
 	align-items: flex-start;
 }
 
-/*.text-editor {
-	color: $c-accent;
+.text-editor {
+	color: $c-text-light;
+	font-weight: 400;
 	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.4em;
-
-	@include max(tablet) {
-		font-size: 14px;
-	}
+	line-height: 156.25%;
 
 	&--light {
 		color: $c-white;
@@ -246,40 +242,17 @@ iframe {
 		margin-bottom: 0 !important;
 	}
 
-	.text-items-list {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		margin-bottom: 45px;
 
-		@include max(tablet) {
-			margin-bottom: 20px;
-		}
 
-		&>*:first-child {
-			margin-top: 0;
-		}
 
-		&__note {
-			margin-top: 18px;
-			max-width: 430px;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 1.02em;
-			color: $c-accent;
-			opacity: 0.3;
 
-			@include max(mobile) {
-				font-size: 12px;
-			}
-		}
-	}
 
-	img+.text-items-list {
-		margin-top: 50px;
-	}
 
-	h2,
+
+
+
+
+	/*h2,
 	h1 {
 		margin-bottom: 30px;
 		font-size: 36px;
@@ -349,12 +322,8 @@ iframe {
 	p {
 		display: block;
 		margin-bottom: 20px;
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 1.2em;
 
 		@include max(tablet) {
-			font-size: 14px;
 			margin-bottom: 18px;
 		}
 	}
@@ -364,7 +333,7 @@ iframe {
 	ol a {
 		margin: 0 !important;
 		display: inline;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 
 	a:not(.btn):hover,
@@ -390,13 +359,6 @@ iframe {
 
 	ul>li {
 		position: relative;
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 1.4em;
-
-		@include max(tablet) {
-			font-size: 14px;
-		}
 	}
 
 	ul>li::before {
@@ -440,8 +402,6 @@ iframe {
 	ol>li {
 		position: relative;
 		padding-left: 24px;
-		font-weight: 500;
-		line-height: 1.4em;
 
 		@include max(tablet) {
 			padding-left: 20px;
@@ -523,11 +483,11 @@ iframe {
 		@include max(tablet) {
 			margin-bottom: 18px;
 		}
-	}
+	}*/
 
-}*/
+}
 
-/*.my-fancybox {
+.my-fancybox {
 	.fancybox__viewport {
 		.fancybox__slide {
 			padding-left: 20px;
@@ -597,7 +557,7 @@ iframe {
 					right: 0;
 					height: auto;
 					bottom: 0;
-					border: 2px solid $c-accent-light;
+					border: 2px solid $c-accent;
 					border-radius: 5px;
 					animation: f-fadeIn 0.2s ease-out;
 					z-index: 10;
@@ -628,7 +588,7 @@ iframe {
 		.f-thumbs__slide.is-nav-selected {
 			.f-thumbs__slide__button {
 				&:after {
-					border: 2px solid $c-accent-title;
+					border: 2px solid $c-accent;
 					border-radius: 5px;
 
 					@include max(tablet) {
@@ -748,4 +708,4 @@ iframe {
 			}
 		}
 	}
-}*/
+}

@@ -28,14 +28,54 @@ function getScrollbarWidth() {
     return scrollWidth
 }
 
-
 const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLATE_PATH ? SITE_TEMPLATE_PATH + '/' : '');
 
 document.addEventListener('DOMContentLoaded', () => {
     //headerBannerControll();
-    //fancyboxInit();
+    fancyboxInit();
     //anchorsInit();
 })
+
+// проверяет все ли слайды видны в слайдере
+function allSlidesVisible(swiper) {
+  const containerRect = swiper.el.getBoundingClientRect();
+
+  return Array.from(swiper.slides).every(slide => {
+    const slideRect = slide.getBoundingClientRect();
+    
+    return slideRect.left >= containerRect.left && slideRect.right <= containerRect.right;
+  });
+}
+
+// Инициализация фансибокса
+function fancyboxInit() {
+    Fancybox.bind("[data-fancybox]", {
+        placeFocusBack: false,
+        mainClass: 'my-fancybox',
+        idle: false,
+        Carousel: {
+            transition: "crossfade",
+            Navigation: {
+                prevTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#arrow_slider_prev"></use></svg>',
+                nextTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#arrow_slider_next"></use></svg>',
+              },
+        },
+        Thumbs: {
+            type: "classic",
+        },
+        Toolbar: {
+            enabled: true,
+            display: {
+                left: [],
+                middle: [],
+                right: [
+                  "close",
+                ],
+            },
+        }
+
+    });
+}
 
 // Показ баннера
 /*function headerBannerControll() {
@@ -60,40 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         headerBanner.classList.remove('active')
     })
-}
-
-// Инициализация фансибокса
-function fancyboxInit() {
-    Fancybox.bind("[data-fancybox]", {
-        placeFocusBack: false,
-        mainClass: 'my-fancybox',
-        idle: false,
-        Carousel: {
-            transition: "crossfade",
-            Navigation: {
-                prevTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#angle_arrow"></use></svg>',
-                nextTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#angle_arrow"></use></svg>',
-              },
-        },
-        Thumbs: {
-            type: "classic",
-        },
-        Toolbar: {
-            enabled: true,
-            display: {
-                left: [],
-                middle: [],
-                right: [
-                  "close",
-                ],
-            },
-        }
-
-    });
-}
+}*/
 
 // якорные ссылки
-function anchorsInit() {
+/*function anchorsInit() {
 
     const anchors = document.querySelectorAll('a[href^="#"]');
 

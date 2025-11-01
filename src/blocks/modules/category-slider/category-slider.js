@@ -25,7 +25,7 @@ function categorySlider() {
             },
             on: {
                 init: function() {
-                    const allVisible = areAllSlidesVisible(this);
+                    const allVisible = allSlidesVisible(this);
                     if(allVisible) {
                         sliderControls.classList.remove('active')
                     } else {
@@ -33,7 +33,7 @@ function categorySlider() {
                     }
                 },
                 resize: function() {
-                    const allVisible = areAllSlidesVisible(this);
+                    const allVisible = allSlidesVisible(this);
                     if(allVisible) {
                         sliderControls.classList.remove('active')
                     } else {
@@ -43,16 +43,4 @@ function categorySlider() {
             }
         })
     })
-
-
-}
-
-function areAllSlidesVisible(swiper) {
-  const containerRect = swiper.el.getBoundingClientRect();
-
-  return Array.from(swiper.slides).every(slide => {
-    const slideRect = slide.getBoundingClientRect();
-    
-    return slideRect.left >= containerRect.left && slideRect.right <= containerRect.right;
-  });
 }

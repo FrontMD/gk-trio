@@ -22,7 +22,7 @@ mixin volume-slider(props= defaultVolumeSliderProps)
                                 +title({
                                     classes: 'category-slider__title',
                                     size: '40',
-                                    text: '<span>Объём</span> производимой продукции'
+                                    text: '<span>Объём</span> производимой <br>продукции'
                                 })
                             +slider-controls({
                                 classes: 'category-slider__controls',
@@ -36,26 +36,138 @@ mixin volume-slider(props= defaultVolumeSliderProps)
                             cMode: 'accent'
                         })
                     .volume-slider__main
-                        .volume-slider__slider(data-js="categorySliderSlider")
+                        .volume-slider__slider(data-js="volumeSliderSlider")
                             .swiper-wrapper
-                                +category-card({
-                                    classes: 'swiper-slide'
-                                })
-                                +category-card({
-                                    classes: 'swiper-slide',
-                                    img: 'img/categories/category_2.jpg',
-                                    title: 'быки',
-                                    count: '64 животных'
-                                })
-                                +category-card({
-                                    classes: 'swiper-slide',
-                                    img: 'img/categories/category_3.jpg',
-                                    title: 'Племенные бычки',
-                                    count: '22 животных'
-                                })
-                                +category-card({
-                                    classes: 'swiper-slide',
-                                    img: 'img/categories/category_4.jpg',
-                                    title: 'Эмбрионы',
-                                    count: '16 животных'
-                                })
+                                .volume-slider__slide.volume-slide.swiper-slide
+                                    .volume-slide__item.volume-slide__item--big
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_1.webp" alt="зерновые")
+                                            .volume-slide__corner
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Зерновые',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '90 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+                                .volume-slider__slide.volume-slide.swiper-slide
+                                    .volume-slide__item
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_2.webp" alt="зерновые")
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Картофель',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '68 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                    .volume-slide__item.volume-slide__item--rev
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_3.webp" alt="зерновые")
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Молоко',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '74 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                .volume-slider__slide.volume-slide.swiper-slide
+                                    .volume-slide__item.volume-slide__item--big
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_1.webp" alt="зерновые")
+                                            .volume-slide__corner
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Зерновые',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '90 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                .volume-slider__slide.volume-slide.swiper-slide
+                                    .volume-slide__item
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_2.webp" alt="зерновые")
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Картофель',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '68 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                    .volume-slide__item.volume-slide__item--rev
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_3.webp" alt="зерновые")
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Молоко',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '74 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                .volume-slider__slide.volume-slide.swiper-slide
+                                    .volume-slide__item.volume-slide__item--big
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_1.webp" alt="зерновые")
+                                            .volume-slide__corner
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Зерновые',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '90 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                .volume-slider__slide.volume-slide.swiper-slide
+                                    .volume-slide__item
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_2.webp" alt="зерновые")
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Картофель',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '68 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })
+
+                                    .volume-slide__item.volume-slide__item--rev
+                                        .volume-slide__img
+                                            img(src="img/volume/volume_3.webp" alt="зерновые")
+                                        .volume-slide__info
+                                            +title({
+                                                text: 'Молоко',
+                                                size: '20'
+                                            })
+                                            +title({
+                                                classes: 'volume-slide__title',
+                                                text: '74 000 <span class="small">тонн</span>',
+                                                size: '40'
+                                            })

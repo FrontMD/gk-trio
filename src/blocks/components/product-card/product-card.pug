@@ -1,0 +1,41 @@
+-
+    const defaultProductCardProps = {
+        classes: '',
+        img: 'img/products/product_1.webp',
+        title: 'Бык Цыган 508',
+        desc: 'Порода ч/п Голштинская, дата рождения 31.07.2024',
+        price: 'По договорённости'
+    }
+
+mixin product-card(props= defaultProductCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProductCardProps.classes,
+            img: props.img ? props.img : defaultProductCardProps.img,
+            title: props.title ? props.title : defaultProductCardProps.title,
+            desc: props.desc ? props.desc : defaultProductCardProps.desc,
+            price: props.price ? props.price : defaultProductCardProps.price,
+        }
+
+    .product-card(class= checkProps.classes)&attributes(attributes)
+        .product-card__img
+            img(src=checkProps.img alt=checkProps.title)
+        .product-card__content
+            +title({
+                classes: 'category-card__title',
+                size: '20',
+                text: checkProps.title
+            })
+            .product-card__desc.text-editor!= checkProps.desc
+            .product-card__bottom
+                +title({
+                    classes: 'product-card__price',
+                    size: '20',
+                    text: checkProps.price
+                })
+                +btn({
+                    name: 'Купить',
+                    cMode: 'bordered',
+                    icon: 'arrow_link',
+                    sMode: 'card'
+                })

@@ -3,10 +3,14 @@
 @@include("../../blocks/modules/main-burger/main-burger.js")
 @@include("../../blocks/modules/home-intro/home-intro.js")
 @@include("../../blocks/modules/category-slider/category-slider.js")
+@@include("../../blocks/modules/volume-slider/volume-slider.js")
+@@include("../../blocks/modules/animal-slider/animal-slider.js")
 
 document.addEventListener('DOMContentLoaded', () => {
   homeIntro()
   modalsInit()
   mainBurger()
   categorySlider()
+  volumeSlider()
+  animalSlider()
 })

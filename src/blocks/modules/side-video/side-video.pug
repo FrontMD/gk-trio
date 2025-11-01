@@ -1,0 +1,59 @@
+-
+    const defaultSideVideoProps = {
+        classes: ''
+    }
+
+mixin side-video(props= defaultSideVideoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSideVideoProps.classes
+        }
+
+    section.side-video(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .side-video__layout
+                    .side-video__video
+                        .side-video__preview
+                            img(src="img/home/side_video_preview.webp" alt="ГК «Трио» сегодня")
+                        a.side-video__play(href='public/video/side_video.mp4' data-fancybox)
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#play`)
+
+                    .side-video__main
+                        .side-video__header
+                            +title-tag({
+                                text: 'О компании'
+                            })
+                            +title({
+                                classes: 'side-video__title',
+                                size: '40',
+                                text: 'ГК «<span>Трио</span>» сегодня'
+                            })
+                            .side-video__subtitle Выстраивая успешный и эффективный бизнес в сельскохозяйственной отрасли, заботимся о людях, о благополучии родного края и процветании агропромышленного комплекса России.
+
+                        .side-video__bottom
+                            +title({
+                                classes: '',
+                                size: '20',
+                                text: 'Покажем и расскажем'
+                            })
+                            .side-video__topics
+                                .side-video__topic.video-topic.video-topic--first
+                                    .video-topic__header 
+                                        .video-topic__icon
+                                            img(src="img/home/video_topic_1.webp" alt="Земляные масштабы холдинга")
+                                        .video-topic__count 01
+                                    .video-topic__desc Земляные масштабы холдинга
+                                .side-video__topic.video-topic
+                                    .video-topic__header 
+                                        .video-topic__icon
+                                            img(src="img/home/video_topic_1.webp" alt="Как и на чем собираем урожай")
+                                        .video-topic__count 02
+                                    .video-topic__desc Как и на чем собираем урожай
+                                .side-video__topic.video-topic
+                                    .video-topic__header 
+                                        .video-topic__icon
+                                            img(src="img/home/video_topic_1.webp" alt="Как ухаживаем за животными")
+                                        .video-topic__count 03
+                                    .video-topic__desc Как ухаживаем за животными

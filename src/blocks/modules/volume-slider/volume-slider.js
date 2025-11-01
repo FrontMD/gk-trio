@@ -1,58 +1,41 @@
-function categorySlider() {
-    const categorySliders = document.querySelectorAll('[data-js="categorySlider"]');
+function volumeSlider() {
+    const volumeSliders = document.querySelectorAll('[data-js="volumeSlider"]');
 
-    if(categorySliders.length < 1) return
+    if(volumeSliders.length < 1) return
 
-    categorySliders.forEach(sliderSection => {
+    volumeSliders.forEach(sliderSection => {
 
-        const sliderEl = sliderSection.querySelector('[data-js="categorySliderSlider"]')
+        const sliderEl = sliderSection.querySelector('[data-js="volumeSliderSlider"]')
         const sliderControls = sliderSection.querySelector('[data-js="sliderControls"]')
         const prev = sliderControls.querySelector('[data-js="sliderPrev"]');
         const next = sliderControls.querySelector('[data-js="sliderNext"]');
-        const slidesCounter = sliderEl.querySelectorAll('.swiper-slide').length > 4 ? 4.3 : 4;
+        const slidesPerView = 2
+        const slidesCount = sliderEl.querySelectorAll('.swiper-slide').length
     
-        const categorySliderEx = new Swiper(sliderEl, {
-            slidesPerView: 3,
+        const volumeSliderEx = new Swiper(sliderEl, {
+            slidesPerView: slidesPerView,
+            slidesPerGroup: slidesPerView,
             spaceBetween: 24,
              navigation: {
                 nextEl: next,
                 prevEl: prev,
             },
-            breakpoints: {
-                1024: {
-                    slidesPerView: slidesCounter,
-                }
-            },
             on: {
                 init: function() {
-                    const allVisible = areAllSlidesVisible(this);
-                    if(allVisible) {
-                        sliderControls.classList.remove('active')
-                    } else {
+                    if(slidesCount > slidesPerView) {
                         sliderControls.classList.add('active')
+                    } else {
+                        sliderControls.classList.remove('active')
                     }
                 },
                 resize: function() {
-                    const allVisible = areAllSlidesVisible(this);
-                    if(allVisible) {
-                        sliderControls.classList.remove('active')
-                    } else {
+                    if(slidesCount > slidesPerView) {
                         sliderControls.classList.add('active')
+                    } else {
+                        sliderControls.classList.remove('active')
                     }
                 },
             }
         })
     })
-
-
-}
-
-function areAllSlidesVisible(swiper) {
-  const containerRect = swiper.el.getBoundingClientRect();
-
-  return Array.from(swiper.slides).every(slide => {
-    const slideRect = slide.getBoundingClientRect();
-    
-    return slideRect.left >= containerRect.left && slideRect.right <= containerRect.right;
-  });
 }
