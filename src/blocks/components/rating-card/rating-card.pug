@@ -1,0 +1,34 @@
+-
+    const defaultRatingCardProps = {
+        classes: '',
+        img: 'img/ratings/rating_1.webp',
+        title: 'Рейтинг топ-30 самых эффективных хозяйств',
+        rating: '9 место',
+        link: 'https://top.milknews.ru/efficiency'
+    }
+
+mixin rating-card(props= defaultRatingCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultRatingCardProps.classes,
+            img: props.img ? props.img : defaultRatingCardProps.img,
+            title: props.title ? props.title : defaultRatingCardProps.title,
+            rating: props.rating ? props.rating : defaultRatingCardProps.rating,
+            link: props.link ? props.link : defaultRatingCardProps.link,
+        }
+
+    .rating-card(class= checkProps.classes)&attributes(attributes)
+        .rating-card__top
+            .rating-card__img
+                img(src=checkProps.img alt=checkProps.title)
+            .rating-card__rating!= checkProps.rating
+        .rating-card__content
+            +title({
+                classes: 'rating-card__title',
+                size: '20',
+                text: checkProps.title
+            })
+            a.rating-card__link(href=checkProps.link)
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#link`)
+                != checkProps.link

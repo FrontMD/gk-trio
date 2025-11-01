@@ -1,0 +1,19 @@
+.news {
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    &__all {
+        flex: 0 0 auto;
+    }
+
+    &__list {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}

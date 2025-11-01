@@ -22,7 +22,6 @@ mixin product-card(props= defaultProductCardProps)
             img(src=checkProps.img alt=checkProps.title)
         .product-card__content
             +title({
-                classes: 'category-card__title',
                 size: '20',
                 text: checkProps.title
             })

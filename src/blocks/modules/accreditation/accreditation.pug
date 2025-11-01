@@ -1,0 +1,52 @@
+-
+    const defaultAccreditationProps = {
+        classes: ''
+    }
+
+mixin accreditation(props= defaultAccreditationProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAccreditationProps.classes
+        }
+
+    section.accreditation(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .accreditation__layout
+                    .title-block.accreditation__header
+                        +title-tag({
+                            text: 'О компании'
+                        })
+                        +title({
+                            classes: 'accreditation__title',
+                            size: '40',
+                            text: '<span>Аккредитация</span> <br>от ключевых партнёров'
+                        })
+                        .accreditation__subtitle.text-editor Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья
+
+                    .accreditation__main
+                        .accreditation__list
+                            .accreditation__item
+                                img(src="img/partners/partner_1.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_2.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_3.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_4.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_5.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_6.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_7.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_8.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_9.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_10.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_11.webp" alt="")
+                            .accreditation__item
+                                img(src="img/partners/partner_12.webp" alt="")

@@ -1,0 +1,38 @@
+.accreditation {
+    &__layout {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    &__header {
+        flex: 0 0 496px;
+    }
+
+    &__main {
+        flex: 1 1 auto;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    &__item {
+        border-radius: $br-10;
+        background-color: $c-white;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-height: 96px;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+}

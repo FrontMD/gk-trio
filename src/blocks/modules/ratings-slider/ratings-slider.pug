@@ -1,0 +1,45 @@
+-
+    const defaultRetingSliderProps = {
+        classes: ''
+    }
+
+mixin ratings-slider(props= defaultRetingSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultRetingSliderProps.classes
+        }
+
+    section.ratings-slider(class= checkProps.classes data-js="animalSlider")&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .ratings-slider__header
+                    .title-block.ratings-slider__headblock
+                        +title-tag({
+                            text: 'Рейтинговые достижения'
+                        })
+                        +title({
+                            classes: 'ratings-slider__title',
+                            size: '40',
+                            text: 'Участвуем в <span>рейтингах</span>'
+                        })
+                    +slider-controls({
+                        classes: 'ratings-slider__controls'
+                    })
+                .ratings-slider__slider(data-js="animalSliderSlider")
+                    .swiper-wrapper
+                        +rating-card({
+                            classes: 'swiper-slide'
+                        })
+                        +rating-card({
+                            classes: 'swiper-slide',
+                            img: 'img/ratings/rating_2.webp',
+                            title: 'Рейтинг топ-100 Производителей молока',
+                            rating: '61 место'
+                        })
+                        +rating-card({
+                            classes: 'swiper-slide',
+                            img: 'img/ratings/rating_3.webp',
+                            title: 'Рейтинг крупнейших компаний Черноземья',
+                            rating: '31 место'
+                        })
+

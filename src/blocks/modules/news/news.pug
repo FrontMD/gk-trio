@@ -1,0 +1,33 @@
+-
+    const defaultNewsProps = {
+        classes: ''
+    }
+
+mixin news(props= defaultNewsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsProps.classes
+        }
+
+    section.news(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .news__header
+                    .title-block
+                        +title-tag({
+                            text: 'Пресс-центр'
+                        })
+                        +title({
+                            classes: 'news__title',
+                            size: '40',
+                            text: 'Будьте в курсе <br>последних <span>новостей</span>'
+                        })
+
+                    +btn({
+                        classes: 'news__all',
+                        name: 'Больше новостей',
+                        cMode: 'accent'
+                    })
+
+                .news__list
+                    +news-link
