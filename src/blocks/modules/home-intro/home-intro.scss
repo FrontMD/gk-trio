@@ -11,6 +11,14 @@
         border-radius: $br-20;
         overflow: hidden;
         min-height: calc(100vh - 100px);
+
+        @include max(laptop) {
+            min-height: 50vw;
+        }
+
+        @include max(tablet) {
+            min-height: 700px;
+        }
     }
 
     &__slider {
@@ -25,14 +33,7 @@
 
         @include max(mobile) {}
 
-        @include max(xs) {
-            min-width: auto;
-            aspect-ratio: auto;
-            width: calc((100vh - 440px) * 1.778);
-            height: calc(100vh - 440px);
-            top: 120px;
-            transform: translate(-50%, 0)
-        }
+        @include max(xs) {}
 
         .swiper-wrapper {
             align-items: stretch;
@@ -98,16 +99,17 @@
         }
 
         @include max(tablet) {
+            position: relative;
             bottom: auto;
-            top: calc((100dvh - 100%) / -2 + 82px + 13%);
+            top: 0;
+            left: 0;
             display: flex;
             flex-direction: column-reverse;
-            width: calc(100vw - 30px);
+            width: 100%;
+            padding: 15px;
         }
 
-        @include max(mobile) {
-            left: calc((100% - 100vw) / 2 + 15px);
-        }
+        @include max(mobile) {}
 
         @include max(xs) {
             top: -100px;
@@ -128,8 +130,8 @@
             flex-direction: column;
             align-items: stretch;
             justify-content: flex-end;
-            height: 100%;
             width: 100%;
+            padding: 15px;
         }
     }
 
@@ -191,6 +193,10 @@
 
     &__slider {
         margin-top: 30px;
+
+        @include max(tablet) {
+            margin-top: 20px;
+        }
     }
 
     &__tab {
@@ -233,7 +239,7 @@
         padding: 0 10px;
 
         @include max(tablet) {
-            gap: 12px;
+            gap: 0;
         }
 
         &.swiper-slide-active {

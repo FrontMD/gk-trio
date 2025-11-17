@@ -13,6 +13,10 @@
         margin-top: 50px;
         overflow: hidden;
 
+        @include max(laptop) {
+            margin-top: 30px;
+        }
+
         .swiper-wrapper {
             align-items: stretch;
         }

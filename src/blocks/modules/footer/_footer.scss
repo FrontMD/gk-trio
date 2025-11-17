@@ -2,16 +2,20 @@
     position: relative;
     color: $c-white;
 
-    @include max(tablet) {
-        margin-bottom: 20px;
-    }
-
-    @include max(mobile) {
-        margin-bottom: 0;
-    }
-
     &__container {
         padding-bottom: 40px;
+
+        @include max(large) {
+            padding-bottom: 30px;
+        }
+
+        @include max(laptop) {
+            padding-bottom: 20px;
+        }
+
+        @include max(tablet) {
+            padding-bottom: 0;
+        }
     }
 
     &__main {
@@ -21,11 +25,11 @@
 
         @include max(laptop) {
             padding: 30px 24px;
+            border-radius: 10px 10px 0 0;
         }
 
         @include max(mobile) {
             padding: 20px 10px;
-            border-radius: 10px 10px 0 0;
         }
     }
 

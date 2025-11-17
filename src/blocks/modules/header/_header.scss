@@ -17,6 +17,22 @@
 
     &__container {
         padding-bottom: 0;
+
+        @include max(large) {
+            padding-bottom: 0;
+        }
+
+        @include max(laptop) {
+            padding-bottom: 0;
+        }
+
+        @include max(tablet) {
+            padding-bottom: 0;
+        }
+
+        @include max(mobile) {
+            padding-bottom: 0;
+        }
     }
 
     &__content {

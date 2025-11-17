@@ -14,19 +14,16 @@ mixin volume-slider(props= defaultVolumeSliderProps)
             .gkt-container__inner.gkt-container__inner--bg
                 .volume-slider__layout
                     .volume-slider__main
-                        .volume-slider__header
-                            .title-block.volume-slider__headblock
-                                +title-tag({
-                                    text: 'Производственые масштабы'
-                                })
-                                +title({
-                                    classes: 'category-slider__title',
-                                    size: '40',
-                                    text: '<span>Объём</span> производимой <br>продукции'
-                                })
-                            +slider-controls({
-                                classes: 'category-slider__controls',
+                        .title-block.volume-slider__headblock
+                            +title-tag({
+                                text: 'Производственые масштабы'
                             })
+                            +title({
+                                classes: 'category-slider__title',
+                                size: '40',
+                                text: '<span>Объём</span> производимой <br>продукции'
+                            })
+
                 .volume-slider__layout
                     .volume-slider__sidebar
                         .volume-slider__desc.text-editor
@@ -35,6 +32,9 @@ mixin volume-slider(props= defaultVolumeSliderProps)
                             name: 'О компании',
                             cMode: 'accent'
                         })
+                    +slider-controls({
+                        classes: 'volume-slider__controls',
+                    })
                     .volume-slider__main
                         .volume-slider__slider(data-js="volumeSliderSlider")
                             .swiper-wrapper

@@ -180,9 +180,36 @@ table {
 	margin: 0 auto;
 	padding: 0 50px 80px;
 
+	@include max(large) {
+		padding: 0 30px 60px;
+	}
+
+	@include max(laptop) {
+		padding: 0 20px 50px;
+	}
+
+	@include max(tablet) {
+		padding: 0 0 40px;
+	}
+
 	&__inner {
 		padding-left: 50px;
 		padding-right: 50px;
+
+		@include max(large) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		@include max(laptop) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@include max(tablet) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 
 	&__inner--bg {
@@ -190,22 +217,21 @@ table {
 		padding-bottom: 50px;
 		background-color: $c-white;
 		border-radius: $br-20;
-	}
 
-	@include max(large) {
-		min-width: auto;
-		width: 95%;
-	}
+		@include max(large) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
 
-	@include max(laptop) {
-		min-width: auto;
-		width: 100%;
-		padding: 0 20px;
-	}
+		@include max(laptop) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
 
-	@include max(mobile) {
-		width: 100%;
-		padding: 0 10px;
+		@include max(tablet) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
 	}
 
 }

@@ -35,11 +35,17 @@
         text-transform: uppercase;
         letter-spacing: -0.04em;
 
-        @include max(laptop) {}
+        @include max(large) {
+            font-size: 52px;
+        }
 
-        @include max(tablet) {}
+        @include max(laptop) {
+            font-size: 42px;
+        }
 
-        @include max(mobile) {}
+        @include max(tablet) {
+            font-size: 34px;
+        }
     }
 
     &--40 {
@@ -48,15 +54,38 @@
         line-height: 130%;
         text-transform: uppercase;
 
-        @include max(laptop) {}
+        @include max(laptop) {
+            font-size: 32px;
+        }
 
-        @include max(mobile) {}
+        @include max(tablet) {
+            font-size: 26px;
+        }
+    }
+
+    &--30 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 130%;
+        text-transform: uppercase;
+
+        @include max(laptop) {
+            font-size: 24px;
+        }
+
+        @include max(tablet) {
+            font-size: 20px;
+        }
     }
 
     &--24 {
         font-weight: 500;
         font-size: 24px;
         line-height: 129%;
+
+        @include max(laptop) {
+            font-size: 20px;
+        }
     }
 
     &--20 {
@@ -64,6 +93,10 @@
         font-size: 20px;
         line-height: 130%;
         text-transform: uppercase;
+
+        @include max(laptop) {
+            font-size: 18px;
+        }
 
     }
 

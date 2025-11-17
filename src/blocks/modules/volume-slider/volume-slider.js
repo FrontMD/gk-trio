@@ -15,10 +15,15 @@ function volumeSlider() {
         const volumeSliderEx = new Swiper(sliderEl, {
             slidesPerView: slidesPerView,
             slidesPerGroup: slidesPerView,
-            spaceBetween: 24,
+            spaceBetween: 12,
              navigation: {
                 nextEl: next,
                 prevEl: prev,
+            },
+            breakpoints: {
+                1341: {
+                    spaceBetween: 24
+                }
             },
             on: {
                 init: function() {

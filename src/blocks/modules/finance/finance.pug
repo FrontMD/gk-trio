@@ -1,0 +1,89 @@
+-
+    const defaultFinanceProps = {
+        classes: ''
+    }
+
+mixin finance(props= defaultFinanceProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFinanceProps.classes
+        }
+
+    section.finance(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .finance__container
+                    .finance-report
+                        .finance-report__bg
+                            img(src="img/home/finance_report.webp" alt="")
+                        .finance-report__content
+                            .finance__icon
+                                img(src="img/home/finance_report.svg" alt="")
+                            .finance__subtitle
+                                +title({
+                                    classes: 'finance-report__title',
+                                    size: '30',
+                                    text: 'Финансовый отчет'
+                                })
+                                .finance-report__subtitle за 2024 год
+                            a(href="javascript:void(0);").finance-report__download
+                                img(src="img/pdf.svg" alt="")
+                                span Скачать отчет в PDF (3.2Мб)
+
+                    .finance__grid
+                        .finance-revenue
+                            .finance-revenue__header
+                                .finance-revenue__left
+                                    +title({
+                                        size: '20',
+                                        text: 'Выручка'
+                                    })
+                                    .finance__subtitle.finance__subtitle--row
+                                        +title({
+                                            size: '60',
+                                            text: '258,9'
+                                        })
+                                        .finance__unit
+                                            | млрд.
+                                            <br>
+                                            | рублей
+                                .finance__icon +13%
+                            .finance-revenue__img
+                                img(src="img/home/finance_revenue.webp" alt="")
+
+                        .finance-profit
+                            .finance-profit__header
+                                +title({
+                                    size: '20',
+                                    text: 'Чистая прибыль'
+                                })
+                                .finance__icon.finance__icon--dark
+                                    img(src="img/home/finance_profit.svg" alt="")
+
+                            .finance__subtitle.finance__subtitle--row
+                                +title({
+                                    size: '60',
+                                    text: '25,3'
+                                })
+                                .finance__unit
+                                    | млрд.
+                                    <br>
+                                    | рублей
+
+
+                        .finance-ebitda
+                            .finance-ebitda__title.finance__subtitle.finance__subtitle--row
+                                +title({
+                                    size: '60',
+                                    text: '48,9'
+                                })
+                                .finance__unit
+                                    | млрд.
+                                    <br>
+                                    | рублей
+                            +title({
+                                size: '20',
+                                text: 'EBITDA'
+                                })
+                            .finance__icon
+                                img(src="img/home/finance_ebitda.svg" alt="")

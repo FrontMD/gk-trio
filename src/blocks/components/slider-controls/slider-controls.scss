@@ -8,6 +8,10 @@
         height: 1px;
         background-color: #B2B2B2;
         flex: 0 0 auto;
+
+        @include max(laptop) {
+            width: 40px;
+        }
     }
 
     &.active {
@@ -35,5 +39,10 @@
     svg {
         width: 48px;
         height: 48px;
+
+        @include max(laptop) {
+            width: 32px;
+            height: 32px;
+        }
     }
 }

@@ -6,6 +6,11 @@
     gap: 20px;
     padding-top: 30px;
 
+    @include max(tablet) {
+        gap: 10px;
+        padding-top: 24px;
+    }
+
     &__top {
         position: relative;
     }
@@ -37,6 +42,11 @@
         line-height: 100%;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(tablet) {
+            padding: 12px 20px;
+            font-size: 24px;
+        }
     }
 
     &__content {
@@ -50,11 +60,19 @@
         padding: 10px;
         background-color: $c-bg-main;
         border-radius: 10px;
+
+        @include max(tablet) {
+            min-height: 100px;
+        }
     }
 
     &__title {
         text-transform: none;
         text-align: center;
+
+        @include max(tablet) {
+            font-size: 16px;
+        }
     }
 
     &__link {

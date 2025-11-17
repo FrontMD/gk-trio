@@ -1,0 +1,238 @@
+.finance {
+    &__container {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+
+        @include max(laptop) {
+            gap: 12px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__grid {
+        flex: 0 1 50%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        color: $c-text;
+
+        @include max(large) {
+            flex: 0 1 60%;
+        }
+
+        @include max(laptop) {
+            gap: 12px;
+            flex: 0 1 62%;
+        }
+    }
+
+    &__subtitle {
+        &--row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__unit {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: $c-text-light;
+
+        @include max(large) {
+            font-size: 18px;
+        }
+
+        @include max(laptop) {
+            font-size: 14px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: $c-bg-grey;
+        font-family: $ff-open;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 143.75%;
+
+        img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        &--dark {
+            background-color: $c-black;
+        }
+    }
+}
+
+.finance-report {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex: 0 1 50%;
+    border-radius: $br-20;
+    overflow: hidden;
+
+    @include max(large) {
+        flex: 0 1 40%;
+    }
+
+    @include max(laptop) {
+        flex: 0 1 38%;
+        padding: 15px;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        background-color: $c-white;
+        padding: 20px 30px 20px 20px;
+        border-radius: $br-10;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.25%;
+        color: $c-text-light;
+    }
+
+    &__download {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: fit-content;
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.25%;
+        color: $c-link;
+
+        img {
+            width: 30px;
+            height: 30px;
+            object-position: center;
+        }
+
+        span {
+            transition: all $tr;
+            opacity: 1;
+        }
+
+        &:hover span {
+            opacity: 0.7;
+        }
+    }
+}
+
+.finance-revenue {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+    padding: 25px 25px 15px;
+    grid-row: 1 / 3;
+    background-color: $c-white;
+    border-radius: $br-20;
+    overflow: hidden;
+
+    @include max(laptop) {
+        padding: 15px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 100%;
+
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.finance-profit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 25px;
+    grid-row: 1 / 3;
+    background-color: $c-bg-grey;
+    border-radius: $br-20;
+    overflow: hidden;
+
+    @include max(laptop) {
+        padding: 15px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .finance__unit {
+        color: $c-text;
+    }
+}
+
+.finance-ebitda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    background-color: $c-white;
+    border-radius: $br-20;
+    overflow: hidden;
+
+    @include max(laptop) {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    &__title {
+        margin-right: auto;
+    }
+}

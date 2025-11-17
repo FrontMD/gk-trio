@@ -3,7 +3,6 @@
         classes: '',
         img: '',
         title: '',
-        desc: '',
         date: '',
     }
 
@@ -13,31 +12,32 @@ mixin news-link(props= defaultNewsLinkProps)
             classes: props.classes ? props.classes : defaultNewsLinkProps.classes,
             img: props.img ? props.img : defaultNewsLinkProps.img,
             title: props.title ? props.title : defaultNewsLinkProps.title,
-            desc: props.desc ? props.desc : defaultNewsLinkProps.desc,
             date: props.date ? props.date : defaultNewsLinkProps.date,
         }
 
-    .news-link(class= checkProps.classes)&attributes(attributes)
+        let imgClass = checkProps.img.length > 0 ? " news-link--bg" : ''
+        let titleColorMode = checkProps.img.length > 0 ? 'light' : 'dark'
+
+    .news-link(class= checkProps.classes + imgClass)&attributes(attributes)
         a.news-link__link(href="javascript:void(0);")
+        -if(checkProps.img.length > 0)
+            .news-link__bg
+                img(src=checkProps.img alt="")
         .news-link__header
-            -if(checkProps.date.lenght > 0)
+            -if(checkProps.date.length > 0)
                 .news-link__date!= checkProps.date
-            -else if(checkProps.title.lenght > 0)
-                +title({
-                    classes: 'news-link__title',
-                    size: '20',
-                    text: checkProps.title
-                })
-            .news-link__arrow
-                use(xlink:href=`img/sprites/sprite.svg#arrow_link_top`)
+            -if(checkProps.img.length < 1)
+                .news-link__arrow
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_link_top`)
 
         .news-link__bottom
-            -if(checkProps.date.lenght > 0 && checkProps.title.lenght > 0)
+            -if(checkProps.title.length > 0)
                 +title({
                     classes: 'news-link__title',
                     size: '20',
-                    text: checkProps.title
+                    text: checkProps.title,
+                    cMode: titleColorMode
                 })
-            -else if(checkProps.desc.lenght > 0)
-                .news-link__desc.text-editor!= checkProps.desc
+
 

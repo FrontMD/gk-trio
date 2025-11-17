@@ -13,9 +13,18 @@
     border-radius: $br-30;
     background-color: $c-white;
 
+    @include max(tablet) {
+        font-size: 13px;
+    }
+
     svg {
         width: 20px;
         height: 20px;
         color: $c-text-grey;
+
+        @include max(tablet) {
+            width: 16px;
+            height: 16px;
+        }
     }
 }

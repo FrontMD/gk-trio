@@ -12,9 +12,17 @@
     &__slider {
         margin-top: 50px;
         overflow: hidden;
+
+        @include max(laptop) {
+            margin-top: 30px;
+        }
     }
 
     &__text {
         max-width: 890px;
+
+        @include max(laptop) {
+            max-width: 550px;
+        }
     }
 }

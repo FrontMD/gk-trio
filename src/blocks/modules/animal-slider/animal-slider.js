@@ -12,14 +12,19 @@ function animalSlider() {
     
         const animalSliderEx = new Swiper(sliderEl, {
             slidesPerView: 1,
-            spaceBetween: 24,
+            spaceBetween: 12,
              navigation: {
                 nextEl: next,
                 prevEl: prev,
             },
             breakpoints: {
-                1024: {
+                768: {
+                    slidesPerView: 2,
+                },
+
+                1341: {
                     slidesPerView: 3,
+                    spaceBetween: 24
                 }
             },
             on: {

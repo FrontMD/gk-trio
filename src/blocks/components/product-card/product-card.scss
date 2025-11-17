@@ -8,6 +8,11 @@
     padding: 20px;
     overflow: hidden;
 
+    @include max(tablet) {
+        padding: 12px;
+        border-radius: $br-10;
+    }
+
     &__img {
         width: 100%;
         border-radius: $br-10;
@@ -41,8 +46,18 @@
         gap: 20px;
         margin-top: auto;
 
+        @include max(large) {
+            gap: 10px;
+        }
+
         * {
             flex: 0 0 auto;
+        }
+    }
+
+    &__price {
+        @include max(tablet) {
+            font-size: 16px;
         }
     }
 }
