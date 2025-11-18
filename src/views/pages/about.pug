@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block variables
+    - const title = "О компании"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +i-intro({
+                title: 'Холдинг с&nbsp;многолетней историей',
+                img: 'img/intro/about_intro.webp'
+            })
+            +volume-slider
+            +accreditation
+            +finance
+
+

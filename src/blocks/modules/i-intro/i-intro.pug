@@ -1,0 +1,47 @@
+-
+    const defaultIIntroProps = {
+        classes: '',
+        breadcrumbs: false,
+        img: '',
+        title: '',
+        subtitle: '',
+        desc: '',
+    }
+
+mixin i-intro(props = defaultIIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultIIntroProps.classes,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultIIntroProps.breadcrumbs,
+            img: props.img ? props.img : defaultIIntroProps.img,
+            title: props.title ? props.title : defaultIIntroProps.title,
+            subtitle: props.subtitle ? props.subtitle : defaultIIntroProps.subtitle,
+            desc: props.desc ? props.desc : defaultIIntroProps.desc,
+        }
+
+    section.i-intro(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .i-intro__container
+                    .i-intro__img
+                        - if(checkProps.img.length > 0)
+                            .i-intro__overlay
+                            img(src=checkProps.img alt="")
+
+                    .i-intro__top
+                        - if(checkProps.breadcrumbs !== false)
+                            +breadcrumbs(checkProps.breadcrumbs)
+                        +title({
+                            classes: 'i-intro__title',
+                            tag: 'h1',
+                            text: checkProps.title,
+                            cMode: 'light',
+                        })
+                        - if(checkProps.subtitle.length > 0)
+                            .i-intro__subtitle!= checkProps.subtitle
+
+                    .i-intro__bottom
+                        - if(checkProps.desc.length > 0)
+                            .i-intro__desc.text-editor!= checkProps.desc
+                        .i-intro__right
+                            block

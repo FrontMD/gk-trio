@@ -25,6 +25,9 @@
 
         @include max(laptop) {
             padding: 30px 24px;
+        }
+
+        @include max(tablet) {
             border-radius: 10px 10px 0 0;
         }
 

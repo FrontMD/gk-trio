@@ -15,8 +15,6 @@ function homeIntro() {
     const slidesCounter = homeIntroTabs.querySelectorAll('.swiper-slide').length;
     const homeIntroInfoSlider = homeIntro.querySelector('[data-js="homeIntroInfoSlider"]');
 
-    console.log(slidesCounter)
-
     const homeIntroTabsEx = new Swiper(homeIntroTabs, {
         slidesPerView: slidesCounter,
         spaceBetween: 10,

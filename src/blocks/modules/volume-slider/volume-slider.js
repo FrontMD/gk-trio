@@ -13,16 +13,22 @@ function volumeSlider() {
         const slidesCount = sliderEl.querySelectorAll('.swiper-slide').length
     
         const volumeSliderEx = new Swiper(sliderEl, {
-            slidesPerView: slidesPerView,
-            slidesPerGroup: slidesPerView,
+            slidesPerView: 1.5,
+            slidesPerGroup: 1,
             spaceBetween: 12,
              navigation: {
                 nextEl: next,
                 prevEl: prev,
             },
             breakpoints: {
+                768: {
+                    slidesPerView: slidesPerView,
+                    slidesPerGroup: slidesPerView,
+                },
                 1341: {
-                    spaceBetween: 24
+                    spaceBetween: 24,
+                    slidesPerView: slidesPerView,
+                    slidesPerGroup: slidesPerView,
                 }
             },
             on: {

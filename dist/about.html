@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>О компании</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -104,147 +104,253 @@
       </div>
     </header>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding: 140px 0 60px;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__subtitle {
-            margin-top: 60px;
-            font-size: 32px !important;
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: var(--c-accent);
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
-        }
-        
-        .pages-list__link:hover {
-            opacity: 0.7;
-        }
-        
-        @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-            .pages-list {
-                padding: 140px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
-      <div class="page">
-        <section class="section pages-list">
-          <div class="gkt-container">
-            <div class="gkt-container__inner">
-                  <div class="title pages-list__title title--60 title--dark">
-                    <h1>Страницы</h1>
+      <div class="page" data-js="page">
+        <div class="page-layout">
+              <section class="i-intro">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="i-intro__container">
+                      <div class="i-intro__img">
+                        <div class="i-intro__overlay"></div><img src="img/intro/about_intro.webp" alt="">
+                      </div>
+                      <div class="i-intro__top">
+                            <div class="title i-intro__title title--40 title--light">
+                              <h1>Холдинг с&nbsp;многолетней историей</h1>
+                            </div>
+                      </div>
+                      <div class="i-intro__bottom">
+                        <div class="i-intro__right">
+                        </div>
+                      </div>
+                    </div>
                   </div>
-              <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="home.html" target="_blank">Главная</a><a class="pages-list__link pages-list__link--work" href="about.html" target="_blank">О компании</a></div>
-            </div>
-          </div>
-        </section>
+                </div>
+              </section>
+              <section class="volume-slider" data-js="volumeSlider">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner gkt-container__inner--bg">
+                    <div class="volume-slider__layout">
+                      <div class="volume-slider__main">
+                        <div class="title-block volume-slider__headblock">
+                              <div class="title-tag">
+                                <svg> 
+                                  <use xlink:href="img/sprites/sprite.svg#title_tag"></use>
+                                </svg>Производственые масштабы
+                              </div>
+                              <div class="title category-slider__title title--40 title--dark"><span>Объём</span> производимой <br>продукции
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="volume-slider__layout">
+                      <div class="volume-slider__sidebar">
+                        <div class="volume-slider__desc text-editor">Современные мощности предприятия позволяют выпускать продукцию в&nbsp;значительных объёмах, обеспечивая стабильные поставки для&nbsp;партнёров по&nbsp;всей стране.</div><a class="btn  btn--accent" href="javascript:void(0);"><span>О компании</span></a>
+                      </div>
+                          <div class="slider-controls volume-slider__controls" data-js="sliderControls">
+                            <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_slider_prev"></use>
+                              </svg>
+                            </button>
+                            <div class="slider-controls__separator"></div>
+                            <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_slider_next"></use>
+                              </svg>
+                            </button>
+                          </div>
+                      <div class="volume-slider__main">
+                        <div class="volume-slider__slider" data-js="volumeSliderSlider">
+                          <div class="swiper-wrapper">
+                            <div class="volume-slider__slide volume-slide swiper-slide">
+                              <div class="volume-slide__item volume-slide__item--big">
+                                <div class="volume-slide__img"><img src="img/volume/volume_1.webp" alt="зерновые">
+                                  <div class="volume-slide__corner"></div>
+                                </div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Зерновые
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">90 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="volume-slider__slide volume-slide swiper-slide">
+                              <div class="volume-slide__item">
+                                <div class="volume-slide__img"><img src="img/volume/volume_2.webp" alt="зерновые"></div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Картофель
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">68 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="volume-slide__item volume-slide__item--rev">
+                                <div class="volume-slide__img"><img src="img/volume/volume_3.webp" alt="зерновые"></div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Молоко
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">74 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="volume-slider__slide volume-slide swiper-slide">
+                              <div class="volume-slide__item volume-slide__item--big">
+                                <div class="volume-slide__img"><img src="img/volume/volume_1.webp" alt="зерновые">
+                                  <div class="volume-slide__corner"></div>
+                                </div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Зерновые
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">90 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="volume-slider__slide volume-slide swiper-slide">
+                              <div class="volume-slide__item">
+                                <div class="volume-slide__img"><img src="img/volume/volume_2.webp" alt="зерновые"></div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Картофель
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">68 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="volume-slide__item volume-slide__item--rev">
+                                <div class="volume-slide__img"><img src="img/volume/volume_3.webp" alt="зерновые"></div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Молоко
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">74 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="volume-slider__slide volume-slide swiper-slide">
+                              <div class="volume-slide__item volume-slide__item--big">
+                                <div class="volume-slide__img"><img src="img/volume/volume_1.webp" alt="зерновые">
+                                  <div class="volume-slide__corner"></div>
+                                </div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Зерновые
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">90 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="volume-slider__slide volume-slide swiper-slide">
+                              <div class="volume-slide__item">
+                                <div class="volume-slide__img"><img src="img/volume/volume_2.webp" alt="зерновые"></div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Картофель
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">68 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="volume-slide__item volume-slide__item--rev">
+                                <div class="volume-slide__img"><img src="img/volume/volume_3.webp" alt="зерновые"></div>
+                                <div class="volume-slide__info">
+                                      <div class="title  title--20 title--dark">Молоко
+                                      </div>
+                                      <div class="title volume-slide__title title--40 title--dark">74 000 <span class="small">тонн</span>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="accreditation">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="accreditation__layout">
+                      <div class="title-block accreditation__header">
+                            <div class="title-tag">
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#title_tag"></use>
+                              </svg>О компании
+                            </div>
+                            <div class="title accreditation__title title--40 title--dark"><span>Аккредитация</span> <br>от ключевых партнёров
+                            </div>
+                        <div class="accreditation__subtitle text-editor">Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья</div>
+                      </div>
+                      <div class="accreditation__main">
+                        <div class="accreditation__list"><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_1.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_2.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_3.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_4.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_5.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_6.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_7.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_8.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_9.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_10.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_11.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_12.webp" alt=""></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="finance">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="finance__container">
+                      <div class="finance-report">
+                        <div class="finance-report__bg"><img src="img/home/finance_report.webp" alt=""></div>
+                        <div class="finance-report__content">
+                          <div class="finance__icon"><img src="img/home/finance_report.svg" alt=""></div>
+                          <div class="finance__subtitle">
+                                <div class="title finance-report__title title--30 title--dark">Финансовый отчет
+                                </div>
+                            <div class="finance-report__subtitle">за 2024 год</div>
+                          </div><a class="finance-report__download" href="javascript:void(0);"><img src="img/pdf.svg" alt=""><span>Скачать отчет в PDF (3.2Мб)</span></a>
+                        </div>
+                      </div>
+                      <div class="finance__grid">
+                        <div class="finance-revenue">
+                          <div class="finance-revenue__header">
+                            <div class="finance-revenue__left">
+                                  <div class="title  title--20 title--dark">Выручка
+                                  </div>
+                              <div class="finance__subtitle finance__subtitle--row">
+                                    <div class="title  title--60 title--dark">258,9
+                                    </div>
+                                <div class="finance__unit">
+                                  млрд.<br>рублей</div>
+                              </div>
+                            </div>
+                            <div class="finance__icon">+13%</div>
+                          </div>
+                          <div class="finance-revenue__img"><img src="img/home/finance_revenue.webp" alt=""></div>
+                        </div>
+                        <div class="finance-profit">
+                          <div class="finance-profit__header">
+                                <div class="title  title--20 title--dark">Чистая прибыль
+                                </div>
+                            <div class="finance__icon finance__icon--dark"><img src="img/home/finance_profit.svg" alt=""></div>
+                          </div>
+                          <div class="finance__subtitle finance__subtitle--row">
+                                <div class="title  title--60 title--dark">25,3
+                                </div>
+                            <div class="finance__unit">
+                              млрд.<br>рублей</div>
+                          </div>
+                        </div>
+                        <div class="finance-ebitda">
+                          <div class="finance-ebitda__title finance__subtitle finance__subtitle--row">
+                                <div class="title  title--60 title--dark">48,9
+                                </div>
+                            <div class="finance__unit">
+                              млрд.<br>рублей</div>
+                          </div>
+                              <div class="title  title--20 title--dark">EBITDA
+                              </div>
+                          <div class="finance__icon"><img src="img/home/finance_ebitda.svg" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
       </div>
     </main>
         <footer class="site-footer">

@@ -11,6 +11,10 @@
         padding-top: 24px;
     }
 
+    @include max(xs) {
+        padding-top: 16px;
+    }
+
     &__top {
         position: relative;
     }
@@ -46,6 +50,11 @@
         @include max(tablet) {
             padding: 12px 20px;
             font-size: 24px;
+        }
+
+        @include max(xs) {
+            padding: 8px 16px;
+            font-size: 14px;
         }
     }
 
@@ -84,6 +93,11 @@
         line-height: 137.5%;
         color: $c-link;
         transition: all $tr;
+        word-break: break-all;
+
+        @include max(xs) {
+            font-size: 14px;
+        }
 
         &:hover {
             text-decoration: underline;
@@ -94,6 +108,12 @@
             width: 24px;
             height: 24px;
             transition: all $tr;
+            flex-shrink: 0;
+
+            @include max(xs) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &:hover svg {

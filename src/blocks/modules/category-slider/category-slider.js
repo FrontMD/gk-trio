@@ -12,13 +12,16 @@ function categorySlider() {
         const slidesCounter = sliderEl.querySelectorAll('.swiper-slide').length > 4 ? 4.3 : 4;
     
         const categorySliderEx = new Swiper(sliderEl, {
-            slidesPerView: 2,
+            slidesPerView: 1.2,
             spaceBetween: 12,
              navigation: {
                 nextEl: next,
                 prevEl: prev,
             },
             breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
                 1024: {
                     slidesPerView: 3,
                 },

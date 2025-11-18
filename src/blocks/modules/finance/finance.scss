@@ -28,6 +28,14 @@
             gap: 12px;
             flex: 0 1 62%;
         }
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+        }
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 
     &__subtitle {
@@ -68,10 +76,21 @@
         font-size: 16px;
         line-height: 143.75%;
 
+        @include max(mobile) {
+            width: 40px;
+            height: 40px;
+            font-size: 12px;
+        }
+
         img {
             width: 35px;
             height: 35px;
             object-fit: contain;
+
+            @include max(mobile) {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         &--dark {
@@ -99,6 +118,15 @@
         padding: 15px;
     }
 
+    @include max(mobile) {
+        padding: 10px;
+        border-radius: $br-10;
+    }
+
+    @include max(xs) {
+        padding: 0px;
+    }
+
     &__bg {
         position: absolute;
         left: 0;
@@ -121,6 +149,13 @@
         background-color: $c-white;
         padding: 20px 30px 20px 20px;
         border-radius: $br-10;
+
+        @include max(xs) {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 0;
+        }
     }
 
     &__subtitle {
@@ -141,6 +176,10 @@
         font-size: 16px;
         line-height: 156.25%;
         color: $c-link;
+
+        @include max(mobile) {
+            margin-top: 12px;
+        }
 
         img {
             width: 30px;
@@ -171,6 +210,15 @@
 
     @include max(laptop) {
         padding: 15px;
+    }
+
+    @include max(mobile) {
+        padding: 10px;
+        border-radius: $br-10;
+    }
+
+    @include max(xs) {
+        grid-row: auto;
     }
 
     &__header {
@@ -204,6 +252,15 @@
         padding: 15px;
     }
 
+    @include max(mobile) {
+        padding: 10px;
+        border-radius: $br-10;
+    }
+
+    @include max(xs) {
+        grid-row: auto;
+    }
+
     &__header {
         display: flex;
         align-items: flex-start;
@@ -230,6 +287,15 @@
     @include max(laptop) {
         padding: 15px;
         gap: 15px;
+    }
+
+    @include max(mobile) {
+        padding: 10px;
+        border-radius: $br-10;
+    }
+
+    @include max(xs) {
+        grid-column: 1 / 2;
     }
 
     &__title {

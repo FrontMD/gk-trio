@@ -11,7 +11,7 @@ function animalSlider() {
         const next = sliderControls.querySelector('[data-js="sliderNext"]');
     
         const animalSliderEx = new Swiper(sliderEl, {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 12,
              navigation: {
                 nextEl: next,

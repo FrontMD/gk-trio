@@ -43,6 +43,10 @@
         @include max(large) {
             gap: 30px;
         }
+
+        @include max(mobile) {
+            gap: 16px;
+        }
     }
 
     &__logo {
@@ -50,6 +54,10 @@
 
         @include max(laptop) {
             margin-right: auto;
+        }
+
+        @include max(mobile) {
+            flex-basis: 100px;
         }
     }
 
@@ -79,6 +87,10 @@
 
         @include max(large) {
             gap: 20px;
+        }
+
+        @include max(xs) {
+            gap: 10px;
         }
     }
 
@@ -174,6 +186,11 @@
             line-height: 100%;
             letter-spacing: 0;
             color: $c-text;
+
+            @include max(xs) {
+                padding: 4.5px 5px;
+                font-size: 10px;
+            }
         }
     }
 
@@ -208,8 +225,13 @@
         }
 
         svg {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
+
+            @include max(xs) {
+                width: 26px;
+                height: 26px;
+            }
         }
 
         @include max(laptop) {

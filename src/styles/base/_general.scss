@@ -165,12 +165,8 @@ table {
 .page-layout {
 	padding: 85px 0 0;
 
-	@include max(laptop) {
-		padding: 85px 0 0;
-	}
-
 	@include max(mobile) {
-		padding: 85px 0 0;
+		padding: 55px 0 0;
 	}
 }
 
@@ -210,6 +206,11 @@ table {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
+
+		@include max(mobile) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 
 	&__inner--bg {
@@ -231,6 +232,7 @@ table {
 		@include max(tablet) {
 			padding-top: 20px;
 			padding-bottom: 20px;
+			border-radius: $br-10;
 		}
 	}
 
@@ -255,6 +257,10 @@ iframe {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 156.25%;
+
+	@include max(xs) {
+		font-size: 14px;
+	}
 
 	&--light {
 		color: $c-white;

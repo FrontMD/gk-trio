@@ -3,6 +3,10 @@
     align-items: center;
     gap: 10px;
 
+    @include max(xs) {
+        gap: 6px;
+    }
+
     &__separator {
         width: 50px;
         height: 1px;
@@ -11,6 +15,10 @@
 
         @include max(laptop) {
             width: 40px;
+        }
+
+        @include max(xs) {
+            width: 30px;
         }
     }
 
@@ -43,6 +51,11 @@
         @include max(laptop) {
             width: 32px;
             height: 32px;
+        }
+
+        @include max(xs) {
+            width: 24px;
+            height: 24px;
         }
     }
 }

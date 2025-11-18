@@ -3,6 +3,11 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
+        @include max(xs) {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     &__controls {
@@ -15,6 +20,10 @@
 
         @include max(laptop) {
             margin-top: 30px;
+        }
+
+        @include max(xs) {
+            margin-top: 16px;
         }
     }
 

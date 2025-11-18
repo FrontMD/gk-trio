@@ -74,6 +74,11 @@
                 width: 80px;
                 height: 80px;
             }
+
+            @include max(xs) {
+                width: 48px;
+                height: 48px;
+            }
         }
     }
 
@@ -109,6 +114,11 @@
         @include max(laptop) {
             font-size: 24px;
         }
+
+        @include max(mobile) {
+            font-size: 16px;
+            margin-top: 0;
+        }
     }
 
     &__bottom {
@@ -116,6 +126,10 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+
+        @include max(mobile) {
+            gap: 10px;
+        }
     }
 
     &__topics {
@@ -123,11 +137,20 @@
         display: flex;
         align-items: stretch;
         gap: 10px;
+
+        @include max(xs) {
+            flex-direction: column;
+        }
     }
 
     &__topic {
         flex: 0 1 33%;
         max-width: calc((100% - 20px) / 3);
+
+        @include max(xs) {
+            flex: 0 0 auto;
+            max-width: 100%;
+        }
     }
 }
 
@@ -143,6 +166,10 @@
 
     @include max(laptop) {
         padding: 12px;
+    }
+
+    @include max(xs) {
+        gap: 12px;
     }
 
     &__header {
@@ -161,10 +188,30 @@
         background-color: $c-bg-main;
         border-radius: 100%;
 
+        @include max(mobile) {
+            width: 50px;
+            height: 50px;
+        }
+
+        @include max(xs) {
+            width: 36px;
+            height: 36px;
+        }
+
         img {
             width: 50px;
             height: 50px;
             object-fit: contain;
+
+            @include max(mobile) {
+                width: 32px;
+                height: 32px;
+            }
+
+            @include max(xs) {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 
@@ -175,6 +222,10 @@
         line-height: 100%;
         text-transform: uppercase;
         color: $c-border;
+
+        @include max(xs) {
+            font-size: 18px;
+        }
     }
 
     &__desc {
@@ -185,6 +236,10 @@
 
         @include max(laptop) {
             font-size: 16px;
+        }
+
+        @include max(xs) {
+            font-size: 14px;
         }
     }
 

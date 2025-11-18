@@ -46,6 +46,10 @@
         @include max(tablet) {
             font-size: 34px;
         }
+
+        @include max(xs) {
+            font-size: 26px;
+        }
     }
 
     &--40 {
@@ -60,6 +64,10 @@
 
         @include max(tablet) {
             font-size: 26px;
+        }
+
+        @include max(xs) {
+            font-size: 22px;
         }
     }
 
@@ -86,6 +94,10 @@
         @include max(laptop) {
             font-size: 20px;
         }
+
+        @include max(xs) {
+            font-size: 18px;
+        }
     }
 
     &--20 {
@@ -96,6 +108,14 @@
 
         @include max(laptop) {
             font-size: 18px;
+        }
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
+
+        @include max(xs) {
+            font-size: 14px;
         }
 
     }

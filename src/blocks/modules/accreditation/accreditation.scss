@@ -12,6 +12,10 @@
             flex-direction: column;
             gap: 30px;
         }
+
+        @include max(xs) {
+            gap: 20px;
+        }
     }
 
     &__header {
@@ -23,6 +27,14 @@
 
         @include max(tablet) {
             flex: 0 0 auto;
+        }
+    }
+
+    &__subtitle {
+        @include max(xs) {
+            br {
+                display: none;
+            }
         }
     }
 
@@ -42,6 +54,14 @@
 
         @include max(tablet) {
             grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        @include max(mobile) {
+            gap: 8px;
+        }
+
+        @include max(xs) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
     }
 

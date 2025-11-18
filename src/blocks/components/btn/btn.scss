@@ -13,16 +13,16 @@
     cursor: pointer;
     text-align: center;
 
+    @include max(xs) {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
     svg {
         transition: all $tr;
         width: 16px;
         height: 16px;
     }
-
-    /*span span {
-        margin-left: 8px;
-        opacity: 0.4;
-    }*/
 
     &--light {
         color: $c-text-btn;
@@ -87,9 +87,18 @@
         padding: 9px 14px 9px 19px;
         border-radius: 100px;
 
+        @include max(xs) {
+            width: 100%;
+        }
+
         svg {
             width: 24px;
             height: 24px;
+
+            @include max(xs) {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 

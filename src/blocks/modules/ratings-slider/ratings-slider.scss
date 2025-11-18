@@ -17,6 +17,10 @@
             margin-top: 30px;
         }
 
+        @include max(xs) {
+            margin-top: 16px;
+        }
+
         .swiper-wrapper {
             align-items: stretch;
         }
