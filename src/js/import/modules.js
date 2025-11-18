@@ -5,6 +5,7 @@
 @@include("../../blocks/modules/category-slider/category-slider.js")
 @@include("../../blocks/modules/volume-slider/volume-slider.js")
 @@include("../../blocks/modules/animal-slider/animal-slider.js")
+@@include("../../blocks/modules/history-modal/history-modal.js")
 
 document.addEventListener('DOMContentLoaded', () => {
   homeIntro()
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   categorySlider()
   volumeSlider()
   animalSlider()
+  historyModal()
 })

@@ -1,0 +1,225 @@
+.history-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 90;
+    visibility: hidden;
+    opacity: 0.9;
+    transition: all $tr-long;
+    color: $c-text;
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        height: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: $c-black;
+        transition: opacity $tr-long;
+    }
+
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $c-text;
+        cursor: pointer;
+        transition: all $tr;
+        z-index: 5;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        right: -100vw;
+        width: 100%;
+        max-width: 950px;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        transition: right $tr-long;
+        background-color: $c-white;
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        height: 100%;
+        padding: 10px 35px 50px 0px;
+        overflow-y: auto;
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 34px;
+        z-index: 3;
+        padding: 20px;
+        background-color: transparent;
+        transition: all $tr;
+
+        /*&:hover {
+            background-color: rgba(250, 230, 230, 0.8);
+        }*/
+
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 16px;
+            padding: 10px;
+        }
+    }
+
+    &__year {
+        font-family: $ff-tiktok;
+        flex: 0 0 190px;
+        font-size: 50px;
+        line-height: 100%;
+        margin-top: -19px;
+        text-align: end;
+
+        @include max(laptop) {
+            font-size: 44px;
+        }
+
+        @include max(mobile) {
+            flex-basis: auto;
+            padding-bottom: 0;
+        }
+    }
+
+    &__row--first &__year {
+        margin-top: 0;
+    }
+
+    &__point {
+        flex: 0 0 12px;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: $c-border;
+        transition: all $tr;
+
+        @include max(mobile) {
+            position: absolute;
+            left: -16px;
+            top: 8px;
+            flex-basis: 0;
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+    &__progress {
+        position: absolute;
+        top: 36px;
+        left: 249px;
+        bottom: 0;
+        width: 1px;
+        height: calc(100% - 55px);
+        z-index: 1;
+        background-color: $c-white;
+        overflow: hidden;
+
+        @include max(mobile) {
+            left: 12px;
+            top: 58px;
+            height: calc(100% - 63px);
+        }
+
+        .line-color {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0%;
+            z-index: 1;
+            background-color: $c-border;
+        }
+
+        .line-dashed {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background-image: url(../img/about/history_scroll_bg.svg);
+            background-size: 100% auto;
+            background-repeat: repeat-y;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        padding-left: 10px;
+        max-width: 540px;
+        flex: 1 1 auto;
+        color: $c-text;
+
+        img {
+            max-width: 343px;
+            border-radius: $br-10;
+        }
+
+        ul>li::before {
+            background-color: $c-text;
+        }
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        margin: 32px auto;
+
+        img {
+            margin-bottom: 0;
+            width: 100%;
+        }
+    }
+
+    a.history-modal__play {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        z-index: 1;
+        color: $c-white;
+    }
+
+    a.history-modal__play:hover {
+        color: $c-white;
+    }
+}
+
+.history-modal {
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &.active &__content {
+        right: 0;
+    }
+
+    &.active &__overlay {
+        opacity: 0.25;
+    }
+}

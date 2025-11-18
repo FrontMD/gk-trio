@@ -1,0 +1,56 @@
+.history-modal(data-js='historyModal')
+    .history-modal__overlay(data-js='historyModalClose')
+    .history-modal__content
+        .history-modal__close(data-js='historyModalClose')
+            svg 
+                use(xlink:href=`img/sprites/sprite.svg#close`)
+        .history-modal__list.scrollbar(data-js='historyModalScroller')
+            .history-modal__progress(data-js='historyModalProgress')
+                .line-color(data-js='historyModalProgressLine')
+                .line-dashed
+            .history-modal__row.history-modal__row--first(data-js='historyModalRow')
+                .history-modal__year.title--83 1997
+                .history-modal__point.active(data-js='historyModalPoint')
+                .history-modal__info.text-editor
+                    img(src="img/about/about_history_1.webp")
+                    ul
+                        li Основание компании «ТРИО»
+                        li Создание подразделения, специализирующегося на трейдинге сахара
+
+            .history-modal__row(data-js='historyModalRow')
+                .history-modal__year.title--83 2000
+                .history-modal__point(data-js='historyModalPoint')
+                .history-modal__info.text-editor
+                    .collapsible-text__wrapper(data-js="collapsibleTextWrapper")
+                        p Развитие оптово‑розничного направления, а также приобретение в собственность складского комплекса площадью 4300 м²
+
+            .history-modal__row(data-js='historyModalRow')
+                .history-modal__year.title--83 2002
+                .history-modal__point(data-js='historyModalPoint')
+                .history-modal__info.text-editor
+                    .collapsible-text__wrapper(data-js="collapsibleTextWrapper")
+                        p Создание подразделения, специализирующегося на поставке зёрна в регионы Российской Федерации
+
+            .history-modal__row(data-js='historyModalRow')
+                .history-modal__year.title--83 2003
+                .history-modal__point(data-js='historyModalPoint')
+                .history-modal__info.text-editor
+                    img(src="img/about/about_history_2.webp")
+                    .collapsible-text__wrapper(data-js="collapsibleTextWrapper")
+                        p Основание ООО «Агрофирма ТРИО» сельскохозяйственного направления, специализирующегося на животноводстве и растениеводстве. Основание ООО «Агрофирма ТРИО» сельскохозяйственного направления, специализирующегося на животноводстве и растениеводстве
+
+            .history-modal__row(data-js='historyModalRow')
+                .history-modal__year.title--83 2005
+                .history-modal__point(data-js='historyModalPoint')
+                .history-modal__info.text-editor
+                    .collapsible-text__wrapper(data-js="collapsibleTextWrapper")
+                        p Строительство животноводческого комплекса «Анечка» на 1 000 голов
+
+            .history-modal__row(data-js='historyModalRow')
+                .history-modal__year.title--83 2007
+                .history-modal__point(data-js='historyModalPoint')
+                .history-modal__info.text-editor
+                    .collapsible-text__wrapper(data-js="collapsibleTextWrapper")
+                        ul
+                            li Приобретение в собственность административно-складского комплекса площадью 10 000 м²
+                            li Строительство элеватора мощностью 44 000 тонн

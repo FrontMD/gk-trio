@@ -256,7 +256,7 @@ iframe {
 	color: $c-text-light;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 156.25%;
+	line-height: 160%;
 
 	@include max(xs) {
 		font-size: 14px;
@@ -274,7 +274,81 @@ iframe {
 		margin-bottom: 0 !important;
 	}
 
+	p {
+		display: block;
+	}
 
+	img,
+	p,
+	ul,
+	ul {
+		margin: 1.33em 0;
+	}
+
+	ul {
+		padding-left: 1.5em;
+		list-style: none;
+	}
+
+	ul>li {
+		position: relative;
+	}
+
+	ul>li+li {
+		margin-top: 0.625em;
+	}
+
+	ul>li::before {
+		content: '';
+		position: absolute;
+		top: 0.625em;
+		left: -0.625em;
+		width: 0.25em;
+		height: 0.25em;
+		background-color: $c-text-light;
+		border-radius: 100%;
+	}
+
+	/*ol {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7em;
+		list-style: none;
+		counter-reset: num;
+		color: $c-accent;
+		font-size: 16px;
+		margin-bottom: 20px;
+
+		@include max(tablet) {
+			font-size: 14px;
+			margin-bottom: 18px;
+		}
+	}
+
+	ol>li {
+		position: relative;
+		padding-left: 24px;
+
+		@include max(tablet) {
+			padding-left: 20px;
+		}
+	}
+
+	ol>li::before {
+		content: counter(num) '.';
+		counter-increment: num;
+		position: absolute;
+		top: 1px;
+		right: calc(100% - 15px);
+		font-weight: 500;
+	}*/
+
+	ul>ul,
+	ol>ul,
+	ul>ol,
+	ol>ol {
+		padding-left: 0.75em;
+	}
 
 
 
@@ -351,22 +425,7 @@ iframe {
 		}
 	}
 
-	p {
-		display: block;
-		margin-bottom: 20px;
-
-		@include max(tablet) {
-			margin-bottom: 18px;
-		}
-	}
-
-	p a,
-	ul a,
-	ol a {
-		margin: 0 !important;
-		display: inline;
-		text-decoration: underline;
-	}
+	
 
 	a:not(.btn):hover,
 	a:not(.btn):hover>* {
@@ -376,97 +435,6 @@ iframe {
 	a:not(.btn, .m-table-link),
 	a:not(.btn, .m-table-link)>* {
 		transition: color $tr;
-	}
-
-	ul {
-		padding-left: 22px;
-		list-style: none;
-		margin-bottom: 20px;
-
-		@include max(tablet) {
-			padding-left: 15px;
-			margin-bottom: 18px;
-		}
-	}
-
-	ul>li {
-		position: relative;
-	}
-
-	ul>li::before {
-		content: '';
-		position: absolute;
-		top: 0.575em;
-		left: -22px;
-		transform: translateY(-50%);
-		width: 5px;
-		height: 5px;
-		background-color: $c-accent;
-		border-radius: 100%;
-
-		@include max(tablet) {
-			width: 5px;
-			height: 5px;
-			left: -10px;
-		}
-	}
-
-	ul>li:has(b):before {
-		background-color: rgba(1, 50, 32, 0.4);
-	}
-
-	ol {
-		display: flex;
-		flex-direction: column;
-		gap: 0.7em;
-		list-style: none;
-		counter-reset: num;
-		color: $c-accent;
-		font-size: 16px;
-		margin-bottom: 20px;
-
-		@include max(tablet) {
-			font-size: 14px;
-			margin-bottom: 18px;
-		}
-	}
-
-	ol>li {
-		position: relative;
-		padding-left: 24px;
-
-		@include max(tablet) {
-			padding-left: 20px;
-		}
-	}
-
-	ol>li::before {
-		content: counter(num) '.';
-		counter-increment: num;
-		position: absolute;
-		top: 1px;
-		right: calc(100% - 15px);
-		font-weight: 500;
-	}
-
-	ul>ul,
-	ol>ul {
-		padding-left: 32px;
-
-		@include max(tablet) {
-			padding-left: 24px;
-		}
-	}
-
-	ul>ol,
-	ol>ol {
-		padding-left: 36px;
-
-		margin-bottom: 0;
-
-		@include max(tablet) {
-			padding-left: 30px;
-		}
 	}
 
 	>table {
@@ -517,6 +485,43 @@ iframe {
 		}
 	}*/
 
+}
+
+.custom-scrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	.simplebar-wrapper {
+		padding-bottom: 5px;
+	}
+
+	.simplebar-track {
+		background-color: $c-bg-main;
+		opacity: 0.5;
+
+	}
+
+	.simplebar-scrollbar {
+		background-color: $c-text-light;
+	}
+
+	.simplebar-track.simplebar-vertical {
+		width: 3px;
+	}
+
+	.simplebar-track.simplebar-horizontal {
+		height: 3px;
+	}
+
+	.simplebar-content-wrapper::-webkit-scrollbar,
+	.simplebar-hide-scrollbar::-webkit-scrollbar {
+		display: initial;
+		width: initial;
+		height: initial;
+	}
 }
 
 .my-fancybox {

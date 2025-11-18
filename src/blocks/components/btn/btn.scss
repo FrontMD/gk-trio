@@ -79,6 +79,17 @@
         }
     }
 
+    &--big {
+        font-size: 15px;
+        padding: 40px;
+        border-radius: $br-10;
+
+        svg {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
     &--full {
         width: 100%;
     }
@@ -99,6 +110,17 @@
                 width: 18px;
                 height: 18px;
             }
+        }
+    }
+
+    &--blur {
+        background: rgba(235, 205, 184, 0.2);
+        color: $c-white;
+        backdrop-filter: blur(30px);
+        transition: all $tr;
+
+        &:hover {
+            background: rgba(104, 91, 82, 0.2);
         }
     }
 
@@ -123,20 +145,6 @@
         &:hover {
             background-color: $c-accent-text;
             color: $c-white !important;
-        }
-    }
-
-    &--big {
-        font-size: 18px;
-        padding: 48px 38px;
-
-        @include min(full) {
-            font-size: 22px;
-            padding: 48px 38px;
-        }
-
-        @include max(laptop) {
-            padding: 36px 28px;
         }
     }
 

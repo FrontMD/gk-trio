@@ -7,9 +7,40 @@ block content
     .page(data-js="page")
         .page-layout
             +i-intro({
-                title: 'Холдинг с&nbsp;многолетней историей',
-                img: 'img/intro/about_intro.webp'
+                title: 'Холдинг <br>с&nbsp;многолетней <br>историей',
+                subtitle: '[Производим с 1997 года]',
+                img: 'img/intro/about_intro.webp',
+                breadcrumbs: {
+                    cMode: 'light',
+                    items: [
+                        {
+                            name: 'ГК ТРИО',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'О компании',
+                            link: 'javascript:void(0);'
+                        }
+                    ]
+                },
+                desc: 'Группа компаний «ТРИО» – современное, динамично развивающееся агропромышленное предприятие, хорошо известное в Липецкой области'
             })
+                .i-intro__content
+                    .i-intro__btns
+                        +btn({
+                            name: 'Фильм о компании',
+                            link: 'public/video/about.mp4',
+                            sMode: 'big',
+                            cMode: 'blur',
+                            icon: 'video'
+                        })(data-fancybox)
+                        +btn({
+                            name: 'История компании',
+                            sMode: 'big',
+                            cMode: 'blur',
+                            icon: 'flag'
+                        })(data-js="historyModalOpen")
+
             +volume-slider
             +accreditation
             +finance

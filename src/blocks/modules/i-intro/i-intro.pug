@@ -34,6 +34,7 @@ mixin i-intro(props = defaultIIntroProps)
                         +title({
                             classes: 'i-intro__title',
                             tag: 'h1',
+                            size: '60',
                             text: checkProps.title,
                             cMode: 'light',
                         })
@@ -42,6 +43,6 @@ mixin i-intro(props = defaultIIntroProps)
 
                     .i-intro__bottom
                         - if(checkProps.desc.length > 0)
-                            .i-intro__desc.text-editor!= checkProps.desc
+                            .i-intro__desc.text-editor.text-editor--light!= checkProps.desc
                         .i-intro__right
                             block
