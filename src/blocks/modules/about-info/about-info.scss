@@ -1,0 +1,83 @@
+.about-info {
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__row {
+        display: flex;
+        align-self: flex-start;
+        gap: 50px;
+    }
+
+    &__left {
+        flex: 0 0 340px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        max-width: 57.5%;
+        font-family: $ff-tiktok;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        color: $c-text;
+    }
+
+    &__cards {
+        margin-top: 50px;
+        display: flex;
+        gap: 24px;
+    }
+
+    &__card {
+        flex: 0 1 50%;
+    }
+
+}
+
+.ai-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 30px;
+    border-radius: $br-20;
+    background-color: $c-bg-main;
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $c-white;
+        border-radius: 100%;
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        color: $c-text;
+
+        ul li::before {
+            background-color: $c-text;
+        }
+    }
+}

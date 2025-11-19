@@ -9,9 +9,15 @@
     border-radius: $br-10;
     overflow: hidden;
     color: $c-text;
+    min-height: 250px;
 
     @include max(laptop) {
+        min-height: 200px;
         padding: 20px;
+    }
+
+    @include max(xs) {
+        min-height: 150px;
     }
 
     &__link {

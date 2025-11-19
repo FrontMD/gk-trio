@@ -1,0 +1,51 @@
+-
+    const defaultAboutInfoProps = {
+        classes: '',
+        top: '',
+        cards: ''
+    }
+
+mixin about-info(props= defaultAboutInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAboutInfoProps.classes,
+            top: props.top ? props.top : defaultAboutInfoProps.top,
+            cards: props.cards ? props.cards : defaultAboutInfoProps.cards
+        }
+
+    section.about-info(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .about-info__container
+                    - if(checkProps.top.length > 0)
+                        .about-info__top
+                            - let topList = checkProps.top
+                            - let topCounter = 0
+
+                            - while(topCounter < topList.length)
+                                .about-info__row
+                                    .about-info__left
+                                        +title-tag({
+                                            text: topList[topCounter].tag
+                                        })
+                                    .about-info__text!= topList[topCounter].text
+
+                                - topCounter++
+
+                    - if(checkProps.cards.length > 0)    
+                        .about-info__cards
+                            - let cardsList = checkProps.cards
+                            - let cardsCounter = 0
+
+                            - while(cardsCounter < cardsList.length)
+                                .about-info__card.ai-card
+                                    .ai-card__header
+                                        +title({
+                                            text: cardsList[cardsCounter].title,
+                                            size: '20'
+                                        })
+                                        .ai-card__icon
+                                            img(src=cardsList[cardsCounter].icon alt="")
+                                    .ai-card__text.text-editor!= cardsList[cardsCounter].text
+
+                                - cardsCounter++

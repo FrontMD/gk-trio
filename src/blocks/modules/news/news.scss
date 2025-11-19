@@ -44,17 +44,4 @@
             grid-column: auto;
         }
     }
-
-    .news-link {
-        min-height: 250px;
-
-        @include max(laptop) {
-            min-height: 200px;
-        }
-
-        @include max(xs) {
-            min-height: 150px;
-        }
-    }
-
 }

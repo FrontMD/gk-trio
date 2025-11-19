@@ -1,0 +1,54 @@
+-
+    const defaultTScaleProps = {
+        classes: ''
+    }
+
+mixin t-scale(props= defaultTScaleProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTScaleProps.classes
+        }
+
+    section.t-scale(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .t-scale__layout
+                    .t-scale__sidebar
+                        +title-tag({
+                            text: 'Территориальные масштабы'
+                        })
+                        +title({
+                            classes: 't-scale__title',
+                            size: '40',
+                            text: '<span>Площадь</span> земли'
+                        })
+                        .t-scale__tags
+                            .t-scale__tag
+                                .t-scale__icon
+                                    img(src="img/about/about_icon_9.svg" alt="")
+                                .t-scale__text Элеватор
+
+                            .t-scale__tag
+                                .t-scale__icon
+                                    img(src="img/about/about_icon_12.svg" alt="")
+                                .t-scale__text Молочные комплексы
+
+                            .t-scale__tag
+                                .t-scale__icon
+                                    img(src="img/about/about_icon_13.svg" alt="")
+                                .t-scale__text Картофелехранилище
+
+                            .t-scale__tag
+                                .t-scale__icon
+                                    img(src="img/about/about_icon_7.svg" alt="")
+                                .t-scale__text Семенной завод
+
+                            .t-scale__tag
+                                .t-scale__icon
+                                    img(src="img/about/about_icon_14.svg" alt="")
+                                .t-scale__text Элеватор
+
+                    .t-scale__main
+                        .t-scale__map
+                            img(src="img/about/about_map.webp" alt="")
+

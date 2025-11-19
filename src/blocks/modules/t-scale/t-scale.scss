@@ -1,0 +1,31 @@
+.t-scale {
+    &__layout {
+        display: flex;
+        align-items: center;
+        margin-top: -80px;
+
+    }
+
+    &__sidebar {
+        flex: 0 0 auto;
+    }
+
+    &__main {
+        position: relative;
+        height: calc(100vh - 100px);
+        flex: 1 1 auto;
+    }
+
+    &__map {
+        position: absolute;
+        right: -91px;
+        bottom: 0;
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+            object-position: right top;
+        }
+    }
+}

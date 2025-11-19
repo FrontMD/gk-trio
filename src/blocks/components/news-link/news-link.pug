@@ -4,6 +4,7 @@
         img: '',
         title: '',
         date: '',
+        desc: ''
     }
 
 mixin news-link(props= defaultNewsLinkProps)
@@ -13,6 +14,7 @@ mixin news-link(props= defaultNewsLinkProps)
             img: props.img ? props.img : defaultNewsLinkProps.img,
             title: props.title ? props.title : defaultNewsLinkProps.title,
             date: props.date ? props.date : defaultNewsLinkProps.date,
+            desc: props.desc ? props.desc : defaultNewsLinkProps.desc,
         }
 
         let imgClass = checkProps.img.length > 0 ? " news-link--bg" : ''
@@ -26,18 +28,28 @@ mixin news-link(props= defaultNewsLinkProps)
         .news-link__header
             -if(checkProps.date.length > 0)
                 .news-link__date!= checkProps.date
-            -if(checkProps.img.length < 1)
-                .news-link__arrow
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#arrow_link_top`)
-
-        .news-link__bottom
-            -if(checkProps.title.length > 0)
+            -else if(checkProps.desc.length > 0 && checkProps.title.length > 0)
                 +title({
                     classes: 'news-link__title',
                     size: '20',
                     text: checkProps.title,
                     cMode: titleColorMode
                 })
+
+            -if(checkProps.img.length < 1)
+                .news-link__arrow
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_link_top`)
+
+        .news-link__bottom
+            -if(checkProps.title.length > 0 && checkProps.desc.length < 1)
+                +title({
+                    classes: 'news-link__title',
+                    size: '20',
+                    text: checkProps.title,
+                    cMode: titleColorMode
+                })
+            -else if(checkProps.desc.length > 0)
+                .news-link__desc.text-editor!= checkProps.desc
 
 

@@ -7,13 +7,8 @@ function historyModal() {
     if(!historyModalOpen || !historyModal) return
 
     const historyModalCloseBtns = historyModal.querySelectorAll('[data-js="historyModalClose"]')
-    
-    const headerSearch = document.querySelector('[data-js="headerSearchContent"]')
 
     historyModalOpen.addEventListener('click', () => {
-        if(headerSearch) {
-            headerSearch.classList.remove('active')
-        }
         historyModal.classList.add('active')
         lockBody()
     })
@@ -32,12 +27,12 @@ function historyModal() {
 
     if(textItems.length > 0) {
         
-        const maxLines = 6;
+        const maxLines = 3;
         const showMoreLayout =  `
                                 <span class="show">Развернуть</span>
                                 <span class="hide">Свернуть</span>
-                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.66797 8.66675L8.00185 11.7201L11.3346 8.66675" stroke="currentColor" stroke-linecap="square"/>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.6199 5.2207L7.81655 9.02404C7.36738 9.4732 6.63238 9.4732 6.18322 9.02404L2.37988 5.2207" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 `
         
@@ -124,10 +119,6 @@ function historyModal() {
             pointPercentsArr.forEach((pointPercent, index) => {
                 if(currentProgress >= pointPercent) {
                     points[index].classList.add('active')
-                    /*rows.forEach(row => {
-                        row.classList.remove('active')
-                    })
-                    rows[index].classList.add('active')*/
                 } else {
                     points[index].classList.remove('active')
                 }

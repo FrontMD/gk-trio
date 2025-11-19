@@ -1,0 +1,43 @@
+-
+    const defaultQuoteSectionProps = {
+        classes: '',
+        photo: '',
+        text: '',
+        name: '',
+        position: ''
+    }
+
+mixin quote-section(props= defaultQuoteSectionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultQuoteSectionProps.classes,
+            photo: props.photo ? props.photo : defaultQuoteSectionProps.photo,
+            text: props.text ? props.text : defaultQuoteSectionProps.text,
+            name: props.name ? props.name : defaultQuoteSectionProps.name,
+            position: props.position ? props.position : defaultQuoteSectionProps.position,
+        }
+
+    section.quote-section(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .quote-section__container
+                    .quote-section__left
+                        .quote-section__photo
+                            .quote-section__corner
+                            img(src=checkProps.photo alt="")
+                        .quote-section__info
+                            +title({
+                                classes: 'quote-section__title',
+                                text: checkProps.name,
+                                size: '20'
+                            })
+                            .quote-section__position!= checkProps.position
+                    .quote-section__right
+                        .quote-section__icon
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#quotes`)
+
+                        .quote-section__text!= checkProps.text
+                        .quote-section__icon.quote-section__icon--close
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#quotes`)

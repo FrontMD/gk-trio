@@ -236,6 +236,57 @@ table {
 		}
 	}
 
+	&__inner--dark {
+		background-color: $c-bg-grey;
+	}
+
+}
+
+.sidebar-layout {
+	display: flex;
+	align-items: stretch;
+	gap: 24px;
+
+	@include max(laptop) {
+		gap: 12px;
+	}
+
+	@include max(tablet) {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	@include max(xs) {
+		gap: 20px;
+	}
+
+	&__sidebar {
+		flex: 0 0 496px;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+
+		@include max(laptop) {
+			flex: 0 0 280px;
+		}
+
+		@include max(tablet) {
+			flex: 0 0 auto;
+		}
+	}
+
+	&__bottom {
+		margin-top: auto;
+
+		@include max(tablet) {
+			margin-top: 20px;
+		}
+	}
+
+	&__main {
+		flex: 1 1 auto;
+	}
 }
 
 iframe {
@@ -282,7 +333,7 @@ iframe {
 	p,
 	ul,
 	ul {
-		margin: 1.33em 0;
+		margin: 0 0 1.33em;
 	}
 
 	ul {
@@ -484,6 +535,68 @@ iframe {
 			margin-bottom: 18px;
 		}
 	}*/
+
+	.collapsible-text {
+		&__btn {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			margin-top: 15px;
+			color: $c-text;
+			transition: all $tr;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			padding: 12px 15px 12px 18px;
+			background-color: $c-bg-main;
+			border-radius: 5px;
+			cursor: pointer;
+
+			.show {
+				display: block;
+			}
+
+			.hide {
+				display: none;
+			}
+
+			svg {
+				width: 14px;
+				height: 14px;
+				color: $c-text-light;
+				transition: all $tr;
+			}
+
+			&:hover {
+				background-color: $c-accent;
+				color: $c-white;
+
+				svg {
+					color: $c-white;
+				}
+			}
+		}
+
+		&--opened .collapsible-text__btn {
+			.show {
+				display: none;
+			}
+
+			.hide {
+				display: block;
+			}
+
+			svg {
+				transform: rotate(-180deg);
+			}
+		}
+
+		.collapsible-text__wrapper {
+			margin-bottom: 0;
+			overflow: hidden;
+			transition: all $tr;
+		}
+	}
 
 }
 

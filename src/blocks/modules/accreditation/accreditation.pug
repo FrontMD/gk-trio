@@ -12,8 +12,8 @@ mixin accreditation(props= defaultAccreditationProps)
     section.accreditation(class= checkProps.classes)&attributes(attributes)
         .gkt-container
             .gkt-container__inner
-                .accreditation__layout
-                    .title-block.accreditation__header
+                .sidebar-layout
+                    .sidebar-layout__sidebar
                         +title-tag({
                             text: 'О компании'
                         })
@@ -24,7 +24,7 @@ mixin accreditation(props= defaultAccreditationProps)
                         })
                         .accreditation__subtitle.text-editor Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья
 
-                    .accreditation__main
+                    .sidebar-layout__main
                         .accreditation__list
                             a(href="javascript:void(0);").accreditation__item
                                 img(src="img/partners/partner_1.webp" alt="")

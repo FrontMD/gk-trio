@@ -1,45 +1,10 @@
 .accreditation {
-    &__layout {
-        display: flex;
-        align-items: stretch;
-        gap: 24px;
-
-        @include max(laptop) {
-            gap: 12px;
-        }
-
-        @include max(tablet) {
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        @include max(xs) {
-            gap: 20px;
-        }
-    }
-
-    &__header {
-        flex: 0 0 496px;
-
-        @include max(laptop) {
-            flex: 0 0 280px;
-        }
-
-        @include max(tablet) {
-            flex: 0 0 auto;
-        }
-    }
-
     &__subtitle {
         @include max(xs) {
             br {
                 display: none;
             }
         }
-    }
-
-    &__main {
-        flex: 1 1 auto;
     }
 
     &__list {

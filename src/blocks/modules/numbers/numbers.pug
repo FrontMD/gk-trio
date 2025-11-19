@@ -1,0 +1,78 @@
+-
+    const defaultNumbersProps = {
+        classes: '',
+        cards: [
+            {
+                title: '20 000 <span>ГА</span>',
+                icon: 'img/about/about_icon_1.svg',
+                text: 'Общая площадь земли',
+                smallTitle: false
+            },
+            {
+                title: '1',
+                icon: 'img/about/about_icon_6.svg',
+                text: 'Растениеводческое подразделение в Липецкой области',
+                smallTitle: false
+            },
+            {
+                title: '2',
+                icon: 'img/about/about_icon_7.svg',
+                text: 'Животноводческих комплекса: на 1000, 2000 и 4000 голов дойного стада, молодняковая ферма',
+                smallTitle: false
+            },
+            {
+                title: '1 000 <span>+</span>',
+                icon: 'img/about/about_icon_5.svg',
+                text: 'Обрудования для посева и сбора урожая',
+                smallTitle: false
+            },
+            {
+                title: '750 <span>+</span>',
+                icon: 'img/about/about_icon_8.svg',
+                text: 'Сотрудников',
+                smallTitle: false
+            },
+            {
+                title: '2 <span>элеватора</span>',
+                icon: 'img/about/about_icon_9.svg',
+                text: 'Мощностью хранения более 76&nbsp;000 тонн',
+                smallTitle: false
+            },
+            {
+                title: '400 000',
+                icon: 'img/about/about_icon_10.svg',
+                text: 'тонн зёрна продаём в год',
+                smallTitle: false
+            },
+            {
+                title: 'Школа<br>действия',
+                icon: 'img/about/about_icon_11.svg',
+                text: 'Учебный центр практического животноводства',
+                smallTitle: true
+            }
+        ],
+    }
+
+mixin numbers(props= defaultNumbersProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNumbersProps.classes,
+            cards: props.cards ? props.cards : defaultNumbersProps.cards
+        }
+
+    section.numbers(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg.gkt-container__inner--dark
+                .numbers__grid
+                    - let cards = checkProps.cards
+                    - let count = 0
+
+                    - while(count < cards.length)
+                        - let titleClass = cards[count].smallTitle === true ? ' n-card__title--small' : ''
+                        .n-card
+                            .n-card__header
+                                .n-card__title(class= titleClass)!= cards[count].title
+                                .n-card__icon
+                                    img(src=cards[count].icon alt="")
+                            .n-card__text.text-editor!= cards[count].text
+                        - count++

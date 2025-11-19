@@ -1,0 +1,45 @@
+-
+    const defaultStructureProps = {
+        classes: ''
+    }
+
+mixin structure(props= defaultStructureProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultStructureProps.classes
+        }
+
+    section.structure(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .sidebar-layout
+                    .sidebar-layout__sidebar
+                        +title-tag({
+                            text: 'О компании'
+                        })
+                        +title({
+                            classes: 'structure__title',
+                            size: '40',
+                            text: '<span>Cтруктура</span> <br>холдинга'
+                        })
+                        .structure__subtitle.text-editor Сбыт и продвижение продукции
+
+                    .sidebar-layout__main
+                        .structure__list
+                            +news-link({
+                                title: '«ГК «Трио»',
+                                desc: 'Оптовая торговля зерном, семенами <br>и кормами для животных'
+                            })
+                            +news-link({
+                                title: 'ООО «АГРОФИРМА ТРИО»',
+                                desc: 'Смешанное сельское хозяйство'
+                            })
+                            +news-link({
+                                title: 'ООО «ТМ»',
+                                desc: 'Разведение молочного крупного рогатого скота <br>и производство сырого молока'
+                            })
+                            +news-link({
+                                title: 'ООО «ХОЛДИНГ ТРИО»',
+                                desc: 'Оптовая торговля зерном, семенами <br>и кормами для животных'
+                            })
+
