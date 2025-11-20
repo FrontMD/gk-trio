@@ -1,1 +1,86 @@
-.news-card {}
+.news-card {
+    padding: 20px;
+    border-radius: $br-20;
+    background-color: $c-white;
+    position: relative;
+
+    @include max(laptop) {
+        padding: 15px;
+    }
+
+    @include max(mobile) {
+        padding: 10px;
+        border-radius: $br-10;
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 1 / 0.658;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__desc {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 137.5%;
+        margin-top: 20px;
+
+        @include max(mobile) {
+            margin-top: 10px;
+        }
+    }
+
+    &__bottom {
+        margin-top: 20px;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        @include max(mobile) {
+            margin-top: 10px;
+        }
+    }
+
+    &__date,
+    &__tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        color: $c-text-light;
+        padding: 12px 15px;
+        border: 1px solid $c-text-light;
+        border-radius: 50px;
+
+        @include max(laptop) {
+            font-size: 14px;
+        }
+
+        @include max(mobile) {
+            padding: 8px 12px;
+            font-size: 12px;
+        }
+    }
+}

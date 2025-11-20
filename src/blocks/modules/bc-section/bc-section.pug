@@ -1,0 +1,30 @@
+-
+    const defaultBCSectionProps = {
+        classes: '',
+        bc: {
+            items: [
+                {
+                    name: 'ГК ТРИО',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Новости',
+                    link: 'javascript:void(0);'
+                }
+            ],
+        },
+    }
+
+mixin bc-section(props= defaultBCSectionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBCSectionProps.classes,
+            bc: props.bc ? props.bc : defaultBCSectionProps.bc,
+        }
+
+    section.bc-section(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .bc-section__container
+                    +breadcrumbs(checkProps.bc)
+

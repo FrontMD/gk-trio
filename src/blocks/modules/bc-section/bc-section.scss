@@ -1,0 +1,29 @@
+.bc-section {
+    .gkt-container {
+        padding-bottom: 0;
+
+        @include max(large) {
+            padding-bottom: 0;
+        }
+
+        @include max(laptop) {
+            padding-bottom: 0;
+        }
+
+        @include max(tablet) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__container {
+        padding: 30px 0;
+
+        @include max(laptop) {
+            padding: 20px 0;
+        }
+
+        @include max(mobile) {
+            padding: 10px 0;
+        }
+    }
+}

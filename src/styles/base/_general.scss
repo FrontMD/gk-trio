@@ -165,6 +165,10 @@ table {
 .page-layout {
 	padding: 85px 0 0;
 
+	@include max(laptop) {
+		padding: 65px 0 0;
+	}
+
 	@include max(mobile) {
 		padding: 55px 0 0;
 	}

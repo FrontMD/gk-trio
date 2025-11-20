@@ -1,0 +1,116 @@
+.pagination {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin: 0 auto;
+
+    &--mt {
+        margin-top: 30px;
+
+        @include max(mobile) {
+            margin-top: 20px;
+        }
+    }
+
+    @include max(mobile) {
+        gap: 4px;
+    }
+
+    &__page,
+    &__separator {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid $c-text-grey;
+        color: $c-text;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        @include max(mobile) {
+            width: 40px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+
+    &__page {
+        transition: all $tr;
+
+        &.active,
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white !important;
+            border-color: $c-accent;
+        }
+    }
+
+    &__btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        color: $c-text;
+        border: 1px solid $c-text-grey;
+        border-radius: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        transition: all $tr;
+
+        @include max(mobile) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &.active,
+        &:hover {
+            background-color: $c-accent;
+            border-color: $c-accent;
+
+            svg {
+                color: $c-white !important;
+            }
+        }
+
+        &--next {
+            margin-left: 22px !important;
+            transform: rotate(180deg);
+
+            @include max(mobile) {
+                margin-left: 4px !important;
+            }
+        }
+
+        &--prev {
+            margin-right: 22px !important;
+
+            @include max(mobile) {
+                margin-right: 4px !important;
+            }
+        }
+    }
+}

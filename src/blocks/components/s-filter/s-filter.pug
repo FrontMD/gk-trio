@@ -1,0 +1,23 @@
+-
+    const defaultSFilterProps = {
+        classes: '',
+        items: [
+            '# Все новости',
+            '# Пресса о нас',
+            '# Пресс-релизы',
+            '# Школа действия',
+        ]
+    }
+
+mixin s-filter(props = defaultSFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSFilterProps.classes,
+            items: props.items ? props.items : defaultSFilterProps.items
+        }
+
+    .s-filter(class=checkProps.classes data-js="sFilter")
+        .s-filter__list(data-js="sFilterSlider")
+            .swiper-wrapper
+                each val, index in checkProps.items
+                    .s-filter__item.swiper-slide(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val
