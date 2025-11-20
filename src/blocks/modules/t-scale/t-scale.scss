@@ -3,17 +3,127 @@
         display: flex;
         align-items: center;
         margin-top: -80px;
+        gap: 40px;
 
+        @include max(large) {
+            margin-top: -60px;
+        }
+
+        @include max(laptop) {
+            margin-top: -50px;
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            margin-top: -40px;
+            gap: 10px;
+        }
+
+        @include max(mobile) {
+            margin-top: 0;
+            gap: 0;
+            flex-direction: column;
+            align-items: stretch;
+        }
     }
 
     &__sidebar {
         flex: 0 0 auto;
+
+        @include max(large) {
+            padding-top: 60px;
+        }
+
+        @include max(laptop) {
+            padding-top: 50px;
+        }
+
+        @include max(tablet) {
+            padding-top: 40px;
+            flex: 0 0 260px;
+        }
+
+        @include max(mobile) {
+            padding-top: 0;
+            flex: 0 0 auto;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+        background-color: $c-white;
+        margin-top: 70px;
+        border-radius: $br-20;
+
+        @include max(laptop) {
+            padding: 15px;
+            margin-top: 24px;
+            border-radius: $br-10;
+        }
+
+        @include max(tablet) {
+            margin-top: 12px;
+        }
+
+        @include max(xs) {
+            padding: 12px;
+        }
+    }
+
+    &__tag {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-family: $ff-tiktok;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        color: $c-text;
+
+        @include max(laptop) {
+            font-size: 16px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        background-color: $c-bg-main;
+
+        @include max(laptop) {
+            width: 32px;
+            height: 32px;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+
+            @include max(laptop) {
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
 
     &__main {
         position: relative;
         height: calc(100vh - 100px);
         flex: 1 1 auto;
+
+        @include max(large) {
+            height: auto;
+            align-self: stretch;
+        }
     }
 
     &__map {
@@ -22,10 +132,35 @@
         bottom: 0;
         height: 100%;
 
+        @include max(large) {
+            right: -51px;
+        }
+
+        @include max(laptop) {
+            right: -31px;
+        }
+
+        @include max(tablet) {
+            right: -20px;
+        }
+
+        @include max(mobile) {
+            position: relative;
+            right: 0;
+            width: 100%;
+            height: auto;
+        }
+
         img {
             height: 100%;
             object-fit: contain;
             object-position: right top;
+
+            @include max(mobile) {
+                width: 100%;
+                height: auto;
+                object-position: center top;
+            }
         }
     }
 }

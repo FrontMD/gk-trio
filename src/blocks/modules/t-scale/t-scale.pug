@@ -14,14 +14,15 @@ mixin t-scale(props= defaultTScaleProps)
             .gkt-container__inner
                 .t-scale__layout
                     .t-scale__sidebar
-                        +title-tag({
-                            text: 'Территориальные масштабы'
-                        })
-                        +title({
-                            classes: 't-scale__title',
-                            size: '40',
-                            text: '<span>Площадь</span> земли'
-                        })
+                        .title-block
+                            +title-tag({
+                                text: 'Территориальные масштабы'
+                            })
+                            +title({
+                                classes: 't-scale__title',
+                                size: '40',
+                                text: '<span>Площадь</span> земли'
+                            })
                         .t-scale__tags
                             .t-scale__tag
                                 .t-scale__icon
@@ -46,7 +47,7 @@ mixin t-scale(props= defaultTScaleProps)
                             .t-scale__tag
                                 .t-scale__icon
                                     img(src="img/about/about_icon_14.svg" alt="")
-                                .t-scale__text Элеватор
+                                .t-scale__text Процент возделываемой земли
 
                     .t-scale__main
                         .t-scale__map

@@ -1,0 +1,23 @@
+-
+    const defaultNewsListProps = {
+        classes: ''
+    }
+
+mixin news-list(props= defaultNewsListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsListProps.classes
+        }
+
+    section.news-list(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .news-list__header
+                    +title({
+                        text: 'Новости',
+                        tag: 'h1',
+                        size: '40'
+                    })
+            .gkt-container__inner
+                .news-list__body
+                    +news-card

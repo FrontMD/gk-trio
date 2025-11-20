@@ -3,12 +3,30 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
+
+        @include max(laptop) {
+            gap: 30px;
+        }
+
+        @include max(mobile) {
+            gap: 20px;
+        }
     }
 
     &__row {
         display: flex;
         align-self: flex-start;
         gap: 50px;
+
+        @include max(laptop) {
+            gap: 30px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
     }
 
     &__left {
@@ -16,6 +34,15 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
+
+        @include max(laptop) {
+            flex: 0 0 280px;
+        }
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+
+        }
     }
 
     &__text {
@@ -26,12 +53,39 @@
         font-size: 20px;
         line-height: 150%;
         color: $c-text;
+
+        @include max(laptop) {
+            font-size: 18px;
+        }
+
+        @include max(tablet) {
+            max-width: 100%;
+        }
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
+
+        @include max(xs) {
+            font-size: 14px;
+        }
     }
 
     &__cards {
         margin-top: 50px;
         display: flex;
         gap: 24px;
+
+        @include max(laptop) {
+            margin-top: 30px;
+            gap: 12px;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: stretch;
+            margin-top: 20px;
+        }
     }
 
     &__card {
@@ -45,10 +99,23 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
     padding: 30px;
     border-radius: $br-20;
     background-color: $c-bg-main;
+
+    @include max(laptop) {
+        padding: 20px;
+    }
+
+    @include max(mobile) {
+        padding: 15px;
+        border-radius: $br-10;
+    }
+
+    @include max(xs) {
+        padding: 10px;
+    }
 
     &__header {
         display: flex;
@@ -66,10 +133,30 @@
         background-color: $c-white;
         border-radius: 100%;
 
+        @include max(laptop) {
+            width: 60px;
+            height: 60px;
+        }
+
+        @include max(xs) {
+            width: 40px;
+            height: 40px;
+        }
+
         img {
             width: 50px;
             height: 50px;
             object-fit: contain;
+
+            @include max(laptop) {
+                width: 38px;
+                height: 38px;
+            }
+
+            @include max(xs) {
+                width: 25px;
+                height: 25px;
+            }
         }
     }
 

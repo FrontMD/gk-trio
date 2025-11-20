@@ -1,0 +1,14 @@
+.news-list {
+
+    .gkt-container__inner--bg {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__body {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(1fr));
+        gap: 24px;
+    }
+}

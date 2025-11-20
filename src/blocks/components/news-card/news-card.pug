@@ -1,0 +1,31 @@
+-
+    const defaultNewsCardProps = {
+        classes: '',
+        img: '',
+        desc: '',
+        date: '',
+        tag: ''
+    }
+
+mixin news-card(props= defaultNewsCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsCardProps.classes,
+            img: props.img ? props.img : defaultNewsCardProps.img,
+            desc: props.desc ? props.desc : defaultNewsCardProps.desc,
+            date: props.date ? props.date : defaultNewsCardProps.date,
+            tag: props.tag ? props.tag : defaultNewsCardProps.tag,
+        }
+
+    .news-card(class= checkProps.classes)&attributes(attributes)
+        a.news-card__link(href="javascript:void(0);")
+        .news-card__img
+            img(src=checkProps.img alt="")
+        .news-card__body
+            .news-card__desc.text-editor!= checkProps.desc
+            .news-card__bottom
+                .news-card__date!= checkProps.date
+                .news-card__tag!= checkProps.tag
+
+
+

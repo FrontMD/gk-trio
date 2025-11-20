@@ -267,6 +267,10 @@ table {
 		flex-direction: column;
 		gap: 10px;
 
+		@include max(large) {
+			flex: 0 0 400px;
+		}
+
 		@include max(laptop) {
 			flex: 0 0 280px;
 		}
@@ -339,6 +343,10 @@ iframe {
 	ul {
 		padding-left: 1.5em;
 		list-style: none;
+
+		@include max(tablet) {
+			padding-left: 1em;
+		}
 	}
 
 	ul>li {
@@ -399,6 +407,10 @@ iframe {
 	ul>ol,
 	ol>ol {
 		padding-left: 0.75em;
+
+		@include max(tablet) {
+			padding-left: 0.5em;
+		}
 	}
 
 

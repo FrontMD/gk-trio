@@ -84,9 +84,23 @@
         padding: 40px;
         border-radius: $br-10;
 
+        @include max(laptop) {
+            padding: 30px 20px;
+        }
+
+        @include max(mobile) {
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+
         svg {
             width: 35px;
             height: 35px;
+
+            @include max(mobile) {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 

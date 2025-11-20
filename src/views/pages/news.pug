@@ -1,0 +1,9 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Новости"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +news-list
