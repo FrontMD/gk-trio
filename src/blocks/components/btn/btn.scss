@@ -79,6 +79,27 @@
         }
     }
 
+    &--bordered-dark {
+        color: $c-text;
+        background-color: transparent;
+        transition: all $tr;
+        border: solid 1px $c-text-light;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white;
+            border-color: $c-accent;
+        }
+
+        svg {
+            color: $c-accent;
+        }
+
+        &:hover svg {
+            color: $c-white;
+        }
+    }
+
     &--big {
         font-size: 15px;
         padding: 40px;
@@ -127,6 +148,23 @@
         }
     }
 
+    &--share {
+        padding: 14px 19px;
+        border-radius: 50px;
+        font-size: 15px;
+        gap: 5px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+
+            @include max(xs) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
     &--blur {
         background: rgba(235, 205, 184, 0.2);
         color: $c-white;
@@ -136,6 +174,10 @@
         &:hover {
             background: rgba(104, 91, 82, 0.2);
         }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
     }
 
     /*&--lightGreen {
@@ -207,10 +249,6 @@
             width: 45px;
             height: 45px;
         }
-    }
-
-    &--reverse {
-        flex-direction: row-reverse;
     }*/
 
 }

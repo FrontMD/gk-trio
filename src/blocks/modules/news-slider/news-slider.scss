@@ -1,0 +1,24 @@
+.news-slider {
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__controls {
+        flex: 0 0 auto;
+    }
+
+    &__slider {
+        margin-top: 20px;
+        overflow: hidden;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+    }
+}

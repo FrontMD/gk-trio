@@ -6,3 +6,24 @@ block variables
 block content
     .page(data-js="page")
         .page-layout
+            +bc-section({
+                bc: {
+                    items: [
+                        {
+                            name: 'ГК ТРИО',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Новости',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Команда ГК Трио приняла участие в IV Липецком полумарафоне',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                },
+            })
+
+            +news-article
+            +news-slider

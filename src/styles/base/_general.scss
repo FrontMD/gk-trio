@@ -333,11 +333,20 @@ iframe {
 		margin-bottom: 0 !important;
 	}
 
+	h2 {
+		font-family: $ff-tiktok;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 100%;
+		text-transform: uppercase;
+	}
+
 	p {
 		display: block;
 	}
 
 	img,
+	h2,
 	p,
 	ul,
 	ul {
@@ -370,6 +379,72 @@ iframe {
 		height: 0.25em;
 		background-color: $c-text-light;
 		border-radius: 100%;
+	}
+
+	h2,
+	.te-media,
+	.te-note {
+		margin-top: 50px;
+	}
+
+	.te-media,
+	.te-note {
+		margin-bottom: 50px;
+	}
+
+	.te-media {
+		img {
+			margin-bottom: 0;
+		}
+	}
+
+	.te-media {
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		video {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+		}
+
+		&__caption {
+			margin-top: 15px;
+			text-align: center;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			color: #5E5E5E;
+		}
+	}
+
+	.te-note {
+		position: relative;
+		padding-left: 50px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 156.25%;
+		color: $c-text-light;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 4px;
+			width: 20px;
+			height: 20px;
+			background-size: 100% 100%;
+		}
+
+		&--question::before {
+			background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.5' cy='10.5' r='9.5' stroke='%23219653' stroke-width='2'/%3E%3Cpath d='M8 8.5C8 8.08887 8.10139 7.68409 8.2952 7.32151C8.489 6.95893 8.76923 6.64974 9.11107 6.42133C9.45291 6.19292 9.84581 6.05234 10.255 6.01204C10.6641 5.97174 11.0769 6.03297 11.4567 6.1903C11.8365 6.34763 12.1717 6.59621 12.4325 6.91402C12.6933 7.23182 12.8718 7.60905 12.952 8.01227C13.0322 8.4155 13.0117 8.83229 12.8924 9.22571C12.773 9.61914 12.5585 9.97706 12.2678 10.2678C11.6785 10.6785 11 11.3 11 12.5' stroke='%23219653' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='11' cy='15' r='1' fill='%23219653'/%3E%3C/svg%3E%0A");
+		}
+
+		&--attention::before {
+			background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.5' cy='10.5' r='9.5' stroke='%23EB5757' stroke-width='2'/%3E%3Cpath d='M10.5 10L10.5 15M10.5 6L10.5 7' stroke='%23EB5757' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+		}
 	}
 
 	/*ol {
