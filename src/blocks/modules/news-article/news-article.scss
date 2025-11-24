@@ -20,6 +20,16 @@
         grid-template-columns: minmax(0, 1fr) 62% minmax(0, 1fr);
         gap: 24px;
         align-items: flex-start;
+
+        @include max(large) {
+            grid-template-columns: minmax(0, 1fr) 70% minmax(0, 1fr);
+        }
+
+        @include max(laptop) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            max-width: 870px;
+            margin: 0 auto;
+        }
     }
 
     &__date {
@@ -32,6 +42,17 @@
 
     &__title {
         grid-column: 2 / 3;
+
+        @include max(laptop) {
+            grid-column: 1 / 3;
+            order: -1;
+        }
+
+        @include max(mobile) {
+            br {
+                display: none;
+            }
+        }
     }
 
     &__share {
@@ -44,7 +65,11 @@
         margin: 20px auto 0;
 
         @include max(large) {
-            max-width: 1015px;
+            max-width: 70%;
+        }
+
+        @include max(laptop) {
+            max-width: 870px;
         }
     }
 

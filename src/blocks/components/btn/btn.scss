@@ -154,6 +154,10 @@
         font-size: 15px;
         gap: 5px;
 
+        @include max(mobile) {
+            padding: 10px 15px;
+        }
+
         svg {
             width: 24px;
             height: 24px;

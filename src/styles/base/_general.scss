@@ -339,6 +339,10 @@ iframe {
 		font-size: 20px;
 		line-height: 100%;
 		text-transform: uppercase;
+
+		@include max(xs) {
+			font-size: 18px;
+		}
 	}
 
 	p {
@@ -385,11 +389,19 @@ iframe {
 	.te-media,
 	.te-note {
 		margin-top: 50px;
+
+		@include max(mobile) {
+			margin-top: 30px;
+		}
 	}
 
 	.te-media,
 	.te-note {
 		margin-bottom: 50px;
+
+		@include max(mobile) {
+			margin-bottom: 30px;
+		}
 	}
 
 	.te-media {
@@ -417,6 +429,11 @@ iframe {
 			font-size: 14px;
 			line-height: 100%;
 			color: #5E5E5E;
+
+			@include max(xs) {
+				font-size: 10px;
+				margin-top: 10px;
+			}
 		}
 	}
 
@@ -428,6 +445,15 @@ iframe {
 		line-height: 156.25%;
 		color: $c-text-light;
 
+		@include max(mobile) {
+			padding-left: 32px;
+		}
+
+		@include max(xs) {
+			padding-left: 24px;
+			font-size: 14px;
+		}
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -436,6 +462,16 @@ iframe {
 			width: 20px;
 			height: 20px;
 			background-size: 100% 100%;
+
+			@include max(mobile) {
+				width: 15px;
+				height: 15px;
+			}
+
+			@include max(xs) {
+				width: 12px;
+				height: 12px;
+			}
 		}
 
 		&--question::before {
