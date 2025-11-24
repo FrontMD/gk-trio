@@ -1,6 +1,8 @@
 noindex
     div
         //- код модалок сюда
+
+        //- обратный звонок
         +modal({modalId:"callbackModal"})(data-js="callbackModal")
             +form({
                 classes: 'form--modal',
@@ -27,6 +29,62 @@ noindex
                             'data-type': 'phoneNumber',
                             'required': '',
                             'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        type: '',
+                        title: '',
+                        placeholder: 'Комментарий',
+                    })
+
+        //- заявка в интро
+        +modal({modalId:"orderModal"})(data-js="orderModal")
+            +form({
+                classes: 'form--modal',
+                title: 'Оставить заявку',
+                text: 'Мы ищем надёжных партнёров для долгосрочного и взаимовыгодного сотрудничества. Оставьте заявку — и в ближайшее время мы обсудим детали возможного партнёрства.',
+                btnText: 'Отправить заявку',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Ваше имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Компания',
+                        inputAttr: {
+                            'required': '',
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Ваш телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Ваша почта',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'email'
                         },
                     })
                     +field({

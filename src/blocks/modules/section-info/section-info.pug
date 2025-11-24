@@ -1,0 +1,57 @@
+-
+    const defaultSectionInfoProps = {
+        classes: '',
+        top: '',
+        cards: ''
+    }
+
+mixin section-info(props= defaultSectionInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSectionInfoProps.classes,
+            top: props.top ? props.top : defaultSectionInfoProps.top,
+            cards: props.cards ? props.cards : defaultSectionInfoProps.cards
+        }
+
+    section.section-info(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .section-info__container
+                    - if(checkProps.top.length > 0)
+                        .section-info__top
+                            - let topList = checkProps.top
+                            - let topCounter = 0
+
+                            - while(topCounter < topList.length)
+                                .section-info__row
+                                    .section-info__left
+                                        +title({
+                                            classes: 'section-info__title',
+                                            text: topList[topCounter].title,
+                                            size: '20'
+                                        })
+                                    .section-info__text!= topList[topCounter].text
+
+                                - topCounter++
+
+                    - if(checkProps.cards.length > 0)    
+                        .section-info__cards
+                            - let cardsList = checkProps.cards
+                            - let cardsCounter = 0
+
+                            - while(cardsCounter < cardsList.length)
+                                .section-info__card.si-card
+                                    .si-card__header
+                                        .si-card__left
+                                            .si-card__icon
+                                                img(src=cardsList[cardsCounter].icon alt="")
+                                            +title({
+                                                classes: 'si-card__title',
+                                                text: cardsList[cardsCounter].title,
+                                                size: '20'
+                                            })
+                                        .si-card__num!= cardsList[cardsCounter].num
+
+                                    .si-card__text.text-editor!= cardsList[cardsCounter].text
+
+                                - cardsCounter++

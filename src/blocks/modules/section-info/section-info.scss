@@ -1,4 +1,4 @@
-.about-info {
+.section-info {
     &__top {
         display: flex;
         flex-direction: column;
@@ -44,6 +44,11 @@
             flex: 0 0 auto;
 
         }
+    }
+
+    &__title {
+        text-align: right;
+        font-size: 22px;
     }
 
     &__text {
@@ -118,20 +123,20 @@
     }
 
     &__card {
-        flex: 0 1 50%;
+        flex: 0 1 33%;
     }
 
 }
 
-.ai-card {
+.si-card {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    gap: 20px;
+    gap: 38px;
     padding: 30px;
     border-radius: $br-20;
-    background-color: $c-bg-main;
+    background-color: $c-white;
 
     @include max(laptop) {
         padding: 20px;
@@ -159,7 +164,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $c-white;
+        background-color: $c-bg-main;
         border-radius: 100%;
 
         @include max(laptop) {
@@ -189,16 +194,24 @@
         }
     }
 
-    &__text.text-editor {
-        color: $c-text;
+    &__title {
+        margin-top: 20px;
+    }
 
-        h2,
-        p {
-            margin-bottom: 10px;
-        }
+    &__num {
+        font-family: $ff-code;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $c-border;
+    }
+
+    &__text.text-editor {
+        color: $c-text-light;
 
         ul li::before {
-            background-color: $c-text;
+            background-color: $c-text-light;
         }
     }
 }
