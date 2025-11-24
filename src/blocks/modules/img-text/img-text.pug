@@ -1,0 +1,56 @@
+-
+    const defaultImgTextProps = {
+        classes: '',
+        rows: [
+            {
+                img: 'img/img-text/img_text_1.webp',
+                title: 'Подача учебного материала, максимально приближенная к «полевым условиям»',
+                text: `
+                <p>Мы не обучаем готовым «схемам успеха» и не информируем о тех или иных инновационных подходах как отвлечённых теоретических фактах — мы даём исчерпывающее практическое представление о технологии в целом.</p>
+                <p>Сначала объясняем, а потом показываем на практике в условиях действующей фермы, для чего, кем и когда должно быть совершено то или иное действие и применена та или иная методика или инновация и сама по себе, и в системе других методик.</p>
+                <p>Благодаря такому подходу вы получаете ясное и целостное понимание технологии и её применения в условиях практического функционирования современного животноводческого комплекса.</p>`,
+                imgRight: false
+            },
+            {
+                img: 'img/img-text/img_text_2.webp',
+                title: 'Формирование навыков адаптации любой технологии к конкретным условиям',
+                text: `
+                <p>Не существует единственно правильного метода или технологии, которые подходили бы для всех ферм, но есть принципы, которых необходимо придерживаться каждой из них.</p>
+                <p>Эти принципы — системная организация работы внутри каждого технологического блока, а также планирование и учёт.</p>
+                <p>Наша цель — научить вас адаптировать любую необходимую технологию к условиям реальной фермы и наладить работу на комплексе так, чтобы каждое из запланированных действий выполнялось наилучшим образом.</p>
+                <p>При этом вы будете обладать чёткими критериями и параметрами для контроля над совершаемыми действиями и их оценки.</p>`,
+                imgRight: true
+            },
+        ],
+    }
+
+mixin img-text(props= defaultImgTextProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultImgTextProps.classes,
+            rows: props.rows ? props.rows : defaultImgTextProps.rows
+        }
+
+    section.img-text(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .img-text__container
+                    - let rows = checkProps.rows 
+                    - let count = 0
+
+                    - while(count < rows.length)
+
+                        - let row = rows[count]
+                        - let dirClass = row.imgRight === true ? 'img-text__row--reverse' : ''
+
+                        .img-text__row(class=dirClass)
+                            .img-text__img
+                                img(src=row.img, alt="")
+                            .img-text__info
+                                +title({
+                                    text: row.title,
+                                    size: '40'
+                                })
+                                .img-text__text.text-editor!= row.text
+
+                        - count++

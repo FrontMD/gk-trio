@@ -1,0 +1,33 @@
+-
+    const defaultPdfSectionProps = {
+        classes: '',
+        title: 'Бесплатно <br><span>скачайте программу</span> <br>«Школа-Вуз-Бизнес»',
+        text: 'В документе более подробно представлен список тем занятий с почасовкой и аттестационными формами'
+    }
+
+mixin pdf-section(props= defaultPdfSectionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPdfSectionProps.classes,
+            title: props.title ? props.title : defaultPdfSectionProps.title,
+            text: props.text ? props.text : defaultPdfSectionProps.text
+        }
+
+    section.pdf-section(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg.gkt-container__inner--dark
+                .pdf-section__container
+                    .pdf-section__left
+                        +title({
+                            classes: 'pdf-section__title',
+                            text: checkProps.title,
+                            size: '40'
+                        })
+                        .pdf-section__text.text-editor!= checkProps.text
+                        +btn({
+                            name: 'Скачать PDF  (3.2мб)',
+                            cMode: 'accent',
+                            sMode: 'content'
+                        })
+                    .pdf-section__img
+                        img(src="img/school/pdf_section.webp" alt="")

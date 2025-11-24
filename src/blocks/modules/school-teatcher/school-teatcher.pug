@@ -1,0 +1,42 @@
+-
+    const defaultSchoolteatcherProps = {
+        classes: '',
+    }
+
+mixin school-teatcher(props= defaultSchoolteatcherProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSchoolteatcherProps.classes
+        }
+
+    section.school-teatcher(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .school-teatcher__container
+                    .school-teatcher__left
+                        .school-teatcher__img
+                            img(src="img/school/school_teatcher.webp" alt="")
+                        +btn({
+                            name: 'Приветственное слово преподавателя',
+                            sMode: 'full',
+                            cMode: 'accent',
+                            link: 'public/video/about.mp4'
+                        })(data-fancybox)
+                        .school-teatcher__contacts
+                            .school-teatcher__contact.teatcher-contact
+                                .teatcher-contact__name Телефон:
+                                a.teatcher-contact__link(href="tel:+74959395469") +7 (495) 939 54 69
+                            .school-teatcher__contact.teatcher-contact
+                                .teatcher-contact__name E-mail:
+                                a.teatcher-contact__link(href="maito:sibol1954@bk.ru") sibol1954@bk.ru
+
+                    .school-teatcher__right
+                        .title-block 
+                            +title-tag({
+                                text: 'Преподаватель'
+                            })
+                            +title({
+                                text: "Иванов <br>Иван Иванович",
+                                size: "40"
+                            })
+
