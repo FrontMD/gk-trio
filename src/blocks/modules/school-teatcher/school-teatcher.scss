@@ -1,1 +1,177 @@
-.school-tetcher {}
+.school-teatcher {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+
+        @include max(laptop) {
+            gap: 30px;
+        }
+
+        @include max(tablet) {
+            display: grid;
+            grid-template-columns: 300px auto;
+            gap: 20px;
+        }
+
+        @include max(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__left {
+        flex: 0 0 600px;
+
+        @include max(large) {
+            flex: 0 0 460px;
+        }
+
+        @include max(laptop) {
+            flex: 0 0 370px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: $br-10 70px $br-10 $br-10;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__contacts {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+
+        @include max(tablet) {
+            display: contents;
+        }
+    }
+
+    &__top {
+        @include max(mobile) {
+            margin-top: 20px;
+        }
+    }
+
+    &__params {
+        margin-top: 30px;
+        width: 100%;
+
+        @include max(xs) {
+            margin-top: 15px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        padding-bottom: 30px;
+        gap: 10px;
+
+        @include max(laptop) {
+            padding-bottom: 15px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__row+&__row {
+        padding-top: 30px;
+        border-top: 1px solid $c-border;
+
+        @include max(laptop) {
+            padding-top: 15px;
+        }
+    }
+
+    &__param {
+        flex: 0 0 26.6%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.25%;
+        color: $c-text-light;
+    }
+
+    &__val {
+        flex: 1 1 auto;
+        color: $c-text;
+
+        ul li::before {
+            background-color: $c-text;
+        }
+    }
+
+    &__desc {
+        color: $c-text;
+        max-width: 85.5%;
+        margin-top: 50px;
+
+        @include max(large) {
+            max-width: 100%;
+        }
+
+        @include max(laptop) {
+            margin-top: 20px;
+        }
+
+        @include max(tablet) {
+            grid-column: 1 / 3;
+        }
+
+        @include max(mobile) {
+            grid-column: 1 / 2;
+        }
+
+        @include max(xs) {
+            margin-top: 0;
+        }
+    }
+}
+
+.teatcher-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__name {
+        flex: 0 0 26.67%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.25%;
+        color: $c-text-light;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156.25%;
+        color: $c-text;
+        opacity: 1;
+        transition: all $tr;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

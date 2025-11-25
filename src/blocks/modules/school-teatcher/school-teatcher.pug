@@ -17,6 +17,7 @@ mixin school-teatcher(props= defaultSchoolteatcherProps)
                         .school-teatcher__img
                             img(src="img/school/school_teatcher.webp" alt="")
                         +btn({
+                            classes: 'school-teatcher__btn',
                             name: 'Приветственное слово преподавателя',
                             sMode: 'full',
                             cMode: 'accent',
@@ -31,12 +32,40 @@ mixin school-teatcher(props= defaultSchoolteatcherProps)
                                 a.teatcher-contact__link(href="maito:sibol1954@bk.ru") sibol1954@bk.ru
 
                     .school-teatcher__right
-                        .title-block 
-                            +title-tag({
-                                text: 'Преподаватель'
-                            })
-                            +title({
-                                text: "Иванов <br>Иван Иванович",
-                                size: "40"
-                            })
+                        .school-teatcher__top
+                            .title-block 
+                                +title-tag({
+                                    text: 'Преподаватель'
+                                })
+                                +title({
+                                    text: "Иванов <br>Иван Иванович",
+                                    size: "40"
+                                })
+
+                            .school-teatcher__params
+                                .school-teatcher__row
+                                    .school-teatcher__param Должность:
+                                    .school-teatcher__val.text-editor
+                                        ul
+                                            li Ведущий консультант ООО «Агрофирма «Трио»
+                                            li Ведущий преподаватель «Школы Действия»
+
+                                .school-teatcher__row
+                                    .school-teatcher__param Образование:
+                                    .school-teatcher__val.text-editor
+                                        | Высшее, Харьковский зооветеринарный институт
+
+                        .school-teatcher__desc.text-editor
+                            h2 Опыт работы
+                            ul
+                                li Более 30 лет своей жизни посвятил развитию молочного скотоводства.
+                                li Прошёл путь от старшего зоотехника до руководителя животноводческих проектов крупнейших молочно-товарных ферм Украины и России.
+                                li Работал главным технологом АОЗТ «Агро-Союз», и руководителем Международной школы по молочному скотоводству.
+                                li 1995 год. Голландия — изучение технологии содержания, кормления, селекции.
+                                li 1996 год. Швеция — изучение доильного оборудования, содержания.
+                                li 2000 год. Германия, Финляндия — изучение опыта успешных фермерских хозяйств, применения кормовых добавок.
+                                li 2002 год. Канада — обучение в Международной школе по разведению, селекции.
+                                li 2002–2008 годы. США — ежегодное обучение вопросам управления молочным стадом.
+                                li Участник и докладчик международных конгрессов, семинаров, форумов, выставок.
+
 

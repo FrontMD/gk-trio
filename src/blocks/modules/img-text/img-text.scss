@@ -5,12 +5,25 @@
         flex-direction: column;
         align-items: stretch;
         gap: 70px;
+
+        @include max(large) {
+            gap: 50px;
+        }
     }
 
     &__row {
         display: flex;
         align-items: flex-start;
         gap: 70px;
+
+        @include max(large) {
+            gap: 40px;
+        }
+
+        @include max(tablet) {
+            gap: 30px;
+            flex-direction: column;
+        }
     }
 
     &__row--reverse {
@@ -19,6 +32,10 @@
 
     &__info {
         margin-top: 20px;
+
+        @include max(large) {
+            margin-top: 0;
+        }
     }
 
     &__text.text-editor {
@@ -36,6 +53,11 @@
         aspect-ratio: 1 / 0.667;
         border-radius: $br-10;
         overflow: hidden;
+
+        @include max(tablet) {
+            max-width: 500px;
+            width: 100%;
+        }
 
         img {
             width: 100%;

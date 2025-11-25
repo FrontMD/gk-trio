@@ -99,10 +99,16 @@
         margin-left: -106px;
         padding-bottom: 20px;
         position: relative;
+        max-width: 250px;
 
         @include max(laptop) {
             margin-left: -100px;
             padding-bottom: 10px;
+            max-width: 220px;
+        }
+
+        @include max(tablet) {
+            max-width: none;
         }
 
         @include max(mobile) {
