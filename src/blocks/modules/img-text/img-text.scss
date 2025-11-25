@@ -39,6 +39,7 @@
     }
 
     &__text.text-editor {
+        color: $c-text;
         margin-top: 24px;
 
         h2,
@@ -48,11 +49,11 @@
     }
 
     &__img {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         flex: 0 0 39%;
         max-width: 750px;
-        aspect-ratio: 1 / 0.667;
-        border-radius: $br-10;
-        overflow: hidden;
 
         @include max(tablet) {
             max-width: 500px;
@@ -60,10 +61,18 @@
         }
 
         img {
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: $br-10;
             width: 100%;
-            height: 100%;
+            height: auto;
+            aspect-ratio: 1 / 0.667;
             object-fit: cover;
         }
+    }
+
+    &__row--reverse &__img {
+        align-items: flex-end;
     }
 
 }

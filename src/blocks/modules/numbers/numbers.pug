@@ -1,6 +1,8 @@
 -
     const defaultNumbersProps = {
         classes: '',
+        title: '',
+        columns: '',
         cards: [
             {
                 title: '20 000 <span>ГА</span>',
@@ -57,11 +59,21 @@ mixin numbers(props= defaultNumbersProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultNumbersProps.classes,
+            title: props.title ? props.title : defaultNumbersProps.title,
+            columns: props.columns ? props.columns : defaultNumbersProps.columns,
             cards: props.cards ? props.cards : defaultNumbersProps.cards
         }
 
-    section.numbers(class= checkProps.classes)&attributes(attributes)
+        let columnsClass = checkProps.columns.length > 0 ? ` numbers--${checkProps.columns}` : ''
+
+    section.numbers(class= checkProps.classes + columnsClass)&attributes(attributes)
         .gkt-container
+            -if(checkProps.title.length > 0)
+                .gkt-container__inner
+                    +title({
+                        classes: 'numbers__title',
+                        text: checkProps.title
+                    })
             .gkt-container__inner.gkt-container__inner--bg.gkt-container__inner--dark
                 .numbers__grid
                     - let cards = checkProps.cards

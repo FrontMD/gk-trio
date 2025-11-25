@@ -1,34 +1,55 @@
 -
     const defaultSchoolMethodProps = {
         classes: '',
+        hasBg: false,
+        title: '<span>Главная особенность</span> школы — в&nbsp;технике передачи знаний',
+        btnText: 'Запись открытого урока',
+        text: `
+            <p>Выбирая традиционные формы и методики обучения, можно узнать то, что не было известно прежде.</p>
+            <p>Но знания, не подкреплённые практикой, остаются в лучшем случае потенциальной силой, а в худшем — оседают мёртвым грузом или даже предаются забвению за невостребованностью.</p>
+            <p>До тех пор, пока вы не осознаете чётко и в подробностях, как действовать в соответствии с полученным теоретическим багажом, ваши знания почти бесполезны.</p>
+            <p>Когда же их использование на практике приводит к тому, что «правильные действия становятся второй натурой», обучение можно считать достигшим цели.</p>
+            <p>Именно на получение такого результата — практического в прямом смысле слова — и сориентирована наша школа. Достигать его нам позволяют два основополагающих подхода.</p>
+            `,
+        img: 'img/school/school_method.webp',
+        isVideo: false
     }
 
 mixin school-method(props= defaultSchoolMethodProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultSchoolMethodProps.classes,
+            hasBg: props.hasBg ? props.hasBg : defaultSchoolMethodProps.hasBg,
+            title: props.title ? props.title : defaultSchoolMethodProps.title,
+            btnText: props.btnText ? props.btnText : defaultSchoolMethodProps.btnText,
+            text: props.text ? props.text : defaultSchoolMethodProps.text,
+            img: props.img ? props.img : defaultSchoolMethodProps.img,
+            isVideo: props.isVideo ? props.isVideo : defaultSchoolMethodProps.isVideo,
         }
+
+        let bgClass = checkProps.hasBg === true ? ' gkt-container__inner--bg' : ''
 
     section.school-method(class= checkProps.classes)&attributes(attributes)
         .gkt-container
-            .gkt-container__inner.gkt-container__inner--bg
+            .gkt-container__inner(class=bgClass)
                 .school-method__container
                     .school-method__header
                         +title({
-                            text: '<span>Главная особенность</span> школы — в&nbsp;технике передачи знаний',
+                            text: checkProps.title,
                             size: '40'
                         })
                         +btn({
-                            name: 'Запись открытого урока',
+                            name: checkProps.btnText,
                             cMode: 'accent',
                             sMode: 'content',
                             link: 'public/video/about.mp4'
                         })(data-fancybox)
-                    .school-method__text.text-editor
-                        <p>Выбирая традиционные формы и методики обучения, можно узнать то, что не было известно прежде.</p>
-                        <p>Но знания, не подкреплённые практикой, остаются в лучшем случае потенциальной силой, а в худшем — оседают мёртвым грузом или даже предаются забвению за невостребованностью.</p>
-                        <p>До тех пор, пока вы не осознаете чётко и в подробностях, как действовать в соответствии с полученным теоретическим багажом, ваши знания почти бесполезны.</p>
-                        <p>Когда же их использование на практике приводит к тому, что «правильные действия становятся второй натурой», обучение можно считать достигшим цели.</p>
-                        <p>Именно на получение такого результата — практического в прямом смысле слова — и сориентирована наша школа. Достигать его нам позволяют два основополагающих подхода.</p>
-                    .school-method__img
-                        img(src="img/school/school_method.webp" alt="")
+                    .school-method__text.text-editor!= checkProps.text   
+                    .school-method__media
+                        img(src=checkProps.img alt="")
+
+                        - if(checkProps.isVideo === true)
+                            a.school-method__play(href='public/video/side_video.mp4' data-fancybox)
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#play`)
+

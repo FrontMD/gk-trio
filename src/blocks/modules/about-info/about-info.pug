@@ -1,6 +1,7 @@
 -
     const defaultAboutInfoProps = {
         classes: '',
+        topCenter: false,
         top: '',
         cards: ''
     }
@@ -9,11 +10,14 @@ mixin about-info(props= defaultAboutInfoProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultAboutInfoProps.classes,
+            topCenter: props.topCenter ? props.topCenter : defaultAboutInfoProps.topCenter,
             top: props.top ? props.top : defaultAboutInfoProps.top,
             cards: props.cards ? props.cards : defaultAboutInfoProps.cards
         }
 
-    section.about-info(class= checkProps.classes)&attributes(attributes)
+        let topLeftClass = checkProps.topCenter === true ? ' about-info--center' : ''
+
+    section.about-info(class= checkProps.classes + topLeftClass)&attributes(attributes)
         .gkt-container
             .gkt-container__inner.gkt-container__inner--bg
                 .about-info__container
