@@ -24,6 +24,10 @@
             display: grid;
             grid-template-columns: minmax(0, 60%) auto;
             align-items: flex-start;
+
+            .title br {
+                display: none;
+            }
         }
 
         @include max(tablet) {
@@ -37,7 +41,7 @@
 
     &__text.text-editor {
         align-self: center;
-        padding: 30px 0;
+        padding: 20px 0;
         color: $c-text-light;
         align-self: flex-start;
 
@@ -57,7 +61,17 @@
         }
     }
 
+    &--center &__text {
+        order: 1;
+        padding-left: 46px;
+
+        @include max(large) {
+            padding-left: 0;
+        }
+    }
+
     &__media {
+        position: relative;
         flex: 0 0 500px;
         overflow: hidden;
         border-radius: 70px $br-10 $br-10 $br-10;

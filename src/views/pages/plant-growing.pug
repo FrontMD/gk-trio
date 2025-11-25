@@ -127,7 +127,22 @@ block content
             })
 
             +school-method({
-
+                classes: 'school-method--center',
+                title: '<span>Обработка</span> почвы без оборота <br>пласта',
+                btnText: 'Видео по обработке почвы',
+                text: `
+                    <p>В результате анализа собственного опыта работы, а также обучения и обмена знаниями в разных странах, ГК «ТРИО» совершила осознанный переход на технологию обработки почвы без оборота пласта.</p>
+                    <p>Проводится минимальная обработка почвы на глубину до 14 см.</p>
+                    <p>Преимуществами данной технологии являются:</p>
+                    <ul>
+                        <li>Накопительное улучшение качества и структуры чернозёма год от года;</li>
+                        <li>Противоэррозионное воздействие;</li>
+                        <li>Применение меньшего количества удобрений;</li>
+                        <li>Лёгкая уборка в дождливый период.</li>
+                    </ul>
+                    `,
+                img: 'img/plant/plant_method.webp',
+                isVideo: true
             })
 
             +img-text({
@@ -148,7 +163,7 @@ block content
                     },
                     {
                         img: `<img src="img/img-text/img_text_4.webp">
-                            <a class="btn btn--accent btn--content" href="public/video/home_intro_bg_2.mp4" data-fancybox><span>Инновации в картофелеводстве от ГК «Трио»</span></a>`,
+                            <a class="btn btn--accent btn--content" href="public/video/home_intro_bg_2.mp4" data-fancybox><span>Инновации в картофелеводстве от&nbsp;ГК&nbsp;«Трио»</span></a>`,
                         title: 'Картофельный проект',
                         text: `
                         <p>Картофельный проект Группы компаний «ТРИО» реализуется с 2010 года. Объём инвестиций около 2,5 млрд ₽.</p>
@@ -165,3 +180,6 @@ block content
                     },
                 ],
             })
+
+            +title-text
+            +gallery

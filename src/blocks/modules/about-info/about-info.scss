@@ -114,9 +114,12 @@
             gap: 12px;
         }
 
-        @include max(mobile) {
+        @include max(tablet) {
             flex-direction: column;
             align-items: stretch;
+        }
+
+        @include max(mobile) {
             margin-top: 20px;
         }
     }

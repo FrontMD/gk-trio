@@ -1,0 +1,26 @@
+-
+    const defaultTitleTextProps = {
+        classes: '',
+        title: '<span>Действие</span> – вот что дает <br>желаемый результат',
+        text: 'На сегодняшний день ГК «ТРИО» выращивает картофель для компаний <br>ООО «ФРИТО ЛЕЙ МАНУФАКТУРИНГ» (ПепсиКо) и ООО «ЛЭМ УЭСТОН БЕЛАЯ ДАЧА».'
+    }
+
+mixin title-text(props= defaultTitleTextProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTitleTextProps.classes,
+            title: props.title ? props.title : defaultTitleTextProps.title,
+            text: props.text ? props.text : defaultTitleTextProps.text
+        }
+
+    section.title-text(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg.gkt-container__inner--dark
+                .title-text__container
+                    +title({
+                        classes: 'title-text__title',
+                        text: checkProps.title,
+                        size: '40'
+                    })
+                    .title-text__text.text-editor!= checkProps.text
+

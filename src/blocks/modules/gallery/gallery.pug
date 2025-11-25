@@ -1,0 +1,33 @@
+-
+    const defaultGalleryProps = {
+        classes: '',
+    }
+
+mixin gallery(props= defaultGalleryProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultGalleryProps.classes,
+        }
+
+    section.gallery(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner
+                .gallery__container
+                    .gallery__left
+                        img(src="img/gallery/gallery_1.webp" alt="")
+                    .gallery__right
+                        .gallery__images
+                            img(src="img/gallery/gallery_2.webp" alt="")
+                            img(src="img/gallery/gallery_3.webp" alt="")
+
+                        .gallery__desc
+                            +title({
+                                text: 'Надежный парк техники',
+                                size: '20'
+                            })
+                            .gallery__text.text-editor
+                                <p>Машинно-тракторный парк регулярно обновляется.</p>
+                                <p>С 2011 года инвестиции в технику составили 1 млрд. рублей.</p>
+                                <p>В хозяйствах используется надежная техника зарекомендовавших себя мировых брендов.</p>
+
+

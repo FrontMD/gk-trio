@@ -1,0 +1,47 @@
+.title-text {
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 70px;
+
+        @include max(laptop) {
+            gap: 24px;
+        }
+
+        @include max(tablet) {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+    }
+
+    &__title {
+        text-align: end;
+
+        @include max(tablet) {
+            text-align: start;
+        }
+
+        span {
+            color: $c-white;
+        }
+    }
+
+    &__text.text-editor {
+        color: $c-text;
+        align-self: end;
+
+        @include max(laptop) {
+            br {
+                display: none;
+            }
+        }
+
+        h2,
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+}

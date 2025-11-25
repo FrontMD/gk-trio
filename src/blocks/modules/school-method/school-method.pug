@@ -49,7 +49,7 @@ mixin school-method(props= defaultSchoolMethodProps)
                         img(src=checkProps.img alt="")
 
                         - if(checkProps.isVideo === true)
-                            a.school-method__play(href='public/video/side_video.mp4' data-fancybox)
+                            a.side-video__play(href='public/video/side_video.mp4' data-fancybox)
                                 svg 
                                     use(xlink:href=`img/sprites/sprite.svg#play`)
 

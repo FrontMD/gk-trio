@@ -73,6 +73,10 @@
 
     &__row--reverse &__img {
         align-items: flex-end;
+
+        @include max(tablet) {
+            align-items: flex-start;
+        }
     }
 
 }
