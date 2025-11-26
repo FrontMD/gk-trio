@@ -8,6 +8,10 @@
         @include max(tablet) {
             gap: 12px;
         }
+
+        @include max(mobile) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -17,6 +21,10 @@
 
         @include max(tablet) {
             border-radius: $br-10;
+        }
+
+        @include max(mobile) {
+            flex: 0 0 auto;
         }
 
         img {
@@ -54,6 +62,10 @@
 
         @include max(tablet) {
             padding: 10px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 0 0;
         }
     }
 
