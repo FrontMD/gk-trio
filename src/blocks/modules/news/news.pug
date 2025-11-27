@@ -1,12 +1,14 @@
 -
     const defaultNewsProps = {
-        classes: ''
+        classes: '',
+        title: 'Будьте в курсе <br>последних <span>новостей</span>'
     }
 
 mixin news(props= defaultNewsProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultNewsProps.classes
+            classes: props.classes ? props.classes : defaultNewsProps.classes,
+            title: props.title ? props.title : defaultNewsProps.title
         }
 
     section.news(class= checkProps.classes)&attributes(attributes)
@@ -20,7 +22,7 @@ mixin news(props= defaultNewsProps)
                         +title({
                             classes: 'news__title',
                             size: '40',
-                            text: 'Будьте в курсе <br>последних <span>новостей</span>'
+                            text: checkProps.title
                         })
 
                     +btn({

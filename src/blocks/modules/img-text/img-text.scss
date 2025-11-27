@@ -28,6 +28,7 @@
 
     &__row--reverse {
         flex-direction: row-reverse;
+        justify-content: space-between;
     }
 
     &__info {
@@ -95,6 +96,29 @@
 
         @include max(tablet) {
             align-items: flex-start;
+        }
+    }
+
+    &__note {
+        position: relative;
+        margin-top: 20px;
+        padding-left: 32px;
+        font-family: $ff-tiktok;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: $c-text;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.60449 0L8.95508 6.78467L15.7056 4.81934L16.1499 7.81006L9.68994 8.47656L13.8599 14.0308L11.0913 15.5518L7.99805 9.46777L5.16113 15.5518L2.29004 14.0308L6.42578 8.47656L0 7.81006L0.478516 4.81934L7.12646 6.78467L6.45996 0H9.60449Z' fill='%23969696'/%3E%3C/svg%3E%0A");
+            background-size: 100% 100%;
         }
     }
 

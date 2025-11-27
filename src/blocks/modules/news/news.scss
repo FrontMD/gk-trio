@@ -5,9 +5,17 @@
         justify-content: space-between;
         gap: 24px;
 
-        @include max(xs) {
+        @include max(mobile) {
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        .title {
+            @include max(tablet) {
+                br {
+                    display: none;
+                }
+            }
         }
     }
 

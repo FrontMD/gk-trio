@@ -3,6 +3,7 @@
         classes: '',
         tag: '',
         title: '<span>Аккредитация</span> <br>от ключевых партнёров',
+        subtitle: 'Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья'
     }
 
 mixin accreditation(props= defaultAccreditationProps)
@@ -11,6 +12,7 @@ mixin accreditation(props= defaultAccreditationProps)
             classes: props.classes ? props.classes : defaultAccreditationProps.classes,
             tag: props.tag ? props.tag : defaultAccreditationProps.tag,
             title: props.title ? props.title : defaultAccreditationProps.title,
+            subtitle: props.subtitle ? props.subtitle : defaultAccreditationProps.subtitle,
         }
 
     section.accreditation(class= checkProps.classes)&attributes(attributes)
@@ -27,7 +29,7 @@ mixin accreditation(props= defaultAccreditationProps)
                             size: '40',
                             text: checkProps.title
                         })
-                        .accreditation__subtitle.text-editor Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья
+                        .accreditation__subtitle.text-editor!= checkProps.subtitle
 
                     .sidebar-layout__main
                         .accreditation__list

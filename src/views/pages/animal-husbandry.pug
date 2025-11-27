@@ -144,6 +144,7 @@ block content
             +ratings-slider
 
             +img-text({
+                transparent: true,
                 rows: [
                     {
                         img: `<img src="img/img-text/img_text_3.webp">
@@ -159,7 +160,8 @@ block content
                             <li>Инструкции для каждого сотрудника и специалиста в недельном ритме.</li>
                         </ul>`,
                         imgRight: false,
-                        btn: false
+                        btn: false,
+                        isLink: false
                     },
                     {
                         img: `<img src="img/img-text/img_text_4.webp">`,
@@ -169,9 +171,12 @@ block content
                         <p>На собственном примере компания демонстрирует, что прибыльное животноводство в России возможно, а залог успеха состоит в грамотном использовании ресурсов и чётком соблюдении технологий.</p>
                         `,
                         imgRight: true,
-                        btn: 'О Poket Cow Card'
+                        btn: 'О Poket Cow Card',
+                        isLink: false
                     },
                 ],
             })
 
-            +news
+            +news({
+                title: 'Будьте в курсе последних новостей <br>на&nbsp;тему <span>животноводство</span>'
+            })

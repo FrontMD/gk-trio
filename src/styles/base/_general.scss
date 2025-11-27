@@ -244,6 +244,10 @@ table {
 		background-color: $c-bg-grey;
 	}
 
+	&__inner--black {
+		background-color: $c-text-btn;
+	}
+
 }
 
 .sidebar-layout {

@@ -1,0 +1,38 @@
+-
+    const defaultSocialSectionProps = {
+        classes: ''
+    }
+
+mixin social-section(props= defaultSocialSectionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSocialSectionProps.classes
+        }
+
+    section.social-section(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg.gkt-container__inner--black
+                .social-section__container
+                    +title({
+                        text: 'Мы в соцсетях',
+                        size: '20',
+                        cMode: 'light'
+                    })
+                    .social-section__list
+                        a.social-section__link(href="javascript:void(0);")
+                            span.social-section__name Вконтакте
+                            span.social-section__icon
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#vk`)
+                        a.social-section__link(href="javascript:void(0);")
+                            span.social-section__name Telegram
+                            span.social-section__icon
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#telegram`)
+                        a.social-section__link.social-section__link--transparent.social-section__link--last(href="javascript:void(0);")
+                            span.social-section__name Подписка на рассылку
+                            span.social-section__icon
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#mail`)
+
+

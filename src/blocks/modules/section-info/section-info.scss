@@ -34,6 +34,10 @@
         justify-content: center;
     }
 
+    &--right &__row {
+        justify-content: center;
+    }
+
     &__left {
         flex: 0 0 340px;
         display: flex;
@@ -49,6 +53,10 @@
             justify-content: flex-start;
 
         }
+    }
+
+    &--right &__left {
+        flex: 0 1 50%;
     }
 
     &__title {
@@ -101,6 +109,20 @@
             border-radius: 100%;
         }
 
+        ul,
+        p {
+            margin-top: 10px;
+            margin-bottom: 24px;
+        }
+
+        *:first-child {
+            margin-top: 0;
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+
         @include max(laptop) {
             font-size: 18px;
         }
@@ -116,6 +138,10 @@
         @include max(xs) {
             font-size: 14px;
         }
+    }
+
+    &--right &__text {
+        flex: 0 1 50%;
     }
 
     &__cards {

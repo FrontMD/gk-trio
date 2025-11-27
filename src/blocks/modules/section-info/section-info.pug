@@ -2,6 +2,7 @@
     const defaultSectionInfoProps = {
         classes: '',
         topCenter: false,
+        topRight: false,
         top: '',
         cards: ''
     }
@@ -11,14 +12,16 @@ mixin section-info(props= defaultSectionInfoProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultSectionInfoProps.classes,
             topCenter: props.topCenter ? props.topCenter : defaultSectionInfoProps.topCenter,
+            topRight: props.topRight ? props.topRight : defaultSectionInfoProps.topRight,
             top: props.top ? props.top : defaultSectionInfoProps.top,
             cards: props.cards ? props.cards : defaultSectionInfoProps.cards
         }
 
 
         let topLeftClass = checkProps.topCenter === true ? ' section-info--center' : ''
+        let topRightClass = checkProps.topRight === true ? ' section-info--right' : ''
 
-    section.section-info(class= checkProps.classes + topLeftClass)&attributes(attributes)
+    section.section-info(class= checkProps.classes + topLeftClass + topRightClass)&attributes(attributes)
         .gkt-container
             .gkt-container__inner
                 .section-info__container

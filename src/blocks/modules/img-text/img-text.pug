@@ -1,6 +1,7 @@
 -
     const defaultImgTextProps = {
         classes: '',
+        transparent: false,
         rows: [
             {
                 img: `<img src="img/img-text/img_text_1.webp">`,
@@ -10,7 +11,8 @@
                 <p>Сначала объясняем, а потом показываем на практике в условиях действующей фермы, для чего, кем и когда должно быть совершено то или иное действие и применена та или иная методика или инновация и сама по себе, и в системе других методик.</p>
                 <p>Благодаря такому подходу вы получаете ясное и целостное понимание технологии и её применения в условиях практического функционирования современного животноводческого комплекса.</p>`,
                 imgRight: false,
-                btn: false
+                btn: false,
+                isLink: false
             },
             {
                 img: '<img src="img/img-text/img_text_1.webp">',
@@ -21,7 +23,8 @@
                 <p>Наша цель — научить вас адаптировать любую необходимую технологию к условиям реальной фермы и наладить работу на комплексе так, чтобы каждое из запланированных действий выполнялось наилучшим образом.</p>
                 <p>При этом вы будете обладать чёткими критериями и параметрами для контроля над совершаемыми действиями и их оценки.</p>`,
                 imgRight: true,
-                btn: false
+                btn: false,
+                isLink: false
             },
         ],
     }
@@ -30,12 +33,15 @@ mixin img-text(props= defaultImgTextProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultImgTextProps.classes,
-            rows: props.rows ? props.rows : defaultImgTextProps.rows
+            rows: props.rows ? props.rows : defaultImgTextProps.rows,
+            transparent: props.transparent ? props.transparent : defaultImgTextProps.transparent,
         }
+
+        let bgClass = checkProps.transparent === false ? 'gkt-container__inner--bg' : ''
 
     section.img-text(class= checkProps.classes)&attributes(attributes)
         .gkt-container
-            .gkt-container__inner.gkt-container__inner--bg
+            .gkt-container__inner(class= bgClass)
                 .img-text__container
                     - let rows = checkProps.rows 
                     - let count = 0
@@ -54,11 +60,18 @@ mixin img-text(props= defaultImgTextProps)
                                 })
                                 .img-text__text.text-editor!= row.text
                                 - if(row.btn !== false)
-                                    +btn({
-                                        name: row.btn,
-                                        cMode: 'accent',
-                                        sMode: 'content',
-                                        link: 'public/video/side_video.mp4'
-                                    })(data-fancybox)
+                                    - if(row.isLink === false)
+                                        +btn({
+                                            name: row.btn,
+                                            cMode: 'accent',
+                                            sMode: 'content',
+                                            link: 'public/video/side_video.mp4'
+                                        })(data-fancybox)
+                                    - else
+                                        +btn({
+                                            name: row.btn,
+                                            cMode: 'accent',
+                                            sMode: 'content',
+                                        })
 
                         - count++
