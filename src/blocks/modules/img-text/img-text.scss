@@ -36,6 +36,18 @@
         @include max(large) {
             margin-top: 0;
         }
+
+        .btn {
+            margin-top: 24px;
+        }
+    }
+
+    .title {
+        br {
+            @include max(mobile) {
+                display: none;
+            }
+        }
     }
 
     &__text.text-editor {
@@ -45,6 +57,10 @@
         h2,
         p {
             margin-bottom: 10px;
+        }
+
+        ul li::before {
+            background-color: $c-text;
         }
     }
 
@@ -61,13 +77,16 @@
         }
 
         img {
-            margin-bottom: 20px;
             overflow: hidden;
             border-radius: $br-10;
             width: 100%;
             height: auto;
             aspect-ratio: 1 / 0.667;
             object-fit: cover;
+        }
+
+        img+.btn {
+            margin-top: 20px;
         }
     }
 

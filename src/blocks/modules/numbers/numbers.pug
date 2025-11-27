@@ -86,5 +86,6 @@ mixin numbers(props= defaultNumbersProps)
                                 .n-card__title(class= titleClass)!= cards[count].title
                                 .n-card__icon
                                     img(src=cards[count].icon alt="")
-                            .n-card__text.text-editor!= cards[count].text
+                            - if(cards[count].text.length > 0)
+                                .n-card__text.text-editor!= cards[count].text
                         - count++
