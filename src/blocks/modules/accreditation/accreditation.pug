@@ -1,12 +1,16 @@
 -
     const defaultAccreditationProps = {
-        classes: ''
+        classes: '',
+        tag: '',
+        title: '<span>Аккредитация</span> <br>от ключевых партнёров',
     }
 
 mixin accreditation(props= defaultAccreditationProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultAccreditationProps.classes
+            classes: props.classes ? props.classes : defaultAccreditationProps.classes,
+            tag: props.tag ? props.tag : defaultAccreditationProps.tag,
+            title: props.title ? props.title : defaultAccreditationProps.title,
         }
 
     section.accreditation(class= checkProps.classes)&attributes(attributes)
@@ -14,13 +18,14 @@ mixin accreditation(props= defaultAccreditationProps)
             .gkt-container__inner
                 .sidebar-layout
                     .sidebar-layout__sidebar
-                        +title-tag({
-                            text: 'О компании'
-                        })
+                        -  if(checkProps.tag.length > 0)
+                            +title-tag({
+                                text: checkProps.tag
+                            })
                         +title({
                             classes: 'accreditation__title',
                             size: '40',
-                            text: '<span>Аккредитация</span> <br>от ключевых партнёров'
+                            text: checkProps.title
                         })
                         .accreditation__subtitle.text-editor Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья
 

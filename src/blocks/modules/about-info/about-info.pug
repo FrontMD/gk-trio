@@ -29,9 +29,16 @@ mixin about-info(props= defaultAboutInfoProps)
                             - while(topCounter < topList.length)
                                 .about-info__row
                                     .about-info__left
-                                        +title-tag({
-                                            text: topList[topCounter].tag
-                                        })
+                                        - if(topList[topCounter].tag.length > 0)
+                                            +title-tag({
+                                                text: topList[topCounter].tag
+                                            })
+
+                                        - if(topList[topCounter].title.length > 0)
+                                            +title({
+                                                text: topList[topCounter].title,
+                                                size: '22'
+                                            })
                                     .about-info__text!= topList[topCounter].text
 
                                 - topCounter++

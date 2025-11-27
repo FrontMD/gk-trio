@@ -46,7 +46,14 @@
 
         @include max(tablet) {
             flex: 0 0 auto;
+        }
 
+        .title {
+            text-align: end;
+
+            @include max(tablet) {
+                text-align: start;
+            }
         }
     }
 
@@ -73,7 +80,7 @@
         }
 
         ul>li+li {
-            margin-top: 0.75em;
+            margin-top: 0.5em;
         }
 
         ul>li::before {
@@ -105,18 +112,24 @@
     }
 
     &__cards {
-        margin-top: 50px;
         display: flex;
         gap: 24px;
 
         @include max(laptop) {
-            margin-top: 30px;
             gap: 12px;
         }
 
         @include max(tablet) {
             flex-direction: column;
             align-items: stretch;
+        }
+    }
+
+    &__top+&__cards {
+        margin-top: 50px;
+
+        @include max(laptop) {
+            margin-top: 30px;
         }
 
         @include max(mobile) {

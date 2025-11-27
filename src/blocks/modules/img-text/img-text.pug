@@ -54,6 +54,11 @@ mixin img-text(props= defaultImgTextProps)
                                 })
                                 .img-text__text.text-editor!= row.text
                                 - if(row.btn !== false)
-                                    +btn(row.btn)
+                                    +btn({
+                                        name: row.btn,
+                                        cMode: 'accent',
+                                        sMode: 'content',
+                                        link: 'public/video/side_video.mp4'
+                                    })(data-fancybox)
 
                         - count++
