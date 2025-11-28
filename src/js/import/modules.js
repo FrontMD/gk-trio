@@ -6,6 +6,7 @@
 @@include("../../blocks/modules/volume-slider/volume-slider.js")
 @@include("../../blocks/modules/animal-slider/animal-slider.js")
 @@include("../../blocks/modules/history-modal/history-modal.js")
+@@include("../../blocks/modules/sp-slider/sp-slider.js")
 
 document.addEventListener('DOMContentLoaded', () => {
   homeIntro()
@@ -15,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   volumeSlider()
   animalSlider()
   historyModal()
+  spSlider()
 })
