@@ -2,6 +2,7 @@
     const defaultAboutInfoProps = {
         classes: '',
         topCenter: false,
+        verticalReverse: false,
         top: '',
         cards: ''
     }
@@ -11,6 +12,7 @@ mixin about-info(props= defaultAboutInfoProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultAboutInfoProps.classes,
             topCenter: props.topCenter ? props.topCenter : defaultAboutInfoProps.topCenter,
+            verticalReverse: props.verticalReverse ? props.verticalReverse : defaultAboutInfoProps.verticalReverse,
             top: props.top ? props.top : defaultAboutInfoProps.top,
             cards: props.cards ? props.cards : defaultAboutInfoProps.cards
         }
@@ -21,7 +23,7 @@ mixin about-info(props= defaultAboutInfoProps)
         .gkt-container
             .gkt-container__inner.gkt-container__inner--bg
                 .about-info__container
-                    - if(checkProps.top.length > 0)
+                    - if(checkProps.top.length > 0 && checkProps.top.verticalReverse !== true)
                         .about-info__top
                             - let topList = checkProps.top
                             - let topCounter = 0
@@ -60,3 +62,25 @@ mixin about-info(props= defaultAboutInfoProps)
                                     .ai-card__text.text-editor!= cardsList[cardsCounter].text
 
                                 - cardsCounter++
+
+                    - if(checkProps.top.length > 0 && checkProps.top.verticalReverse === true)
+                        .about-info__top
+                            - let topList = checkProps.top
+                            - let topCounter = 0
+
+                            - while(topCounter < topList.length)
+                                .about-info__row
+                                    .about-info__left
+                                        - if(topList[topCounter].tag.length > 0)
+                                            +title-tag({
+                                                text: topList[topCounter].tag
+                                            })
+
+                                        - if(topList[topCounter].title.length > 0)
+                                            +title({
+                                                text: topList[topCounter].title,
+                                                size: '22'
+                                            })
+                                    .about-info__text!= topList[topCounter].text
+
+                                - topCounter++
