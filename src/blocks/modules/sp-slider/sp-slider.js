@@ -13,7 +13,7 @@ function spSlider() {
         const slidesCount = sliderEl.querySelectorAll('.swiper-slide').length
     
         const spSliderEx = new Swiper(sliderEl, {
-            slidesPerView: 1.5,
+            slidesPerView: 1.2,
             slidesPerGroup: 1,
             spaceBetween: 12,
              navigation: {
@@ -21,15 +21,21 @@ function spSlider() {
                 prevEl: prev,
             },
             breakpoints: {
-                768: {
+                1024: {
+                    slidesPerView: 1.5,
+                    slidesPerGroup: 1,
+                },
+
+                1350: {
                     slidesPerView: slidesPerView,
                     slidesPerGroup: slidesPerView,
                 },
-                1341: {
-                    spaceBetween: 24,
+
+                1400: {
+                    spaceBetween: 0,
                     slidesPerView: slidesPerView,
                     slidesPerGroup: slidesPerView,
-                }
+                },
             },
             on: {
                 init: function() {

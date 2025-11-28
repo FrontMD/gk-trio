@@ -56,7 +56,10 @@
     }
 
     &--right &__left {
-        flex: 0 1 50%;
+
+        @include min(laptop) {
+            flex: 0 1 50%;
+        }
     }
 
     &__title {
@@ -141,7 +144,10 @@
     }
 
     &--right &__text {
-        flex: 0 1 50%;
+
+        @include min(laptop) {
+            flex: 0 1 50%;
+        }
     }
 
     &__cards {

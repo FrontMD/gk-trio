@@ -10,6 +10,10 @@
         overflow: hidden;
         margin-top: 50px;
 
+        @include max(mobile) {
+            margin-top: 30px;
+        }
+
         .swiper-wrapper {
             align-items: stretch;
         }
@@ -20,10 +24,10 @@
         margin-right: 12.5%;
 
         @include max(tablet) {
-            position: relative;
             justify-content: flex-end;
             width: fit-content;
             margin-left: auto;
+            margin-right: 0;
         }
     }
 }
@@ -47,25 +51,62 @@
             gap: 12px;
         }
 
-        @include max(xs) {
-            gap: 8px;
+        @include max(mobile) {
+            flex-direction: column;
         }
     }
 
-    &__item--rev {
-        flex-direction: row-reverse;
+    &__item--big {
+        flex: 0 0 100%;
+
+        @include max(mobile) {
+            flex-direction: column;
+        }
     }
 
-    &__item--big {
-        gap: 0;
-        flex: 0 0 100%;
+    &__item--top &__info {
+        margin-right: 6.4%;
+
+        @include max(large) {
+            margin-right: 0;
+        }
+    }
+
+    &__item--bottom &__info {
+        margin-right: 4.3%;
+
+        @include max(large) {
+            margin-right: 0;
+        }
+    }
+
+    &__item--bottom {
+        margin-left: -6.4%;
+
+        @include max(laptop) {
+            margin-left: 0;
+        }
     }
 
     &__img {
-        flex: 0 0 58%;
+        flex: 0 0 46.68%;
         aspect-ratio: 1 / 0.6;
         border-radius: $br-10;
         overflow: hidden;
+
+        @include max(full) {
+            max-width: 370px;
+        }
+
+
+        @include max(laptop) {
+            flex: 0 0 40%;
+        }
+
+        @include max(mobile) {
+            flex: 0 0 auto;
+            max-width: 40%;
+        }
 
         img {
             width: 100%;
@@ -73,31 +114,62 @@
         }
     }
 
-    &__item--big &__img {
-        position: relative;
-        flex: 0 0 79%;
-        aspect-ratio: 1 / 1.16;
+    &__item--top &__img {
+        margin-left: 19%;
+
+        @include max(large) {
+            margin-left: 0;
+        }
 
         @include max(laptop) {
-            flex: 0 0 70%;
+            margin-left: 6.4%;
         }
 
         @include max(mobile) {
-            flex: 0 0 80%;
+            margin-left: 0;
         }
 
-        @include max(xs) {
-            flex: 0 0 90%;
+
+    }
+
+    &__item--big &__img {
+        position: relative;
+        flex: 0 0 65.6%;
+        aspect-ratio: 1 / 1.16;
+        max-width: none;
+
+        @include max(large) {
+            flex: 0 0 57%;
+        }
+
+        @include max(mobile) {
+            flex: 0 0 auto;
+            max-width: 80%;
+            width: 80%;
         }
     }
 
     &__info {
+        flex: 1 1 auto;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        min-width: 250px;
 
         @include max(mobile) {
             gap: 0;
+        }
+    }
+
+    &__text.text-editor {
+        color: $c-text;
+
+        @include max(tablet) {
+            font-size: 14px;
+        }
+
+        @include max(mobile) {
+            font-size: 12px;
         }
     }
 
