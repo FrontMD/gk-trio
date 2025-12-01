@@ -3,6 +3,8 @@ function tabsBlockInit() {
 
     if(!tabsBlock) return
 
+    console.log(tabsBlock)
+
     const slidesList = tabsBlock.querySelectorAll('[data-js="tabsBlockSlide"]')
     const tabsList = tabsBlock.querySelectorAll('[data-js="tabsBlockTab"]')
 
@@ -31,8 +33,6 @@ function tabsBlockInit() {
 
             if(tabsHeight !== tabsBlock.offsetHeight) {
                 tabsHeight = tabsBlock.offsetHeight;
-
-                scrollTriggerRefresh(400)
             }
 
         })

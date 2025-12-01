@@ -7,8 +7,8 @@
 @@include("../../blocks/modules/animal-slider/animal-slider.js")
 @@include("../../blocks/modules/history-modal/history-modal.js")
 @@include("../../blocks/modules/sp-slider/sp-slider.js")
-@@include("../../blocks/modules/product-intro/product-intro.js")
 @@include("../../blocks/modules/product-slider/product-slider.js")
+@@include("../../blocks/modules/tabs-block/tabs-block.js")
 
 document.addEventListener('DOMContentLoaded', () => {
   homeIntro()
@@ -20,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   historyModal()
   spSlider()
   productSlider()
+  tabsBlockInit()
 })

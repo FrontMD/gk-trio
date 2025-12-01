@@ -1,23 +1,14 @@
 .tabs-block {
-    width: calc(100% + 48px);
     overflow: hidden;
-    margin: 0 -24px;
-
-    @include max(tablet) {
-        margin: 0 -15px;
-        width: calc(100% + 30px);
-    }
 
     &__tabs {
         overflow-x: auto;
-        padding-bottom: 1px;
     }
 
     &__list {
         display: flex;
         align-items: stretch;
         border-bottom: 1px solid $c-border;
-        border-top: 1px solid $c-border;
         width: fit-content;
         min-width: 100%;
     }
@@ -28,35 +19,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 12px;
-        padding: 7px 24px 10px;
+        gap: 10px;
+        padding: 0 50px 25px;
         cursor: pointer;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.4em;
-        color: $c-text;
-        transition: color $tr-time linear;
+        font-family: $ff-tiktok;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $c-text-light;
+        transition: color $tr;
         white-space: nowrap;
+
+        @include max(tablet) {
+            padding: 0 24px 16px;
+            font-size: 18px;
+        }
 
         svg {
             width: 24px;
             height: 24px;
-
-            @include max(mobile) {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        @include max(tablet) {
-            padding: 7px 15px 10px;
-            font-size: 16px;
-        }
-
-        @include max(mobile) {
-            padding: 7px 15px 10px;
-            font-size: 14px;
-            gap: 8px;
         }
 
         &::after {
@@ -65,9 +47,13 @@
             bottom: -1px;
             left: 0;
             width: 100%;
-            height: 2px;
+            height: 5px;
             background-color: transparent;
             transition: background-color 0.1s linear;
+
+            @include max(tablet) {
+                height: 3px;
+            }
         }
 
         &.active::after {
@@ -75,19 +61,14 @@
         }
 
         &:hover {
-            color: $c-accent-hover;
+            color: $c-accent;
         }
     }
 
     &__slides {
         margin-top: 50px;
-        padding: 0 24px;
 
         @include max(tablet) {
-            padding: 0 15px;
-        }
-
-        @include max(mobile) {
             margin-top: 30px;
         }
     }
@@ -101,46 +82,40 @@
     }
 }
 
-.tabs-block {
-    &--section {
+.product-detailed {
+    &__container {
+        max-width: 74.4%;
+        overflow: hidden;
+
         @include max(large) {
-            width: calc(100% + 40px);
-            margin: 0 -20px;
+            max-width: 1150px;
         }
 
-        @include max(tablet) {
-            width: calc(100% + 40px);
-            margin: 0 -20px;
-        }
+        .text-editor {
+            color: $c-text;
 
-        @include max(mobile) {
-            width: calc(100% + 30px);
-            margin: 0 -15px;
+            li:before {
+                background-color: $c-text;
+            }
+
+            h2,
+            ul,
+            li,
+            p {
+                margin-bottom: 0.625em;
+            }
+
+            h2 {
+                margin-top: 50px;
+
+                @include max(tablet) {
+                    margin-top: 24px;
+                }
+            }
         }
     }
 
-    &--section &__list {
-        border-top: none;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        @include max(laptop) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
-    &--section &__slides {
-        margin-top: 32px;
-        padding: 0 32px;
-
-        @include max(tablet) {
-            margin-top: 24px;
-            padding: 0 20px;
-        }
-
-        @include max(mobile) {
-            padding: 0 15px;
-        }
+    &__files {
+        border-top: 1px solid $c-border;
     }
 }
