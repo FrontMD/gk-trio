@@ -2,7 +2,9 @@
     const defaultAboutInfoProps = {
         classes: '',
         topCenter: false,
+        top50: false,
         verticalReverse: false,
+        transparent: false,
         top: '',
         cards: ''
     }
@@ -12,18 +14,22 @@ mixin about-info(props= defaultAboutInfoProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultAboutInfoProps.classes,
             topCenter: props.topCenter ? props.topCenter : defaultAboutInfoProps.topCenter,
+            top50: props.top50 ? props.top50 : defaultAboutInfoProps.top50,
             verticalReverse: props.verticalReverse ? props.verticalReverse : defaultAboutInfoProps.verticalReverse,
+            transparent: props.transparent ? props.transparent : defaultAboutInfoProps.transparent,
             top: props.top ? props.top : defaultAboutInfoProps.top,
             cards: props.cards ? props.cards : defaultAboutInfoProps.cards
         }
 
         let topLeftClass = checkProps.topCenter === true ? ' about-info--center' : ''
+        let topCenterClass = checkProps.top50 === true ? ' about-info--50' : ''
+        let bgClass = checkProps.transparent === false ? ' gkt-container__inner--bg' : ''
 
-    section.about-info(class= checkProps.classes + topLeftClass)&attributes(attributes)
+    section.about-info(class= checkProps.classes + topLeftClass + topCenterClass)&attributes(attributes)
         .gkt-container
-            .gkt-container__inner.gkt-container__inner--bg
+            .gkt-container__inner(class=bgClass)
                 .about-info__container
-                    - if(checkProps.top.length > 0 && checkProps.top.verticalReverse !== true)
+                    - if(checkProps.top.length > 0 && checkProps.verticalReverse !== true)
                         .about-info__top
                             - let topList = checkProps.top
                             - let topCounter = 0
@@ -63,7 +69,7 @@ mixin about-info(props= defaultAboutInfoProps)
 
                                 - cardsCounter++
 
-                    - if(checkProps.top.length > 0 && checkProps.top.verticalReverse === true)
+                    - if(checkProps.top.length > 0 && checkProps.verticalReverse === true)
                         .about-info__top
                             - let topList = checkProps.top
                             - let topCounter = 0

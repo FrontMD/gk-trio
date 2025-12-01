@@ -1,0 +1,76 @@
+.video-btn {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    width: 94px;
+    aspect-ratio: 1 / 0.667;
+    border: 1px solid #E9E9E9;
+    border-radius: $br-10;
+    overflow: hidden;
+
+    &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 3;
+    }
+
+    &__poster {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        aspect-ratio: 1 / 1;
+        background-color: $c-accent;
+        border-radius: 4px;
+        padding-left: 2%;
+        cursor: pointer;
+        color: $c-white;
+        z-index: 1;
+        transition: all $tr;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover &__play {
+        background-color: $c-white;
+        color: $c-accent;
+    }
+}

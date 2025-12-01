@@ -34,6 +34,10 @@
         justify-content: center;
     }
 
+    &--50 &__row {
+        justify-content: center;
+    }
+
     &__left {
         flex: 0 0 340px;
         display: flex;
@@ -54,6 +58,15 @@
             @include max(tablet) {
                 text-align: start;
             }
+        }
+    }
+
+    &--50 &__left {
+        flex: 0 1 50%;
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+            max-width: 100%;
         }
     }
 
@@ -108,6 +121,16 @@
 
         @include max(xs) {
             font-size: 14px;
+        }
+    }
+
+    &--50 &__text {
+        flex: 0 1 50%;
+        max-width: 50%;
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+            max-width: 100%;
         }
     }
 

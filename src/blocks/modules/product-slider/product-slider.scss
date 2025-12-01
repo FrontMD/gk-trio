@@ -1,0 +1,143 @@
+.product-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__video {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        z-index: 7;
+    }
+
+    &__wrapper {
+        border-radius: $br-20;
+        overflow: hidden;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 0.66;
+
+        @include max(large) {
+            max-height: none;
+            aspect-ratio: 1 / 0.945;
+        }
+
+        @include max(tablet) {
+            aspect-ratio: 1 / 0.45;
+        }
+
+        @include max(xs) {
+            aspect-ratio: 1 / 0.75;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__twrapper {
+        position: relative;
+        margin-top: 20px;
+        padding: 0 48px;
+
+        .slider-controls__separator {
+            display: none;
+        }
+
+        .slider-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 32px;
+            height: 32px;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            &--prev {
+                left: 0;
+            }
+
+            &--next {
+                right: 0;
+            }
+
+            &.swiper-button-disabled {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__tabs {
+        overflow: hidden;
+
+    }
+
+    &__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.83vw;
+        height: 5vw;
+        width: 7.6vw;
+        border-radius: $br-10;
+        cursor: pointer;
+        overflow: hidden;
+
+        @include max(large) {
+            height: 65px;
+            width: 65px;
+        }
+
+        @include max(tablet) {
+            height: 80px;
+            width: 80px;
+        }
+
+        @include max(mobile) {
+            height: 50px;
+            width: 50px;
+        }
+
+        &.swiper-slide-thumb-active {
+            border-color: $c-text-grey;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            transition: border-color $tr;
+            border-radius: $br-10;
+        }
+
+        &.swiper-slide-thumb-active::after {
+            border-color: $c-text-grey;
+        }
+
+    }
+
+    &__controls {
+        display: block;
+    }
+
+}

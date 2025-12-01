@@ -1,0 +1,29 @@
+-
+    const defaultDownloadBtnProps = {
+        classes: '',
+        name: '',
+        format: '',
+        size: '',
+    }
+
+mixin download-btn(props = defaultDownloadBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultDownloadBtnProps.classes,
+            name: props.name ? props.name : defaultDownloadBtnProps.name,
+            format: props.format ? props.format : defaultDownloadBtnProps.format,
+            size: props.size ? props.size : defaultDownloadBtnProps.size
+        }
+
+    .download-btn(class=checkProps.classes)&attributes(attributes)
+        .download-btn__format!= checkProps.format
+        .download-btn__main
+            .download-btn__title!= checkProps.name
+            .download-btn__size!= checkProps.size
+        a(href="javascript:void(0);").download-btn__download
+            span Скачать
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#download`)
+
+
+

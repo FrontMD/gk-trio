@@ -35,6 +35,17 @@
         }
     }
 
+    &--grey {
+        color: $c-accent;
+        background-color: $c-bg-grey;
+        opacity: 1;
+        transition: all $tr;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
     &--accent {
         color: $c-white;
         background-color: $c-accent;
@@ -148,6 +159,17 @@
         }
     }
 
+    &--icon {
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
     &--share {
         padding: 14px 19px;
         border-radius: 50px;
@@ -229,30 +251,6 @@
         }
     }
 
-    &--icon {
-        padding: 10px;
-        width: 60px;
-        height: 60px;
-
-        @include min(full) {
-            padding: 10px;
-        }
-
-        @include max(laptop) {
-            width: 45px;
-            height: 45px;
-
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        @include max(xs) {
-            padding: 5px;
-            width: 45px;
-            height: 45px;
-        }
-    }*/
+    */
 
 }

@@ -1,0 +1,70 @@
+-
+    const defaultProductSliderProps = {
+        classes: '',
+    }
+
+mixin product-slider(props= defaultProductSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProductSliderProps.classes,
+        }
+
+    .product-slider(data-js="productSlider")
+        +video-btn({
+            classes: 'product-slider__video',
+            video: 'public/video/about.mp4',
+            poster: 'img/products/product_4.webp',
+        })
+        .product-slider__wrapper
+            .product-slider__slider(data-js="productSliderSlider")
+                .swiper-wrapper
+                    a.swiper-slide.product-slider__slide(href="img/products/product_4.webp" data-fancybox="productSlider" data-thumb="img/products/product_4.webp")
+                        img(src="img/products/product_4.webp" alt="")
+                    a.swiper-slide.product-slider__slide(href="img/products/product_5.webp" data-fancybox="productSlider" data-thumb="img/products/product_5.webp")
+                        img(src="img/products/product_5.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+                    a.swiper-slide.product-slider__slide(href="img/products/product_6.webp" data-fancybox="productSlider" data-thumb="img/products/product_6.webp")
+                        img(src="img/products/product_6.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+                    a.swiper-slide.product-slider__slide(href="img/products/product_5.webp" data-fancybox="productSlider" data-thumb="img/products/product_5.webp")
+                        img(src="img/products/product_5.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+                    a.swiper-slide.product-slider__slide(href="img/products/product_1.webp" data-fancybox="productSlider" data-thumb="img/products/product_1.webp")
+                        img(src="img/products/product_1.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+                    a.swiper-slide.product-slider__slide(href="img/products/product_2.webp" data-fancybox="productSlider" data-thumb="img/products/product_2.webp")
+                        img(src="img/products/product_2.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+                    a.swiper-slide.product-slider__slide(href="img/products/product_3.webp" data-fancybox="productSlider" data-thumb="img/products/product_3.webp")
+                        img(src="img/products/product_3.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+                    a.swiper-slide.product-slider__slide(href="img/products/product_5.webp" data-fancybox="productSlider" data-thumb="img/products/product_5.webp")
+                        img(src="img/products/product_5.webp" loading="lazy" alt="")
+                        .swiper-lazy-preloader
+
+
+        .product-slider__twrapper
+            .product-slider__tabs(data-js="productSliderTabs")
+                .swiper-wrapper
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_4.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_5.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_6.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_5.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_1.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_2.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_3.webp" alt="")
+                    .swiper-slide.product-slider__tab
+                        img(src="img/products/product_5.webp" alt="")
+
+            +slider-controls({
+                classes: 'product-slider__controls'
+            })
+
+

@@ -1,0 +1,90 @@
+-
+    const defaultProductIntroProps = {
+        classes: ''
+    }
+
+mixin product-intro(props= defaultProductIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProductIntroProps.classes
+        }
+
+    section.product-intro(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .product-intro__container
+                    +title({
+                        classes: 'product-intro__title',
+                        tag: 'h1',
+                        size: '40',
+                        text: 'Бык Цыган 508, порода ч/п Голштинская, <br>дата рождения 31.07.2024 '
+                    })
+                    .product-intro__flex
+                        .product-intro__media
+                            +product-slider
+
+                        .product-intro__info
+                            +title({
+                                classes: 'product-intro__subtitle',
+                                size: '20',
+                                text: 'Информация о животном'
+                            })
+
+                            .product-intro__chars.product-chars
+                                .product-chars__row
+                                    .product-chars__param Инвентарный номер:
+                                    .product-chars__value 12376
+                                .product-chars__row
+                                    .product-chars__param Индекс NM$:
+                                    .product-chars__value 415
+                                .product-chars__row    
+                                    .product-chars__param MBI:
+                                    .product-chars__value 24997
+                                .product-chars__row    
+                                    .product-chars__param Дата рождения:
+                                    .product-chars__value 31.07.2024
+                                .product-chars__row    
+                                    .product-chars__param Поставщик:
+                                    .product-chars__value ГК Трио
+                                .product-chars__row    
+                                    .product-chars__param Дата рождения:
+                                    .product-chars__value 31.07.2024
+                                .product-chars__row    
+                                    .product-chars__param Индекс NM$:
+                                    .product-chars__value 415
+                                .product-chars__row    
+                                    .product-chars__param Инвентарный номер:
+                                    .product-chars__value 12376
+                                .product-chars__row    
+                                    .product-chars__param Поставщик:
+                                    .product-chars__value ГК Трио
+                                .product-chars__row    
+                                    .product-chars__param MBI:
+                                    .product-chars__value 24997
+
+                            .product-intro__files  
+                                +download-btn({
+                                    format: 'pdf',
+                                    name: 'Сертификат',
+                                    size: 'pdf, 3Мб',
+                                })
+                                +download-btn({
+                                    format: 'pdf',
+                                    name: 'Генетический паспорт',
+                                    size: 'pdf, 3Мб',
+                                }) 
+
+                            .product-intro__bottom
+                                .product-intro__left
+                                    .product-intro__price 100 000 ₽
+                                    +btn({
+                                        sMode: 'icon',
+                                        icon: 'basket',
+                                        cMode: 'grey'
+                                    })
+
+                                +btn({
+                                    name: 'Оставить заявку',
+                                    cMode: 'accent',
+                                    sMode: 'content'
+                                })(data-modal="#orderModal")

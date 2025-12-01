@@ -1,0 +1,564 @@
+-
+    const defaultTabsProps = {
+        classes: '',
+        tabs: [
+            {
+                name: 'Вкладка 1',
+                icon: ''
+            },
+            {
+                name: 'Вкладка 2',
+                icon: ''
+            },
+        ],
+    }
+
+mixin tabs-block(props= defaultTabsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTabsProps.classes,
+            tabs: props.tabs ? props.tabs : defaultTabsProps.tabs
+        }
+
+    section.tabs-block
+        .section__container.product-detailed__container
+            .gkt-container
+                .gkt-container__inner.gkt-container__inner--bg
+                    .tabs-block__tabs.scrollbar.scrollbar--small(data-js="tabsBlockList")
+                        .tabs-block__list
+                            .tabs-block__tab.active(data-index="0" data-js="tabsBlockTab")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#`)
+                                span Описание
+                            .tabs-block__tab(data-index="1" data-js="tabsBlockTab")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#`)
+                                span Характеристики
+                            .tabs-block__tab(data-index="2" data-js="tabsBlockTab")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#`)
+                                span Документы
+
+                    .tabs-block__slides
+                        .tabs-block__slide.active(data-js="tabsBlockSlide")
+                            .product-detailed__desc.text-editor#lineDesc
+                                h3 Особенности линейки
+
+                                ul 
+                                    li Эргономичный пульт управления;
+                                    li Управление машиной и испытаниями осуществляется через программу с ПК или ноутбука;
+                                    li Зарегистрированная торговая марка, защита от подделок;
+                                    li Точность позиционирования траверсы;
+                                    li Плавный ход захватов и приспособлений
+
+                                hr
+
+                                h3#completeSet Заводская комплектация
+
+                                ul
+                                    li 
+                                        != 'Высокоточная синхронная система управления перемещением – 1 компл. <a href="img/catalog/product_1.webp" data-fancybox="group1" data-thumb="img/catalog/product_1.webp">Фото</a>'
+                                        .gallery-list 
+                                            a(href="img/catalog/product_2.webp" data-fancybox="group1" data-thumb="img/catalog/product_2.webp")
+                                    li 
+                                        != 'Высокоточная ШВП – 1шт. <a href="img/catalog/product_3.webp" data-fancybox="group2" data-thumb="img/catalog/product_3.webp">Фото</a>'
+                                        .gallery-list 
+                                            a(href="img/catalog/product_4.webp" data-fancybox="group2" data-thumb="img/catalog/product_4.webp")
+                                            a(href="img/catalog/product_5.webp" data-fancybox="group2" data-thumb="img/catalog/product_5.webp")
+                                            a(href="img/catalog/product_6.webp" data-fancybox="group2" data-thumb="img/catalog/product_6.webp")
+                                            a(href="img/catalog/product_15.webp" data-fancybox="group2" data-thumb="img/catalog/product_15.webp")
+                                            a(href="img/catalog/product_16.webp" data-fancybox="group2" data-thumb="img/catalog/product_16.webp")
+                                    li 
+                                        != 'Прецизионная измерительная система – 1компл.'
+                                    li 
+                                        != 'Высокоточный фотоэлектрический энкодер – 1шт.'
+                                    li 
+                                        != 'Цифровая система регулировки и контроля скорости – 1 компл.'
+                                    li 
+                                        != 'Высокоточный датчик нагрузки – 1шт.'
+                                    li 
+                                        != 'Программное обеспечение – 1 компл. <a href="img/catalog/product_7.webp" data-fancybox="group3" data-thumb="img/catalog/product_7.webp">Фото</a>'
+                                        .gallery-list 
+                                            a(href="img/catalog/product_8.webp" data-fancybox="group3" data-thumb="img/catalog/product_8.webp")
+                                            a(href="img/catalog/product_9.webp" data-fancybox="group3" data-thumb="img/catalog/product_9.webp")
+                                            a(href="img/catalog/product_10.webp" data-fancybox="group3" data-thumb="img/catalog/product_10.webp")
+                                    li 
+                                        != 'Универсальные тисковые захваты – 1 компл.'
+                                    li 
+                                        != 'Губки-вкладыши– 2 компл.'
+                                    li 
+                                        != 'Универсальные тисковые захваты – 1 компл.'
+                                    li 
+                                        != 'Плиты для испытания на сжатие – 1 компл.'
+                                    li 
+                                        != 'ПК или ноутбук – 1 компл.'
+
+                                .text-highlight
+                                    h3 Заводская комплектация
+
+                                    ul
+                                        li Изменение НПИ в пределах от 0,1 до 5 кН не приведёт к изменению цены на машину (БЕСПЛАТНО), вместе с НПИ меняется НмПИ.
+                                        li Возможно оснащение машины доп. датчиком для понижения минимального значения НмПИ и повышения точности на минимальных нагрузках (доп. датчик + 50 т.р.)
+                                        li Возможно увеличения рабочего хода, максимального расстояния между захватами до = не менее 1200 мм (+ 160 т.р.)
+                                        li По желанию заказчика и по предварительной договорённости, приёмка оборудования возможна на производстве, до момента отгрузки.
+                                        li По желанию заказчика, возможно оснащение машины доп. захватами и приспособлениями: на растяжения, на сжатие, на 3х опорный изгиб, на прокол, экстензометрами, системами температурных испытаний и т.д.
+
+                                h3 Габариты рабочей зоны <a href="img/catalog/product_11.webp"  data-fancybox="group4" data-thumb="img/catalog/product_11.webp">Фото</a>
+                                .gallery-list 
+                                    a(href="img/catalog/product_12.webp" data-fancybox="group4" data-thumb="img/catalog/product_12.webp")
+                                h3 Диаграмма мощности двигателя <a href="img/catalog/product_13.webp"  data-fancybox="group5" data-thumb="img/catalog/product_13.webp">Фото</a>
+                                .gallery-list 
+                                    a(href="img/catalog/product_14.webp" data-fancybox="group5" data-thumb="img/catalog/product_14.webp")
+                                    a(href="img/catalog/product_17.webp" data-fancybox="group5" data-thumb="img/catalog/product_17.webp")
+
+
+                        .tabs-block__slide(data-js="tabsBlockSlide")
+                            .product-detailed__tech.text-editor#allChars
+                                table
+                                    // Если продукт без моделей, то убрать <thead>...</thead>
+                                    thead
+                                        tr
+                                            th Характеристики модификаций
+                                            th(data-model="ТРМ-О 0,1")
+                                                b ТРМ-О 0,1
+                                            th(data-model="ТРМ-О 0,2")
+                                                b ТРМ-О 0,2
+                                            th(data-model="ТРМ-О 0,3")
+                                                b ТРМ-О 0,3
+                                            th(data-model="ТРМ-О 0,5")
+                                                b ТРМ-О 0,5
+                                            th(data-model="ТРМ-О 1")
+                                                b ТРМ-О 1
+                                            th(data-model="ТРМ-О 1,5")
+                                                b ТРМ-О 1,5
+                                            th(data-model="ТРМ-О 2")
+                                                b ТРМ-О 2
+                                            th(data-model="ТРМ-О 2,5")
+                                                b ТРМ-О 2,5
+                                            th(data-model="ТРМ-О 3")
+                                                b ТРМ-О 3
+                                            th(data-model="ТРМ-О 5")
+                                                b ТРМ-О 5
+                                            th(data-model="ТРМ-О 10")
+                                                b ТРМ-О 10
+                                            th(data-model="ТРМ-О 20")
+                                                b ТРМ-О 20
+                                            th(data-model="ТРМ-О 30")
+                                                b ТРМ-О 30
+                                            th(data-model="ТРМ-О 50")
+                                                b ТРМ-О 50
+                                            th(data-model="ТРМ-О 100")
+                                                b ТРМ-О 100
+                                            th(data-model="ТРМ-О 200")
+                                                b ТРМ-О 200
+                                            th(data-model="ТРМ-О 300")
+                                                b ТРМ-О 300
+                                            th(data-model="ТРМ-О 500")
+                                                b ТРМ-О 500
+
+                                    tbody
+                                        tr
+                                            th Конструктивное исполнение
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+
+                                        tr
+                                            th Напряжение питания
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                        tr
+                                            th Мин. нагрузка, Н
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                        tr
+                                            th Макс. нагрузка, Н
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                        tr
+                                            th Погрешность по нагрузке на данном диапазоне
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                        tr
+                                            th Ход траверсы, мм
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                        tr
+                                            th Конструктивное исполнение
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+
+                                        tr
+                                            th Напряжение питания
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                        tr
+                                            th Мин. нагрузка, Н
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                        tr
+                                            th Макс. нагрузка, Н
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                        tr
+                                            th Погрешность по нагрузке на данном диапазоне
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                        tr
+                                            th Ход траверсы, мм
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                        tr
+                                            th Конструктивное исполнение
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+                                            td настольное
+
+                                        tr
+                                            th Напряжение питания
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                            td 220В, 50Гц
+                                        tr
+                                            th Мин. нагрузка, Н
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                            td 0,2
+                                        tr
+                                            th Макс. нагрузка, Н
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                            td 100
+                                        tr
+                                            th Погрешность по нагрузке на данном диапазоне
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                            td ±0.5%
+                                        tr
+                                            th Ход траверсы, мм
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+                                            td 770
+
+
+                        .tabs-block__slide(data-js="tabsBlockSlide")
+                            .product-detailed__docs#productDocs
+                                +download-btn({
+                                    classes: '',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Свидетельство об утверждении типа средств измерений ОС.С. 28.070.А №75160',
+                                    size: '3,5 Мб'
+                                })
+                                +download-btn({
+                                    classes: '',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Методика поверки',
+                                    size: '12,5 Мб'
+                                })
+                                +download-btn({
+                                    classes: '',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Разрешение на применение Знака соответствия',
+                                    size: '1 Мб'
+                                })
+                                +download-btn({
+                                    classes: '',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Патент на изобретение №2818547',
+                                    size: '88 Мб'
+                                })
+                                +download-btn({
+                                    classes: '',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Свидетельство об утверждении типа средств измерений ОС.С. 28.070.А №75160 ОС.С. 28.070.А  ОС.С. 28.070.А  ОС.С. 28.070.А',
+                                    size: '43,9 Мб'
+                                })
+                                +download-btn({
+                                    classes: '',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Свидетельство об утверждении типа средств измерений ОС.С. 28.070.А №75160',
+                                    size: '2,5 Мб'
+                                })
+
+                        .tabs-block__slide(data-js="tabsBlockSlide")
