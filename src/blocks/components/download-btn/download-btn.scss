@@ -6,9 +6,8 @@
     border-bottom: 1px solid $c-border;
 
     @include max(xs) {
-        padding: 10px 12px;
+        padding: 12px 0;
         gap: 8px;
-        font-size: 14px;
     }
 
     &__format {
@@ -25,6 +24,12 @@
         line-height: 100%;
         color: $c-white;
         background-color: $c-error;
+
+        @include max(mobile) {
+            min-width: 40px;
+            height: 40px;
+            font-size: 12px;
+        }
     }
 
     &__main {
@@ -35,7 +40,11 @@
     &__title {
         font-weight: 400;
         font-size: 16px;
-        line-height: 16px;
+        line-height: 100%;
+
+        @include max(xs) {
+            font-size: 14px;
+        }
     }
 
     &__size {
@@ -47,6 +56,7 @@
 
         @include max(xs) {
             font-size: 12px;
+            margin-top: 6px;
         }
     }
 

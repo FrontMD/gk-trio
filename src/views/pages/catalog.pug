@@ -1,0 +1,90 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Каталог"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +home-intro({
+                slides: [
+                    {
+                        title: 'Каталог продукции <br>животноводства',
+                        topTitle: 'Бычки',
+                        img: 'img/home/home_intro_bg_1.webp',
+                        isVideo: false
+                    },
+                    {
+                        title: 'Каталог продукции <br>животноводства',
+                        topTitle: 'Нетели',
+                        img: 'public/video/home_intro_bg_2.mp4',
+                        isVideo: true
+                    },
+                    {
+                        title: 'Каталог продукции <br>животноводства',
+                        topTitle: 'Эмбрионы',
+                        img: 'img/home/home_intro_bg_3.webp',
+                        isVideo: false
+                    },
+                ],
+                contentSlides: [
+                    {
+                        num: '01',
+                        title: 'Бычки',
+                        icon: 'img/home/home_intro_icon_1.svg'
+                    },
+                    {
+                        num: '02',
+                        title: 'Нетели',
+                        icon: 'img/home/home_intro_icon_1.svg'
+                    },
+                    {
+                        num: '03',
+                        title: 'Эмбрионы',
+                        icon: 'img/home/home_intro_icon_1.svg'
+                    }
+                ]
+            })
+
+            +s-catalog
+
+            +img-text({
+                transparent: true,
+                rows: [
+                    {
+                        img: `<img src="img/img-text/img_text_16.webp">`,
+                        title: 'Особенности генетики',
+                        text: `<ul>
+                            <li>Бык Цыган наследует удой +103, жир +46, белок +34 улучшает показатели оплодотворяемости коров.</li>
+                            <li>Мать 3871 по первой лактации за 305 дней надоила 11451 л., со средними показателями: жира 4,18; белка 3,57.</li>
+                            <li>Отец быка Альта Моновар, инвентарный номер 3235933059, имеет следующие племенные индексы: TPI 3026, NM649 $. Выдающиеся качества отца: наследует удой +773, высокий индекс вымени, фертильность</li>
+                        </ul>`,
+                        imgRight: false,
+                        btn: 'Об особенностях генетики',
+                        isLink: false
+                    },
+                ],
+            })
+
+            +accreditation({
+                title: 'Наши <span>ключевые партнеры</span>'
+            })
+
+            +category-slider
+
+            +img-text({
+                transparent: true,
+                rows: [
+                    {
+                        img: `<img src="img/img-text/img_text_17.webp">`,
+                        title: 'Эффективное ведение бизнеса',
+                        text: `
+                        <p>На животноводческих комплексах Группы компаний «ТРИО» постоянно внедряются новые технологии, совершенствуется процесс производства и ведётся контроль над производительностью.</p>
+                        <p>На собственном примере компания демонстрирует, что прибыльное животноводство в России возможно, а залог успеха состоит в грамотном использовании ресурсов и чётком соблюдении технологий.</p>
+                        `,
+                        imgRight: false,
+                        btn: 'О бизнес-процессах',
+                        isLink: false
+                    },
+                ],
+            })

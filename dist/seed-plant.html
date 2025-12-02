@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>Семенной завод</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -104,147 +104,157 @@
       </div>
     </header>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding: 140px 0 60px;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__subtitle {
-            margin-top: 60px;
-            font-size: 32px !important;
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: var(--c-accent);
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
-        }
-        
-        .pages-list__link:hover {
-            opacity: 0.7;
-        }
-        
-        @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-            .pages-list {
-                padding: 140px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
-      <div class="page">
-        <section class="section pages-list">
-          <div class="gkt-container">
-            <div class="gkt-container__inner">
-                  <div class="title pages-list__title title--60 title--dark">
-                    <h1>Страницы</h1>
+      <div class="page" data-js="page">
+        <div class="page-layout">
+              <section class="i-intro">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="i-intro__container">
+                      <div class="i-intro__img">
+                        <div class="i-intro__overlay"></div><img src="img/intro/seed_intro.webp" alt="">
+                      </div>
+                      <div class="i-intro__top">
+                            <div class="breadcrumbs  breadcrumbs--light">
+                              <div class="custom-scrollbar breadcrumbs__scroll" data-js="customScrollbar">
+                                <ul class="breadcrumbs__list">
+                                  <li class="breadcrumbs__item"><a href="javascript:void(0);">ГК ТРИО</a><span class="breadcrumbs__separator">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#arrow_breadcrumbs"></use>
+                                      </svg></span>
+                                  </li>
+                                  <li class="breadcrumbs__item breadcrumbs__item--current"><span>Семенной завод</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="title i-intro__title title--60 title--light">
+                              <h1>Семенной завод</h1>
+                            </div>
+                        <div class="i-intro__subtitle">[Крупнейший семенной завод в России]</div>
+                      </div>
+                      <div class="i-intro__bottom">
+                        <div class="i-intro__desc text-editor text-editor--light">Крупнейший семенной завод в России</div>
+                        <div class="i-intro__right">
+                          <div class="i-intro__corner">
+                            <ul class="i-intro__list">
+                              <li>Доставка средствами автомобильного и ж/д транспорта в 24/7 режиме;</li>
+                              <li>Доставка экспедированием зёрна до склада клиента (либо до загрузки в вагон ж/д или судно) на собственном автотранспорте.</li>
+                              <li>Минимальный заказ — 300 кг</li>
+                            </ul><a class="btn  btn--accent btn--full" href="javascript:void(0);" data-modal="#orderModal"><span>Оставить заявку</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-              <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="home.html" target="_blank">Главная</a><a class="pages-list__link pages-list__link--check" href="about.html" target="_blank">О компании</a><a class="pages-list__link pages-list__link--check" href="school.html" target="_blank">Школа действия</a><a class="pages-list__link pages-list__link--check" href="plant-growing.html" target="_blank">Растениеводство</a><a class="pages-list__link pages-list__link--check" href="animal-husbandry.html" target="_blank">Животноводство</a><a class="pages-list__link pages-list__link--check" href="grain-trading.html" target="_blank">Трейдинг зерна</a><a class="pages-list__link pages-list__link--check" href="social-activities.html" target="_blank">Социально-благотворительная деятельность</a><a class="pages-list__link pages-list__link--check" href="news.html" target="_blank">Новости</a><a class="pages-list__link pages-list__link--check" href="news-detailed.html" target="_blank">Новость (детальная)</a><a class="pages-list__link pages-list__link--check" href="excursion.html" target="_blank">Экскурсия на молочную ферму</a><a class="pages-list__link pages-list__link--check" href="product.html" target="_blank">Карточка товара</a><a class="pages-list__link pages-list__link--work" href="catalog.html" target="_blank">Каталог</a><a class="pages-list__link pages-list__link--check" href="seed-plant.html" target="_blank">Семенной завод</a><a class="pages-list__link pages-list__link--work" href="contacts.html" target="_blank">Контакты</a></div>
-            </div>
-          </div>
-        </section>
+                </div>
+              </section>
+              <section class="section-info  section-info--right">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="section-info__container">
+                      <div class="section-info__top">
+                        <div class="section-info__row">
+                          <div class="section-info__left">
+                                <div class="title section-info__title title--20 title--dark"><span>Производительность</span> уникального <br>семенного завода достигает <br>30&nbsp;тонн семян в&nbsp;час при&nbsp;калибровке
+                                </div>
+                          </div>
+                          <div class="section-info__text"><p>В сутки завод способен перерабатывать более 600 тонн семян. На пашнях площадью 27 тыс. га Семенной завод выращивает технические, бобовые и зерновые культуры. Зерновые составляют 60% от общего объема выращиваемых культур – это ячмень, яровая и озимая пшеница.</p></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="about-info">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner  gkt-container__inner--bg">
+                    <div class="about-info__container">
+                      <div class="about-info__cards">
+                        <div class="about-info__card ai-card">
+                          <div class="ai-card__header">
+                                <div class="title  title--20 title--dark">Более 100 видов <br>испытательных сортов
+                                </div>
+                            <div class="ai-card__icon"><img src="img/about/about_icon_31.svg" alt=""></div>
+                          </div>
+                          <div class="ai-card__text text-editor">
+                            <p>Семенной завод производит оригинальные и элитные семена разных сортов сельскохозяйственных культур: пшеницы, ячменя, гороха, люпина, рапса, горчицы, люцерны, рыжика и других.</p>
+                            <p>Предприятие имеет собственные сортоиспытательные поля, на которых тестируются более 100 видов перспективных сортов.</p>
+                            </div>
+                        </div>
+                        <div class="about-info__card ai-card">
+                          <div class="ai-card__header">
+                                <div class="title  title--20 title--dark">Каждая партия <br>семян сертифицируется
+                                </div>
+                            <div class="ai-card__icon"><img src="img/about/about_icon_3.svg" alt=""></div>
+                          </div>
+                          <div class="ai-card__text text-editor">
+                            <p>Семенной завод применяет передовые технологии выращивания семян сельскохозяйственных культур.</p> 
+                            <p>За счет применения современных прогрессивных технологий улучшается и качество производимых семян. Каждая партия семян сертифицируется Россельхозцентром.</p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="accreditation">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="sidebar-layout">
+                      <div class="sidebar-layout__sidebar">
+                            <div class="title accreditation__title title--40 title--dark">Наши <br><span>ключевые партнеры</span>
+                            </div>
+                        <div class="accreditation__subtitle text-editor">Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья</div>
+                      </div>
+                      <div class="sidebar-layout__main">
+                        <div class="accreditation__list"><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_1.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_2.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_3.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_4.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_5.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_6.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_7.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_8.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_9.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_10.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_11.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_12.webp" alt=""></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="img-text">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="img-text__container">
+                      <div class="img-text__row">
+                        <div class="img-text__img"><img src="img/img-text/img_text_5.webp"></div>
+                        <div class="img-text__info">
+                              <div class="title  title--40 title--dark">Федеральный лидер
+                              </div>
+                          <div class="img-text__text text-editor">
+                        <p>Предприятие имеет 3 линии приемки зерна по 80 тонн в час каждая. Одновременно завод может принимать 3 разных вида культур. Мощности по приемке – 2 600 тонн в сутки.</p>
+                        <p>Линии сортировки, калибровки и протравки. Предприятие имеет 4 погрузчика, мощность по отгрузке составляет 550 – 1000 тонн в сутки. Мощность хранения семенного материала зерновых культур составляет 40 тысяч тонн в год.</p>
+                        <p>Упаковка готовых семян происходит в воздухопроницаемые полипропиленовые мешки - Биг-Бэги с возможностью фасовки 700-850 кг. Бик-Бэги хранятся на складах готовой продукции, рассчитанных на 16 000 тонн семян.</p>
+                        <p>Элитные семена хранятся на 3 складах по 2 000 тонн каждая. Производительный процесс от приемки до хранения доведенного до кондиции семенного материала полностью компьютеризирован и оснащен самым современным европейским технологическим оборудованием компаний «Cimbria» и «Symaga».</p></div><a class="btn  btn--accent btn--content" href="public/video/side_video.mp4" data-fancybox><span>Фильм</span></a>
+                        </div>
+                      </div>
+                      <div class="img-text__row img-text__row--reverse">
+                        <div class="img-text__img"><img src="img/img-text/img_text_6.webp"></div>
+                        <div class="img-text__info">
+                              <div class="title  title--40 title--dark">Семенной завод работает по&nbsp;уникальному принципу «завод&nbsp;— поле»
+                              </div>
+                          <div class="img-text__text text-editor">
+                            <p>Завод напрямую поставляет собственные, готовые к посеву семена на поля агрофирм ГК «ТРИО».</p>
+                            <p>Таким образом, устраняется цепочка посредников, что позволяет значительно снизить затраты на логистику. При этом, работая по принципу «завод – поле», производитель гарантирует качество семян.</p></div><a class="btn  btn--accent btn--content" href="public/video/side_video.mp4" data-fancybox><span>Обзор элеваторов</span></a>
+                        </div>
+                      </div>
+                      <div class="img-text__row">
+                        <div class="img-text__img"><img src="img/img-text/img_text_7.webp"></div>
+                        <div class="img-text__info">
+                              <div class="title  title--40 title--dark">Мощность производства семян высокой репродукции и мелкосемянных культур — 10 тонн в час
+                              </div>
+                          <div class="img-text__text text-editor">
+                        <p>После модернизации линии по производству семян высокой репродукции и мелкосемянных культур в октябре 2021 года его мощность составит 10 тонн в час.</p>
+                        <p>Каждая партия семян будет сертифицироваться Россельхозцентром, а затем поступать в качестве готовой к посеву напрямую на поля.</p>
+                        <p>Таким образом предприятие закрывает формат «завод – поле», избегая посредников, снижая затраты на логистику и сохраняя высокое качество.</p></div><a class="btn  btn--accent btn--content" href="public/video/side_video.mp4" data-fancybox><span>Интервью со специалистом по надзору качества</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
       </div>
     </main>
         <footer class="site-footer">

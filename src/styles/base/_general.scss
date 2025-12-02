@@ -612,6 +612,12 @@ iframe {
 			@include max(tablet) {
 				padding: 12px 15px;
 			}
+
+			@include max(mobile) {
+				padding: 6px 10px;
+				font-size: 12px;
+				min-width: 100px;
+			}
 		}
 
 		tbody tr:nth-child(odd) td,

@@ -1,0 +1,24 @@
+-
+    const defaultSCatalogProps = {
+        classes: ''
+    }
+
+mixin s-catalog(props= defaultSCatalogProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSCatalogProps.classes
+        }
+
+    section.s-catalog(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .s-catalog__container
+                    .s-catalog__header
+                        +title({
+                            text: '<span>Каталог</span> животных на продажу',
+                            tag: 'h1',
+                            size: '40'
+                        })
+                        .s-catalog__status Каталог обновлен 06.08.2025
+
+                    .s-catalog__

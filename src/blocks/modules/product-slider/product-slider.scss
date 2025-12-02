@@ -8,6 +8,11 @@
         top: 13px;
         right: 13px;
         z-index: 7;
+
+        @include max(mobile) {
+            top: 8px;
+            right: 8px;
+        }
     }
 
     &__wrapper {
@@ -42,6 +47,11 @@
             margin-top: 12px;
         }
 
+        @include max(mobile) {
+            padding: 0 24px;
+            margin-top: 8px;
+        }
+
         .slider-controls__separator {
             display: none;
         }
@@ -59,6 +69,11 @@
                 height: 24px;
             }
 
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
+
             svg {
                 width: 32px;
                 height: 32px;
@@ -66,6 +81,11 @@
                 @include max(laptop) {
                     width: 24px;
                     height: 24px;
+                }
+
+                @include max(mobile) {
+                    width: 20px;
+                    height: 20px;
                 }
             }
 
@@ -106,6 +126,12 @@
             height: 65.8px;
         }
 
+        @include max(mobile) {
+            width: 80px;
+            height: 52.64px;
+            margin-right: 4px;
+        }
+
         &.swiper-slide-thumb-active {
             border-color: $c-text-grey;
         }
@@ -130,6 +156,10 @@
             @include max(laptop) {
                 border-radius: 5px;
                 border-width: 2px;
+            }
+
+            @include max(mobile) {
+                border-width: 1px;
             }
         }
 

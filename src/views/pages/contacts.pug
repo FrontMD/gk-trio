@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Контакты"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +bc-section({
+                bc: {
+                    items: [
+                        {
+                            name: 'ГК ТРИО',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Контакты',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                },
+            })

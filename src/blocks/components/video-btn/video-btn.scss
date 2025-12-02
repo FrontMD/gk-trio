@@ -8,6 +8,11 @@
     border-radius: $br-10;
     overflow: hidden;
 
+    @include max(mobile) {
+        width: 75px;
+        border-radius: 5px;
+    }
+
     &__link {
         position: absolute;
         width: 100%;
@@ -61,6 +66,11 @@
         svg {
             width: 16px;
             height: 16px;
+
+            @include max(mobile) {
+                width: 10px;
+                height: 10px;
+            }
         }
 
     }

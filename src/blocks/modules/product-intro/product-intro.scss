@@ -48,6 +48,10 @@
 
     &__chars {
         margin-top: 20px;
+
+        @include max(mobile) {
+            margin-top: 12px;
+        }
     }
 
     &__files {
@@ -60,6 +64,15 @@
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @include max(mobile) {
+            gap: 20px;
+        }
+
+        @include max(xs) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__left {
@@ -67,6 +80,11 @@
         align-items: center;
         gap: 15px;
         margin-right: auto;
+
+        @include max(xs) {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 
     &__price {
@@ -79,6 +97,10 @@
 
         @include max(laptop) {
             font-size: 28px;
+        }
+
+        @include max(mobile) {
+            font-size: 24px;
         }
     }
 
@@ -93,6 +115,10 @@
         column-gap: 12px;
     }
 
+    @include max(xs) {
+        columns: auto;
+    }
+
     &__row {
         display: flex;
         align-items: flex-start;
@@ -105,6 +131,10 @@
 
         @include max(laptop) {
             font-size: 14px;
+        }
+
+        @include max(xs) {
+            margin-bottom: 5px;
         }
     }
 

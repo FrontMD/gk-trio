@@ -1,12 +1,51 @@
 -
     const defaultHomeIntroProps = {
-        classes: ''
+        classes: '',
+        slides: [
+            {
+                title: 'Агропромышленное предприятие из&nbsp;Липецкой области',
+                topTitle: '',
+                img: 'img/home/home_intro_bg_1.webp',
+                isVideo: false
+            },
+            {
+                title: 'Агропромышленное предприятие из&nbsp;Липецкой области',
+                topTitle: '',
+                img: 'public/video/home_intro_bg_2.mp4',
+                isVideo: true
+            },
+            {
+                title: 'Агропромышленное предприятие из&nbsp;Липецкой области',
+                topTitle: '',
+                img: 'img/home/home_intro_bg_3.webp',
+                isVideo: false
+            },
+        ],
+        contentSlides: [
+            {
+                num: '01',
+                title: 'Животноводство',
+                icon: 'img/home/home_intro_icon_1.svg'
+            },
+            {
+                num: '02',
+                title: 'Растениеводство',
+                icon: 'img/home/home_intro_icon_1.svg'
+            },
+            {
+                num: '03',
+                title: 'Трейдинг зерна',
+                icon: 'img/home/home_intro_icon_1.svg'
+            }
+        ]
     }
 
 mixin home-intro(props= defaultHomeIntroProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultHomeIntroProps.classes
+            classes: props.classes ? props.classes : defaultHomeIntroProps.classes,
+            slides: props.slides ? props.slides : defaultHomeIntroProps.slides,
+            contentSlides: props.contentSlides ? props.contentSlides : defaultHomeIntroProps.contentSlides
         }
 
     section.home-intro(class= checkProps.classes data-js="homeIntro")&attributes(attributes)
@@ -15,110 +54,79 @@ mixin home-intro(props= defaultHomeIntroProps)
                 .home-intro__container
                     .home-intro__slider(data-js="homeIntroSlider")
                         .swiper-wrapper
-                            .swiper-slide.home-intro__slide
-                                .home-intro__bg
-                                    img(src="img/home/home_intro_bg_1.webp" alt="")
-                                .home-intro__left
-                                    .home-intro__tag [Производим с 1997 года]
-                                    +title({
-                                        classes: 'home-intro__title',
-                                        size: '60',
-                                        text: 'Агропромышленное предприятие из&nbsp;Липецкой области',
-                                        cMode: 'light'
-                                    })
-                            .swiper-slide.home-intro__slide
-                                .home-intro__bg
-                                    video(src="public/video/home_intro_bg_2.mp4" muted loop)
-                                .home-intro__left
-                                    .home-intro__tag [Производим с 1997 года]
-                                    +title({
-                                        classes: 'home-intro__title',
-                                        size: '60',
-                                        text: 'Агропромышленное предприятие из&nbsp;Липецкой области',
-                                        cMode: 'light'
-                                    })
-                            .swiper-slide.home-intro__slide
-                                .home-intro__bg
-                                    img(src="img/home/home_intro_bg_3.webp" alt="")
-                                .home-intro__left
-                                    .home-intro__tag [Производим с 1997 года]
-                                    +title({
-                                        classes: 'home-intro__title',
-                                        size: '60',
-                                        text: 'Агропромышленное предприятие из&nbsp;Липецкой области',
-                                        cMode: 'light'
-                                    })
+
+                            - let count = 0
+                            - let slides = checkProps.slides
+
+                            - while(count < slides.length)
+                                -let slide = slides[count]
+
+                                .swiper-slide.home-intro__slide
+                                    .home-intro__bg
+                                        - if(slide.isVideo === true)
+                                            video(src=slide.img muted loop)
+                                        - else
+                                            img(src=slide.img alt="")
+                                    .home-intro__left
+                                        - if(slide.topTitle.length > 0)
+                                            +title({
+                                                classes: 'home-intro__suptitle',
+                                                size: '60',
+                                                text: slide.topTitle,
+                                                cMode: 'light'
+                                            })
+                                        .home-intro__tag [Производим с 1997 года]
+                                        +title({
+                                            classes: 'home-intro__title',
+                                            size: '60',
+                                            tag: 'h1',
+                                            text: slide.title,
+                                            cMode: 'light'
+                                        })
+
+                                - count++
 
                     .home-intro__content
                         .home-intro__right
                             .home-intro__info.home-info(data-js="homeIntroInfo")
                                 .home-info__tabs(data-js="homeIntroTabs")
                                     .swiper-wrapper
-                                        .swiper-slide.home-info__tab(data-js="homeIntroTab") 
-                                            span 01
-                                            .tab-progress
-                                        .swiper-slide.home-info__tab(data-js="homeIntroTab") 
-                                            span 02
-                                            .tab-progress
-                                        .swiper-slide.home-info__tab(data-js="homeIntroTab") 
-                                            span 03
-                                            .tab-progress
+                                        - let countTabs = 0
+                                        - let slidesTabs = checkProps.contentSlides
+
+                                        - while(countTabs < slidesTabs.length)
+                                            .swiper-slide.home-info__tab(data-js="homeIntroTab") 
+                                                span!= slidesTabs[countTabs].num
+                                                .tab-progress
+
+                                                - countTabs++
 
                                 .home-info__slider(data-js="homeIntroInfoSlider")
                                     .swiper-wrapper
-                                        .swiper-slide.home-info__slide
-                                            .home-info__icon
-                                                img(src="img/home/home_intro_icon_1.svg")
-                                            +title({
-                                                classes: 'home-info__title',
-                                                size: '24',
-                                                text: 'Животноводство',
-                                                cMode: 'light'
-                                            })
-                                            .home-info__text 4 животноводческих комплекса: на 1000, 2000 и 4000 голов дойного стада, молодняковая ферма
-                                            .home-info__separator
-                                            +btn({
-                                                classes: 'home-info__btn',
-                                                name: 'Подробнее',
-                                                icon: "arrow_link_down",
-                                                cMode: 'transparent',
-                                                sMode: 'full'
-                                            })(target="_blank")
+                                        - let countCont = 0
+                                        - let slidesCont = checkProps.contentSlides
 
-                                        .swiper-slide.home-info__slide
-                                            .home-info__icon
-                                                img(src="img/home/home_intro_icon_1.svg")
-                                            +title({
-                                                classes: 'home-info__title',
-                                                size: '24',
-                                                text: 'Растениеводство',
-                                                cMode: 'light'
-                                            })
-                                            .home-info__text 4 животноводческих комплекса: на 1000, 2000 и 4000 голов дойного стада, молодняковая ферма
-                                            .home-info__separator
-                                            +btn({
-                                                classes: 'home-info__btn',
-                                                name: 'Подробнее',
-                                                icon: "arrow_link_down",
-                                                cMode: 'transparent',
-                                                sMode: 'full'
-                                            })(target="_blank")
-                                        .swiper-slide.home-info__slide
-                                            .home-info__icon
-                                                img(src="img/home/home_intro_icon_1.svg")
-                                            +title({
-                                                classes: 'home-info__title',
-                                                size: '24',
-                                                text: 'Трейдинг зерна',
-                                                cMode: 'light'
-                                            })
-                                            .home-info__text 4 животноводческих комплекса: на 1000, 2000 и 4000 голов дойного стада, молодняковая ферма
-                                            .home-info__separator
-                                            +btn({
-                                                classes: 'home-info__btn',
-                                                name: 'Подробнее',
-                                                icon: "arrow_link_down",
-                                                cMode: 'transparent',
-                                                sMode: 'full'
-                                            })(target="_blank")
+                                        - while(countCont < slidesCont.length)
+                                            - let slideCont = slidesCont[countCont]
+
+                                            .swiper-slide.home-info__slide
+                                                .home-info__icon
+                                                    img(src=slideCont.icon)
+                                                +title({
+                                                    classes: 'home-info__title',
+                                                    size: '24',
+                                                    text: slideCont.title,
+                                                    cMode: 'light'
+                                                })
+                                                .home-info__text 4 животноводческих комплекса: на 1000, 2000 и 4000 голов дойного стада, молодняковая ферма
+                                                .home-info__separator
+                                                +btn({
+                                                    classes: 'home-info__btn',
+                                                    name: 'Подробнее',
+                                                    icon: "arrow_link_down",
+                                                    cMode: 'transparent',
+                                                    sMode: 'full'
+                                                })(target="_blank")
+
+                                            - countCont++
 
