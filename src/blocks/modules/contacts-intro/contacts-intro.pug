@@ -1,0 +1,148 @@
+-
+    const defaultContactsIntroProps = {
+        classes: ''
+    }
+
+mixin contacts-intro(props= defaultContactsIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultContactsIntroProps.classes
+        }
+
+    section.contacts-intro(class= checkProps.classes data-js="contactsBlock")&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                +title({
+                    text: 'Контакты',
+                    size: '40',
+                    tag: 'h1'
+                })
+                .contacts-intro__content
+                    .contacts-intro__tabs
+                        .contacts-intro__tab.active(data-js='contactsTabsTab' data-id="0" data-coords="52.578441, 39.607545") Главный офис в Липецке
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                        .contacts-intro__tab(data-js='contactsTabsTab' data-id="1" data-coords="52.323237, 38.354069") Произв. комплекс, Долгоруково
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                        .contacts-intro__tab(data-js='contactsTabsTab' data-id="2" data-coords="52.271317, 38.190833") Школа действия
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                        a.contacts-intro__tab.contacts-intro__tab--plan(href="javascript:void(0)") План производственного комплекса
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+
+                    .contacts-intro__map(data-js="contactsMap")
+
+                    .contacts-intro__info
+                        .contacts-intro__item.active(data-js="contactsInfoItem")
+                            .contacts-intro__block 
+                                .contacts-intro__contact 
+                                    .contacts-intro__title Телефон:
+                                    a.contacts-intro__text.contacts-intro__link(href="tel:+74742371361") +7 (474) 237-13-61
+                                .contacts-intro__contact 
+                                    .contacts-intro__title Email:
+                                    a.contacts-intro__text.contacts-intro__link(href="mailto:info@triogk.ru") info@triogk.ru
+                                .contacts-intro__contact 
+                                    .contacts-intro__title Адрес:
+                                    a.contacts-intro__text 398017, г. Липецк, ул. Металлургов, 1
+
+                            .contacts-intro__block 
+                                .contacts-intro__contact
+                                    .contacts-intro__title Режим работы
+                                    .contacts-intro__modes
+                                        .contacts-intro__mode
+                                            span Понедельник - Четверг
+                                            span.separator
+                                            span с 9:00 до 18:00 (Мск)
+                                        .contacts-intro__mode
+                                            span Пятница
+                                            span.separator
+                                            span с 8.30 до 16.00 (Мск)
+
+                            .contacts-intro__socials
+                                a.social-link(href="https://web.whatsapp.com/")
+                                    span.social-link__text Написать в&nbsp;WhatsApp
+                                    span.social-link__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#whatsapp`)
+                                a.social-link(href="https://telegram.org/")
+                                    span.social-link__text Написать в&nbsp;Telegram
+                                    span.social-link__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#telegram`)
+
+
+
+
+
+
+
+
+
+
+                        .contacts-intro__item(data-js="contactsInfoItem")
+                            .contacts-intro__block 
+                                .contacts-intro__contact 
+                                    .contacts__title.title--26 Телефон
+                                    a.contacts__text.contacts__link(href="tel:+78126123003") +7 (812) 612-30-03
+                                .contacts-intro__contact 
+                                    .contacts__title.title--26 Email
+                                    a.contacts__text.contacts__link(href="mailto:spb@tochpribor-nw.ru") spb@tochpribor-nw.ru
+                                .contacts-intro__contact 
+                                    .contacts__title.title--26 Адрес
+                                    a.contacts__text 190121, г. Москва, пер. Дровяной, д. 20, пом. 4-Н
+                            .contacts-intro__block 
+                                .contacts-intro__contact
+                                    .contacts__title.title--26 Режим работы
+                                    .contacts-intro__modes
+                                        .contacts-intro__mode
+                                            span Понедельник - Четверг
+                                            span с 9:00 до 18:00 (Мск)
+                                        .contacts-intro__mode
+                                            span Пятница
+                                            span с 8.30 до 16.00 (Мск)
+                            .contacts-intro__socials
+                                a.social-link(href="https://web.whatsapp.com/")
+                                    span.social-link__text Написать в WhatsApp
+                                    span.social-link__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#wa`)
+                                a.social-link(href="https://telegram.org/")
+                                    span.social-link__text Написать в Telegram
+                                    span.social-link__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#tg`)
+
+                        .contacts-intro__item(data-js="contactsInfoItem")
+                            .contacts-intro__block 
+                                .contacts-intro__contact 
+                                    .contacts__title.title--26 Телефон
+                                    a.contacts__text.contacts__link(href="tel:+78126123003") +7 (812) 612-30-03
+                                .contacts-intro__contact 
+                                    .contacts__title.title--26 Email
+                                    a.contacts__text.contacts__link(href="mailto:spb@tochpribor-nw.ru") spb@tochpribor-nw.ru
+                                .contacts-intro__contact 
+                                    .contacts__title.title--26 Адрес
+                                    a.contacts__text 190121, г. Екатеринбург, пер. Дровяной, д. 20, пом. 4-Н
+                            .contacts-intro__block 
+                                .contacts-intro__contact
+                                    .contacts__title.title--26 Режим работы
+                                    .contacts-intro__modes
+                                        .contacts-intro__mode
+                                            span Понедельник - Четверг
+                                            span с 9:00 до 18:00 (Мск)
+                                        .contacts-intro__mode
+                                            span Пятница
+                                            span с 8.30 до 16.00 (Мск)
+                            .contacts-intro__socials
+                                a.social-link(href="https://web.whatsapp.com/")
+                                    span.social-link__text Написать в WhatsApp
+                                    span.social-link__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#wa`)
+                                a.social-link(href="https://telegram.org/")
+                                    span.social-link__text Написать в Telegram
+                                    span.social-link__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#tg`)

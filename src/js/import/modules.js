@@ -9,6 +9,7 @@
 @@include("../../blocks/modules/sp-slider/sp-slider.js")
 @@include("../../blocks/modules/product-slider/product-slider.js")
 @@include("../../blocks/modules/tabs-block/tabs-block.js")
+@@include("../../blocks/modules/contacts-intro/contacts-intro.js")
 
 document.addEventListener('DOMContentLoaded', () => {
   homeIntro()
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   spSlider()
   productSlider()
   tabsBlockInit()
+  contactsController()
 })

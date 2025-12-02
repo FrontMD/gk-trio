@@ -3,8 +3,6 @@ function tabsBlockInit() {
 
     if(!tabsBlock) return
 
-    console.log(tabsBlock)
-
     const slidesList = tabsBlock.querySelectorAll('[data-js="tabsBlockSlide"]')
     const tabsList = tabsBlock.querySelectorAll('[data-js="tabsBlockTab"]')
 
