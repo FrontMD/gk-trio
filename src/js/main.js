@@ -9,11 +9,11 @@
 @@include("./libs/hystmodal.min.js")
 @@include("./libs/inputmask.min.js")
 @@include("./libs/simplebar.min.js")
+@@include("./libs/nouislider.min.js")
 
 //если желаете подключить библиотеку - раскомментируйте и добавьте @@
 // include("./libs/select2.full.min.js")
 // include("./libs/air-datepicker.js")
-// include("./libs/nouislider.min.js")
 // include("./libs/wNumb.min.js")
 // include("./libs/autosize.min.js")
 // include("./libs/debounce.js")

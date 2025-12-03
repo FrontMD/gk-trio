@@ -21,4 +21,26 @@ mixin s-catalog(props= defaultSCatalogProps)
                         })
                         .s-catalog__status Каталог обновлен 06.08.2025
 
-                    .s-catalog__
+                    .s-catalog__ss
+                        form(action="#").s-catalog__search
+                            .search-field
+                                label.field
+                                    input.field__input(placeholder='Искать по названию, инвентарному номеру или индексу')
+                                button.search-field__submit(type='submit')
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#search`)
+
+                        .s-catalog__sort
+                            +filter-field({
+                                classes: 'filter-field--sort',
+                                title: 'Сначала новые'
+                            })
+                                .filter-field__links
+                                    a.filter-field__link.current(href="javascript:void(0);") Сначала новые
+                                    a.filter-field__link(href="javascript:void(0);") Сначала старые
+
+
+                    .s-catalog__filter
+                        +c-filter
+
+                    .s-catalog__body

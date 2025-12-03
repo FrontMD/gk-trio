@@ -1,0 +1,21 @@
+-
+    const defaultFilterFieldProps = {
+        classes: '',
+        title: ''
+    }
+
+mixin filter-field(props = defaultFilterFieldProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFilterFieldProps.classes,
+            title: props.title ? props.title : defaultFilterFieldProps.title
+        }
+
+    .filter-field(class=checkProps.classes data-js="filterField")
+        .filter-field__header(data-js="filterFieldHeader")
+            .filter-field__title!= checkProps.title
+            .filter-field__icon
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+        .filter-field__content(data-js="filterFieldContent")
+            block

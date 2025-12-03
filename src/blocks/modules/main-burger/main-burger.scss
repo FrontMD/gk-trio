@@ -85,10 +85,6 @@
         transition: all $tr;
         width: fit-content;
 
-        &:hover {
-            color: $c-accent-dark;
-        }
-
         svg {
             width: 24px;
             height: 24px;

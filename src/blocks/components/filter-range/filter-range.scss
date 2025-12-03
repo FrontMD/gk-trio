@@ -1,0 +1,91 @@
+.filter-range {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding-bottom: 37px;
+
+    &__input {
+        background-color: $c-bg-main;
+        height: 36px;
+        flex: 1 1 50%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 107%;
+        color: $c-accent;
+        padding: 10px 15px;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &__input--max {
+        border-left: 1px solid $c-border;
+        border-radius: 0 $br-10 $br-10 0;
+    }
+
+    &__input--min {
+        border-radius: $br-10 0 0 $br-10;
+    }
+
+    .noUi-horizontal {
+        height: 2px;
+    }
+
+    .noUi-target {
+        position: absolute;
+        bottom: 19px;
+        left: 5px;
+        width: calc(100% - 10px);
+        border: none;
+        background-color: $c-bg-main;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .noUi-connect {
+        background-color: $c-border;
+    }
+
+    .noUi-handle {
+        width: 10px;
+        height: 10px;
+        right: -5px;
+        top: -4px;
+        border: none;
+        background-color: $c-text-light;
+        box-shadow: none;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &:before,
+        &::after {
+            content: none;
+        }
+    }
+
+    .noUi-tooltip {
+        left: 0;
+        bottom: auto;
+        top: calc(100% + 6px);
+        transform: none;
+        border: none;
+        padding: 0;
+        font-family: $ff-open;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        color: $c-text-light;
+        background-color: $c-white;
+    }
+
+    .noUi-handle.noUi-handle-upper .noUi-tooltip {
+        left: auto;
+        right: 0;
+    }
+
+}

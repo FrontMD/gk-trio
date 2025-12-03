@@ -71,7 +71,8 @@
             background-color: $c-accent;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $c-accent;
         }
     }

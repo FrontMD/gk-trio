@@ -220,7 +220,177 @@
                             </div>
                         <div class="s-catalog__status">Каталог обновлен 06.08.2025</div>
                       </div>
-                      <div class="s-catalog__"></div>
+                      <div class="s-catalog__ss">
+                        <form class="s-catalog__search" action="#">
+                          <div class="search-field">
+                            <label class="field">
+                              <input class="field__input" placeholder="Искать по названию, инвентарному номеру или индексу">
+                            </label>
+                            <button class="search-field__submit" type="submit">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#search"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </form>
+                        <div class="s-catalog__sort">
+                              <div class="filter-field filter-field--sort" data-js="filterField">
+                                <div class="filter-field__header" data-js="filterFieldHeader">
+                                  <div class="filter-field__title">Сначала новые</div>
+                                  <div class="filter-field__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-field__content" data-js="filterFieldContent">
+                                  <div class="filter-field__links"><a class="filter-field__link current" href="javascript:void(0);">Сначала новые</a><a class="filter-field__link" href="javascript:void(0);">Сначала старые</a></div>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                      <div class="s-catalog__filter">
+                            <div class="c-filter">
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">Инвентарный номер</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                      <div class="filter-field__checkboxes">
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="in"><span class="field__fake"></span><span class="field__title">02525</span>
+                                        </label>
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="in"><span class="field__fake"></span><span class="field__title">02526</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">Индекс NM$</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                          <div class="filter-range filter-field__range" data-js="filterRange" data-min="500" data-max="5000" data-step="10">
+                                            <input class="filter-range__input filter-range__input--min" type="number" min="0" max="5000" data-js="filterRangeMin">
+                                            <input class="filter-range__input filter-range__input--max" type="number" min="0" max="5000" data-js="filterRangeMax">
+                                            <div class="filter-range__range" data-js="filterRangeSlider"></div>
+                                          </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">MBI</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                      <div class="filter-field__checkboxes">
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="mbi"><span class="field__fake"></span><span class="field__title">02525</span>
+                                        </label>
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="mbi"><span class="field__fake"></span><span class="field__title">02526</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">Поставщик</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                      <div class="filter-field__checkboxes">
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="supplier"><span class="field__fake"></span><span class="field__title">02525</span>
+                                        </label>
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="supplier"><span class="field__fake"></span><span class="field__title">02526</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">На ферме</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                      <div class="filter-field__checkboxes">
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="farm"><span class="field__fake"></span><span class="field__title">02525</span>
+                                        </label>
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="farm"><span class="field__fake"></span><span class="field__title">02526</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">Дата рождения</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                      <div class="filter-field__checkboxes">
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="born-date"><span class="field__fake"></span><span class="field__title">02525</span>
+                                        </label>
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="born-date"><span class="field__fake"></span><span class="field__title">02526</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="filter-field" data-js="filterField">
+                                    <div class="filter-field__header" data-js="filterFieldHeader">
+                                      <div class="filter-field__title">Характеристика 1</div>
+                                      <div class="filter-field__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_chevron"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="filter-field__content" data-js="filterFieldContent">
+                                      <div class="filter-field__checkboxes">
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="char-1"><span class="field__fake"></span><span class="field__title">02525</span>
+                                        </label>
+                                        <label class="field field--checkbox">
+                                          <input class="field__input" type="checkbox" name="char-1"><span class="field__fake"></span><span class="field__title">02526</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="s-catalog__body"></div>
                     </div>
                   </div>
                 </div>

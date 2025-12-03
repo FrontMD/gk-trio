@@ -1,0 +1,103 @@
+-
+    const defaultCFilterProps = {
+        classes: ''
+    }
+
+mixin c-filter(props= defaultCFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCFilterProps.classes
+        }
+
+    .c-filter(class= checkProps.classes)&attributes(attributes)
+        +filter-field({
+            title: 'Инвентарный номер'
+        })
+            .filter-field__checkboxes
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="in")
+                    span.field__fake
+                    span.field__title 02525
+
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="in")
+                    span.field__fake
+                    span.field__title 02526
+
+        +filter-field({
+            title: 'Индекс NM$'
+        })
+            +filter-range({
+                classes: 'filter-field__range'
+            })
+
+
+        +filter-field({
+            title: 'MBI'
+        })
+            .filter-field__checkboxes
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="mbi")
+                    span.field__fake
+                    span.field__title 02525
+
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="mbi")
+                    span.field__fake
+                    span.field__title 02526
+
+        +filter-field({
+            title: 'Поставщик'
+        })
+            .filter-field__checkboxes
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="supplier")
+                    span.field__fake
+                    span.field__title 02525
+
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="supplier")
+                    span.field__fake
+                    span.field__title 02526
+
+        +filter-field({
+            title: 'На ферме'
+        })
+            .filter-field__checkboxes
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="farm")
+                    span.field__fake
+                    span.field__title 02525
+
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="farm")
+                    span.field__fake
+                    span.field__title 02526
+
+        +filter-field({
+            title: 'Дата рождения'
+        })
+            .filter-field__checkboxes
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="born-date")
+                    span.field__fake
+                    span.field__title 02525
+
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="born-date")
+                    span.field__fake
+                    span.field__title 02526
+
+        +filter-field({
+            title: 'Характеристика 1'
+        })
+            .filter-field__checkboxes
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="char-1")
+                    span.field__fake
+                    span.field__title 02525
+
+                label.field.field--checkbox
+                    input.field__input(type='checkbox' name="char-1")
+                    span.field__fake
+                    span.field__title 02526

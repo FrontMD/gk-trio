@@ -81,7 +81,6 @@ function contactsController() {
 
         if(tab.dataset.js == 'contactsTabsTab') {
             tab.classList.add('active')
-            selectBlock.classList.remove('active')
         } else {
             selectBlock.classList.add('active')
         }

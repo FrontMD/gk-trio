@@ -7,15 +7,16 @@
 
         @include max(laptop) {
             display: grid;
-            grid-template-columns: minmax(0, 360px) auto;
-            gap: 32px 24px;
+            grid-template-columns: minmax(0, 350px) auto;
+            gap: 24px;
         }
 
         @include max(tablet) {
-            grid-template-columns: 1fr;
+            gap: 24px 12px;
         }
 
         @include max(mobile) {
+            grid-template-columns: 1fr;
             margin-top: 32px;
         }
     }
@@ -26,6 +27,9 @@
         flex-direction: column;
         gap: 10px;
 
+        @include max(large) {
+            flex: 0 0 350px;
+        }
     }
 
     &__tab {
@@ -60,6 +64,11 @@
                 color: $c-white;
             }
         }
+
+        @include max(mobile) {
+            min-height: 50px;
+            font-size: 15px;
+        }
     }
 
     &__tab--plan {
@@ -72,6 +81,10 @@
         overflow: hidden;
 
         @include max(tablet) {
+            border-radius: $br-10;
+        }
+
+        @include max(mobile) {
             min-height: 300px;
         }
     }
@@ -80,14 +93,17 @@
         flex: 0 0 496px;
         min-height: 550px;
 
+        @include max(large) {
+            flex: 0 0 450px;
+        }
+
         @include max(laptop) {
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column: 1 / 3;
             min-height: auto;
         }
 
-        @include max(tablet) {
-            grid-column-end: 2;
+        @include max(mobile) {
+            grid-column: 1 / 2;
         }
     }
 
@@ -100,6 +116,9 @@
             gap: 30px;
             height: 100%;
 
+            @include max(laptop) {
+                gap: 24px;
+            }
 
         }
     }
@@ -111,6 +130,7 @@
 
         @include max(laptop) {
             flex-direction: row;
+            gap: 24px;
         }
 
         @include max(tablet) {
@@ -125,6 +145,10 @@
     &__block+&__block {
         padding-top: 30px;
         border-top: 1px solid $c-border;
+
+        @include max(laptop) {
+            padding-top: 24px;
+        }
     }
 
     &__contact {
@@ -138,6 +162,10 @@
         font-size: 16px;
         line-height: 156.25%;
         color: $c-text-light;
+
+        @include max(mobile) {
+            font-size: 14px;
+        }
     }
 
     &__text {
@@ -145,8 +173,11 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 100%;
-        text-transform: uppercase;
         color: $c-text;
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
     }
 
     &__link {
@@ -172,7 +203,13 @@
         line-height: 100%;
         color: $c-text;
 
+        @include max(large) {
+            font-size: 16px;
+        }
+
         @include max(xs) {
+            flex-direction: column;
+            align-items: flex-start;
             gap: 8px;
             font-size: 14px;
         }
@@ -180,11 +217,20 @@
         .separator {
             flex: 1 2 auto;
             border-bottom: 1px dashed $c-border;
+            min-width: 30px;
+
+            @include max(xs) {
+                display: none;
+            }
         }
     }
 
     &__mode+&__mode {
         margin-top: 10px;
+
+        @include max(xs) {
+            margin-top: 20px;
+        }
     }
 
     &__socials {
@@ -236,96 +282,4 @@
         color: $c-accent;
     }
 
-}
-
-.contacts-details {
-    &__container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-
-    }
-
-    &__header {
-        padding-right: 230px;
-
-        @include max(xs) {
-            padding-right: 0;
-            padding-bottom: 56px;
-        }
-    }
-
-    &__content {
-        display: flex;
-        gap: 24px;
-
-        @include max(laptop) {
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        @include max(tablet) {
-            gap: 24px;
-        }
-    }
-
-    &__side {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        flex: 0 0 calc((100% - 24px) / 2);
-
-        @include max(tablet) {
-            gap: 24px;
-        }
-    }
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    &__columns {
-        columns: 3;
-        margin-bottom: -7px;
-
-        @include max(mobile) {
-            columns: 2;
-        }
-
-        @include max(xs) {
-            columns: 1;
-        }
-    }
-
-    &__columns .contacts__subtitle {
-        margin-bottom: 7px;
-    }
-
-    &__btn {
-        position: absolute;
-        top: 30px;
-        right: 24px;
-
-        @include max(laptop) {
-            top: 24px;
-        }
-
-        @include max(tablet) {
-            top: 20px;
-            right: 15px;
-        }
-
-        @include max(mobile) {
-            top: 16px;
-        }
-
-        @include max(xs) {
-            top: 65px;
-            right: auto;
-            left: 15px;
-        }
-    }
 }
