@@ -6,11 +6,26 @@
         align-items: flex-end;
         justify-content: space-between;
         gap: 50px;
+
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
     }
 
     &__ss {
         align-items: center;
         margin-top: 20px;
+
+        @include max(tablet) {
+            gap: 24px;
+        }
+
+        @include max(mobile) {
+            align-items: flex-start;
+            gap: 10px;
+        }
     }
 
     &__status {
@@ -22,6 +37,10 @@
         font-size: 14px;
         line-height: 157%;
         color: $c-text-light;
+
+        @include max(mobile) {
+            align-self: flex-start;
+        }
 
         &::after {
             content: '';
@@ -38,6 +57,11 @@
 
     &__search {
         flex: 1 1 auto;
+
+        @include max(mobile) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
     }
 
     &__sort {
@@ -46,5 +70,23 @@
 
     &__filter {
         margin-top: 20px;
+    }
+
+    &__body {
+        margin-top: 50px;
+        margin-right: -50px;
+
+        @include max(large) {
+            margin-right: -30px;
+        }
+
+        @include max(laptop) {
+            margin-right: -20px;
+            margin-top: 30px;
+        }
+
+        @include max(mobile) {
+            margin-right: -10px;
+        }
     }
 }

@@ -1,0 +1,234 @@
+-
+    const defaultCTableProps = {
+        classes: ''
+    }
+
+mixin c-table(props= defaultCTableProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCTableProps.classes
+        }
+
+    .c-table.text-editor(class= checkProps.classes)&attributes(attributes)
+        .text-scroll-h
+            table
+                thead
+                    tr
+                        th В корзину
+                        th.nmw
+                            span.flex
+                                span.flex__title Название
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title Инвентарный номер
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title Индекс NM$
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title MBI
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title Поставщик
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title На ферме
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title Дата рождения
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+
+                        th 
+                            span.flex
+                                span.flex__title Характеристика 1
+                                a.flex__icon(href="javascript:void(0);")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+                tbody     
+
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 12563
+                        td 12563
+                        td 12563
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 2569
+                        td 5
+                        td 5
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="green">В корзине</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 654132
+                        td 554
+                        td 554
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 654689
+                        td 0
+                        td 0
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 651621
+                        td 989
+                        td 989
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 35679
+                        td 5
+                        td 5
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 3213546
+                        td 84
+                        td 84
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024 
+                        td 2165
+                        td 1
+                        td 1
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 3249879
+                        td 0
+                        td 0
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 32156
+                        td 0
+                        td 0
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 6521987
+                        td 68
+                        td 68
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 698
+                        td 5
+                        td 5
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 6565432
+                        td 5
+                        td 5
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 21321
+                        td 69
+                        td 69
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 65465
+                        td 7
+                        td 7
+                        td ГК Трио
+                        td <span class="grey">Выкуплено</span>
+                        td 31.07.2024
+                        td Значение
+                    tr
+                        td <a href="javascript:void(0);" class="blue">В корзину</a>
+                        td.nmw Бык Цыган 508, порода ч/п Голштинская, дата рождения 31.07.2024
+                        td 111354
+                        td 1
+                        td 1
+                        td ГК Трио
+                        td <span class="green">В наличии</span>
+                        td 31.07.2024
+                        td Значение

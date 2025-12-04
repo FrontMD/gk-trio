@@ -5,7 +5,6 @@ function filterField() {
     
     filterFields.forEach(field => {
         const content = field.querySelector("[data-js='filterFieldContent']")
-        const header = field.querySelector("[data-js='filterFieldHeader']")
 
         field.style.width = field.offsetWidth + 1 + 'px'
 
