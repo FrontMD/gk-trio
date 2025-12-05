@@ -30,16 +30,16 @@ mixin i-intro(props = defaultIIntroProps)
 
                     .i-intro__top
                         - if(checkProps.breadcrumbs !== false)
-                            +breadcrumbs(checkProps.breadcrumbs)(data-aos="flip-up" data-aos-delay="100")
+                            +breadcrumbs(checkProps.breadcrumbs)(data-aos="fade-right" data-aos-delay="100")
                         +title({
                             classes: 'i-intro__title',
                             tag: 'h1',
                             size: '60',
                             text: checkProps.title,
                             cMode: 'light',
-                        })(data-aos="flip-up" data-aos-delay="300")
+                        })(data-aos="fade-right" data-aos-delay="300")
                         - if(checkProps.subtitle.length > 0)
-                            .i-intro__subtitle(data-aos="flip-up" data-aos-delay="400")!= checkProps.subtitle
+                            .i-intro__subtitle(data-aos="fade-right" data-aos-delay="400")!= checkProps.subtitle
 
                     .i-intro__bottom
                         - if(checkProps.desc.length > 0)

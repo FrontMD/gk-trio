@@ -2,6 +2,31 @@
     position: relative;
     overflow: hidden;
 
+    .gkt-container__inner {
+        padding-left: 0;
+        padding-right: 0;
+
+        @include max(large) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include max(laptop) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include max(tablet) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     &__container {
         background-color: $c-bg-dark;
         display: flex;

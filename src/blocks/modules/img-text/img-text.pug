@@ -52,7 +52,7 @@ mixin img-text(props= defaultImgTextProps)
                         - let dirClass = row.imgRight === true ? 'img-text__row--reverse' : ''
 
                         .img-text__row(class=dirClass)
-                            .img-text__img!= row.img
+                            .img-text__img(data-aos=`${row.imgRight === true ? 'fade-left' : 'fade-right'}` data-aos-delay="100")!= row.img
                             .img-text__info
                                 +title({
                                     text: row.title,
