@@ -13,6 +13,11 @@ function sFilter() {
                 768: {
                     spaceBetween: 10
                 }
+            },
+            on: {
+                afterInit: function() {
+                    AOS.refresh()
+                }
             }
         })
     })

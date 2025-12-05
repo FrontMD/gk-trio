@@ -16,16 +16,16 @@ mixin ratings-slider(props= defaultRetingSliderProps)
                     .title-block.ratings-slider__headblock
                         +title-tag({
                             text: 'Рейтинговые достижения'
-                        })
+                        })(data-aos="flip-up" data-aos-delay="300")
                         +title({
                             classes: 'ratings-slider__title',
                             size: '40',
                             text: 'Участвуем в <span>рейтингах</span>'
-                        })
+                        })(data-aos="flip-up" data-aos-delay="100")
                     +slider-controls({
                         classes: 'ratings-slider__controls'
                     })
-                .ratings-slider__slider(data-js="animalSliderSlider")
+                .ratings-slider__slider(data-js="animalSliderSlider" data-aos="fade-up" data-aos-delay="400")
                     .swiper-wrapper
                         +rating-card({
                             classes: 'swiper-slide'

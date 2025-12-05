@@ -13,7 +13,7 @@ mixin finance(props= defaultFinanceProps)
         .gkt-container
             .gkt-container__inner
                 .finance__container
-                    .finance-report
+                    .finance-report(data-aos="fade-up" data-aos-delay="100")
                         .finance-report__bg
                             img(src="img/home/finance_report.webp" alt="")
                         .finance-report__content
@@ -31,7 +31,7 @@ mixin finance(props= defaultFinanceProps)
                                 span Скачать отчет в PDF (3.2Мб)
 
                     .finance__grid
-                        .finance-revenue
+                        .finance-revenue(data-aos="fade-up" data-aos-delay="300")
                             .finance-revenue__header
                                 .finance-revenue__left
                                     +title({
@@ -51,7 +51,7 @@ mixin finance(props= defaultFinanceProps)
                             .finance-revenue__img
                                 img(src="img/home/finance_revenue.webp" alt="")
 
-                        .finance-profit
+                        .finance-profit(data-aos="fade-up" data-aos-delay="400")
                             .pattern-bg
                             .finance-profit__header
                                 +title({
@@ -72,7 +72,7 @@ mixin finance(props= defaultFinanceProps)
                                     | рублей
 
 
-                        .finance-ebitda
+                        .finance-ebitda(data-aos="fade-up" data-aos-delay="200")
                             .finance-ebitda__title.finance__subtitle.finance__subtitle--row
                                 +title({
                                     size: '60',

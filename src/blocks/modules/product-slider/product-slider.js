@@ -23,6 +23,12 @@ function productSlider() {
             nextEl: thumbsNext,
             prevEl: thumbsPrev,
         },
+            on: {
+                afterInit: function() {
+                    AOS.refresh()
+                }
+            }
+
     })
 
     let productSliderSliderEx = new Swiper(productSliderSlider, {

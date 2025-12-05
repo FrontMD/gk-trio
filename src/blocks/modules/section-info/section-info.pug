@@ -48,7 +48,7 @@ mixin section-info(props= defaultSectionInfoProps)
                             - let cardsCounter = 0
 
                             - while(cardsCounter < cardsList.length)
-                                .section-info__card.si-card
+                                .section-info__card.si-card(data-aos="fade-up" data-aos-delay=`${(cardsCounter + 1) * 100}`)
                                     .si-card__header
                                         .si-card__left
                                             .si-card__icon

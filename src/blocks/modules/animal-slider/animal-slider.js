@@ -29,6 +29,7 @@ function animalSlider() {
             },
             on: {
                 init: function() {
+                    AOS.refresh()
                     const allVisible = allSlidesVisible(this);
                     if(allVisible) {
                         sliderControls.classList.remove('active')
@@ -37,6 +38,7 @@ function animalSlider() {
                     }
                 },
                 resize: function() {
+                    AOS.refresh()
                     const allVisible = allSlidesVisible(this);
                     if(allVisible) {
                         sliderControls.classList.remove('active')
@@ -44,6 +46,7 @@ function animalSlider() {
                         sliderControls.classList.add('active')
                     }
                 },
+
             }
         })
     })

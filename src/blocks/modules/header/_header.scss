@@ -4,15 +4,29 @@
     left: 0;
     width: 100%;
     z-index: 80;
-    padding: 20px 0;
-    background-color: $c-bg-main;
+    transition: top $tr;
 
-    @include max(laptop) {
-        padding: 10px 0;
+    .gkt-container__inner {
+        transition: all $tr;
+        border-radius: $br-20;
+
+        @include max(mobile) {
+            border-radius: $br-10;
+        }
     }
 
     &--fixed {
-        background-color: $c-white;
+        top: 20px;
+
+        @include max(mobile) {
+            top: 10px;
+        }
+    }
+
+    &--fixed .gkt-container__inner {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
     }
 
     &__container {
@@ -39,9 +53,14 @@
         display: flex;
         align-items: center;
         gap: 60px;
+        padding: 20px 0;
 
         @include max(large) {
-            gap: 30px;
+            gap: 24px;
+        }
+
+        @include max(laptop) {
+            padding: 10px 0;
         }
 
         @include max(mobile) {
@@ -50,7 +69,11 @@
     }
 
     &__logo {
-        flex-shrink: 0;
+        flex: 0 0 143px;
+
+        @include max(large) {
+            flex-basis: 130px;
+        }
 
         @include max(laptop) {
             margin-right: auto;
@@ -86,7 +109,7 @@
         gap: 30px;
 
         @include max(large) {
-            gap: 20px;
+            gap: 16px;
         }
 
         @include max(xs) {
@@ -103,6 +126,10 @@
         font-size: 18px;
         line-height: 100%;
         letter-spacing: 0;
+
+        @include max(large) {
+            font-size: 16px;
+        }
 
         @include max(laptop) {
             display: none;

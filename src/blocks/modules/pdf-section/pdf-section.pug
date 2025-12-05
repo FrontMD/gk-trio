@@ -23,12 +23,12 @@ mixin pdf-section(props= defaultPdfSectionProps)
                             classes: 'pdf-section__title',
                             text: checkProps.title,
                             size: '40'
-                        })
-                        .pdf-section__text.text-editor!= checkProps.text
+                        })(data-aos="fade-up" data-aos-delay="100")
+                        .pdf-section__text.text-editor(data-aos="fade-up" data-aos-delay="200")!= checkProps.text
                         +btn({
                             name: 'Скачать PDF  (3.2мб)',
                             cMode: 'accent',
                             sMode: 'content'
-                        })
-                    .pdf-section__img
+                        })(data-aos="fade-up" data-aos-delay="300")
+                    .pdf-section__img(data-aos="zoom-in" data-aos-delay="600")
                         img(src="img/school/pdf_section.webp" alt="")

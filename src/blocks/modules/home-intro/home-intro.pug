@@ -74,21 +74,21 @@ mixin home-intro(props= defaultHomeIntroProps)
                                                 size: '60',
                                                 text: slide.topTitle,
                                                 cMode: 'light'
-                                            })
-                                        .home-intro__tag [Производим с 1997 года]
+                                            })(data-aos="flip-up" data-aos-delay="600")
+                                        .home-intro__tag(data-aos="flip-up" data-aos-delay="500") [Производим с 1997 года]
                                         +title({
                                             classes: 'home-intro__title',
                                             size: '60',
                                             tag: 'h1',
                                             text: slide.title,
                                             cMode: 'light'
-                                        })
+                                        })(data-aos="flip-up" data-aos-delay="300")
 
                                 - count++
 
                     .home-intro__content
                         .home-intro__right
-                            .home-intro__info.home-info(data-js="homeIntroInfo")
+                            .home-intro__info.home-info(data-js="homeIntroInfo" data-aos="zoom-in" data-aos-delay="600")
                                 .home-info__tabs(data-js="homeIntroTabs")
                                     .swiper-wrapper
                                         - let countTabs = 0

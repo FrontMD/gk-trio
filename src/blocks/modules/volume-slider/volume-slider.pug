@@ -17,15 +17,15 @@ mixin volume-slider(props= defaultVolumeSliderProps)
                         .title-block.volume-slider__headblock
                             +title-tag({
                                 text: 'Производственые масштабы'
-                            })
+                            })(data-aos="flip-up" data-aos-delay="300")
                             +title({
                                 classes: 'category-slider__title',
                                 size: '40',
                                 text: '<span>Объём</span> производимой <br>продукции'
-                            })
+                            })(data-aos="flip-up" data-aos-delay="100")
 
                 .volume-slider__layout
-                    .volume-slider__sidebar
+                    .volume-slider__sidebar(data-aos="fade-right" data-aos-delay="400")
                         .volume-slider__desc.text-editor
                             | Современные мощности предприятия позволяют выпускать продукцию в&nbsp;значительных объёмах, обеспечивая стабильные поставки для&nbsp;партнёров по&nbsp;всей стране.
                         +btn({
@@ -36,7 +36,7 @@ mixin volume-slider(props= defaultVolumeSliderProps)
                         classes: 'volume-slider__controls',
                     })
                     .volume-slider__main
-                        .volume-slider__slider(data-js="volumeSliderSlider")
+                        .volume-slider__slider(data-js="volumeSliderSlider" data-aos="fade-up" data-aos-delay="0" data-aos-ofset="1")
                             .swiper-wrapper
                                 .volume-slider__slide.volume-slide.swiper-slide
                                     .volume-slide__item.volume-slide__item--big

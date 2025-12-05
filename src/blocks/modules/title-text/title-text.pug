@@ -22,6 +22,6 @@ mixin title-text(props= defaultTitleTextProps)
                         classes: 'title-text__title',
                         text: checkProps.title,
                         size: '40'
-                    })
-                    .title-text__text.text-editor!= checkProps.text
+                    })(data-aos="fade-up" data-aos-delay="100")
+                    .title-text__text.text-editor(data-aos="fade-up" data-aos-delay="300")!= checkProps.text
 

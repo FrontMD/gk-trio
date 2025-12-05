@@ -82,7 +82,7 @@ mixin numbers(props= defaultNumbersProps)
 
                     - while(count < cards.length)
                         - let titleClass = cards[count].smallTitle === true ? ' n-card__title--small' : ''
-                        .n-card
+                        .n-card(data-aos="fade-up" data-aos-delay=`${(count + 1) * 100}`)
                             .n-card__header
                                 .n-card__title(class= titleClass)!= cards[count].title
                                 .n-card__icon

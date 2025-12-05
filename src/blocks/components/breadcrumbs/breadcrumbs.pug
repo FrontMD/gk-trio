@@ -24,7 +24,7 @@ mixin breadcrumbs(props = defaultBreadCrumbsProps)
 
         let colorModeClass = 'breadcrumbs--' + checkProps.cMode
 
-    .breadcrumbs(class=checkProps.classes + ' ' + colorModeClass)
+    .breadcrumbs(class=checkProps.classes + ' ' + colorModeClass)&attributes(attributes)
         .custom-scrollbar.breadcrumbs__scroll(data-js="customScrollbar")
             ul.breadcrumbs__list
                 each val, index in checkProps.items

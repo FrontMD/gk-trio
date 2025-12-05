@@ -31,6 +31,11 @@ function getScrollbarWidth() {
 const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLATE_PATH ? SITE_TEMPLATE_PATH + '/' : '');
 
 document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        once: true,
+        duration: 600,
+        offset: 100
+    });
     $('[data-js="customScrollbar"]').each((index, el) => {
         new SimpleBar(el, { autoHide: false });
     })

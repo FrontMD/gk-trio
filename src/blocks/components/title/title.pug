@@ -22,23 +22,23 @@ mixin title(props = defaultTitleProps)
 
     case checkProps.tag
         when 'h1'
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 h1!= checkProps.text
         when 'h2'
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 h2!= checkProps.text
         when 'h3'
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 h3!= checkProps.text
         when 'h4'
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 h4!= checkProps.text
         when 'h5'
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 h5!= checkProps.text
         when 'h6'
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 h6!= checkProps.text
         default	
-            .title(class=checkProps.classes + sizeClass + colorClass)
+            .title(class=checkProps.classes + sizeClass + colorClass)&attributes(attributes)
                 != checkProps.text			

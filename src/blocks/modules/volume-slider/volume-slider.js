@@ -33,6 +33,7 @@ function volumeSlider() {
             },
             on: {
                 init: function() {
+                    AOS.refresh()
                     if(slidesCount > slidesPerView) {
                         sliderControls.classList.add('active')
                     } else {
@@ -40,6 +41,7 @@ function volumeSlider() {
                     }
                 },
                 resize: function() {
+                    AOS.refresh()
                     if(slidesCount > slidesPerView) {
                         sliderControls.classList.add('active')
                     } else {

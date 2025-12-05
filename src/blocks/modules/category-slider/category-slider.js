@@ -32,6 +32,7 @@ function categorySlider() {
             },
             on: {
                 init: function() {
+                    AOS.refresh()
                     const allVisible = allSlidesVisible(this);
                     if(allVisible) {
                         sliderControls.classList.remove('active')
@@ -40,6 +41,7 @@ function categorySlider() {
                     }
                 },
                 resize: function() {
+                    AOS.refresh()
                     const allVisible = allSlidesVisible(this);
                     if(allVisible) {
                         sliderControls.classList.remove('active')

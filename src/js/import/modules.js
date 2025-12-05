@@ -12,6 +12,7 @@
 @@include("../../blocks/modules/contacts-intro/contacts-intro.js")
 
 document.addEventListener('DOMContentLoaded', () => {
+  headerScroll()
   homeIntro()
   modalsInit()
   mainBurger()

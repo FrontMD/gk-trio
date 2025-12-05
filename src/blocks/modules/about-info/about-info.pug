@@ -36,7 +36,7 @@ mixin about-info(props= defaultAboutInfoProps)
 
                             - while(topCounter < topList.length)
                                 .about-info__row
-                                    .about-info__left
+                                    .about-info__left(data-aos="fade-up" data-aos-delay="100")
                                         - if(topList[topCounter].tag.length > 0)
                                             +title-tag({
                                                 text: topList[topCounter].tag
@@ -47,12 +47,12 @@ mixin about-info(props= defaultAboutInfoProps)
                                                 text: topList[topCounter].title,
                                                 size: '22'
                                             })
-                                    .about-info__text!= topList[topCounter].text
+                                    .about-info__text(data-aos="fade-up" data-aos-delay="300")!= topList[topCounter].text
 
                                 - topCounter++
 
                     - if(checkProps.cards.length > 0)    
-                        .about-info__cards
+                        .about-info__cards(data-aos="fade-up" data-aos-delay="400")
                             - let cardsList = checkProps.cards
                             - let cardsCounter = 0
 
@@ -76,7 +76,7 @@ mixin about-info(props= defaultAboutInfoProps)
 
                             - while(topCounter < topList.length)
                                 .about-info__row
-                                    .about-info__left
+                                    .about-info__left(data-aos="fade-up" data-aos-delay="500")
                                         - if(topList[topCounter].tag.length > 0)
                                             +title-tag({
                                                 text: topList[topCounter].tag
@@ -87,6 +87,6 @@ mixin about-info(props= defaultAboutInfoProps)
                                                 text: topList[topCounter].title,
                                                 size: '22'
                                             })
-                                    .about-info__text!= topList[topCounter].text
+                                    .about-info__text(data-aos="fade-up" data-aos-delay="600")!= topList[topCounter].text
 
                                 - topCounter++

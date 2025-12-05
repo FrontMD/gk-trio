@@ -39,6 +39,7 @@ function spSlider() {
             },
             on: {
                 init: function() {
+                    AOS.refresh()
                     if(slidesCount > slidesPerView) {
                         sliderControls.classList.add('active')
                     } else {
@@ -46,6 +47,7 @@ function spSlider() {
                     }
                 },
                 resize: function() {
+                    AOS.refresh()
                     if(slidesCount > slidesPerView) {
                         sliderControls.classList.add('active')
                     } else {
