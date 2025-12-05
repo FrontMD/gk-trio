@@ -591,6 +591,7 @@
                               </div>
                           <div class="side-video__topics">
                             <div class="side-video__topic video-topic video-topic--first">
+                              <div class="pattern-bg"></div>
                               <div class="video-topic__header"> 
                                 <div class="video-topic__icon"><img src="img/about/about_icon_5.svg" alt="Земляные масштабы холдинга"></div>
                                 <div class="video-topic__count">01</div>
@@ -745,6 +746,7 @@
                           <div class="finance-revenue__img"><img src="img/home/finance_revenue.webp" alt=""></div>
                         </div>
                         <div class="finance-profit">
+                          <div class="pattern-bg"></div>
                           <div class="finance-profit__header">
                                 <div class="title  title--20 title--dark">Чистая прибыль
                                 </div>
@@ -864,6 +866,7 @@
         <footer class="site-footer">
           <div class="gkt-container site-footer__container">
             <div class="site-footer__main">
+              <div class="pattern-bg"></div>
               <div class="site-footer__top">
                 <div class="site-footer__column site-footer__column--first">
                   <div class="site-footer__logo"><img src="img/logo_footer.svg" alt="ТРИО группа компаний"></div>
@@ -1079,6 +1082,48 @@
                             </div>
                             <div class="form__thanks" data-js="form-thanks">
                               <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal" id="subscribeModal" aria-hidden="true" data-js="subscribeModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form form--modal" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="formContent">
+                              <div class="form__title">Подписка на рассылку</div>
+                              <div class="form__fields" data-js="formFields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Ваше имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Ваша почта" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Нажимая кнопку, вы соглашаетесь с <a href="javascript:void(0);" target="_blank">Политикой конфиденциальности</a> и даёте согласие на обработку персональных данных и согласие на получение рассылки рекламных материалов.</span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                                  <button class="btn form__submit btn--accent" type="submit"><span>Подписаться</span>
+                                  </button>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Подписка оформлена!</div>
                               <div class="form__image-success"><img src="img/success.png"></div>
                               <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
                             </div>

@@ -1,4 +1,12 @@
 .social-section {
+    .pattern-bg {
+        opacity: 0.05;
+    }
+
+    &__container {
+        position: relative;
+    }
+
     &__list {
         display: flex;
         align-items: stretch;

@@ -39,6 +39,8 @@
     }
 
     &__subtitle {
+        position: relative;
+
         &--row {
             display: flex;
             align-items: center;
@@ -238,6 +240,7 @@
 }
 
 .finance-profit {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -261,13 +264,19 @@
         grid-row: auto;
     }
 
+    .pattern-bg {
+        background-size: 200%;
+    }
+
     &__header {
+        position: relative;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
 
     .finance__unit {
+        position: relative;
         color: $c-text;
     }
 }

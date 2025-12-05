@@ -31,12 +31,10 @@ function getScrollbarWidth() {
 const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLATE_PATH ? SITE_TEMPLATE_PATH + '/' : '');
 
 document.addEventListener('DOMContentLoaded', () => {
-    //headerBannerControll();
     $('[data-js="customScrollbar"]').each((index, el) => {
         new SimpleBar(el, { autoHide: false });
     })
     fancyboxInit();
-    //anchorsInit();
 })
 
 // проверяет все ли слайды видны в слайдере
@@ -78,8 +76,4 @@ function fancyboxInit() {
         }
 
     });
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }

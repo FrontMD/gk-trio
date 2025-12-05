@@ -12,6 +12,7 @@ mixin social-section(props= defaultSocialSectionProps)
     section.social-section(class= checkProps.classes)&attributes(attributes)
         .gkt-container
             .gkt-container__inner.gkt-container__inner--bg.gkt-container__inner--black
+                .pattern-bg
                 .social-section__container
                     +title({
                         text: 'Мы в соцсетях',
@@ -29,7 +30,7 @@ mixin social-section(props= defaultSocialSectionProps)
                             span.social-section__icon
                                 svg
                                     use(xlink:href=`img/sprites/sprite.svg#telegram`)
-                        a.social-section__link.social-section__link--transparent.social-section__link--last(href="javascript:void(0);")
+                        a.social-section__link.social-section__link--transparent.social-section__link--last(href="javascript:void(0);" data-modal="#subscribeModal")
                             span.social-section__name Подписка на рассылку
                             span.social-section__icon
                                 svg

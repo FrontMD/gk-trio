@@ -92,10 +92,6 @@
         background-color: transparent;
         transition: all $tr;
 
-        /*&:hover {
-            background-color: rgba(250, 230, 230, 0.8);
-        }*/
-
         @include max(mobile) {
             flex-direction: column;
             gap: 16px;

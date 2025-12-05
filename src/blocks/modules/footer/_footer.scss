@@ -19,6 +19,7 @@
     }
 
     &__main {
+        position: relative;
         background-color: $c-bg-dark;
         padding: 50px 50px 40px;
         border-radius: $br-20;
@@ -33,6 +34,10 @@
 
         @include max(mobile) {
             padding: 20px 10px;
+        }
+
+        .pattern-bg {
+            opacity: 0.05;
         }
     }
 

@@ -155,6 +155,7 @@
 }
 
 .video-topic {
+    position: relative;
     padding: 20px;
     background-color: $c-white;
     color: $c-text;
@@ -163,6 +164,10 @@
     justify-content: space-between;
     gap: 20px;
     border-radius: $br-10;
+
+    .pattern-bg {
+        background-size: 200%;
+    }
 
     @include max(laptop) {
         padding: 12px;
@@ -173,6 +178,7 @@
     }
 
     &__header {
+        position: relative;
         display: flex;
         align-items: flex-start;
         gap: 20px;
@@ -229,6 +235,7 @@
     }
 
     &__desc {
+        position: relative;
         max-width: 250px;
         font-weight: 400;
         font-size: 18px;
