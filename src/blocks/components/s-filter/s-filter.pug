@@ -20,4 +20,4 @@ mixin s-filter(props = defaultSFilterProps)
         .s-filter__list(data-js="sFilterSlider")
             .swiper-wrapper
                 each val, index in checkProps.items
-                    .s-filter__item.swiper-slide(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val
+                    a.s-filter__item.swiper-slide(href="javascript:void(0);" class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val

@@ -48,8 +48,12 @@
         width: 100%;
         padding-top: 30px;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 24px;
+
+        @include max(full) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
 
         @include max(laptop) {
             gap: 12px;
