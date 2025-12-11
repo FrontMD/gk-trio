@@ -1,8 +1,22 @@
 .pa-orders {
 
     .bx-content {
+        >.mb-5 {
+            margin-bottom: 20px !important;
+        }
+
+        >.mb-5:last-child {
+            margin-bottom: 0 !important;
+        }
+
         .row.mb-3 {
             margin-bottom: 20px !important;
+        }
+
+        .row .col,
+        .row .col-auto {
+            padding-right: 0;
+            padding-left: 0;
         }
 
         a {
@@ -14,9 +28,215 @@
             color: $c-link;
             opacity: 1;
             transition: all $tr;
+            border-bottom: none;
+
+            @include max(laptop) {
+                font-size: 16px;
+            }
 
             &:hover {
                 opacity: 0.7;
+            }
+        }
+
+        h2,
+        .sale-order-title {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 100%;
+            color: $c-black;
+
+            @include max(laptop) {
+                font-size: 26px;
+            }
+
+            @include max(tablet) {
+                font-size: 24px;
+            }
+
+            @include max(mobile) {
+                font-size: 20px;
+            }
+        }
+
+        .sale-order-title {
+            margin-bottom: 20px !important;
+        }
+
+        .sale-order-list-title-container {
+            padding: 13px 20px;
+            border-color: $c-border;
+            border-bottom-width: 0;
+            background-color: $c-bg-main;
+            border-radius: $br-10 $br-10 0 0;
+
+            @include max(laptop) {
+                padding: 10px 15px !important;
+            }
+
+            @include max(tablet) {
+                padding: 10px !important;
+            }
+        }
+
+        .sale-order-list-title-container h3 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            margin: 0;
+            padding: 0;
+
+            @include max(laptop) {
+                font-size: 18px;
+            }
+
+            @include max(mobile) {
+                font-size: 16px;
+            }
+        }
+
+        .sale-order-list-title-container .mb-1,
+        .sale-order-list-title-container .mt-1 {
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .sale-order-list-inner-container,
+        .col.sale-order-list-inner-container {
+            padding: 0 20px 20px !important;
+            border-color: $c-border;
+            border-top-width: 0;
+            border-radius: 0 0 $br-10 $br-10;
+
+            @include max(laptop) {
+                padding: 0 10px 15px !important;
+            }
+
+            @include max(tablet) {
+                padding: 10px !important;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .sale-order-list-inner-container .mb-3 {
+            margin-bottom: 0 !important;
+        }
+
+        .sale-order-list-inner-title-line-item {
+            display: block;
+            padding: 16px 20px 16px 0;
+            font-family: $ff-open;
+            color: $c-text;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+        }
+
+        .sale-order-list-inner-title-line {
+            background-color: $c-bg-main;
+            opacity: 1;
+            margin: 12px 0;
+
+        }
+
+        .sale-order-list-inner-row-body {
+            padding: 0 0 10px;
+        }
+
+        .sale-order-list-inner-row-body>.row {
+            @include max(tablet) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .sale-order-list-payment-title,
+        .sale-order-list-shipment-title,
+        .sale-order-list-shipment-status,
+        .sale-order-list-shipment-element,
+        .sale-order-list-status-alert,
+        .sale-order-list-payment-price,
+        .sale-order-list-shipment-item,
+        .sale-order-list-shipment-status-block {
+            font-family: $ff-open;
+            font-size: 18px;
+            line-height: 139%;
+            color: $c-text;
+            font-weight: 700;
+
+            @include max(laptop) {
+                font-size: 16px;
+            }
+
+            @include max(mobile) {
+                font-size: 14px;
+            }
+
+        }
+
+        .sale-order-list-status-alert,
+        .sale-order-list-shipment-status-block {
+            color: $c-text-light;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+        }
+
+        .sale-order-list-status-alert {
+            color: #E00000;
+        }
+
+        .sale-order-list-payment-price,
+        .sale-order-list-shipment-status,
+        .sale-order-list-shipment-item {
+            font-weight: 400;
+        }
+
+        .sale-order-list-shipment-status-item {
+            margin: 0;
+        }
+
+        .sale-order-list-button-container {
+            padding-right: 0;
+            padding-left: 24px;
+
+            @include max(tablet) {
+                padding-left: 0;
+                padding-top: 20px;
+            }
+        }
+
+        .btn.btn-primary {
+            border: none;
+            color: $c-white;
+            background-color: $c-accent;
+            transition: all $tr;
+            text-decoration: none;
+
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .sale-order-list-payment-title,
+        .sale-order-list-payment-price,
+        .sale-order-list-shipment-title,
+        .sale-order-list-shipment-status {
+            margin-bottom: 10px !important;
+        }
+
+        .sale-order-list-inner-row {
+            gap: 30px;
+            padding-bottom: 0 !important;
+            padding-top: 8px !important;
+
+            @include max(tablet) {
+                gap: 16px;
             }
         }
     }

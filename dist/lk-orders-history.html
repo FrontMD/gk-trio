@@ -135,176 +135,58 @@
               <section class="pa pa-orders">
                 <div class="gkt-container">
                   <div class="gkt-container__inner gkt-container__inner--bg">
-                        <div class="title  title--40 title--dark">Текущие заказы
+                        <div class="title  title--40 title--dark">История заказов
                         </div>
-                    <div class="pa__content"><div class="row"><div class="bx-content col-md-9 col-sm-8">	
+                    <div class="pa__content"><div class="row"><div class="bx-content col-md-9 col-sm-8">
 <div class="row mb-3">
 <div class="col">
-<a class="mr-4" href="/personal/orders/?filter_history=Y&amp;login=yes">Посмотреть историю заказов</a>
+<a class="mr-4" href="/personal/orders/?login=yes">Посмотреть текущие заказы</a>
+<a class="mr-4" href="/personal/orders/?filter_history=Y&amp;show_canceled=Y&amp;login=yes">Посмотреть историю отмененных заказов</a>
 </div>
 </div>
-<div class="row mb-3">
-<div class="col">
-<h2>Заказы в статусе «Принят, ожидается оплата»</h2>
+<h1 class="sale-order-title">Заказы в статусе «Выполнен»</h1>
+<div class="row sale-order-list-accomplished-title-container">
+<h3 class="g-font-size-20 mb-1 mt-1 col-sm">Заказ №2 от
+<span class="text-nowrap">11.12.2025 09:41:20,</span> 4 товара на сумму
+<span class="text-nowrap">6&nbsp;156 ₽</span>
+</h3>
+<div class="col-sm-auto">
+<span class="sale-order-list-accomplished-date"> Заказ выполнен</span>
+<span class="sale-order-list-accomplished-date">11.12.2025</span>
 </div>
 </div>
-<div class="row mx-0 sale-order-list-title-container">
-<h3 class="col mb-1 mt-1">Заказ	№4 от 11.12.2025, 1	товар на сумму 1&nbsp;399 ₽</h3>
-</div>
-<div class="row mx-0 mb-5">
+<div class="row mb-5">
 <div class="col pt-3 sale-order-list-inner-container">
-<div class="row mb-3 align-items-center">
-<div class="col-auto">
-<span class="sale-order-list-inner-title-line-item">Оплата</span>
-</div>
-<div class="col">
-<hr class="sale-order-list-inner-title-line">
-</div>
-</div>
-<div class="row mb-3 sale-order-list-inner-row">
-<div class="col sale-order-list-inner-row-body">
-<div class="row">
-<div class="col sale-order-list-payment">
-<div class="mb-1 sale-order-list-payment-title">Счет №4/1 от 11.12.2025,
-<span class="sale-order-list-payment-title-element">Внутренний счет</span>
-<span class="sale-order-list-status-alert">Не оплачено</span>
-</div>
-<div class="mb-1 sale-order-list-payment-price">
-<span class="sale-order-list-payment-element">Сумма к оплате по счету</span>:
-<span class="sale-order-list-payment-number">1&nbsp;399 ₽</span>
-</div>
-<a href="#" class="sale-order-list-change-payment" id="4/1">сменить способ оплаты</a>
-</div>
-<div class="col-sm-auto  sale-order-list-button-container">
-<a class="btn btn-primary ajax_reload" href="/personal/order/payment/?ORDER_ID=4&amp;PAYMENT_ID=4/1">Оплатить</a>
-</div>
-</div>
-</div>
-<div class="col sale-order-list-inner-row-template">
-<a class="sale-order-list-cancel-payment" href="">
-<i class="fa fa-long-arrow-left"></i> назад
-</a>
-</div>
-</div>
-<div class="row mb-3 align-items-center">
-<div class="col-auto">
-<span class="sale-order-list-inner-title-line-item">Доставка</span>
-</div>
-<div class="col">
-<hr class="sale-order-list-inner-title-line">
-</div>
-</div>
-<div class="row mb-3">
-<div class="col">
-<div class="mb-1 sale-order-list-shipment-title">
-<span class="sale-order-list-shipment-element">Отгрузка	№4/2, стоимость доставки 0 ₽</span>
-<span class="sale-order-list-status-alert">Не отгружено</span>
-</div>
-<div class="mb-1 sale-order-list-shipment-status">
-<span class="sale-order-list-shipment-status-item">Статус отгрузки:</span>
-<span class="sale-order-list-shipment-status-block">Ожидает обработки</span>
-</div>
-<div class="mb-1 sale-order-list-shipment-item">Служба доставки: Без доставки</div>
-</div>
-</div>
-<div class="row mb-3">
-<div class="col">
-<hr class="sale-order-list-inner-title-line">
-</div>
-</div>
 <div class="row pb-3 sale-order-list-inner-row">
-<div class="col-auto sale-order-list-about-container">
-<a class="g-font-size-15 sale-order-list-about-link" href="/personal/orders/4">Подробнее о заказе</a>
+<div class="col-auto col-auto sale-order-list-about-container">
+<a class="g-font-size-15 sale-order-list-about-link" href="/personal/orders/2">Подробнее о заказе</a>
 </div>
 <div class="col"></div>
 <div class="col-auto sale-order-list-repeat-container">
-<a class="g-font-size-15 sale-order-list-repeat-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=4">Повторить заказ</a>
-</div>
-<div class="col-auto sale-order-list-cancel-container">
-<a class="g-font-size-15 sale-order-list-cancel-link" href="/personal/cancel/4?CANCEL=Y">Отменить заказ</a>
+<a class="g-font-size-15 sale-order-list-cancel-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=2">Повторить заказ</a>
 </div>
 </div>
 </div>
 </div>
-<div class="row mb-3">
-<div class="col">
-<h2>Заказы в статусе «Оплачен, формируется к отправке»</h2>
+<div class="row sale-order-list-accomplished-title-container">
+<h3 class="g-font-size-20 mb-1 mt-1 col-sm">Заказ №1 от
+<span class="text-nowrap">11.12.2025 09:41:20,</span> 3	товара на сумму
+<span class="text-nowrap">5&nbsp;197 ₽</span>
+</h3>
+<div class="col-sm-auto">
+<span class="sale-order-list-accomplished-date">Заказ выполнен</span>
+<span class="sale-order-list-accomplished-date">11.12.2025</span>
 </div>
 </div>
-<div class="row mx-0 sale-order-list-title-container">
-<h3 class="col mb-1 mt-1">Заказ	№3 от 11.12.2025, 2	товара	на сумму 4&nbsp;098 ₽</h3>
-</div>
-<div class="row mx-0 mb-5">
+<div class="row mb-5">
 <div class="col pt-3 sale-order-list-inner-container">
-<div class="row mb-3 align-items-center">
-<div class="col-auto">
-<span class="sale-order-list-inner-title-line-item">Оплата</span>
-</div>
-<div class="col">
-<hr class="sale-order-list-inner-title-line">
-</div>
-</div>
-<div class="row mb-3 sale-order-list-inner-row">
-<div class="col sale-order-list-inner-row-body">
-<div class="row">
-<div class="col sale-order-list-payment">
-<div class="mb-1 sale-order-list-payment-title">Счет №3/1 от 11.12.2025,
-<span class="sale-order-list-payment-title-element">Внутренний счет</span>
-<span class="sale-order-list-status-alert">Не оплачено</span>
-</div>
-<div class="mb-1 sale-order-list-payment-price">
-<span class="sale-order-list-payment-element">Сумма к оплате по счету</span>:
-<span class="sale-order-list-payment-number">4&nbsp;098 ₽</span>
-</div>
-<a href="#" class="sale-order-list-change-payment" id="3/1">сменить способ оплаты</a>
-</div>
-<div class="col-sm-auto  sale-order-list-button-container">
-<a class="btn btn-primary ajax_reload" href="/personal/order/payment/?ORDER_ID=3&amp;PAYMENT_ID=3/1">Оплатить</a>
-</div>
-</div>
-</div>
-<div class="col sale-order-list-inner-row-template">
-<a class="sale-order-list-cancel-payment" href="">
-<i class="fa fa-long-arrow-left"></i> назад
-</a>
-</div>
-</div>
-<div class="row mb-3 align-items-center">
-<div class="col-auto">
-<span class="sale-order-list-inner-title-line-item">Доставка</span>
-</div>
-<div class="col">
-<hr class="sale-order-list-inner-title-line">
-</div>
-</div>
-<div class="row mb-3">
-<div class="col">
-<div class="mb-1 sale-order-list-shipment-title">
-<span class="sale-order-list-shipment-element">Отгрузка №3/2, стоимость доставки 0 ₽</span>
-<span class="sale-order-list-status-alert">Не отгружено</span>
-</div>
-<div class="mb-1 sale-order-list-shipment-status">
-<span class="sale-order-list-shipment-status-item">Статус отгрузки:</span>
-<span class="sale-order-list-shipment-status-block">Ожидает обработки</span>
-</div>
-<div class="mb-1 sale-order-list-shipment-item">Служба доставки: Без доставки</div>
-</div>
-</div>
-<div class="row mb-3">
-<div class="col">
-<hr class="sale-order-list-inner-title-line">
-</div>
-</div>
 <div class="row pb-3 sale-order-list-inner-row">
-<div class="col-auto sale-order-list-about-container">
-<a class="g-font-size-15 sale-order-list-about-link" href="/personal/orders/3">Подробнее о заказе</a>
+<div class="col-auto col-auto sale-order-list-about-container">
+<a class="g-font-size-15 sale-order-list-about-link" href="/personal/orders/1">Подробнее о заказе</a>
 </div>
 <div class="col"></div>
 <div class="col-auto sale-order-list-repeat-container">
-<a class="g-font-size-15 sale-order-list-repeat-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=3">Повторить заказ</a>
-</div>
-<div class="col-auto sale-order-list-cancel-container">
-<a class="g-font-size-15 sale-order-list-cancel-link" href="/personal/cancel/3?CANCEL=Y">Отменить заказ</a>
+<a class="g-font-size-15 sale-order-list-cancel-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=1">Повторить заказ</a>
 </div>
 </div>
 </div>
