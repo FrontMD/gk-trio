@@ -19,7 +19,7 @@ block content
 
         .pages-list__subtitle {
             margin-top: 60px;
-            font-size: 32px !important;
+
         }
 
         .pages-list__link {
@@ -144,7 +144,12 @@ block content
                         size: '60',
                         text: 'Страницы'
                     })
-
+                    +title({
+                        classes: 'pages-list__subtitle',
+                        tag: '',
+                        size: '40',
+                        text: 'Основной сайт'
+                    })
                     .pages-list__links
                         a.pages-list__link.pages-list__link--check(href="home.html" target="_blank") Главная
                         a.pages-list__link.pages-list__link--check(href="about.html" target="_blank") О компании
@@ -160,3 +165,13 @@ block content
                         a.pages-list__link.pages-list__link--check(href="catalog.html" target="_blank") Каталог
                         a.pages-list__link.pages-list__link--check(href="seed-plant.html" target="_blank") Семенной завод
                         a.pages-list__link.pages-list__link--check(href="contacts.html" target="_blank") Контакты
+
+                    +title({
+                        classes: 'pages-list__subtitle',
+                        tag: '',
+                        size: '40',
+                        text: 'Личный кабинет'
+                    })
+                    .pages-list__links
+                        a.pages-list__link.pages-list__link--check(href="lk-common.html" target="_blank") Личный кабинет
+                        a.pages-list__link.pages-list__link--work(href="lk-orders.html" target="_blank") Текущие заказы

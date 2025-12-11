@@ -1,0 +1,378 @@
+/* --- Стилизация Личного Кабинета --- */
+/* Используем Flexbox для контейнера строки */
+.personal-grid .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    max-width: 70%;
+}
+
+/* Принудительно меняем ширину колонок, игнорируя классы col-lg-3 и т.д. */
+.personal-grid .row>[class*='col-'] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    /* Отступ между рядами */
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Планшет: 2 колонки (50%) */
+@media (min-width: 768px) {
+    .personal-grid .row>[class*='col-'] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Десктоп: 3 колонки (33.33%) */
+@media (min-width: 1200px) {
+    .personal-grid .row>[class*='col-'] {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+
+/* --- 2. СТИЛИЗАЦИЯ КАРТОЧЕК --- */
+.sale-personal-section-index-block {
+    background-color: #111 !important;
+    border: 1px solid #222 !important;
+    /* Едва заметная рамка */
+    border-radius: 0 !important;
+    /* Строгие углы */
+    padding: 0 !important;
+    height: 100%;
+    /* Одинаковая высота */
+    min-height: 220px;
+    box-shadow: none !important;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ссылка на всю область карточки */
+.sale-personal-section-index-block-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+    text-decoration: none !important;
+    color: #fff !important;
+    /* Белый текст на темном фоне */
+    flex-grow: 1;
+}
+
+/* Иконка */
+.sale-personal-section-index-block-ico {
+    display: inline-block;
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #fff;
+    /* Белая иконка */
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    /* Сброс стилей Битрикса */
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+/* Заголовок */
+.sale-personal-section-index-block-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+    transition: all 0.4s ease;
+}
+
+/* --- 3. ЭФФЕКТЫ ПРИ НАВЕДЕНИИ (HOVER) --- */
+
+.sale-personal-section-index-block:hover {
+    background-color: #fff !important;
+    /* Инверсия: Белый фон */
+    border-color: #e4e4e4 !important;
+    transform: translateY(-5px);
+    /* Легкий подъем */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Инверсия цвета текста и иконок */
+.sale-personal-section-index-block:hover .sale-personal-section-index-block-link {
+    color: #111 !important;
+    /* Темный текст */
+}
+
+.sale-personal-section-index-block:hover .sale-personal-section-index-block-ico {
+    color: #111;
+    /* Темная иконка */
+    opacity: 1;
+    transform: scale(1.1);
+    /* Небольшое увеличение иконки */
+}
+
+.sale-personal-section-index-block:hover .sale-personal-section-index-block-name {
+    color: #111;
+}
+
+
+/* --- СТИЛИЗАЦИЯ ФОРМЫ ПРОФИЛЯ --- */
+/* 1. Сброс сетки для формы */
+.bx_profile {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    padding: 50px;
+    /* Больше воздуха внутри */
+    max-width: 100%;
+    /* Разрешаем растягиваться */
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+/* 2. Сбрасываем сетку строки, чтобы элементы встали друг под другом */
+.bx_profile .form-group.row {
+    display: block;
+    /* Отключаем flex-строку */
+    margin-bottom: 30px;
+    /* Отступ между блоками */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 3. Заставляем колонки занимать 100% ширины */
+.bx_profile .form-group .col-md-3,
+.bx_profile .form-group .col-md-9,
+.bx_profile .form-group .col-sm-4,
+.bx_profile .form-group .col-sm-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 4. Стилизация ЛЕЙБЛОВ (Названий полей) */
+.main-profile-form-label {
+    text-align: left;
+    /* Выравнивание по левому краю */
+    display: block;
+    margin-bottom: 10px;
+    /* Отступ до поля ввода */
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #111;
+    opacity: 0.8;
+}
+
+/* 5. Стилизация ПОЛЕЙ ВВОДА */
+.bx_profile .form-control {
+    height: 55px;
+    /* Увеличили высоту для удобства */
+    border: 1px solid #ccc;
+    border-radius: 0;
+    /* Строгий стиль */
+    background-color: #fff;
+    /* Светлый фон */
+    color: #111;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Фокус на поле */
+.bx_profile .form-control:focus {
+    border-color: #111;
+    background-color: #fff;
+    box-shadow: none;
+    /* Убираем синюю тень бутстрапа */
+}
+
+/* 6. Блок "Последняя авторизация" */
+.main-profile-block-date-info {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-left: 3px solid #111;
+    /* Акцентная полоска слева */
+    font-size: 14px;
+    color: #555;
+}
+
+.main-profile-block-date-info .col-12 {
+    padding: 0;
+}
+
+.main-profile-block-date-info strong {
+    color: #111;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* 7. Подсказки (маленький текст под паролем) */
+.bx_profile .text-muted {
+    font-size: 13px;
+    color: #888 !important;
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+/* 8. Кнопки (внизу) */
+.bx_profile .btn-primary.main-profile-submit {
+    background-color: #111;
+    border: 1px solid #111;
+    color: #fff;
+    height: 55px;
+    padding: 0 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.bx_profile .btn-primary.main-profile-submit:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.bx_profile .btn-link {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+    padding: 0;
+}
+
+.bx_profile .btn-link:hover {
+    border-bottom-color: #111;
+    text-decoration: none;
+}
+
+/* 9. Убираем лишние отступы у заголовков соцсетей */
+.soc-serv-title {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* --- СТИЛИЗАЦИЯ ПУСТОГО СПИСКА ЗАКАЗОВ --- */
+/* 1. Исправление сетки (Grid Fix) */
+/* Заставляем элементы, которые не являются карточками, занимать всю ширину */
+.personal-grid>h3,
+.personal-grid>.row,
+.personal-grid>br,
+.personal-grid>p,
+.personal-grid>font {
+    grid-column: 1 / -1;
+    /* Растянуть от начала до конца сетки */
+    width: 100%;
+    text-align: center;
+    /* Центрируем всё содержимое */
+}
+
+/* 2. Заголовок "Текущие заказы не найдены" */
+.personal-grid>h3 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 0.02em;
+}
+
+/* 3. Контейнер кнопок */
+.personal-grid>.row {
+    justify-content: center;
+    /* Центрируем кнопки */
+    margin-bottom: 20px;
+}
+
+/* 4. Превращаем ссылки в КНОПКИ */
+.personal-grid>.row .col a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    /* Строгие углы */
+    cursor: pointer;
+    min-width: 260px;
+    /* Чтобы кнопки были одинаковой ширины */
+}
+
+/* Ссылка "Перейти в каталог" - делаем ГЛАВНОЙ кнопкой */
+.personal-grid>.row .col a[href*="/catalog/"] {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.personal-grid>.row .col a[href*="/catalog/"]:hover {
+    background-color: #fff;
+    color: #111;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ссылка "Посмотреть историю" - делаем ВТОРОСТЕПЕННОЙ кнопкой */
+.personal-grid>.row .col a[href*="filter_history"] {
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #e4e4e4;
+    /* Легкая рамка */
+}
+
+.personal-grid>.row .col a[href*="filter_history"]:hover {
+    border-color: #111;
+    background-color: #111;
+    color: #fff;
+}
+
+/* 5. Убираем лишние отступы bootstrap (mr-4), если они мешают центровке */
+.personal-grid .mr-4 {
+    margin-right: 0 !important;
+}
+
+/* 6. Адаптив для мобильных */
+@media (max-width: 768px) {
+    .personal-grid>.row .col a {
+        width: 100%;
+        /* Кнопка во всю ширину */
+        margin-bottom: 10px;
+    }
+
+    /* Если кнопки в разных row, уменьшаем отступ */
+    .personal-grid>.row {
+        margin-bottom: 10px;
+    }
+}
