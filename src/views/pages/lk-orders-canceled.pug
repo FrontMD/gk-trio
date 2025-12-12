@@ -1,0 +1,28 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Мои заказы"
+    - const isLK = true
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +bc-section({
+                bc: {
+                items: [
+                    {
+                    name: 'ГК ТРИО',
+                    link: 'javascript:void(0);'
+                    },
+                    {
+                    name: 'Мои заказы',
+                    link: 'javascript:void(0);'
+                    }
+                ],
+                },
+            })
+
+            +pa-orders({
+                title: 'Отмененные заказы',
+                type: 'canceled'
+            })

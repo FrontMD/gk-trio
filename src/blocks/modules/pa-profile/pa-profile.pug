@@ -1,0 +1,105 @@
+-
+    const defaultPAProfileProps = {
+        classes: '',
+    }
+
+mixin pa-profile(props= defaultPAProfileProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPAProfileProps.classes
+        }
+
+    section.pa.pa-profile(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                +title({
+                    text: 'Профиль пользователя',
+                    size: '40'
+                })
+                .pa__content
+                    <div class="row">
+                        <div class="bx-content col-md-9 col-sm-8">
+                            <div class="bx_profile">
+                                <form method="post" name="form1" action="/personal/private/" enctype="multipart/form-data" role="form">
+                                    <input type="hidden" name="sessid" id="sessid" value="efdb08b1fe7f75a5524dc1ecf39f10bd">
+                                    <input type="hidden" name="lang" value="s1">
+                                    <input type="hidden" name="ID" value="1">
+                                    <input type="hidden" name="LOGIN" value="admin">
+                                    <div class="main-profile-block-shown" id="user_div_reg">
+                                        <div class="row main-profile-block-date-info">
+                                            <div class="col-12">
+                                                <strong>Последняя авторизация:</strong>
+                                                <strong>12.12.2025 15:44:16</strong>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-md-3 col-form-label main-profile-form-label" for="main-profile-name">Имя:</label>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <input class="form-control" type="text" name="NAME" maxlength="50" id="main-profile-name" value="Hudson">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-md-3 col-form-label main-profile-form-label" for="main-profile-last-name">Фамилия:</label>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <input class="form-control" type="text" name="LAST_NAME" maxlength="50" id="main-profile-last-name" value="88">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-md-3 col-form-label main-profile-form-label" for="main-profile-second-name">Отчество:</label>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <input class="form-control" type="text" name="SECOND_NAME" maxlength="50" id="main-profile-second-name" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-md-3 col-form-label main-profile-form-label" for="main-profile-email">E-Mail:</label>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <input class="form-control" type="text" name="EMAIL" maxlength="50" id="main-profile-email" value="test2@mail.de">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-md-3 col-form-label main-profile-form-label" for="main-profile-password">Новый пароль:</label>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <input class=" form-control bx-auth-input main-profile-password" type="password" name="NEW_PASSWORD" maxlength="50" id="main-profile-password" value="" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-md-3 col-form-label main-profile-form-label main-profile-password" for="main-profile-password-confirm">Подтверждение нового пароля:							</label>
+                                                        <div class="col-sm-8 col-md-9">
+                                                            <input class="form-control" type="password" name="NEW_PASSWORD_CONFIRM" maxlength="50" value="" id="main-profile-password-confirm" autocomplete="off">
+                                                            <small id="emailHelp" class="form-text text-muted">Пароль должен быть не менее 6 символов длиной.</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="submit" class="btn btn-themes btn-primary btn-md main-profile-submit" name="save" value="Сохранить">
+                                                <input type="submit" class="btn btn-themes btn-link btn-md" name="reset" value="Отмена">
+                                            </div>
+                                        </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="sidebar col-md-3 col-sm-4">           
+                            <div class="bx-sidebar-block">
+                                <nav class="list-group mb-3 sbx-green">
+                                    <a class="list-group-item list-group-item-action" href="/personal/">Мой кабинет</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/orders/">Текущие заказы</a>
+                                    <a class="list-group-item list-group-item-action active" href="/personal/private/">Личные данные</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/orders/?filter_history=Y">История заказов</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/profiles/">Профили заказов</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/cart/">Корзина</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/subscribe/">Подписки</a>
+                                    <a class="list-group-item list-group-item-action" href="/about/contacts/">Контакты</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>

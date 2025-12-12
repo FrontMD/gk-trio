@@ -63,20 +63,36 @@
             margin-bottom: 20px !important;
         }
 
-        .sale-order-list-title-container {
+        .sale-order-list-title-container,
+        .sale-order-list-accomplished-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
             padding: 13px 20px;
             border-color: $c-border;
             border-bottom-width: 0;
             background-color: $c-bg-main;
             border-radius: $br-10 $br-10 0 0;
 
+
+            >* {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
             @include max(laptop) {
                 padding: 10px 15px !important;
+                gap: 10px;
             }
 
             @include max(tablet) {
                 padding: 10px !important;
             }
+        }
+
+        .sale-order-list-accomplished-date {
+            margin: 0 !important;
         }
 
         .sale-order-list-title-container h3 {

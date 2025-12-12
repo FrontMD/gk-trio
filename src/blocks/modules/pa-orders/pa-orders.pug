@@ -257,6 +257,44 @@ mixin pa-orders(props= defaultPAOrdersProps)
                                 </div>
                             </div>
 
+                        -if(checkProps.type === 'canceled')
+                            <div class="bx-content col-md-9 col-sm-8">	
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <a class="mr-4" href="/personal/orders/?login=yes">Посмотреть текущие заказы</a>
+                                        <a class="mr-4" href="/personal/orders/?filter_history=Y&amp;login=yes">Посмотреть историю заказов</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <h2>Отмененные заказы</h2>
+                                    </div>
+                                </div>
+                                <div class="row sale-order-list-accomplished-title-container">
+                                    <h3 class="g-font-size-20 mb-1 mt-1 col-sm">Заказ №5 от <span class="text-nowrap">11.12.2025 09:41:20,</span>1 товар на сумму 
+                                        <span class="text-nowrap">1&nbsp;199 ₽</span>
+                                    </h3>
+                                    <div class="col-sm-auto">
+                                        <span class="sale-order-list-accomplished-date canceled-order">Заказ отменен</span>
+                                        <span class="sale-order-list-accomplished-date">11.12.2025</span>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col pt-3 sale-order-list-inner-container">
+                                        <div class="row pb-3 sale-order-list-inner-row">
+                                            <div class="col-auto col-auto sale-order-list-about-container">
+                                                <a class="g-font-size-15 sale-order-list-about-link" href="/personal/orders/5">Подробнее о заказе</a>
+                                            </div>
+                                            <div class="col"></div>
+                                            <div class="col-auto sale-order-list-repeat-container">
+                                                <a class="g-font-size-15 sale-order-list-cancel-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=5">Повторить заказ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         <div class="sidebar col-md-3 col-sm-4">           
                             <div class="bx-sidebar-block">
                                 <nav class="list-group mb-3 sbx-green">

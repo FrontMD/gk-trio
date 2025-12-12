@@ -1,0 +1,357 @@
+-
+    const defaultPAOrderProps = {
+        classes: '',
+    }
+
+mixin pa-order(props= defaultPAOrderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPAOrderProps.classes
+        }
+
+    section.pa.pa-order(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                +title({
+                    text: 'Информация о заказе',
+                    size: '40'
+                })
+                .pa__content
+                    <div class="row">
+                        <div class="bx-content col-md-9 col-sm-8">	
+                            <div class="row sale-order-detail">
+                                <div class="col">
+                                    <h1 class="mb-3">Мой заказ №2, создан 11.12.2025</h1>
+                                    <div class="mb-3">
+                                        <a href="/personal/orders/?filter_history=Y">← Вернуться в список заказов</a>
+                                    </div>
+                                    <div class="row mb-3 mx-0">
+                                        <div class="col sale-order-detail-card">
+                                            <h2 class="sale-order-detail-card-title">Заказ №2 от 11.12.2025, 4 товара на сумму 6&nbsp;156 ₽</h2>
+
+                                            <div class="row mb-3">
+                                                <div class="col p-0">
+                                                    <h3 class="sale-order-detail-section-title">Информация о заказе</h3>
+                                                    <div class="row m-0">
+                                                        <div class="col-sm mb-3">
+                                                            <div class="sale-order-detail-prop-name">Ф.И.О.:</div>
+                                                            <div class="sale-order-detail-prop-value">Hudson 88</div>
+                                                            <div class="pt-3">
+                                                                <a href="" onclick="return false;" class="sale-order-detail-more-info-less">свернуть</a>
+                                                                <a href="" onclick="return false;" class="sale-order-detail-more-info-more">подробнее</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-auto mb-3">
+                                                            <div class="sale-order-detail-prop-name">Текущий статус, от 11.12.2025:</div>
+                                                            <div class="sale-order-detail-prop-value">Выполнен</div>
+                                                        </div>
+
+                                                        <div class="col-sm mb-3">
+                                                            <div class="sale-order-detail-prop-name">Сумма:</div>
+                                                            <div class="sale-order-detail-prop-value">6&nbsp;156 ₽</div>
+                                                        </div>
+
+                                                        <div class="col-sm-auto mb-3 text-center">
+                                                            <a href="/personal/orders/?COPY_ORDER=Y&amp;ID=2" class="btn btn-primary btn-block btn-sm my-1">Повторить заказ</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row m-0 sale-order-detail-more-info-details" style="display: none;">
+                                                        <div class="col">
+                                                            <h4 class="sale-order-detail-more-info-details-title">Информация о пользователе</h4>
+
+                                                            <div class="table-responsive">
+                                                                <table class="table table-bordered table-striped mb-3 sale-order-detail-more-info-details-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>Логин:</th>
+                                                                            <td>admin</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>E-mail адрес:</th>
+                                                                            <td>
+                                                                                <a class="" href="mailto:test2@mail.de">test2@mail.de</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Тип плательщика:</th>
+                                                                            <td>Физическое лицо</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Ф.И.О.:</th>
+                                                                            <td>John Smith</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>E-Mail:</th>
+                                                                            <td>example@example.com</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Телефон:</th>
+                                                                            <td>8 495 2312121</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Индекс:</th>
+                                                                            <td>101000</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Местоположение:</th>
+                                                                            <td>Россия, Центр, Москва</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Город:</th>
+                                                                            <td>Москва</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Адрес доставки:</th>
+                                                                            <td>111 Pine Avenue</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col p-0">
+                                                    <h3 class="sale-order-detail-section-title">Параметры оплаты</h3>
+
+                                                    <div class="row pb-3 m-0 align-items-center">
+                                                        <div class="col-lg-1 col-md-2 col-xs-2 d-none d-sm-block sale-order-detail-section-payment-image"></div>
+                                                        <div class="col">
+                                                            <div class="sale-order-detail-payment-options-info-order-number">Заказ №2 от 11.12.2025, Выполнен</div>
+                                                            <div class="sale-order-detail-payment-options-info-total-price">Сумма заказа: <span>6&nbsp;156 ₽</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row m-0">
+                                                    <div class="col sale-order-detail-payment-options-methods-container">
+                                                        <div class="row payment-options-methods-row">
+                                                            <div class="col sale-order-detail-payment-options-methods">
+                                                                <div class="row m-0 align-items-center sale-order-detail-payment-options-methods-information-block">
+                                                                    <div class="col-auto d-none d-sm-block sale-order-detail-payment-options-methods-image-container">
+                                                                        <span class="sale-order-detail-payment-options-methods-image-element" style="background-image: url('https://trio.hudson-8811.online/upload/sale/paysystem/logotip/e2c/r89a8or1ofgdzaz6isxev5z14wq3tkyo.png');"></span>
+                                                                    </div>
+                                                                    <div class="col sale-order-detail-payment-options-methods-info">
+                                                                        <div class="mb-2 sale-order-detail-payment-options-methods-info-title">
+                                                                            <div class="sale-order-detail-methods-title">Счёт №2/1 от 11.12.2025, 
+                                                                                <span class="sale-order-list-payment-title-element">Внутренний счет</span>
+                                                                                <span class="sale-order-detail-payment-options-methods-info-title-status-alert">Не оплачено</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mb-2 sale-order-detail-payment-options-methods-info-total-price">
+                                                                            <span class="sale-order-detail-sum-name">Сумма к оплате по счёту:</span>
+                                                                            <span class="sale-order-detail-sum-number">6&nbsp;156 ₽</span>
+                                                                        </div>
+                                                                        <a href="#" id="2/1" class="sale-order-detail-payment-options-methods-info-change-link">Сменить способ оплаты</a>
+                                                                    </div>
+                                                                    <div class="col-sm-auto col-12 sale-order-detail-payment-options-methods-button-container">
+                                                                        <button class="btn btn-primary btn-sm active-button">Оплатить</button>
+                                                                    </div>
+                                                                    <div class="sale-order-detail-payment-inner-row-template col-12">
+                                                                        <a href="" onclick="return false" class="sale-order-list-cancel-payment">
+                                                                            <i class="fa fa-long-arrow-left"></i> назад
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row sale-order-detail-payment-options-methods-template">
+                                                                    <span class="sale-paysystem-close active-button">
+                                                                        <span class="sale-paysystem-close-item sale-order-payment-cancel"></span>
+                                                                    </span>
+                                                                    <div class="col"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col p-0">
+                                                <h3 class="sale-order-detail-section-title">Параметры отгрузки</h3>
+                                                <div class="row mb-3">
+                                                    <div class="col sale-order-detail-payment-options-shipment">
+                                                        <div class="row">
+                                                            <div class="col-2 sale-order-detail-payment-options-shipment-image-container">
+                                                                <span class="sale-order-detail-payment-options-shipment-image-element" style="background-image: url('https://trio.hudson-8811.online/bitrix/images/sale/logo-default-d.gif')"></span>
+                                                            </div>
+
+                                                            <div class="col sale-order-detail-payment-options-methods-shipment-list">
+                                                                <div class="mb-2 sale-order-detail-payment-options-methods-shipment-list-item-title">Отгрузка №2/2, стоимость доставки 0 ₽</div>
+                                                                <div class="mb-2 sale-order-detail-payment-options-methods-shipment-list-item">Служба доставки: Без доставки</div>
+                                                                <div class="mb-2 sale-order-detail-payment-options-methods-shipment-list-item">Статус отгрузки: Ожидает обработки</div>
+                                                                <div class="mt-3 mb-2 sale-order-detail-payment-options-methods-shipment-list-item-link">
+                                                                    <a href="" onclick="return false" class="sale-order-detail-show-link">показать все</a>
+                                                                    <a href="" onclick="return false" class="sale-order-detail-hide-link">свернуть</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row sale-order-detail-payment-options-shipment-composition-map" style="display: none;">
+                                                            <div class="col">
+                                                                <div class="row mx-0 mb-3">
+                                                                    <div class="col">
+                                                                        <h3 class="sale-order-detail-more-info-details-title">Состав отгрузки</h3>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                            <a class="sale-order-detail-order-item-title" href="/catalog/underwear/lingerie-intimate-evening/">Нижнее белье Интимный Вечер</a>
+                                                                                        </td>
+                                                                                        <td class="sale-order-detail-order-item-properties">Количество:	1&nbsp;</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/pants/pants-striped-flight/">Штаны Полосатый Рейс</a>
+                                                                                            </td>
+                                                                                            <td class="sale-order-detail-order-item-properties">Количество: 1&nbsp;шт</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/underwear/underwear-lights-in-the-night/">Нижнее белье Огонек в Ночи</a>
+                                                                                            </td>
+                                                                                            <td class="sale-order-detail-order-item-properties">Количество: 1&nbsp;шт</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/underwear/lingerie-night-frost-patterns/">Нижнее белье Ночь Морозных Узоров</a>
+                                                                                            </td>
+                                                                                            <td class="sale-order-detail-order-item-properties">Количество: 1&nbsp;шт</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col p-0">
+                                                    <h3 class="sale-order-detail-section-title">Содержимое заказа</h3>
+                                                    <div class="row mx-0">
+                                                        <div class="col">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">Наименование</th>
+                                                                            <th scope="col">Цена</th>
+                                                                                <th scope="col">Скидка</th>
+                                                                                <th scope="col">Количество</th>
+                                                                            <th class="text-right">Сумма</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/underwear/lingerie-intimate-evening/">Нижнее белье Интимный Вечер</a>
+                                                                                    </td>
+                                                                            <td class="sale-order-detail-order-item-properties">
+                                                                                <span class="bx-price">1&nbsp;199 ₽</span>
+                                                                            </td>
+                                                                                <td class="sale-order-detail-order-item-properties text-right">
+                                                                                    <strong class="bx-price"></strong>
+                                                                                </td>
+                                                                                <td class="sale-order-detail-order-item-properties">1&nbsp;шт</td>
+                                                                            <td class="sale-order-detail-order-item-properties text-right">
+                                                                                <strong class="bx-price">1&nbsp;199 ₽</strong>
+                                                                            </td>
+                                                                        </tr>
+                                                                            <tr>
+                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/pants/pants-striped-flight/">Штаны Полосатый Рейс</a>
+                                                                                    </td>
+                                                                            <td class="sale-order-detail-order-item-properties">
+                                                                                <span class="bx-price">1&nbsp;999 ₽</span>
+                                                                            </td>
+                                                                                <td class="sale-order-detail-order-item-properties text-right">
+                                                                                    <strong class="bx-price"></strong>
+                                                                                </td>
+                                                                                    <td class="sale-order-detail-order-item-properties">1&nbsp;шт</td>
+                                                                            <td class="sale-order-detail-order-item-properties text-right">
+                                                                                <strong class="bx-price">1&nbsp;999 ₽</strong>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/underwear/underwear-lights-in-the-night/">Нижнее белье Огонек в Ночи</a>
+                                                                                    </td>
+                                                                            <td class="sale-order-detail-order-item-properties">
+                                                                                <span class="bx-price">1&nbsp;499 ₽</span>
+                                                                            </td>
+                                                                                <td class="sale-order-detail-order-item-properties text-right">
+                                                                                    <strong class="bx-price"></strong>
+                                                                                </td>
+                                                                                    <td class="sale-order-detail-order-item-properties">1&nbsp;шт</td>
+                                                                            <td class="sale-order-detail-order-item-properties text-right">
+                                                                                <strong class="bx-price">1&nbsp;499 ₽</strong>
+                                                                            </td>
+                                                                        </tr>
+                                                                            <tr>
+                                                                            <td class="sale-order-detail-order-item-properties" style="min-width: 250px;">
+                                                                                <a class="sale-order-detail-order-item-title" href="/catalog/underwear/lingerie-night-frost-patterns/">Нижнее белье Ночь Морозных Узоров</a>
+                                                                                    </td>
+                                                                            <td class="sale-order-detail-order-item-properties">
+                                                                                <span class="bx-price">1&nbsp;459 ₽</span>
+                                                                            </td>
+                                                                                <td class="sale-order-detail-order-item-properties text-right">
+                                                                                    <strong class="bx-price"></strong>
+                                                                                </td>
+                                                                                    <td class="sale-order-detail-order-item-properties">1&nbsp;шт</td>
+                                                                            <td class="sale-order-detail-order-item-properties text-right">
+                                                                                <strong class="bx-price">1&nbsp;459 ₽</strong>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row sale-order-detail-total-payment">
+                                                <div class="col sale-order-detail-total-payment-container">
+                                                    <div class="row">
+                                                        <ul class="col-md-8 col sale-order-detail-total-payment-list-left">
+                                                            <li class="sale-order-detail-total-payment-list-left-item">Стоимость доставки:</li>
+                                                            <li class="sale-order-detail-total-payment-list-left-item">Итого:</li>
+                                                        </ul>
+                                                        <ul class="col-md-4 col sale-order-detail-total-payment-list-right">
+                                                            <li class="sale-order-detail-total-payment-list-right-item">0 ₽</li>
+                                                            <li class="sale-order-detail-total-payment-list-right-item">6&nbsp;156 ₽</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <a href="/personal/orders/?filter_history=Y">← Вернуться в список заказов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar col-md-3 col-sm-4">           
+                            <div class="bx-sidebar-block">
+                                <nav class="list-group mb-3 sbx-green">
+                                    <a class="list-group-item list-group-item-action" href="/personal/">Мой кабинет</a>
+                                    <a class="list-group-item list-group-item-action active" href="/personal/orders/">Текущие заказы</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/private/">Личные данные</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/orders/?filter_history=Y">История заказов</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/profiles/">Профили заказов</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/cart/">Корзина</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/subscribe/">Подписки</a>
+                                    <a class="list-group-item list-group-item-action" href="/about/contacts/">Контакты</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
