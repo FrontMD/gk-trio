@@ -105,7 +105,8 @@
         margin-right: 0;
     }
 
-    .bx-content {
+    .bx-content,
+    .bx-basket {
         margin-right: 24px;
         padding-left: 0;
         padding-right: 0;
@@ -121,6 +122,26 @@
         @include max(mobile) {
             margin-right: 0;
             max-width: 100%;
+        }
+
+        input.form-control {
+            width: 100%;
+            padding: 16.5px 20px;
+            font-family: $ff-open;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 100%;
+            background-color: $c-bg-main;
+            outline: none;
+            color: $c-accent;
+            border: 1px solid transparent;
+            transition: all $tr;
+            min-height: 56px;
+            border-radius: $br-10;
+
+            &::placeholder {
+                color: $c-text-light;
+            }
         }
     }
 

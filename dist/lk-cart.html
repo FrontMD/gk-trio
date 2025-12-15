@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>Корзина</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,6 +23,9 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="public/styles/bootstrap.min.min.css">
+    <link rel="stylesheet" href="public/styles/font-awesome.min.min.css">
+    <link rel="stylesheet" href="public/styles/bx.min.css">
     <link rel="stylesheet" href="styles/main.min.css">
     <!-- лучше добавлять только на те страницы где есть блок с картой-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
@@ -106,152 +109,218 @@
       </div>
     </header>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding: 140px 0 60px;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__subtitle {
-            margin-top: 60px;
-        
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: var(--c-accent);
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
-        }
-        
-        .pages-list__link:hover {
-            opacity: 0.7;
-        }
-        
-        @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-            .pages-list {
-                padding: 140px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
-      <div class="page">
-        <section class="section pages-list">
-          <div class="gkt-container">
-            <div class="gkt-container__inner">
-                  <div class="title pages-list__title title--60 title--dark">
-                    <h1>Страницы</h1>
+      <div class="page" data-js="page">
+        <div class="page-layout">
+              <section class="bc-section">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner">
+                    <div class="bc-section__container">
+                          <div class="breadcrumbs  breadcrumbs--dark">
+                            <div class="custom-scrollbar breadcrumbs__scroll" data-js="customScrollbar">
+                              <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a href="javascript:void(0);">ГК ТРИО</a><span class="breadcrumbs__separator">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_breadcrumbs"></use>
+                                    </svg></span>
+                                </li>
+                                <li class="breadcrumbs__item breadcrumbs__item--current"><span>Корзина</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                    </div>
                   </div>
-                  <div class="title pages-list__subtitle title--40 title--dark">Основной сайт
+                </div>
+              </section>
+              <section class="pa pa-cart">
+                <div class="gkt-container">
+                  <div class="gkt-container__inner gkt-container__inner--bg">
+                        <div class="title  title--40 title--dark">Корзина
+                        </div>
+                    <div class="pa__content"><div class="row"><div id="basket-root" class="bx-basket bx-site bx-step-opacity" style="opacity: 1;">
+<div class="row">
+<div class="col" data-entity="basket-total-block">
+<div class="basket-checkout-container" data-entity="basket-checkout-aligner">
+<div class="basket-checkout-section">
+<div class="basket-checkout-section-inner justify-content-between">
+<div class="basket-checkout-block basket-checkout-block-total">
+<div class="basket-checkout-block-total-inner">
+<div class="basket-checkout-block-total-title">Итого:</div>
+<div class="basket-checkout-block-total-description">Сумма НДС: 0 ₽</div>
+</div>
+</div>
+<div class="basket-checkout-block basket-checkout-block-total-price">
+<div class="basket-checkout-block-total-price-inner">
+<div class="basket-coupon-block-total-price-current" data-entity="basket-total-price">3&nbsp;000 ₽</div>
+</div>
+</div>
+<div class="basket-checkout-block basket-checkout-block-btn">
+<button class="btn btn-lg btn-primary basket-btn-checkout" data-entity="basket-checkout-button">Оформить заказ</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="alert alert-warning alert-dismissable" id="basket-warning" style="display: none;">
+<span class="close" data-entity="basket-items-warning-notification-close">×</span>
+<div data-entity="basket-general-warnings" style="display: none;"></div>
+<div data-entity="basket-item-warnings" style="display: none;">В вашей корзине <a href="javascript:void(0)" data-entity="basket-items-warning-count"></a> требует внимания.</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="mb-3 basket-items-list-wrapper basket-items-list-wrapper-height-fixed" id="basket-items-list-wrapper">
+<div class="basket-items-list-header" data-entity="basket-items-list-header">
+<div class="basket-items-search-field" data-entity="basket-filter">
+<div class="form input-group">
+<input type="text" class="form-control" placeholder="Фильтр" data-entity="basket-filter-input">
+</div>
+<button class="basket-items-search-clear-btn" type="button" data-entity="basket-filter-clear-btn">×</button>
+</div>
+<div class="basket-items-list-header-filter">
+<a href="javascript:void(0)" class="basket-items-list-header-filter-item active" data-entity="basket-items-count" data-filter="all" style="">В корзине 2 товара</a>
+<a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="similar" style="display: none;"></a>
+<a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="warning" style="display: none;"></a>
+<a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="delayed" style="display: none;"></a>
+<a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="not-available" style="display: none;"></a>
+</div>
+</div>
+<div class="basket-items-list-container" id="basket-items-list-container">
+<div class="basket-items-list-overlay" id="basket-items-list-overlay" style="display: none;"></div>
+<div class="basket-items-list" id="basket-item-list">
+<div class="basket-search-not-found" id="basket-item-list-empty-result" style="display: none;">
+<div class="basket-search-not-found-icon"></div>
+<div class="basket-search-not-found-text">По данному запросу товаров не найдено</div>
+</div>
+<table class="basket-items-list-table" id="basket-item-table">
+<tbody>
+<tr class="basket-items-list-item-container" id="basket-item-20" data-entity="basket-item" data-id="20">
+<td class="basket-items-list-item-descriptions">
+<div class="basket-items-list-item-descriptions-inner" id="basket-item-height-aligner-20">
+<div class="basket-item-block-info">
+<span class="basket-item-actions-remove d-block d-md-none" data-entity="basket-item-delete"></span>
+<h2 class="basket-item-info-name">
+<a href="/catalog/bychki/byk_tsygan/" class="basket-item-info-name-link"><span data-entity="basket-item-name">Бык Цыган</span></a>
+</h2>
+<div class="basket-item-block-properties">
+<div class="basket-item-property-custom basket-item-property-custom-text" data-entity="basket-item-property">
+<div class="basket-item-property-custom-name">Тип цены</div>
+<div class="basket-item-property-custom-value" data-column-property-code="TYPE" data-entity="basket-item-property-column-value">Розничная цена</div>
+</div>
+</div>
+</div>
+</div>
+</td>
+<td class="basket-items-list-item-price basket-items-list-item-price-for-one">
+<div class="basket-item-block-price d-none d-sm-block">
+<div class="basket-item-price-current">
+<span class="basket-item-price-current-text" id="basket-item-price-20">1&nbsp;000 ₽</span>
+</div>
+<div class="basket-item-price-title">цена за 1 шт</div>
+</div>
+</td>
+<td class="basket-items-list-item-amount">
+<div class="basket-item-block-amount" data-entity="basket-item-quantity-block">
+<span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>
+<div class="basket-item-amount-filed-block">
+<input type="text" class="basket-item-amount-filed" value="1" data-value="1" data-entity="basket-item-quantity-field" id="basket-item-quantity-20">
+</div>
+<span class="basket-item-amount-btn-plus" data-entity="basket-item-quantity-plus"></span>
+<div class="basket-item-amount-field-description">шт</div>
+</div>
+</td>
+<td class="basket-items-list-item-price">
+<div class="basket-item-block-price">
+<div class="basket-item-price-current">
+<span class="basket-item-price-current-text" id="basket-item-sum-price-20">1&nbsp;000 ₽</span>
+</div>
+</div>
+</td>
+<td class="basket-items-list-item-remove d-none d-md-block">
+<div class="basket-item-block-actions">
+<span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
+</div>
+</td>
+</tr>
+<tr class="basket-items-list-item-container" id="basket-item-21" data-entity="basket-item" data-id="21">
+<td class="basket-items-list-item-descriptions">
+<div class="basket-items-list-item-descriptions-inner" id="basket-item-height-aligner-21">
+<div class="basket-item-block-info">
+<span class="basket-item-actions-remove d-block d-md-none" data-entity="basket-item-delete"></span>
+<h2 class="basket-item-info-name">
+<a href="/catalog/bychki/byk_tsygan1/" class="basket-item-info-name-link"><span data-entity="basket-item-name">1Бык Цыган</span></a>
+</h2>
+<div class="basket-item-block-properties">
+<div class="basket-item-property-custom basket-item-property-custom-text" data-entity="basket-item-property">
+<div class="basket-item-property-custom-name">Тип цены</div>
+<div class="basket-item-property-custom-value" data-column-property-code="TYPE" data-entity="basket-item-property-column-value">Розничная цена</div>
+</div>
+</div>
+</div>
+</div>
+</td>
+<td class="basket-items-list-item-price basket-items-list-item-price-for-one">
+<div class="basket-item-block-price d-none d-sm-block">
+<div class="basket-item-price-current">
+<span class="basket-item-price-current-text" id="basket-item-price-21">2&nbsp;000 ₽</span>
+</div>
+<div class="basket-item-price-title">цена за 1 шт</div>
+</div>
+</td>
+<td class="basket-items-list-item-amount">
+<div class="basket-item-block-amount" data-entity="basket-item-quantity-block">
+<span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>
+<div class="basket-item-amount-filed-block">
+<input type="text" class="basket-item-amount-filed" value="1" data-value="1" data-entity="basket-item-quantity-field" id="basket-item-quantity-21">
+</div>
+<span class="basket-item-amount-btn-plus" data-entity="basket-item-quantity-plus"></span>
+<div class="basket-item-amount-field-description">шт</div>
+</div>
+</td>
+<td class="basket-items-list-item-price">
+<div class="basket-item-block-price">
+<div class="basket-item-price-current">
+<span class="basket-item-price-current-text" id="basket-item-sum-price-21">2&nbsp;000 ₽</span>
+</div>
+</div>
+</td>
+<td class="basket-items-list-item-remove d-none d-md-block">
+<div class="basket-item-block-actions">
+<span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="sidebar col-md-3 col-sm-4">           
+<div class="bx-sidebar-block">
+<nav class="list-group mb-3 sbx-green">
+<a class="list-group-item list-group-item-action" href="/personal/">Мой кабинет</a>
+<a class="list-group-item list-group-item-action" href="/personal/orders/">Текущие заказы</a>
+<a class="list-group-item list-group-item-action" href="/personal/private/">Личные данные</a>
+<a class="list-group-item list-group-item-action" href="/personal/orders/?filter_history=Y">История заказов</a>
+<a class="list-group-item list-group-item-action" href="/personal/profiles/">Профили заказов</a>
+<a class="list-group-item list-group-item-action active" href="/personal/cart/">Корзина</a>
+<a class="list-group-item list-group-item-action" href="/personal/subscribe/">Подписки</a>
+<a class="list-group-item list-group-item-action" href="/about/contacts/">Контакты</a>
+</nav>
+</div>
+</div>
+</div>
+                    </div>
                   </div>
-              <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="home.html" target="_blank">Главная</a><a class="pages-list__link pages-list__link--check" href="about.html" target="_blank">О компании</a><a class="pages-list__link pages-list__link--check" href="school.html" target="_blank">Школа действия</a><a class="pages-list__link pages-list__link--check" href="plant-growing.html" target="_blank">Растениеводство</a><a class="pages-list__link pages-list__link--check" href="animal-husbandry.html" target="_blank">Животноводство</a><a class="pages-list__link pages-list__link--check" href="grain-trading.html" target="_blank">Трейдинг зерна</a><a class="pages-list__link pages-list__link--check" href="social-activities.html" target="_blank">Социально-благотворительная деятельность</a><a class="pages-list__link pages-list__link--check" href="news.html" target="_blank">Новости</a><a class="pages-list__link pages-list__link--check" href="news-detailed.html" target="_blank">Новость (детальная)</a><a class="pages-list__link pages-list__link--check" href="excursion.html" target="_blank">Экскурсия на молочную ферму</a><a class="pages-list__link pages-list__link--check" href="product.html" target="_blank">Карточка товара</a><a class="pages-list__link pages-list__link--check" href="catalog.html" target="_blank">Каталог</a><a class="pages-list__link pages-list__link--check" href="seed-plant.html" target="_blank">Семенной завод</a><a class="pages-list__link pages-list__link--check" href="contacts.html" target="_blank">Контакты</a></div>
-                  <div class="title pages-list__subtitle title--40 title--dark">Личный кабинет
-                  </div>
-              <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="lk-common.html" target="_blank">Личный кабинет</a><a class="pages-list__link pages-list__link--check" href="lk-orders.html" target="_blank">Текущие заказы</a><a class="pages-list__link pages-list__link--check" href="lk-orders-history.html" target="_blank">История заказов</a><a class="pages-list__link pages-list__link--check" href="lk-orders-canceled.html" target="_blank">Отмененые заказы</a><a class="pages-list__link pages-list__link--check" href="lk-order.html" target="_blank">Заказ детальная</a><a class="pages-list__link pages-list__link--check" href="lk-profile.html" target="_blank">Профиль пользователя</a><a class="pages-list__link pages-list__link--work" href="lk-cart.html" target="_blank">Корзина</a><a class="pages-list__link pages-list__link--check" href="lk-cart-empty.html" target="_blank">Корзина пустая</a></div>
-            </div>
-          </div>
-        </section>
+                </div>
+              </section>
+        </div>
       </div>
     </main>
         <footer class="site-footer">

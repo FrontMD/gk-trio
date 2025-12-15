@@ -1,0 +1,222 @@
+-
+    const defaultPACartProps = {
+        classes: '',
+        isEmpty: false
+    }
+
+mixin pa-cart(props= defaultPACartProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPACartProps.classes,
+            isEmpty: props.isEmpty ? props.isEmpty : defaultPACartProps.isEmpty
+        }
+
+    section.pa.pa-cart(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                +title({
+                    text: 'Корзина',
+                    size: '40'
+                })
+                .pa__content
+                    <div class="row">
+                        - if(checkProps.isEmpty !== true)
+                            <div id="basket-root" class="bx-basket bx-site bx-step-opacity" style="opacity: 1;">
+                                <div class="row">
+                                    <div class="col" data-entity="basket-total-block">
+                                        <div class="basket-checkout-container" data-entity="basket-checkout-aligner">
+                                            <div class="basket-checkout-section">
+                                                <div class="basket-checkout-section-inner justify-content-between">
+                                                    <div class="basket-checkout-block basket-checkout-block-total">
+                                                        <div class="basket-checkout-block-total-inner">
+                                                            <div class="basket-checkout-block-total-title">Итого:</div>
+                                                            <div class="basket-checkout-block-total-description">Сумма НДС: 0 ₽</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-checkout-block basket-checkout-block-total-price">
+                                                        <div class="basket-checkout-block-total-price-inner">
+                                                            <div class="basket-coupon-block-total-price-current" data-entity="basket-total-price">3&nbsp;000 ₽</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-checkout-block basket-checkout-block-btn">
+                                                        <button class="btn btn-lg btn-primary basket-btn-checkout" data-entity="basket-checkout-button">Оформить заказ</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="alert alert-warning alert-dismissable" id="basket-warning" style="display: none;">
+                                            <span class="close" data-entity="basket-items-warning-notification-close">×</span>
+                                            <div data-entity="basket-general-warnings" style="display: none;"></div>
+                                            <div data-entity="basket-item-warnings" style="display: none;">В вашей корзине <a href="javascript:void(0)" data-entity="basket-items-warning-count"></a> требует внимания.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3 basket-items-list-wrapper basket-items-list-wrapper-height-fixed" id="basket-items-list-wrapper">
+                                            <div class="basket-items-list-header" data-entity="basket-items-list-header">
+                                                <div class="basket-items-search-field" data-entity="basket-filter">
+                                                    <div class="form input-group">
+                                                        <input type="text" class="form-control" placeholder="Фильтр" data-entity="basket-filter-input">
+                                                    </div>
+                                                    <button class="basket-items-search-clear-btn" type="button" data-entity="basket-filter-clear-btn">×</button>
+                                                </div>
+
+                                                <div class="basket-items-list-header-filter">
+                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item active" data-entity="basket-items-count" data-filter="all" style="">В корзине 2 товара</a>
+                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="similar" style="display: none;"></a>
+                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="warning" style="display: none;"></a>
+                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="delayed" style="display: none;"></a>
+                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="not-available" style="display: none;"></a>
+                                                </div>
+                                            </div>
+                                            <div class="basket-items-list-container" id="basket-items-list-container">
+                                                <div class="basket-items-list-overlay" id="basket-items-list-overlay" style="display: none;"></div>
+                                                <div class="basket-items-list" id="basket-item-list">
+                                                    <div class="basket-search-not-found" id="basket-item-list-empty-result" style="display: none;">
+                                                        <div class="basket-search-not-found-icon"></div>
+                                                        <div class="basket-search-not-found-text">По данному запросу товаров не найдено</div>
+                                                    </div>
+                                                    <table class="basket-items-list-table" id="basket-item-table">
+                                                        <tbody>
+                                                            <tr class="basket-items-list-item-container" id="basket-item-20" data-entity="basket-item" data-id="20">
+                                                                <td class="basket-items-list-item-descriptions">
+                                                                    <div class="basket-items-list-item-descriptions-inner" id="basket-item-height-aligner-20">
+                                                                        <div class="basket-item-block-info">
+                                                                            <span class="basket-item-actions-remove d-block d-md-none" data-entity="basket-item-delete"></span>
+                                                                            <h2 class="basket-item-info-name">
+                                                                                <a href="/catalog/bychki/byk_tsygan/" class="basket-item-info-name-link"><span data-entity="basket-item-name">Бык Цыган</span></a>
+                                                                            </h2>
+                                                                            <div class="basket-item-block-properties">
+                                                                                <div class="basket-item-property-custom basket-item-property-custom-text" data-entity="basket-item-property">
+                                                                                    <div class="basket-item-property-custom-name">Тип цены</div>
+                                                                                    <div class="basket-item-property-custom-value" data-column-property-code="TYPE" data-entity="basket-item-property-column-value">Розничная цена</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-price basket-items-list-item-price-for-one">
+                                                                    <div class="basket-item-block-price d-none d-sm-block">
+
+                                                                        <div class="basket-item-price-current">
+                                                                            <span class="basket-item-price-current-text" id="basket-item-price-20">1&nbsp;000 ₽</span>
+                                                                        </div>
+
+                                                                        <div class="basket-item-price-title">цена за 1 шт</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-amount">
+                                                                    <div class="basket-item-block-amount" data-entity="basket-item-quantity-block">
+                                                                        <span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>
+                                                                        <div class="basket-item-amount-filed-block">
+                                                                            <input type="text" class="basket-item-amount-filed" value="1" data-value="1" data-entity="basket-item-quantity-field" id="basket-item-quantity-20">
+                                                                        </div>
+                                                                        <span class="basket-item-amount-btn-plus" data-entity="basket-item-quantity-plus"></span>
+                                                                        <div class="basket-item-amount-field-description">шт</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-price">
+                                                                    <div class="basket-item-block-price">
+                                                                        <div class="basket-item-price-current">
+                                                                            <span class="basket-item-price-current-text" id="basket-item-sum-price-20">1&nbsp;000 ₽</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-remove d-none d-md-block">
+                                                                    <div class="basket-item-block-actions">
+                                                                        <span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="basket-items-list-item-container" id="basket-item-21" data-entity="basket-item" data-id="21">
+                                                                <td class="basket-items-list-item-descriptions">
+                                                                    <div class="basket-items-list-item-descriptions-inner" id="basket-item-height-aligner-21">
+                                                                        <div class="basket-item-block-info">
+                                                                            <span class="basket-item-actions-remove d-block d-md-none" data-entity="basket-item-delete"></span>
+                                                                            <h2 class="basket-item-info-name">
+                                                                                <a href="/catalog/bychki/byk_tsygan1/" class="basket-item-info-name-link"><span data-entity="basket-item-name">1Бык Цыган</span></a>
+                                                                            </h2>
+                                                                            <div class="basket-item-block-properties">
+                                                                                <div class="basket-item-property-custom basket-item-property-custom-text" data-entity="basket-item-property">
+                                                                                    <div class="basket-item-property-custom-name">Тип цены</div>
+                                                                                    <div class="basket-item-property-custom-value" data-column-property-code="TYPE" data-entity="basket-item-property-column-value">Розничная цена</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-price basket-items-list-item-price-for-one">
+                                                                    <div class="basket-item-block-price d-none d-sm-block">
+                                                                        <div class="basket-item-price-current">
+                                                                            <span class="basket-item-price-current-text" id="basket-item-price-21">2&nbsp;000 ₽</span>
+                                                                        </div>
+                                                                        <div class="basket-item-price-title">цена за 1 шт</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-amount">
+                                                                    <div class="basket-item-block-amount" data-entity="basket-item-quantity-block">
+                                                                        <span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>
+                                                                        <div class="basket-item-amount-filed-block">
+                                                                            <input type="text" class="basket-item-amount-filed" value="1" data-value="1" data-entity="basket-item-quantity-field" id="basket-item-quantity-21">
+                                                                        </div>
+                                                                        <span class="basket-item-amount-btn-plus" data-entity="basket-item-quantity-plus"></span>
+                                                                        <div class="basket-item-amount-field-description">шт</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-price">
+                                                                    <div class="basket-item-block-price">
+                                                                        <div class="basket-item-price-current">
+                                                                            <span class="basket-item-price-current-text" id="basket-item-sum-price-21">2&nbsp;000 ₽</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="basket-items-list-item-remove d-none d-md-block">
+                                                                    <div class="basket-item-block-actions">
+                                                                        <span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        -else
+                            <div class="bx-content col">
+                                <div class="bx-sbb-empty-cart-container">
+                                    <div class="bx-sbb-empty-cart-image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="bx-sbb-empty-cart-text">Ваша корзина пуста</div>
+                                    <div class="bx-sbb-empty-cart-desc">
+                                        <a href="/">Нажмите здесь</a>, чтобы продолжить покупки
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="sidebar col-md-3 col-sm-4">           
+                            <div class="bx-sidebar-block">
+                                <nav class="list-group mb-3 sbx-green">
+                                    <a class="list-group-item list-group-item-action" href="/personal/">Мой кабинет</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/orders/">Текущие заказы</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/private/">Личные данные</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/orders/?filter_history=Y">История заказов</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/profiles/">Профили заказов</a>
+                                    <a class="list-group-item list-group-item-action active" href="/personal/cart/">Корзина</a>
+                                    <a class="list-group-item list-group-item-action" href="/personal/subscribe/">Подписки</a>
+                                    <a class="list-group-item list-group-item-action" href="/about/contacts/">Контакты</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>

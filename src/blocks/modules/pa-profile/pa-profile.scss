@@ -40,26 +40,6 @@
                 color: $c-text-light;
                 margin-top: 2px;
             }
-
-            input.form-control {
-                width: 100%;
-                padding: 16.5px 20px;
-                font-family: $ff-open;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 100%;
-                background-color: $c-bg-main;
-                outline: none;
-                color: $c-accent;
-                border: 1px solid transparent;
-                transition: all $tr;
-                min-height: 56px;
-                border-radius: $br-10;
-
-                &::placeholder {
-                    color: $c-text-light;
-                }
-            }
         }
 
         .form-group.row+.form-group.row {
@@ -73,7 +53,6 @@
             padding-bottom: 0;
             color: $c-text-light;
             font-size: 15px;
-
         }
 
         .bx_profile>form>.row>* {

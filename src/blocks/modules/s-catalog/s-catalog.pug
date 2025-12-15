@@ -40,8 +40,17 @@ mixin s-catalog(props= defaultSCatalogProps)
                                     a.filter-field__link(href="javascript:void(0);") Сначала старые
 
 
-                    .s-catalog__filter
+                    form.s-catalog__filter
                         +c-filter
+                        <div style="display: none;opacity: 0;visibility: hidden;">
+                            <input class="btn btn-themes" type="button" id="set_filter" name="set_filter" value="Показать">
+                            <input class="btn btn-link" type="button" id="del_filter" name="del_filter" value="Сбросить">
+                            <div class="bx-filter-popup-result left" id="modef" style="display:none">Выбрано: <span id="modef_num">0</span>
+                                <span class="arrow"></span>
+                                <br>
+                                <a href="/catalog/bychki/filter/clear/apply/" target="">Показать</a>
+                            </div>
+                        </div>
 
                     .s-catalog__body
                         +c-table
