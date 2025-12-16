@@ -203,6 +203,24 @@
             }
         }
 
+        .basket-checkout-block-total {
+            padding: 0;
+        }
+
+        .basket-checkout-section .basket-checkout-section-inner {
+            @include max(laptop) {
+                gap: 20px;
+            }
+        }
+
+        .basket-checkout-block-total-title {
+            font-family: $ff-open;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            color: $c-text;
+        }
+
         .basket-items-list {
             padding: 0 20px;
 
@@ -237,6 +255,10 @@
             input.form-control {
                 padding: 16.5px 30px 16.5px 20px;
             }
+        }
+
+        .basket-items-search-field {
+            max-width: 330px;
         }
 
         .basket-coupon-block-field .form-group {
@@ -391,10 +413,6 @@
             .basket-item-amount-btn-minus:hover {
                 background-color: $c-bg-main;
             }
-        }
-
-        .basket-items-search-field {
-            margin-top: 10px;
         }
 
         .basket-items-search-field+.basket-items-list-header-filter {

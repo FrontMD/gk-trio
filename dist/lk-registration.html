@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Трейдинг зерна</title>
+    <title>Регистрация</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,6 +23,9 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="public/styles/bootstrap.min.min.css">
+    <link rel="stylesheet" href="public/styles/font-awesome.min.min.css">
+    <link rel="stylesheet" href="public/styles/bx.min.css">
     <link rel="stylesheet" href="styles/main.min.css">
     <!-- лучше добавлять только на те страницы где есть блок с картой-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
@@ -111,164 +114,97 @@
     <main class="site-main">
       <div class="page" data-js="page">
         <div class="page-layout">
-              <section class="i-intro">
+              <section class="bc-section">
                 <div class="gkt-container">
                   <div class="gkt-container__inner">
-                    <div class="i-intro__container">
-                      <div class="i-intro__img">
-                        <div class="i-intro__overlay"></div><img src="img/intro/grain_intro.webp" alt="">
-                      </div>
-                      <div class="i-intro__top">
-                            <div class="breadcrumbs  breadcrumbs--light" data-aos="fade-right" data-aos-delay="100">
-                              <div class="custom-scrollbar breadcrumbs__scroll" data-js="customScrollbar">
-                                <ul class="breadcrumbs__list">
-                                  <li class="breadcrumbs__item"><a href="javascript:void(0);">ГК ТРИО</a><span class="breadcrumbs__separator">
-                                      <svg>
-                                        <use xlink:href="img/sprites/sprite.svg#arrow_breadcrumbs"></use>
-                                      </svg></span>
-                                  </li>
-                                  <li class="breadcrumbs__item breadcrumbs__item--current"><span>Трейдинг зерна</span>
-                                  </li>
-                                </ul>
-                              </div>
+                    <div class="bc-section__container">
+                          <div class="breadcrumbs  breadcrumbs--dark">
+                            <div class="custom-scrollbar breadcrumbs__scroll" data-js="customScrollbar">
+                              <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a href="javascript:void(0);">ГК ТРИО</a><span class="breadcrumbs__separator">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_breadcrumbs"></use>
+                                    </svg></span>
+                                </li>
+                                <li class="breadcrumbs__item breadcrumbs__item--current"><span>Регистрация</span>
+                                </li>
+                              </ul>
                             </div>
-                            <div class="title i-intro__title title--60 title--light" data-aos="fade-right" data-aos-delay="300">
-                              <h1>Трейдинг зерна</h1>
-                            </div>
-                        <div class="i-intro__subtitle text-editor text-editor--light" data-aos="fade-right" data-aos-delay="400">[Занимаемся трейдингом зерна с 2003 года] <br><br>Объем реализации зерна ГК «Трио» достигает 400 тыс. тонн в год, из которых около 30% — зерно, выращиваемое растениеводческими подразделениями компании.</div>
-                      </div>
-                      <div class="i-intro__bottom">
-                        <div class="i-intro__right">
-                          <div class="i-intro__corner" data-aos="fade-left" data-aos-delay="700">
-                            <ul class="i-intro__list">
-                              <li>Доставка средствами автомобильного и ж/д транспорта в 24/7 режиме;</li>
-                              <li>Доставка экспедированием зёрна до склада клиента (либо до загрузки в вагон ж/д или судно) на собственном автотранспорте.</li>
-                              <li>Минимальный заказ — 300 кг</li>
-                            </ul><a class="btn  btn--accent btn--full" href="javascript:void(0);" data-modal="#orderModal"><span>Оставить заявку</span></a>
                           </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </section>
-              <section class="section-info  section-info--center">
+              <section class="pa pa-auth">
                 <div class="gkt-container">
-                  <div class="gkt-container__inner">
-                    <div class="section-info__container">
-                      <div class="section-info__top">
-                        <div class="section-info__row">
-                          <div class="section-info__left">
-                                <div class="title section-info__title title--20 title--dark"><span>Зерновой департамент</span> <br>Группы компаний <br>«ТРИО» реализует
-                                </div>
-                          </div>
-                          <div class="section-info__text">
-                            <ul>
-                                <li>Зерновые культуры: пшеница, ячмень, рожь;</li>
-                                <li>Масличные культуры: подсолнечник, соя;</li>
-                                <li>Фуражная продукция: кукуруза, фуражная пшеница, фуражный ячмень.</li>
-                            </ul></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="about-info">
-                <div class="gkt-container">
-                  <div class="gkt-container__inner  gkt-container__inner--bg">
-                    <div class="about-info__container">
-                      <div class="about-info__cards" data-aos="fade-up" data-aos-delay="400">
-                        <div class="about-info__card ai-card">
-                          <div class="ai-card__header">
-                                <div class="title  title--20 title--dark">Наши поставщики
-                                </div>
-                            <div class="ai-card__icon"><img src="img/about/about_icon_23.svg" alt=""></div>
-                          </div>
-                          <div class="ai-card__text text-editor">
-                            <ul>
-                                <li>Крупные сельхозпредприятия;</li>
-                                <li>Малые хозяйства;</li>
-                                <li>Фермерские хозяйства.</li>
-                            </ul>
-                            </div>
-                        </div>
-                        <div class="about-info__card ai-card">
-                          <div class="ai-card__header">
-                                <div class="title  title--20 title--dark">Налаженная работа <br>с поставщиками
-                                </div>
-                            <div class="ai-card__icon"><img src="img/about/about_icon_24.svg" alt=""></div>
-                          </div>
-                          <div class="ai-card__text text-editor">
-                            <p>Закупка зерна производится в радиусе расположения собственных хлебоприемных предприятий по областям (Липецкая, Воронежская, Орловская, Тамбовская, Курская, Белгородская).</p> 
-                            <p>Со многими поставщиками налажено постоянное взаимовыгодное партнерство.</p>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="accreditation">
-                <div class="gkt-container">
-                  <div class="gkt-container__inner">
-                    <div class="sidebar-layout">
-                      <div class="sidebar-layout__sidebar">
-                            <div class="title accreditation__title title--40 title--dark">Наши <span>клиенты и&nbsp;партнеры</span>
-                            </div>
-                        <div class="accreditation__subtitle text-editor">Партнёры «ТРИО» – крупные холдинги России <br>и ближнего зарубежья</div>
-                      </div>
-                      <div class="sidebar-layout__main">
-                        <div class="accreditation__list"><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_1.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_2.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_3.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_4.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_5.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_6.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_7.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_8.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_9.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_10.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_11.webp" alt=""></a><a class="accreditation__item" href="javascript:void(0);"><img src="img/partners/partner_12.webp" alt=""></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="img-text">
-                <div class="gkt-container">
-                  <div class="gkt-container__inner">
-                    <div class="img-text__container">
-                      <div class="img-text__row">
-                        <div class="img-text__img" data-aos="fade-right" data-aos-delay="100"><img src="img/img-text/img_text_5.webp"></div>
-                        <div class="img-text__info">
-                              <div class="title  title--40 title--dark">Базисы поставки зерна в&nbsp;процессе реализации
-                              </div>
-                          <div class="img-text__text text-editor">
-                        <ul>
-                            <li>на элеваторах по переписи в соответствии с отраслевой формой ЗПП-13;</li>
-                            <li>средствами автомобильного и ж/д транспорта в круглосуточном режиме;</li>
-                            <li>экспедированием зёрна до склада клиента (либо до загрузки в вагон ж/д или судно) на собственном автотранспорте.</li>
-                        </ul></div><a class="btn  btn--accent btn--content" href="public/video/side_video.mp4" data-fancybox><span>О транспортном парке</span></a>
-                        </div>
-                      </div>
-                      <div class="img-text__row img-text__row--reverse">
-                        <div class="img-text__img" data-aos="fade-left" data-aos-delay="100"><img src="img/img-text/img_text_6.webp"></div>
-                        <div class="img-text__info">
-                              <div class="title  title--40 title--dark">Наши хлебоприемные <br>предприятия
-                              </div>
-                          <div class="img-text__text text-editor">
-                            <p>НВ Группу компаний «ТРИО» входят 2 элеватора.</p>
-                            <p>Зерновой департамент осуществляет полное управление и контроль над элеваторами в процессе отгрузки зёрна.</p>
-                            <p>Мощность хранения элеваторов и ХПП составляет более 76 000 тонн зерновых.</p></div><a class="btn  btn--accent btn--content" href="public/video/side_video.mp4" data-fancybox><span>Обзор элеваторов</span></a>
-                        </div>
-                      </div>
-                      <div class="img-text__row">
-                        <div class="img-text__img" data-aos="fade-right" data-aos-delay="100"><img src="img/img-text/img_text_7.webp"></div>
-                        <div class="img-text__info">
-                              <div class="title  title--40 title--dark">Отдел контроля качества зерновых и&nbsp;масличных культур
-                              </div>
-                          <div class="img-text__text text-editor">
-                        <p>Создание отдела качества продукции явилось важным шагом в развитии зернового направления. Отдел качества продукции осуществляет:</p>
-                        <ul>
-                            <li>Контроль качества зерновой продукции с момента первичной подработки, в процессе закладки, хранения и отгрузки продукции с элеваторов;</li>
-                            <li>Контроль за состоянием складов и ёмкостей элеваторов;</li>
-                            <li>Дезинфекцию и дезинсекцию зон хранения;</li>
-                            <li>Контроль за процессом аттестации и аккредитации лабораторий хлебоприемных предприятий ГК «ТРИО»;</li>
-                            <li>Обучение специалистов и повышение квалификации сотрудников лабораторий.</li>
-                        </ul></div><a class="btn  btn--accent btn--content" href="public/video/side_video.mp4" data-fancybox><span>Интервью со специалистом по надзору качества</span></a>
-                        </div>
-                      </div>
+                  <div class="gkt-container__inner gkt-container__inner--bg">
+                    <div class="pa__content"><div class="bx-authform">
+<noindex>
+<form method="post" action="/auth/?register=yes" name="bform" enctype="multipart/form-data">
+<input type="hidden" name="AUTH_FORM" value="Y">
+<input type="hidden" name="TYPE" value="REGISTRATION">
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container">Имя</div>
+<div class="bx-authform-input-container">
+<input type="text" name="USER_NAME" maxlength="255" value="">
+</div>
+</div>
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container">Фамилия</div>
+<div class="bx-authform-input-container">
+<input type="text" name="USER_LAST_NAME" maxlength="255" value="">
+</div>
+</div>
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>Логин (минимум 3 символа)</div>
+<div class="bx-authform-input-container">
+<input type="text" name="USER_LOGIN" maxlength="255" value="">
+</div>
+</div>
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>Пароль</div>
+<div class="bx-authform-input-container">
+<input type="password" name="USER_PASSWORD" maxlength="255" value="" autocomplete="off">
+</div>
+</div>
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>Подтверждение пароля</div>
+<div class="bx-authform-input-container">
+<input type="password" name="USER_CONFIRM_PASSWORD" maxlength="255" value="" autocomplete="off">
+</div>
+</div>
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>E-Mail</div>
+<div class="bx-authform-input-container">
+<input type="text" name="USER_EMAIL" maxlength="255" value="">
+</div>
+</div>
+<input type="hidden" name="captcha_sid" value="0f4154ff79f19fc3c196d759d0786e8b">
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container">
+<span class="bx-authform-starrequired">*</span>Введите слово на картинке</div>
+<div class="bx-captcha"><img src="/bitrix/tools/captcha.php?captcha_sid=0f4154ff79f19fc3c196d759d0786e8b" width="180" height="40" alt="CAPTCHA"></div>
+<div class="bx-authform-input-container">
+<input type="text" name="captcha_word" maxlength="50" value="" autocomplete="off">
+</div>
+</div>
+<div class="bx-authform-formgroup-container">
+<div class="bx-authform-label-container"></div>
+<div class="bx-authform-input-container"></div>
+</div>
+<div class="bx-authform-formgroup-container">
+<input type="submit" class="btn btn-primary" name="Register" value="Регистрация">
+</div>
+<hr class="bxe-light">
+<div class="bx-authform-description-container">Пароль должен быть не менее 6 символов длиной.</div>
+<div class="bx-authform-description-container">
+<span class="bx-authform-starrequired">*</span>Обязательные поля.</div>
+<div class="bx-authform-link-container">
+<a href="/auth/?login=yes" rel="nofollow"><b>Авторизация</b></a>
+</div>
+</form>
+</noindex>
+</div>
                     </div>
                   </div>
                 </div>

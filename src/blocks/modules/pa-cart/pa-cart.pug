@@ -29,13 +29,8 @@ mixin pa-cart(props= defaultPACartProps)
                                                 <div class="basket-checkout-section-inner justify-content-between">
                                                     <div class="basket-checkout-block basket-checkout-block-total">
                                                         <div class="basket-checkout-block-total-inner">
-                                                            <div class="basket-checkout-block-total-title">Итого:</div>
-                                                            <div class="basket-checkout-block-total-description">Сумма НДС: 0 ₽</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="basket-checkout-block basket-checkout-block-total-price">
-                                                        <div class="basket-checkout-block-total-price-inner">
-                                                            <div class="basket-coupon-block-total-price-current" data-entity="basket-total-price">3&nbsp;000 ₽</div>
+                                                            <div class="basket-checkout-block-total-title">2 товара на сумму 3 800 Р</div>
+                                                            <div class="basket-checkout-block-total-description"></div>
                                                         </div>
                                                     </div>
                                                     <div class="basket-checkout-block basket-checkout-block-btn">
@@ -67,14 +62,6 @@ mixin pa-cart(props= defaultPACartProps)
                                                     </div>
                                                     <button class="basket-items-search-clear-btn" type="button" data-entity="basket-filter-clear-btn">×</button>
                                                 </div>
-
-                                                <div class="basket-items-list-header-filter">
-                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item active" data-entity="basket-items-count" data-filter="all" style="">В корзине 2 товара</a>
-                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="similar" style="display: none;"></a>
-                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="warning" style="display: none;"></a>
-                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="delayed" style="display: none;"></a>
-                                                    <a href="javascript:void(0)" class="basket-items-list-header-filter-item" data-entity="basket-items-count" data-filter="not-available" style="display: none;"></a>
-                                                </div>
                                             </div>
                                             <div class="basket-items-list-container" id="basket-items-list-container">
                                                 <div class="basket-items-list-overlay" id="basket-items-list-overlay" style="display: none;"></div>
@@ -91,7 +78,9 @@ mixin pa-cart(props= defaultPACartProps)
                                                                         <div class="basket-item-block-info">
                                                                             <span class="basket-item-actions-remove d-block d-md-none" data-entity="basket-item-delete"></span>
                                                                             <h2 class="basket-item-info-name">
-                                                                                <a href="/catalog/bychki/byk_tsygan/" class="basket-item-info-name-link"><span data-entity="basket-item-name">Бык Цыган</span></a>
+                                                                                <a href="/catalog/bychki/byk_tsygan/" class="basket-item-info-name-link">
+                                                                                    <span data-entity="basket-item-name">Бык Цыган</span>
+                                                                                </a>
                                                                             </h2>
                                                                             <div class="basket-item-block-properties">
                                                                                 <div class="basket-item-property-custom basket-item-property-custom-text" data-entity="basket-item-property">
@@ -104,11 +93,9 @@ mixin pa-cart(props= defaultPACartProps)
                                                                 </td>
                                                                 <td class="basket-items-list-item-price basket-items-list-item-price-for-one">
                                                                     <div class="basket-item-block-price d-none d-sm-block">
-
                                                                         <div class="basket-item-price-current">
                                                                             <span class="basket-item-price-current-text" id="basket-item-price-20">1&nbsp;000 ₽</span>
                                                                         </div>
-
                                                                         <div class="basket-item-price-title">цена за 1 шт</div>
                                                                     </div>
                                                                 </td>
@@ -141,7 +128,9 @@ mixin pa-cart(props= defaultPACartProps)
                                                                         <div class="basket-item-block-info">
                                                                             <span class="basket-item-actions-remove d-block d-md-none" data-entity="basket-item-delete"></span>
                                                                             <h2 class="basket-item-info-name">
-                                                                                <a href="/catalog/bychki/byk_tsygan1/" class="basket-item-info-name-link"><span data-entity="basket-item-name">1Бык Цыган</span></a>
+                                                                                <a href="/catalog/bychki/byk_tsygan1/" class="basket-item-info-name-link">
+                                                                                    <span data-entity="basket-item-name">1Бык Цыган</span>
+                                                                                </a>
                                                                             </h2>
                                                                             <div class="basket-item-block-properties">
                                                                                 <div class="basket-item-property-custom basket-item-property-custom-text" data-entity="basket-item-property">
@@ -177,7 +166,7 @@ mixin pa-cart(props= defaultPACartProps)
                                                                         </div>
                                                                     </div>
                                                                 </td>
-                                                                <td class="basket-items-list-item-remove d-none d-md-block">
+                                                                    <td class="basket-items-list-item-remove d-none d-md-block">
                                                                     <div class="basket-item-block-actions">
                                                                         <span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
                                                                     </div>

@@ -17,6 +17,7 @@ mixin i-intro(props = defaultIIntroProps)
             title: props.title ? props.title : defaultIIntroProps.title,
             subtitle: props.subtitle ? props.subtitle : defaultIIntroProps.subtitle,
             desc: props.desc ? props.desc : defaultIIntroProps.desc,
+            descTop: props.descTop ? props.descTop : defaultIIntroProps.descTop,
         }
 
     section.i-intro(class= checkProps.classes)&attributes(attributes)
@@ -39,7 +40,7 @@ mixin i-intro(props = defaultIIntroProps)
                             cMode: 'light',
                         })(data-aos="fade-right" data-aos-delay="300")
                         - if(checkProps.subtitle.length > 0)
-                            .i-intro__subtitle(data-aos="fade-right" data-aos-delay="400")!= checkProps.subtitle
+                            .i-intro__subtitle.text-editor.text-editor--light(data-aos="fade-right" data-aos-delay="400")!= checkProps.subtitle
 
                     .i-intro__bottom
                         - if(checkProps.desc.length > 0)

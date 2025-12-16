@@ -56,7 +56,7 @@
         padding: 20px 0;
 
         @include max(large) {
-            gap: 24px;
+            gap: 20px;
         }
 
         @include max(laptop) {
@@ -75,7 +75,7 @@
         justify-content: center;
 
         @include max(large) {
-            flex-basis: 130px;
+            flex-basis: 120px;
         }
 
         @include max(laptop) {
@@ -112,7 +112,7 @@
         gap: 30px;
 
         @include max(large) {
-            gap: 16px;
+            gap: 12px;
         }
 
         @include max(xs) {
@@ -186,12 +186,12 @@
         gap: 6px;
     }
 
-    &__cart {
+    &__cart,
+    &__lk {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-right: 20px;
         color: $c-accent;
         transition: all $tr;
 
@@ -203,6 +203,11 @@
             width: 24px;
             height: 24px;
         }
+
+    }
+
+    &__cart {
+        padding-right: 20px;
 
         span {
             position: absolute;

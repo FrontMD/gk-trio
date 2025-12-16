@@ -1,0 +1,178 @@
+-
+    const defaultPAAuthProps = {
+        classes: '',
+        page: 'auth'
+    }
+
+mixin pa-auth(props= defaultPAAuthProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPAAuthProps.classes,
+            page: props.page ? props.page : defaultPAAuthProps.page
+        }
+
+    section.pa.pa-auth(class= checkProps.classes)&attributes(attributes)
+        .gkt-container
+            .gkt-container__inner.gkt-container__inner--bg
+                .pa__content
+                    - if(checkProps.page === 'auth')
+                        <div class="bx-authform">
+                            <h3 class="bx-title">Пожалуйста, авторизуйтесь</h3>
+                            <form name="form_auth" method="post" target="_top" action="/auth/?login=yes">
+                                <input type="hidden" name="AUTH_FORM" value="Y">
+                                <input type="hidden" name="TYPE" value="AUTH">
+                                <input type="hidden" name="backurl" value="/auth/">
+                                <div class="bx-authform-formgroup-container">
+                                    <div class="bx-authform-label-container">Логин</div>
+                                    <div class="bx-authform-input-container">
+                                        <input type="text" name="USER_LOGIN" maxlength="255" value="">
+                                    </div>
+                                </div>
+                                <div class="bx-authform-formgroup-container">
+                                    <div class="bx-authform-label-container">Пароль</div>
+                                    <div class="bx-authform-input-container">
+                                        <input type="password" name="USER_PASSWORD" maxlength="255" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="bx-authform-formgroup-container">
+                                    <div class="checkbox">
+                                        <label class="bx-filter-param-label">
+                                            <input type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y">
+                                            <span class="bx-filter-param-text">Запомнить меня на этом компьютере</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="bx-authform-formgroup-container">
+                                    <input type="submit" class="btn btn-primary" name="Login" value="Войти">
+                                </div>
+                            </form>
+
+                            <hr class="bxe-light">
+
+                            <noindex>
+                                <div class="bx-authform-link-container">
+                                    <a href="/auth/?forgot_password=yes" rel="nofollow"><b>Забыли свой пароль?</b></a>
+                                </div>
+                            </noindex>
+
+                            <noindex>
+                                <div class="bx-authform-link-container">Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму.<br>
+                                    <a href="/auth/?register=yes" rel="nofollow"><b>Зарегистрироваться</b></a>
+                                </div>
+                            </noindex>
+                        </div>
+                    - else if(checkProps.page === 'reg')
+                        <div class="bx-authform">
+                            <noindex>
+                                <form method="post" action="/auth/?register=yes" name="bform" enctype="multipart/form-data">
+                                    <input type="hidden" name="AUTH_FORM" value="Y">
+                                    <input type="hidden" name="TYPE" value="REGISTRATION">
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container">Имя</div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="text" name="USER_NAME" maxlength="255" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container">Фамилия</div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="text" name="USER_LAST_NAME" maxlength="255" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>Логин (минимум 3 символа)</div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="text" name="USER_LOGIN" maxlength="255" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>Пароль</div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="password" name="USER_PASSWORD" maxlength="255" value="" autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>Подтверждение пароля</div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="password" name="USER_CONFIRM_PASSWORD" maxlength="255" value="" autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span>E-Mail</div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="text" name="USER_EMAIL" maxlength="255" value="">
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" name="captcha_sid" value="0f4154ff79f19fc3c196d759d0786e8b">
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container">
+                                            <span class="bx-authform-starrequired">*</span>Введите слово на картинке</div>
+                                        <div class="bx-captcha"><img src="/bitrix/tools/captcha.php?captcha_sid=0f4154ff79f19fc3c196d759d0786e8b" width="180" height="40" alt="CAPTCHA"></div>
+                                        <div class="bx-authform-input-container">
+                                            <input type="text" name="captcha_word" maxlength="50" value="" autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                    <div class="bx-authform-formgroup-container">
+                                        <div class="bx-authform-label-container"></div>
+                                        <div class="bx-authform-input-container"></div>
+                                    </div>
+                                    <div class="bx-authform-formgroup-container">
+                                        <input type="submit" class="btn btn-primary" name="Register" value="Регистрация">
+                                    </div>
+
+                                    <hr class="bxe-light">
+
+                                    <div class="bx-authform-description-container">Пароль должен быть не менее 6 символов длиной.</div>
+
+                                    <div class="bx-authform-description-container">
+                                        <span class="bx-authform-starrequired">*</span>Обязательные поля.</div>
+
+                                    <div class="bx-authform-link-container">
+                                        <a href="/auth/?login=yes" rel="nofollow"><b>Авторизация</b></a>
+                                    </div>
+
+                                </form>
+                            </noindex>
+                        </div>
+                    - else if(checkProps.page === 'recovery')
+                        <div class="bx-authform">
+                            <h3 class="bx-title">Выслать контрольную строку</h3>
+
+                            <p class="bx-authform-content-container">Выберите, какую информацию использовать для изменения пароля:</p>
+
+                            <form name="bform" method="post" target="_top" action="/auth/?forgot_password=yes">
+                                <input type="hidden" name="backurl" value="/auth/">
+                                <input type="hidden" name="AUTH_FORM" value="Y">
+                                <input type="hidden" name="TYPE" value="SEND_PWD">
+
+                                <div class="bx-authform-formgroup-container">
+                                    <div class="bx-authform-label-container">Логин или email</div>
+                                    <div class="bx-authform-input-container">
+                                        <input type="text" name="USER_LOGIN" maxlength="255" value="admin">
+                                        <input type="hidden" name="USER_EMAIL">
+                                    </div>
+                                    <div class="bx-authform-note-container">Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам на email.</div>
+                                </div>
+
+
+
+                                <div class="bx-authform-formgroup-container">
+                                    <input type="submit" class="btn btn-primary" name="send_account_info" value="Выслать">
+                                </div>
+
+                                <div class="bx-authform-link-container">
+                                    <a href="/auth/?login=yes"><b>Авторизация</b></a>
+                                </div>
+
+                            </form>
+
+                        </div>
