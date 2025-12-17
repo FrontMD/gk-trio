@@ -1,81 +1,81 @@
 mixin footer
 
-	footer.site-footer
-		.gkt-container.site-footer__container
-			.site-footer__main
-				.pattern-bg
-				.site-footer__top
-					.site-footer__column.site-footer__column--first
-						.site-footer__logo
-							img(src="img/logo_footer.svg" alt="ТРИО группа компаний")
-						+socials({
-							classes: "site-footer__socials",
-							mode: 'footer',
-							icons: [
-								'vk',
-								'telegram',
-								'youtube'
-							]
-						})
-						+btn({
-							classes: 'site-footer__callback',
-							cMode: 'light',
-							name: 'Оставить заявку',
-						})(data-modal="#callbackModal")
+    footer.site-footer
+        .gkt-container.site-footer__container
+            .site-footer__main
+                .pattern-bg
+                .site-footer__top
+                    .site-footer__column.site-footer__column--first
+                        .site-footer__logo
+                            img(src="img/logo_footer.svg" alt="ТРИО группа компаний")
+                        +socials({
+                            classes: "site-footer__socials",
+                            mode: 'footer',
+                            icons: [
+                                'vk',
+                                'telegram',
+                                'youtube'
+                            ]
+                        })
+                        +btn({
+                            classes: 'site-footer__callback',
+                            cMode: 'light',
+                            name: 'Оставить заявку',
+                        })(data-modal="#callbackModal")
 
-					.site-footer__column
-						.site-footer__nav
-							.site-footer__title О КОМПАНИИ
-							ul.site-footer__list
-								a.site-footer__item(href="javascript:void(0);") Производство
-								a.site-footer__item(href="javascript:void(0);") Пресс-центр
-								a.site-footer__item(href="javascript:void(0);") Контакты
+                    .site-footer__column
+                        .site-footer__nav
+                            .site-footer__title О КОМПАНИИ
+                            ul.site-footer__list
+                                a.site-footer__item(href="javascript:void(0);") Производство
+                                a.site-footer__item(href="javascript:void(0);") Пресс-центр
+                                a.site-footer__item(href="javascript:void(0);") Контакты
 
-						.site-footer__nav
-							.site-footer__title КАТАЛОГ
-							.site-footer__list
-								a.site-footer__item(href="javascript:void(0);") Нетели
-								a.site-footer__item(href="javascript:void(0);") Быки
-								a.site-footer__item(href="javascript:void(0);") Племенные бычки
-								a.site-footer__item(href="javascript:void(0);") Эмбрионы
+                        .site-footer__nav
+                            .site-footer__title КАТАЛОГ
+                            .site-footer__list
+                                a.site-footer__item(href="javascript:void(0);") Нетели
+                                a.site-footer__item(href="javascript:void(0);") Быки
+                                a.site-footer__item(href="javascript:void(0);") Племенные бычки
+                                a.site-footer__item(href="javascript:void(0);") Эмбрионы
 
-					.site-footer__column.site-footer__column--stretch
-						.site-footer__nav
-							.site-footer__title НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ
-							ul.site-footer__list
-								a.site-footer__item(href="javascript:void(0);") Животноводство
-								a.site-footer__item(href="javascript:void(0);") Растениеводство
-								a.site-footer__item(href="javascript:void(0);") Трейдинг зерна
-								a.site-footer__item(href="javascript:void(0);") Семенной завод
-								a.site-footer__item(href="javascript:void(0);") Школа действий
-								a.site-footer__item(href="javascript:void(0);") Агротуризм
-								a.site-footer__item(href="javascript:void(0);") Благотворительность
+                    .site-footer__column.site-footer__column--stretch
+                        .site-footer__nav
+                            .site-footer__title НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ
+                            ul.site-footer__list
+                                a.site-footer__item(href="javascript:void(0);") Животноводство
+                                a.site-footer__item(href="javascript:void(0);") Растениеводство
+                                a.site-footer__item(href="javascript:void(0);") Трейдинг зерна
+                                a.site-footer__item(href="javascript:void(0);") Семенной завод
+                                a.site-footer__item(href="javascript:void(0);") Школа действий
+                                a.site-footer__item(href="javascript:void(0);") Агротуризм
+                                a.site-footer__item(href="javascript:void(0);") Благотворительность
 
-					.site-footer__column.site-footer__column--contacts
-						.site-footer__nav
-							.site-footer__title ШКОЛА ДЕЙСТВИЙ
-							.site-footer__list
-								a.site-footer__item(href="tel:+79900595039") +7 (990) 059 50 39
+                    .site-footer__column.site-footer__column--contacts
+                        .site-footer__nav
+                            .site-footer__title ШКОЛА ДЕЙСТВИЙ
+                            .site-footer__list
+                                a.site-footer__item(href="tel:+79900595039") +7 (990) 059 50 39
 
-						.site-footer__nav
-							.site-footer__title ГРАФИК РАБОТЫ
-							.site-footer__item 
-								p Пн. – Пт.:  10:30–18:00 
-								p Сб.: 10:30–15:00
-							a.site-footer__item(href="mailto:info@triogk.ru") info@triogk.ru
-							.site-footer__item 398017, г. Липецк, ул. Металлургов, 1
+                        .site-footer__nav
+                            .site-footer__title ГРАФИК РАБОТЫ
+                            .site-footer__item 
+                                p Пн. – Пт.:  10:30–18:00 
+                                p Сб.: 10:30–15:00
+                            a.site-footer__item(href="mailto:info@triogk.ru") info@triogk.ru
+                            .site-footer__item 398017, г. Липецк, ул. Металлургов, 1
 
-						.site-footer__nav
-							a.site-footer__title(href="javascript:void(0);") КАК ПРОЕХАТЬ
-							.site-footer__title ЭКСКУРСИЯ НА ФЕРМУ
-							a.site-footer__item(href="tel:+74922112222") +7 (4922) 11-22-22
+                        .site-footer__nav
+                            a.site-footer__title(href="javascript:void(0);") КАК ПРОЕХАТЬ
+                            .site-footer__title ЭКСКУРСИЯ НА ФЕРМУ
+                            a.site-footer__item(href="tel:+74922112222") +7 (4922) 11-22-22
 
-				.site-footer__bottom
-					.site-footer__docs
-						a.site-footer__policy(href="javascript:void(0);") Политика обработки персональных данных
-						.site-footer__copyright © 2025 ООО «ГК ТРИО»
-					.site-footer__developer
-						| Разработка сайта
-						a(href="https://itspace.group/" target="_blank")
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#its`)
+                .site-footer__bottom
+                    .site-footer__docs
+                        a.site-footer__policy(href="javascript:void(0);") Политика обработки персональных данных
+                        .site-footer__copyright © 2025 ООО «ГК ТРИО»
+                    .site-footer__developer
+                        | Разработка сайта
+                        a(href="https://itspace.group/" target="_blank")
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#its`)
