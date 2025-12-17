@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('[data-js="customScrollbar"]').each((index, el) => {
         new SimpleBar(el, { autoHide: false });
     })
+    tableScrollWrapper();
     fancyboxInit();
 })
 
@@ -81,4 +82,21 @@ function fancyboxInit() {
         }
 
     });
+}
+
+// оборачивает таблицы в текстовом редакторе
+function tableScrollWrapper() {
+    const tablesList = document.querySelectorAll('.text-editor table')
+
+    if(tablesList.length < 1) return
+
+    tablesList.forEach(table => {
+        if(!table.closest('.text-scroll-h')) {
+            const wrapper = document.createElement('div')
+
+            wrapper.classList.add('text-scroll-h')
+            table.after(wrapper)
+            wrapper.appendChild(table)
+        }
+    })
 }
