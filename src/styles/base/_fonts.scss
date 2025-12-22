@@ -60,3 +60,12 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue/BebasNeue-Bold.woff2') format('woff2'),
+        url('../fonts/BebasNeue/BebasNeue-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
