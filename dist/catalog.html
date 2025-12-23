@@ -23,6 +23,9 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="public/styles/bootstrap.min.min.css">
+    <link rel="stylesheet" href="public/styles/font-awesome.min.min.css">
+    <link rel="stylesheet" href="public/styles/bx.min.min.css">
     <link rel="stylesheet" href="styles/main.min.css">
     <!-- лучше добавлять только на те страницы где есть блок с картой-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
@@ -284,10 +287,31 @@
                                       </div>
                                     </div>
                                     <div class="filter-field__content" data-js="filterFieldContent">
-                                          <div class="filter-range filter-field__range" data-js="filterRange" data-min="500" data-max="5000" data-step="10">
-                                            <input class="filter-range__input filter-range__input--min" type="number" min="0" max="5000" data-js="filterRangeMin">
-                                            <input class="filter-range__input filter-range__input--max" type="number" min="0" max="5000" data-js="filterRangeMax">
-                                            <div class="filter-range__range" data-js="filterRangeSlider"></div>
+                                          <div class="filter-range filter-field__range"><div class="col-xs-6 bx-filter-parameters-box-container-block bx-left">
+<i class="bx-ft-sub">От</i>
+<div class="bx-filter-input-container">
+<input class="min-price" type="text" name="arrFilter_49_MIN" id="arrFilter_49_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)">
+</div>
+</div>
+<div class="col-xs-6 bx-filter-parameters-box-container-block bx-right">
+<i class="bx-ft-sub">До</i>
+<div class="bx-filter-input-container">
+<input class="max-price" type="text" name="arrFilter_49_MAX" id="arrFilter_49_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)">
+</div>
+</div>
+<div class="col-xs-10 col-xs-offset-1 bx-ui-slider-track-container">
+<div class="bx-ui-slider-track" id="drag_track_49">
+<div class="bx-ui-slider-part p1"><span>111</span></div>
+<div class="bx-ui-slider-part p5"><span>222</span></div>
+<div class="bx-ui-slider-pricebar-vd" style="left: 0;right: 0;" id="colorUnavailableActive_49"></div>
+<div class="bx-ui-slider-pricebar-vn" style="left: 0%; right: 0%;" id="colorAvailableInactive_49"></div>
+<div class="bx-ui-slider-pricebar-v" style="left: 0%; right: 0%;" id="colorAvailableActive_49"></div>
+<div class="bx-ui-slider-range" id="drag_tracker_49" style="left: 0;right: 0;">
+<a class="bx-ui-slider-handle left" style="left:0;" href="javascript:void(0)" id="left_slider_49"></a>
+<a class="bx-ui-slider-handle right" style="right:0;" href="javascript:void(0)" id="right_slider_49"></a>
+</div>
+</div>
+</div>
                                           </div>
                                     </div>
                                   </div>
