@@ -147,7 +147,11 @@
     .sidebar {
         padding-right: 0;
         padding-left: 0;
-        flex: 0 0 245px;
+        flex: 0 0 315px;
+
+        @include max(laptop) {
+            flex: 0 0 245px;
+        }
 
         @include max(tablet) {
             flex: 0 0 200px;
@@ -155,6 +159,7 @@
 
         @include max(mobile) {
             flex: 0 0 auto;
+            width: 100%;
         }
 
         .bx-sidebar-block {
@@ -187,5 +192,52 @@
                 background: $c-bg-main;
             }
         }
+    }
+
+    &-sidebar {
+        &__header {
+            color: $c-text;
+            padding: 9px 15px 20px;
+        }
+
+        &__title {
+            @include max(mobile) {
+                font-size: 18px;
+            }
+
+            @include max(xs) {
+                font-size: 18px;
+            }
+        }
+
+        &__person {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            margin-top: 6px;
+        }
+
+        &__contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+            margin-top: 8px;
+
+            a.pa-sidebar__contact {
+                transition: all $tr;
+
+                &:hover {
+                    color: $c-link;
+                }
+            }
+        }
+
+        &__contact {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+        }
+
     }
 }
