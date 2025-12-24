@@ -8,6 +8,13 @@
     .bx-ui-slider-track-container {
         grid-column: 1 / 3;
         padding: 18px 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .bx-filter-parameters-box-container-block {
+        width: 100%;
+        padding: 0;
     }
 
     .bx-filter-input-container input {
@@ -53,11 +60,11 @@
 
     .bx-ui-slider-pricebar-v,
     .bx-ui-slider-pricebar-vd {
-        background-color: $c-border;
+        background-color: $c-border !important;
     }
 
     .bx-ui-slider-pricebar-vn {
-        background-color: $c-bg-main;
+        background-color: $c-bg-main !important;
     }
 
     .bx-ui-slider-range {
@@ -72,8 +79,8 @@
         border: none;
         box-shadow: none;
         border-radius: 100%;
-        background-color: $c-text-light;
-        margin: 0;
+        background: $c-text-light !important;
+        margin: 0 !important;
     }
 
     .bx-ui-slider-part {
