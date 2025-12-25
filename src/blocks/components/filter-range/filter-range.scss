@@ -35,7 +35,7 @@
     }
 
     .bx-filter-input-container input.max-price {
-        border-left: 1px solid $c-border;
+        border-left: 1px solid $c-border !important;
         border-radius: 0 $br-10 $br-10 0;
     }
 
