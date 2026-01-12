@@ -24,6 +24,11 @@
         height: 16px;
     }
 
+    &:active,
+    &:focus {
+        outline: none !important;
+    }
+
     &--light {
         color: $c-text-btn;
         background-color: $c-bg-grey;

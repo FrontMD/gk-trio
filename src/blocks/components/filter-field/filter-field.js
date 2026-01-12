@@ -3,7 +3,6 @@ function filterField(inited = false) {
 
     if(filterFields.length < 1) return
 
-    
     filterFields.forEach(field => {
         const content = field.querySelector("[data-js='filterFieldContent']")
 
@@ -32,15 +31,13 @@ function filterField(inited = false) {
             } else {
                 closeAll()
             }
-
-            inited = true
-    
         })
     }
 
 
     function closeAll() {
-        filterFields.forEach(item => {
+        const actualFilterFields = document.querySelectorAll("[data-js='filterField']")
+        actualFilterFields.forEach(item => {
             item.classList.remove('active')
         })
     }

@@ -203,9 +203,14 @@
         }
     }
 
-    a.site-footer__item:hover,
+    a.site-footer__item:hover {
+        opacity: 0.7;
+        color: $c-white;
+    }
+
     a.site-footer__title:hover {
         opacity: 0.7;
+        color: $c-bg-grey;
     }
 
     &__bottom {
@@ -233,6 +238,16 @@
         font-weight: 400;
         font-size: 15px;
         line-height: 133%;
+
+        a {
+            color: $c-white;
+            transition: all $tr;
+        }
+
+        a:hover {
+            color: $c-white;
+            opacity: 0.7;
+        }
     }
 
     &__developer {
@@ -245,6 +260,13 @@
             display: block;
             padding: 0;
             margin: 0;
+            color: $c-white;
+            transition: all $tr;
+        }
+
+        a:hover {
+            color: $c-white;
+            opacity: 0.7;
         }
 
         svg {
