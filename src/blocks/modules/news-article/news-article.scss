@@ -57,6 +57,10 @@
 
     &__share {
         justify-self: end;
+
+        .ya-share2__popup {
+            right: -20px;
+        }
     }
 
     &__body {

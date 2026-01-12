@@ -50,7 +50,8 @@
             font-weight: 400;
             font-size: 15px;
             line-height: 100%;
-            background-color: $c-bg-main;
+            background-color: $c-bg-main !important;
+            background: $c-bg-main !important;
             outline: none;
             color: $c-accent;
             border: 1px solid transparent;
