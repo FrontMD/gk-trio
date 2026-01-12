@@ -48,6 +48,7 @@
 
     &__item:hover &__chevron {
         transform: rotate(180deg);
+        color: $c-text;
     }
 
     &__item:hover .site-header__sub {
@@ -80,6 +81,7 @@
 
         &:hover {
             opacity: 0.7;
+            color: $c-text;
         }
     }
 }

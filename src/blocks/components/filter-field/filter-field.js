@@ -1,7 +1,8 @@
-function filterField() {
+function filterField(inited = false) {
     const filterFields = document.querySelectorAll("[data-js='filterField']")
 
     if(filterFields.length < 1) return
+
     
     filterFields.forEach(field => {
         const content = field.querySelector("[data-js='filterFieldContent']")
@@ -13,25 +14,30 @@ function filterField() {
         }
     })
 
-    document.addEventListener('click', (e) => {
-        let target = e.target
-
-        if(target.closest("[data-js='filterField']")) {
-            if(target.closest("[data-js='filterFieldHeader']")) {
-                const field = target.closest("[data-js='filterField']")
-        
-                if(field.classList.contains('active')) {
-                    closeAll()
-                } else {
-                    closeAll()
-                    field.classList.add('active')
+    if(!inited) {
+        document.addEventListener('click', (e) => {
+            let target = e.target
+    
+            if(target.closest("[data-js='filterField']")) {
+                if(target.closest("[data-js='filterFieldHeader']")) {
+                    const field = target.closest("[data-js='filterField']")
+            
+                    if(field.classList.contains('active')) {
+                        closeAll()
+                    } else {
+                        closeAll()
+                        field.classList.add('active')
+                    }
                 }
+            } else {
+                closeAll()
             }
-        } else {
-            closeAll()
-        }
 
-    })
+            inited = true
+    
+        })
+    }
+
 
     function closeAll() {
         filterFields.forEach(item => {
